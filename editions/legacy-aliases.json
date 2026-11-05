@@ -1,0 +1,69 @@
+{
+  "zps-art-bible-artist-direction": [
+    "art-bible-artist-direction",
+    "zps-art-bible-artist-direction"
+  ],
+  "zps-art-director-library-manager": [
+    "art-director-library-manager",
+    "zps-art-director-library-manager",
+    "zps-art-library-manager"
+  ],
+  "zps-art-style-development": [
+    "art-style-development",
+    "zps-art-style-development"
+  ],
+  "zps-artistic-critique": [
+    "artistic-critique",
+    "zps-artistic-critique"
+  ],
+  "zps-creative-brainstorming": [
+    "creative-brainstorming",
+    "zps-creative-brainstorming"
+  ],
+  "zps-visual-intelligence": [
+    "visual-intelligence",
+    "zps-visual-intelligence"
+  ],
+  "zps-visual-research": [
+    "visual-research",
+    "zps-visual-research"
+  ],
+  "zps-concept-artist": [
+    "art-concept-artist",
+    "zps-concept-artist",
+    "Claude - art-concept-artist"
+  ],
+  "zps-2d-review": [
+    "art-2d-review"
+  ],
+  "zps-asset-2d": [
+    "art-asset-2d"
+  ],
+  "zps-ui": [
+    "art-ui"
+  ],
+  "zps-2d-artist": [
+    "zps-2d-artist"
+  ],
+  "zps-surface": [
+    "art-surface"
+  ],
+  "zps-texture-planning": [
+    "art-texture-planning"
+  ],
+  "zps-texture-review": [
+    "art-texture-review"
+  ],
+  "zps-texture-artist": [
+    "zps-texture-artist"
+  ],
+  "zps-3d-artist": [
+    "3d-artist",
+    "art-3d-artist",
+    "zps-3d-artist"
+  ],
+  "zps-art-learning": [
+    "art-learn",
+    "art-learning"
+  ]
+}

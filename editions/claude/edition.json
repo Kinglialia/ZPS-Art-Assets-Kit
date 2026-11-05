@@ -1,0 +1,12 @@
+{
+  "edition": "claude",
+  "title": "Claude",
+  "app_name": "Claude Code",
+  "skill_suffix": "",
+  "display_suffix": "",
+  "install_root": "~/.claude/skills",
+  "conflict_roots": [],
+  "state_root": "~/.local/share/zps-art-assets-kit/claude/backups",
+  "openai_yaml": false,
+  "aliases_include_codex_names": true
+}

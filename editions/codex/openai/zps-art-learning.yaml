@@ -1,0 +1,4 @@
+interface:
+  display_name: "ZPS - Art Learning - Codex"
+policy:
+  allow_implicit_invocation: false

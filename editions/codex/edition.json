@@ -1,0 +1,11 @@
+{
+  "edition": "codex",
+  "title": "Codex",
+  "app_name": "Codex",
+  "skill_suffix": "-codex",
+  "display_suffix": " - Codex",
+  "install_root": "~/.agents/skills",
+  "conflict_roots": ["~/.agents/skills", "$CODEX_HOME/skills"],
+  "state_root": "~/.local/share/zps-art-assets-kit/codex/backups",
+  "openai_yaml": true
+}
