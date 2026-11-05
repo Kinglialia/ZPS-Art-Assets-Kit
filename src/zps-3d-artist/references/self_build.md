@@ -61,25 +61,25 @@ Rules:
 
 **3. Rollouts.** Use one builder by default. Only with authorized delegation and budget, use `self_build.rollouts` independent builders (none sees the others), each writing `rollouts/<k>/part_graph.json` + `parts_lib.py`. Build each coarse and keep the best:
 ```
-$BLENDER -b --python tools/self_build/assembly.py -- --work <w> --rollout <k> --coarse --spec task/spec.json
+<BLENDER> -b --python <SKILL>/tools/self_build/assembly.py -- --work <w> --rollout <k> --coarse --spec task/spec.json
 ```
 `--coarse` replaces `custom` parts by boxes of the same bbox. `assembly.py` writes `assembly.json` with per-view IoU when the spec has concept views. Pick the rollout with the highest worst-view IoU; copy it to `<w>/` and record all scores.
 
 **4. Part by part.** For each part n in order:
 ```
-$BLENDER -b --python tools/self_build/assembly.py -- --work <w> --upto <n>
+<BLENDER> -b --python <SKILL>/tools/self_build/assembly.py -- --work <w> --upto <n>
 tools/.deps/venv/bin/python tools/self_build/gates.py --work <w> --part <name>
 ```
 Gates: (1) runs, non-empty mesh, traceback on error; (2) contact: share of sample points on the child's attaching face within 1 mm of the parent ≥ `contact_min_ratio` (`through_axis`: both ends stick out); (3) penetration: intersection volume / child volume ≤ `penetration_max_ratio` (`inset_into`: matches `depth` ±20%); (4) floaters: connected components besides the main one with a bbox edge ≥ `floater_span_ratio` × object size, error only when the count grows; (5) health: non-manifold, zero-area, loose verts on the union; (6) part bbox within `bbox_tolerance` of what its dims declare. On failure the builder fixes that part only, using the numbers in the gate JSON. After `part_max_attempts`, commit with a warning.
 
 **5. Fit numbers.**
 ```
-$BLENDER -b --python tools/self_build/param_fit.py -- --work <w> --spec task/spec.json [--part <name>]
+<BLENDER> -b --python <SKILL>/tools/self_build/param_fit.py -- --work <w> --spec task/spec.json [--part <name>]
 ```
 Nelder–Mead over all params (or one part's), clamped to ±`max_param_change`, objective = mean orthographic IoU minus a small penalty when the worst view trails the mean. Keeps old values unless IoU improves by `min_gain`. Nobody hand-tunes numbers after this.
 
 **6. Critic loop**, up to `self_build.critic_cycles`:
-1. `$BLENDER -b --python tools/self_build/render_views.py -- --work <w> --spec task/spec.json --mode critic`. Produces, each a separate PNG at most `critic_max_long_edge` px, mid-grey background:
+1. `<BLENDER> -b --python <SKILL>/tools/self_build/render_views.py -- --work <w> --spec task/spec.json --mode critic`. Produces, each a separate PNG at most `critic_max_long_edge` px, mid-grey background:
    - `clay_<view>.png` for front, back, left, right, 34 (matte mid-grey);
    - `normal_<view>.png`, same views (world-space normal colours);
    - `overlay_<view>.png` per orthographic concept view: concept mask red, model mask blue, overlap grey; IoU and red/blue % printed in the margin;

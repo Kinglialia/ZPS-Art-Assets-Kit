@@ -8,7 +8,12 @@ Reply to the user in the user's language. The skill files are in English; that d
 
 Codex runs commands in a sandbox. By default it can write only inside the workspace and the temp folder, and it has no network. The skills folder is read-only.
 
-- **Blender must run outside the sandbox.** On macOS, Blender crashes at start inside the sandbox because the sandbox blocks the Metal GPU check, also in background mode. This affects `inspect_model.py`, `render_model.py`, every Blender-side 3D tool and the 3D preflight. Ask the user to approve each Blender command outside the sandbox, or ask them to allow the Blender command in their Codex rules. Do not retry inside the sandbox.
+- **Blender must run outside the sandbox.** On macOS, Blender crashes at start inside the sandbox because the sandbox blocks the Metal GPU check, also in background mode. This affects `inspect_model.py`, `render_model.py`, every Blender-side 3D tool, and `sweep.py`, `apply_edit.py` and `preflight.py` (they start Blender themselves). The kit installer offers a Codex rule (`~/.codex/rules/zps-art-assets-kit.rules`) that lets these exact commands run outside the sandbox without a prompt:
+  - `<Blender> -b --python <installed kit script> -- <args>`
+  - `<Blender> -b --python-exit-code 1 --python <installed kit script> -- <args>`
+  - `<3D venv python> <sweep.py | apply_edit.py | preflight.py> <args>`
+
+  Write the Blender path, the script path and the venv Python path as literal absolute paths. The rule matches the literal command, so a shell variable such as `$BLENDER` or a relative path does not match, and the command then runs in the sandbox and crashes. If the rule is not installed, ask the user to approve each Blender command outside the sandbox. Do not retry inside the sandbox.
 - **Network is off.** `pip install`, Drive sync and paid image APIs (`generate_image.py`) need the user's approval to run with network. The Codex web search tool is separate and is not affected.
 - **Write outputs to the workspace.** Give every script an output path inside the task folder. Never write into the skills folder.
 - **SVG:** `svg_render.py` needs resvg-py inside the sandbox. Its Chrome fallback crashes inside the sandbox.

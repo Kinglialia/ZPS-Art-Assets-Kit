@@ -41,7 +41,7 @@ The script tests need Pillow and resvg-py (see `package/TOOLS.md`). Use `--skip-
 - A new tool or package that a script needs must go into `package/TOOLS.md`, `src/.art-production-support/requirements.txt` and `src/.art-production-support/check_tools.py` in the same change.
 - A new script needs an intent test in `tests/`, and `build.py` must run it.
 - A file removed from `src/` must be listed in `editions/<edition>/removed-files.txt` (installed path, with the edition suffix), so that users can archive the old copy after an upgrade. The installer never deletes files.
-- Codex sandbox facts: Blender crashes inside the Codex sandbox on macOS (Metal GPU check), so Blender commands must run outside it; network is off by default; the skills folder is read-only. Keep these facts in `editions/codex/adapter.md`.
+- Codex sandbox facts: Blender crashes inside the Codex sandbox on macOS (Metal GPU check), so Blender commands must run outside it; network is off by default; the skills folder is read-only. Keep these facts in `editions/codex/adapter.md`. `editions/codex/installer/codex_rules.py` writes a Codex rule that allows only the installed kit scripts to run in headless Blender outside the sandbox. Every Blender command in the docs must use the literal form `<Blender> -b --python <absolute script path> -- <args>`, or the rule does not match. A new script that starts Blender as a child process must be added to `SPAWNERS` in that file.
 - Claude Code has no built-in image generation. Keep the image-tool choice in `editions/claude/adapter.md`.
 
 ## Release

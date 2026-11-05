@@ -12,6 +12,7 @@ Both editions come from the same `src/`. This table lists every difference. If y
 | Installer conflict check | Target, `~/.agents/skills`, `$CODEX_HOME/skills` | Target only |
 | Old names treated as conflicts | `editions/legacy-aliases.json` | Same list, plus the `-codex` names of the Codex edition |
 | Backups | `~/.local/share/zps-art-assets-kit/codex/backups` | `~/.local/share/zps-art-assets-kit/claude/backups` |
+| Codex rule for Blender | `installer/codex_rules.py` writes `~/.codex/rules/zps-art-assets-kit.rules`: headless Blender may run only the installed kit scripts outside the sandbox | Not needed |
 | `removed-files.txt` | Files that newer versions removed from Codex installs | Files that newer versions removed from Claude installs |
 
 ## Test an edition without touching the real skills

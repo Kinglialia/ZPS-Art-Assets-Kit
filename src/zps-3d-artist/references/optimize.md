@@ -13,7 +13,7 @@ Work dir: `output/<asset>/work/optimize/`.
 ## 1. Audit — `tools/optimize/audit.py`
 
 ```
-$BLENDER -b --python tools/optimize/audit.py -- --input input/model.glb --work <w> --spec task/spec.json
+<BLENDER> -b --python <SKILL>/tools/optimize/audit.py -- --input input/model.glb --work <w> --spec task/spec.json
 ```
 Imports, rejects armature/shape keys (`out_of_scope_rig`), triangulates, applies transforms, converts to metres, scales to `height_m` when given (records factor), writes `<w>/ingest.glb`. Reports: tris, verts, bbox, diag, manifold edges ratio, boundary edges, shells (count, face share, bbox share), interior-face ratio (faces never hit by rays from 64 exterior directions), degenerate faces, flipped-normal estimate, UV score (layer present, share of area in 0–1, overlap ratio, island count per 1k faces), materials, textures. Decides `branch: clean | dirty` with reasons.
 

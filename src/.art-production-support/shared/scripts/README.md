@@ -1,6 +1,6 @@
 # Tools — run per operation, not a required stage
 
-Python 3.10+. Pillow is needed for preview/palette/sprite/inspect. generate_image and check_gate use the standard library. render_model needs `bpy`. Run with the absolute path to the package scripts:
+Python 3.11+. Pillow is needed for preview/palette/sprite/inspect. generate_image and check_gate use the standard library. `inspect_model` and `render_model` run inside Blender (see below). Run with the absolute path to the package scripts:
 
 ```sh
 ART_TOOLS=/absolute/path/to/skills/.art-production-support/shared/scripts
@@ -95,8 +95,10 @@ The tool outputs `<name>.png` (1x = width/height px of the SVG) and `<name>@2x.p
 ## Evaluate a model (Blender headless)
 
 ```sh
-python3 "$ART_TOOLS/inspect_model.py" prop_v4.glb --texture-size 1024
+/Applications/Blender.app/Contents/MacOS/Blender -b --python /abs/skills/.art-production-support/shared/scripts/inspect_model.py -- prop_v4.glb --texture-size 1024
 ```
+
+**Blender command form (both model scripts).** Run them inside Blender: `<Blender> -b --python <script> -- <args>`. Write the Blender path and the script path as literal absolute paths, not shell variables such as `$ART_TOOLS`. Some hosts (for example Codex rules) allow a command by matching its literal text. The Blender path comes from `paths.blender` in the 3D skill's `config.yaml`, or from the `BLENDER` environment variable. A Python that has the `bpy` module can run the same script with `python3 <script> <args>`.
 
 The tool reports triangle count, dimensions, materials, UV sets, UV coverage/overlap (including overlap between objects that share an image)/out-of-range, vertex color, and texel density at the planned texture size. It is read-only. Use it for texture planning. Overlap and out-of-range can be intentional (mirror, tileable, trim).
 
@@ -104,11 +106,11 @@ The tool reports triangle count, dimensions, materials, UV sets, UV coverage/ove
 ## Render a model (Blender headless)
 
 ```sh
-python3 "$ART_TOOLS/render_model.py" prop_v4.glb --mode checker --views 4 --out-dir renders_checker_v4
-python3 "$ART_TOOLS/render_model.py" prop_v4.glb --mode textured --texture albedo_v2.png --out-dir renders_tex_v2
+/Applications/Blender.app/Contents/MacOS/Blender -b --python /abs/skills/.art-production-support/shared/scripts/render_model.py -- prop_v4.glb --mode checker --views 4 --out-dir /abs/task/renders_checker_v4
+/Applications/Blender.app/Contents/MacOS/Blender -b --python /abs/skills/.art-production-support/shared/scripts/render_model.py -- prop_v4.glb --mode textured --texture albedo_v2.png --out-dir /abs/task/renders_tex_v2
 ```
 
-Run with a Python that has `bpy` (an environment that already has a suitable bpy module), or with `blender -b -P render_model.py -- ...` on Mac. `clay`: form. `checker`: UV distortion/density. `textured`: texture on the model. It uses Cycles CPU with neutral lighting. It does not replace a check in Godot.
+Use the Blender command form above. `clay`: form. `checker`: UV distortion/density. `textured`: texture on the model. It uses Cycles CPU with neutral lighting. It does not replace a check in Godot.
 
 <a id="image-checks"></a>
 ## Check an image file when you need measurements

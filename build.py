@@ -82,6 +82,10 @@ def build(edition, version, run_tests):
         dst = stage / item.name
         shutil.copytree(item, dst, ignore=IGNORE) if item.is_dir() else shutil.copy(item, dst)
     shutil.copy(ED / edition / 'removed-files.txt', stage / 'installer/removed-files.txt')
+    if (ED / edition / 'installer').is_dir():
+        for extra in (ED / edition / 'installer').iterdir():
+            if extra.is_file():
+                shutil.copy(extra, stage / 'installer' / extra.name)
     for d in ('resources', 'release-notes'):
         shutil.copytree(ROOT / d, stage / d, ignore=IGNORE)
 
@@ -180,6 +184,14 @@ def tests(rt):
         r = subprocess.run([sys.executable, str(ROOT / 'tests' / t), str(scripts / target)], capture_output=True, text=True)
         if r.returncode != 0:
             errors.append(f'{t} failed: {(r.stdout + r.stderr).strip()[-400:]}')
+    rules = rt.parent / 'installer' / 'codex_rules.py'
+    if rules.exists():
+        r = subprocess.run([sys.executable, str(ROOT / 'tests' / 'test_codex_rules.py'), str(rules), str(rt)],
+                           capture_output=True, text=True)
+        if r.returncode != 0:
+            errors.append(f'test_codex_rules.py failed: {(r.stdout + r.stderr).strip()[-400:]}')
+        else:
+            print('   ', r.stdout.strip())
     for p in rt.rglob('__pycache__'):
         shutil.rmtree(p)
     return errors
