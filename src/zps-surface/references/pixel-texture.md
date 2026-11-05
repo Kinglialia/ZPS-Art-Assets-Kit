@@ -1,28 +1,31 @@
-# Pixel texture trên model
+# Pixel texture on a model
 
-Texel to và rõ, palette giới hạn, không làm mịn. Nhất quán quan trọng hơn chi tiết.
+Texels are large and clear, the palette is limited, and nothing is smoothed. Consistency matters more than detail.
 
-## Nguyên tắc
+## Principles
 
-- **Texel density cố định cho cả game** (ví dụ N texel mỗi mét): mọi asset dùng cùng giá trị; đo bằng `inspect_model.py --texture-size` và chỉnh kích thước texture/UV cho khớp. Lệch density là lỗi dễ thấy nhất của style này.
-- **Palette giới hạn** lấy từ style sheet; không thêm màu trung gian do resize hay blur.
-- **Không resample mượt**: tạo ở đúng độ phân giải đích hoặc thu nhỏ bằng Nearest; không bilinear/Lanczos.
-- **UV bám lưới texel**: cạnh UV island nằm trên ranh giới texel để pixel không bị cắt chéo; 3D Artist đặt UV theo lưới.
-- **Filter Nearest, không mipmap** (hoặc mipmap có kiểm) trên material; xem tech profile.
+- **One fixed texel density for the whole game** (for example N texels per meter). Every asset uses the same value. Measure with `inspect_model.py --texture-size`, and adjust the texture size or UV to match. A density mismatch is the most visible fault of this style.
+- **Limited palette** from the style sheet. Do not add intermediate colors from resizing or blur.
+- **No smooth resampling.** Make the image at the exact target resolution, or shrink it with Nearest. Do not use bilinear or Lanczos.
+- **UV follows the texel grid.** UV island edges lie on texel boundaries, so pixels are not cut diagonally. The 3D Artist places UV on the grid.
+- **Nearest filter, no mipmap** (or a checked mipmap) on the material. See the tech profile.
 
-## Quy trình
+## Process
 
-1. Chốt texel density, kích thước texture, palette với AD/tech profile.
-2. Tạo nguồn ở độ phân giải đích. Nếu gen ảnh lớn rồi thu nhỏ: thu bằng Nearest, rồi lượng tử về palette (`palette_report.py` để kiểm màu ngoài palette), sửa tay cụm pixel lỗi.
-3. Gắn lên model, `render_model.py` ở khoảng nhìn game; `preview.py sheet --nearest` cho texture phẳng.
+1. Fix the texel density, the texture size and the palette with the AD or the tech profile.
+2. Make the source at the target resolution. If you generate a large image and shrink it:
+   - Shrink it with Nearest.
+   - Quantize it to the palette (use `palette_report.py` to check colors outside the palette).
+   - Fix faulty pixel clusters by hand.
+3. Apply it to the model. Run `render_model.py` at the game viewing distance. For a flat texture, use `preview.py sheet --nearest`.
 
-## Tự kiểm
+## Self-check
 
-- Mọi asset cùng texel density (sai lệch nhỏ so với chuẩn).
-- Không màu ngoài palette, không pixel mờ/viền nhòe.
-- Cụm pixel đọc được hình ở khoảng nhìn game; không nhiễu pixel lẻ.
+- All assets have the same texel density (small deviation from the standard).
+- No color outside the palette. No blurry pixels or smeared edges.
+- Pixel clusters read as shapes at the game viewing distance. No stray pixel noise.
 
 ## Gotchas
 
-- Ảnh gen thu nhỏ thường ra pixel nhiễu và màu trung gian: phải lượng tử palette và dọn cụm.
-- Mipmap làm pixel nhòe ở xa: quyết định theo tech profile và kiểm ở khoảng xa nhất.
+- A shrunk generated image often gives noisy pixels and intermediate colors. You must quantize to the palette and clean the clusters.
+- Mipmaps blur pixels at distance. Decide by the tech profile and check at the longest distance.

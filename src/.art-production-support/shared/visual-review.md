@@ -1,29 +1,29 @@
-# Review có bằng chứng
+# Review with evidence
 
-## Ba trục độc lập
+## Three independent axes
 
-1. Mỹ thuật: tổng thể, nhịp, cá tính, biểu đạt và quan hệ hình/màu/cạnh/vật liệu.
-2. Đúng brief: phần khóa, style và câu hỏi đã được giải tại stage này.
-3. Khả năng sử dụng: file/mapping/import và nhìn trong điều kiện đích.
+1. Art: overall impression, rhythm, personality, expression, and the relations between shape, color, edge, and material.
+2. Brief fit: locked parts, style, and the questions that this stage has resolved.
+3. Usability: file/mapping/import, and how it looks under the target conditions.
 
-Đọc whole → inspect → whole. Chỉ soi vùng có thể giải thích/bác bỏ nhận định. Tách quan sát (mắt thấy), diễn giải (nguyên nhân có thể) và phán đoán theo mục tiêu. Không suy topology, resolution hay performance từ ảnh. Grayscale không thay kiểm thị giác màu; ảnh tĩnh không chứng minh chuyển động hoặc phản ứng người chơi.
+Read the whole, inspect, then read the whole again. Inspect only the areas that can explain or reject a judgment. Separate the observation (what the eye sees), the interpretation (possible causes), and the judgment against the goal. Do not infer topology, resolution, or performance from an image. Grayscale does not replace a visual color check. A still image does not prove motion or player reaction.
 
-## Check theo nhánh
+## Checks by branch
 
-Concept: ý tưởng phân biệt được, silhouette/negative space, tỷ lệ/cấu tạo, phối cảnh/foreshortening, hierarchy và câu hỏi dựng. Environment thêm đường đi/scale; character thêm gesture/identity giữa view; prop thêm công năng/mối nối.
+Concept: a distinguishable idea, silhouette/negative space, proportion/construction, perspective/foreshortening, hierarchy, and modeling questions. Environment adds paths/scale. Character adds gesture/identity across views. Prop adds function/joints.
 
-Surface: mảng vật liệu, hướng/scale nét, nhịp chi tiết, art intent; geometry/UV/normal/shader có thể gây cùng biểu hiện, cần phân biệt. Kiểm neutral và target lighting, góc khác, mip/compression nếu thuộc scope. Một texture phẳng đẹp chưa đạt on-model.
+Surface: material areas, stroke direction/scale, detail rhythm, art intent. Geometry/UV/normal/shader can cause the same appearance, so tell them apart. Check neutral and target lighting, other angles, and mip/compression if they are in scope. A good flat texture does not pass on-model.
 
-Asset 2D: alpha/pivot/canvas/frame, sự đồng bộ trong bộ, kích thước hiển thị và nền thực. Phần thiếu evidence đánh not_checked, không phán lỗi hoặc đạt.
+Asset 2D: alpha/pivot/canvas/frame, consistency within the set, display size, and real background. Mark parts that lack evidence as not_checked. Do not judge them as defects or as passing.
 
-UI: đúng wireframe đã duyệt, thứ tự chú ý, đủ state, chữ dài và tiếng Việt có dấu, 9-slice ở min/max size, vùng chạm sau scale. Preview safe area không thay thử thiết bị. Vấn đề flow/UX ghi cho UX/game design, không chấm là lỗi art.
+UI: it matches the approved wireframe, order of attention, enough states, long text and Vietnamese text with diacritics, 9-slice at min/max size, and touch area after scaling. A safe area preview does not replace a device test. Record flow/UX problems for UX/game design. Do not score them as art defects.
 
-## Vòng sửa
+## Revision round
 
-Khi theo dõi nhiều vòng hoặc caller yêu cầu, mỗi issue quan trọng có ID, vị trí/state, điều kiện, evidence, impact, causal hypothesis, repair direction, strengths-to-preserve và observable acceptance. Blocker là yêu cầu bắt buộc thất bại ở checkpoint này; major ảnh hưởng chất lượng đáng kể; minor là polish; preference ghi riêng. Không chặn concept rough chỉ vì thiếu chi tiết final.
+When you track several rounds, or when the caller asks, give each important issue an ID, location/state, condition, evidence, impact, causal hypothesis, repair direction, strengths-to-preserve, and observable acceptance. A blocker is a mandatory requirement that fails at this checkpoint. A major issue significantly affects quality. A minor issue is polish. Record a preference separately. Do not block a rough concept only because final detail is missing.
 
-Khóa artifact, brief và điều kiện so. Khi AD đổi yêu cầu, đánh superseded với lý do; không tính như một lỗi được sửa. Kiểm regression và ý tưởng tổng thể sau sửa. Reviewer đề xuất phương pháp, không ép artist dùng đúng kỹ thuật nếu kết quả đạt.
+Lock the artifact, the brief, and the comparison conditions. When the AD changes a requirement, mark the issue superseded with the reason. Do not count it as a fixed defect. After a fix, check for regression and check the overall idea. The reviewer proposes methods. The reviewer does not force the artist to use an exact technique if the result passes.
 
-## Verdict trung thực
+## Honest verdict
 
-Self-review không là approval của AD. Review độc lập cần context/reviewer thực riêng; không tự gọi độc lập bằng đổi persona. Kết luận: meets_checked_criteria, needs_revision hoặc insufficient_evidence, giới hạn theo stage. Chỉ dùng [gate kỹ thuật](scripts/README.md#evidence-gate) khi caller yêu cầu nghiệm thu máy đọc được; required IDs là cấu hình đã chốt, không tự bỏ để pass. Missing/stale evidence không được trộn với not_applicable. Số điểm nếu có phải có rubric và không che blocker. Không cần tìm lỗi cho đủ quota.
+A self-review is not AD approval. An independent review needs a real separate context/reviewer. Do not claim independence by changing persona. The conclusion is meets_checked_criteria, needs_revision, or insufficient_evidence, limited to the stage. Use the [technical gate](scripts/README.md#evidence-gate) only when the caller asks for machine-readable acceptance. The required IDs are an agreed configuration. Do not drop them to get a pass. Do not mix missing or stale evidence with not_applicable. If you give a score, it must have a rubric and must not hide a blocker. Do not look for defects to fill a quota.

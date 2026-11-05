@@ -1,36 +1,36 @@
-# Tech profile — Godot mobile (Web: mục mở rộng sau)
+# Tech profile — Godot mobile (Web: extension section for later)
 
-Một file cho mỗi project, do lead kỹ thuật/AD xác nhận. Artist đọc file này thay vì đoán thông số. Ô trống là chưa biết: ghi giả định trong task, không tự điền vào profile.
+One file per project, confirmed by the technical lead/AD. The artist reads this file instead of guessing parameters. An empty field means unknown. Record an assumption in the task. Do not fill it into the profile yourself.
 
 ```markdown
-# Tech profile <project> — Godot <phiên bản> — status: draft | confirmed_by:<người>
+# Tech profile <project> — Godot <version> — status: draft | confirmed_by:<person>
 
-## Màn hình đích
-- Viewport thiết kế (px) và stretch mode/aspect:
-- Thiết bị tham chiếu thấp nhất:
+## Target screen
+- Design viewport (px) and stretch mode/aspect:
+- Lowest reference device:
 - Safe area / notch:
 
 ## Asset 2D
-- Kích thước hiển thị icon/sprite chuẩn (px tại viewport thiết kế):
-- Hệ số vẽ so với hiển thị (ví dụ vẽ 2x rồi để Godot scale):
-- Filter mặc định (project setting/CanvasItem: Linear/Nearest), mipmap cho 2D:
-- Atlas/AtlasTexture hay file rời; padding giữa ô:
-- Alpha: straight; Fix Alpha Border (mặc định bật):
-- Nén: Lossless / Lossy / VRAM Compressed theo loại asset:
+- Standard display size of icon/sprite (px at the design viewport):
+- Draw scale versus display (for example draw at 2x and let Godot scale):
+- Default filter (project setting/CanvasItem: Linear/Nearest), mipmap for 2D:
+- Atlas/AtlasTexture or separate files; padding between cells:
+- Alpha: straight; Fix Alpha Border (on by default):
+- Compression: Lossless / Lossy / VRAM Compressed by asset type:
 
 ## Texture 3D
-- Shader: unlit / StandardMaterial3D / shader riêng:
-- Texel density hoặc kích thước map theo loại asset:
-- Color space: albedo sRGB, data maps linear; normal map convention (Godot dùng OpenGL Y+):
-- VRAM Compressed mobile: ETC2 (mặc định) hay ASTC (high quality); mipmap (mặc định bật khi Detect 3D):
-- Định dạng giao (PNG/glTF), quy ước tên map:
+- Shader: unlit / StandardMaterial3D / custom shader:
+- Texel density or map size by asset type:
+- Color space: albedo sRGB, data maps linear; normal map convention (Godot uses OpenGL Y+):
+- VRAM Compressed mobile: ETC2 (default) or ASTC (high quality); mipmap (on by default when Detect 3D):
+- Delivery format (PNG/glTF), map naming convention:
 
-## Đặt tên & thư mục
-- Quy ước tên file/state/frame:
-- Thư mục giao trong project / Drive:
+## Naming & folders
+- Naming convention for file/state/frame:
+- Delivery folder in the project / Drive:
 
-## Web (để sau)
-- Giới hạn kích thước tải, định dạng ảnh, nén:
+## Web (later)
+- Download size limit, image format, compression:
 ```
 
-Ghi chú cố định cho Godot 4: import 2D và 3D cấu hình riêng trên từng texture (`.import`); đổi preset import là việc của người giữ project, artist chỉ đề xuất. Kiểm ảnh trong editor/thiết bị khi có quyền, không suy từ file PNG.
+Fixed notes for Godot 4: 2D and 3D import are configured separately on each texture (`.import`). Changing the import preset is the job of the person who owns the project. The artist only proposes. Check the image in the editor/on a device when you have permission. Do not infer from the PNG file.

@@ -1,28 +1,28 @@
-# Task record — chỉ điền phần liên quan
+# Task record — fill in only the relevant parts
 
-Task nhỏ: một đoạn trong record hiện có. Không tạo file mới cho đủ mẫu.
+Small task: one paragraph in an existing record. Do not create a new file just to fill the template.
 
 ```markdown
 # <project> / <task> — status: in_progress | delivered | blocked
-- Nguồn giao: AD brief <link> | user-direct | 3D request
+- Source of assignment: AD brief <link> | user-direct | 3D request
 - Brief/Bible/style sheet version:
-- Phạm vi được giao; budget lượt gen/edit đã được giao (chưa có thì ghi "chưa giao") và các lần mở rộng đã được duyệt:
-- Source/version đầu vào; phần giữ / đổi:
+- Assigned scope; assigned budget of generate/edit rounds (write "not assigned" if none) and approved extensions:
+- Input source/version; Keep / Change:
 
-## Lượt tạo
-| # | Tool/model | Đầu vào (ảnh, mask) | Yêu cầu tóm tắt | Seed/tham số | Output | Kết quả kiểm |
+## Creation rounds
+| # | Tool/model | Input (images, mask) | Request summary | Seed/parameters | Output | Check result |
 |---|---|---|---|---|---|---|
 
-## Giao
-- File + preview đã mở:
-- Kiểm kê phần tử:
-- Self-check 6 chiều / issue còn mở:
-- Chưa kiểm (import Godot, trên thiết bị, sau bake...):
-- Trạng thái duyệt: self-checked | AD-approved <người, ngày>
+## Delivery
+- Files + previews opened:
+- Element inventory:
+- 6-dimension self-check / open issues:
+- Not checked (Godot import, on device, after bake...):
+- Approval status: self-checked | AD-approved <person, date>
 
-## Bài học (chỉ khi có)
-Tình huống → can thiệp → kết quả + bằng chứng → phạm vi áp dụng / chưa xác nhận.
-Riêng style/project → chép sang Ghi chú sản xuất của style sheet. Có vẻ đúng chung → đề xuất owner sửa skill ở repo nguồn.
+## Lessons (only when there are any)
+Situation → intervention → result + evidence → scope of application / not yet confirmed.
+Specific to a style/project → copy to the Production notes of the style sheet. Seems generally true → propose to the owner to fix the skill in the source repo.
 ```
 
-Lưu bản ghi ở repo project hoặc hệ thống task đã chọn; không lấy chat làm bản lưu duy nhất. Bài học chỉ là candidate cho tới khi thử lại trên task mới và được xác nhận.
+Store the record in the project repo or in the chosen task system. Do not use chat as the only copy. A lesson is only a candidate until it is tested again on a new task and confirmed.

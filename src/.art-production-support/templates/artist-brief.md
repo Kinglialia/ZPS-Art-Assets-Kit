@@ -1,40 +1,40 @@
-# Artist Brief — cùng mục với AD `art-bible-artist-direction` v0.1.0
+# Artist Brief — same sections as AD `art-bible-artist-direction` v0.1.0
 
-Khi AD đã giao brief, dùng brief đó, không chép lại. Khi user mô tả trực tiếp, artist tự điền mẫu này ở mức tối thiểu; mục chưa biết ghi `?` hoặc `giả định: ...`. Brief tự lập là đề xuất, không phải AD approval.
+When the AD has delivered a brief, use that brief. Do not copy it again. When the user describes the work directly, the artist fills in this template at a minimum level. For an unknown item, write `?` or `assumption: ...`. A self-made brief is a proposal. It is not AD approval.
 
 ```markdown
 # Brief <asset/task> — source: AD | user-direct | 3D-request — status: draft | confirmed
 
-## Mục đích
-- Asset để làm gì, người chơi dùng/nhìn nó thế nào:
-- Vị trí trong game/thế giới:
-- Điều kiện xem đích (camera, kích thước hiển thị px, nền):
+## Purpose
+- What the asset is for, how the player uses/sees it:
+- Position in the game/world:
+- Target viewing conditions (camera, display size in px, background):
 
 ## Style
-- Art Bible version: <hoặc "chưa có">
-- Style sheet: <link/version nếu tự đọc>
-- Rule áp dụng (chỉ phần liên quan):
+- Art Bible version: <or "none yet">
+- Style sheet: <link/version if read by the artist>
+- Applicable rules (relevant parts only):
 
-## Cố định / được khám phá
-- Cố định (silhouette, màu nhận diện, tỷ lệ...):
-- Được khám phá:
+## Fixed / explorable
+- Fixed (silhouette, identifying color, proportion...):
+- Explorable:
 
 ## Reference
-| ID | Vai trò (Inspiration/Execution/Avoid) | Lấy gì | Không lấy gì |
+| ID | Role (Inspiration/Execution/Avoid) | Take what | Do not take what |
 |---|---|---|---|
 
 ## Deliverables
-- Subject / biến thể / states / views:
-- Kích thước pixel, alpha, format, source editability:
-- Ràng buộc kỹ thuật (Godot import, atlas, UV, shader) — không bịa số:
-- Nơi giao:
+- Subject / variants / states / views:
+- Pixel size, alpha, format, source editability:
+- Technical constraints (Godot import, atlas, UV, shader) — do not invent numbers:
+- Delivery location:
 
-## Checkpoint và nghiệm thu
-- Checkpoint (thumbnail / bản thử / final) và người duyệt:
-- Tiêu chí nghiệm thu quan sát được ở điều kiện đích:
-- Budget lượt gen/edit:
+## Checkpoints and acceptance
+- Checkpoint (thumbnail / test sample / final) and approver:
+- Observable acceptance criteria under the target conditions:
+- Budget of generate/edit rounds:
 
-## Câu hỏi còn mở
+## Open questions
 ```
 
-Tiêu chí nghiệm thu tốt: "Icon kiếm phân biệt được với icon rìu ở 64px trên nền panel tối, không chữ, không hiệu ứng sáng". Kém: "đẹp, đúng style".
+A good acceptance criterion: "The sword icon is distinguishable from the axe icon at 64px on a dark panel background, with no text and no glow effect". A bad one: "pretty, on style".

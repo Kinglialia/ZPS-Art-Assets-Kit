@@ -1,19 +1,19 @@
-# Review — quick hoặc tracked (cùng trường issue với AD)
+# Review — quick or tracked (same issue fields as the AD)
 
-Trường issue, mức ưu tiên và verdict lấy từ [issue-fields.json](issue-fields.json); AD `artistic-critique` dùng cùng bộ, nên issue artist ghi có thể chuyển thẳng cho AD và ngược lại.
+The issue fields, priority levels, and verdict come from [issue-fields.json](issue-fields.json). The AD `artistic-critique` uses the same set, so an issue that the artist records can pass directly to the AD and the other way around.
 
-**Quick:** artifact/version + điều kiện đã xem → điểm mạnh cần giữ → 1–3 vấn đề có tác động + hướng sửa → phần chưa đủ bằng chứng.
+**Quick:** artifact/version + viewing conditions → strengths to keep → 1–3 issues that have impact + repair direction → parts with insufficient evidence.
 
-**Self-check 6 chiều** (cùng trục `visual-intelligence` của AD): composition · shape_silhouette · color_value · lighting · material_texture · visual_appeal. Mỗi chiều: đạt / lệch (vì sao) / không áp dụng / chưa kiểm.
+**6-dimension self-check** (same axes as AD `visual-intelligence`): composition · shape_silhouette · color_value · lighting · material_texture · visual_appeal. For each dimension: pass / deviates (why) / not applicable / not checked.
 
-**Tracked** khi nhiều lỗi, nhiều vòng sửa hoặc AD yêu cầu:
+**Tracked** when there are many defects, many revision rounds, or the AD asks:
 
 | id | priority | region | viewing_condition | evidence | consequence | confidence | repair | preserve | acceptance | status |
 |---|---|---|---|---|---|---|---|---|---|---|
-| I-01 | blocker | chuôi kiếm | 64px, nền panel tối | ngọc đỏ không có trong brief | lệch cấp độ vật phẩm | cao | xóa ngọc, giữ khối chuôi | silhouette lưỡi | 64px không còn điểm đỏ ở chuôi | open |
+| I-01 | blocker | sword hilt | 64px, dark panel background | red gem is not in the brief | wrong item tier | high | remove the gem, keep the hilt form | blade silhouette | at 64px no red dot remains on the hilt | open |
 
-`priority`: blocker (yêu cầu bắt buộc hoặc phân biệt gameplay thiết yếu thất bại) / major (chất lượng, nhất quán đáng kể) / minor (polish cục bộ) / preference (sở thích, ghi riêng).
+`priority`: blocker (a mandatory requirement or essential gameplay distinction fails) / major (significant quality or consistency) / minor (local polish) / preference (taste, record separately).
 
-`status`: open / resolved / superseded (AD đổi yêu cầu) / regression. Giữ `id` qua các version. Chỉ `resolved` khi artifact mới chứng minh `acceptance`.
+`status`: open / resolved / superseded (the AD changed the requirement) / regression. Keep the `id` across versions. Mark `resolved` only when the new artifact proves the `acceptance`.
 
-Verdict: meets_checked_criteria / needs_revision / insufficient_evidence — giới hạn theo phần đã kiểm. Ghi rõ self-review hay reviewer khác; verdict không phải AD approval hay quyền ship.
+Verdict: meets_checked_criteria / needs_revision / insufficient_evidence — limited to the parts that were checked. State clearly whether it is a self-review or another reviewer. The verdict is not AD approval or permission to ship.

@@ -1,20 +1,20 @@
 # Stylized hand-painted
 
-## Khóa mục tiêu ánh sáng
+## Lock the lighting target
 
-Chọn theo brief: unlit có ánh sáng vẽ sẵn, stylized lit với một phần shading chủ ý, hay base color painted dưới PBR. Không suy từ chữ hand-painted. Ánh sáng bake vào màu đi theo object khi object quay; phải kiểm phạm vi xoay/ánh sáng của game.
+Choose from the brief: unlit with painted lighting, stylized lit with some deliberate shading, or painted base color under PBR. Do not infer it from the words "hand-painted". Lighting baked into color rotates with the object when the object turns. Check the rotation and lighting range of the game.
 
-## Tiến trình author có thể điều chỉnh
+## Adjustable author process
 
-1. **Mảng nền và hierarchy:** xác định vùng vật liệu và độ sáng tương đối trên model. Chưa cần noise; khối lớn và dấu nhận diện phải đọc ở kích thước game.
-2. **Cấu trúc bề mặt:** chia tấm gỗ, thớ, đường may, nếp lớn, mặt đá theo nguyên nhân tạo thành. Hướng nét mô tả khối, có nhóm và khoảng nghỉ.
-3. **Màu có quan hệ:** thay đổi hue/value/saturation có chọn lọc theo vật liệu, môi trường và ý đồ. Bóng lạnh/highlight ấm là một lựa chọn, không quy tắc. Không dùng saturation hoặc gradient để che phân mảng sai.
-4. **Ánh sáng được phép:** với unlit, mô tả mặt, tiếp xúc và chiều sâu theo rig giả định; với lit, tránh highlight/specular và bóng đổ cố định trừ hiệu ứng đã chốt. AO/art shading phải kiểm không làm bẩn/đen kép dưới shader.
-5. **Cạnh và điểm nhấn:** độ dày, độ sắc và cường độ nét thay đổi theo khối/scale/style; không tô mọi mép bằng một đường sáng. Highlight phải có lý do ánh sáng hoặc ngôn ngữ minh họa đã duyệt.
-6. **Dấu sử dụng và polish:** thêm đúng nơi góp câu chuyện/nhận diện; giữ vùng nghỉ. Thu nhỏ thường xuyên, bỏ hoặc tổ chức lại chi tiết chỉ tạo nhiễu trong điều kiện đích.
+1. **Base blocks and hierarchy:** define material areas and relative values on the model. Noise is not needed yet. Large forms and identity marks must read at game size.
+2. **Surface structure:** divide wood planks, grain, stitches, large folds and stone faces by what causes them. Stroke direction describes the form. Use groups of strokes and rest areas.
+3. **Related color:** change hue, value and saturation selectively, by material, environment and intent. Cool shadow with warm highlight is one option, not a rule. Do not use saturation or gradient to hide wrong segmentation.
+4. **Allowed lighting:** for unlit, describe faces, contact and depth for an assumed light rig. For lit, avoid highlights, specular and fixed cast shadows unless they are an approved effect. Check that AO and art shading do not double the dirt or darkening under the shader.
+5. **Edges and accents:** edge thickness, sharpness and stroke strength vary with form, scale and style. Do not paint every edge with one light line. A highlight needs a lighting reason or an approved illustration language.
+6. **Wear marks and polish:** add them only where they support the story or identity. Keep rest areas. Shrink the image often. Remove or reorganize detail that only makes noise under the target conditions.
 
-Không bắt mọi asset đủ sáu lớp/source layer này; đây là thứ tự quyết định, không tiêu chí chấm hình. Layer chỉ được khai là có khi thực sự tồn tại trong source.
+Do not require every asset to have all six layers or source layers. This is an order of decisions, not a scoring criterion. Declare a layer only if it really exists in the source.
 
-## Kiểm và tra cứu thêm
+## Check and further reference
 
-Xem base-color/unlit view khi cần tách nét khỏi shading, rồi shader thực. Giữ biểu đạt tổng thể; không tối đa contrast, sắc nét hoặc độ bẩn. Recipe gỗ/đá/vải và kỹ thuật stroke chỉ có tại [painting practice](painting-practice.md), đọc khi cần ví dụ để giải quyết vùng khó; không là bước bắt buộc.
+When you need to separate strokes from shading, look at the base-color/unlit view first, then at the real shader. Keep the overall expression. Do not maximize contrast, sharpness or dirt. Recipes for wood, stone and cloth, and stroke techniques, are only in [painting practice](painting-practice.md). Read it when you need examples to solve a hard area. It is not a required step.

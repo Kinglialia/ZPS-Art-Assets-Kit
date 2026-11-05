@@ -1,9 +1,9 @@
-# Sửa ảnh không làm trôi thiết kế
+# Edit an image without design drift
 
-Ghi Gốc/Giữ/Đổi bằng thuộc tính và vùng cụ thể. Reference phải đánh số/vai trò trong yêu cầu công cụ. Chọn sửa cục bộ khi có source phù hợp; không âm thầm sinh ảnh mới từ chữ để thay bản edit.
+Record Source/Keep/Change with specific attributes and areas. Number each reference and give it a role in the tool request. Choose a local edit when a suitable source exists. Do not silently generate a new image from text to replace an edit.
 
-Giữ source và phiên bản được duyệt. Công cụ có thể đổi framing, tỷ lệ, chi tiết phụ hoặc số bộ phận dù prompt yêu cầu giữ. Mở và so cả vùng sửa lẫn vùng giữ. Khi yêu cầu giữ pixel tuyệt đối, dùng công cụ hỗ trợ mask/composite theo chính sách môi trường và so pixel vùng khóa; prompt không bảo đảm bất biến. Không gọi phần ghép từ ảnh phẳng là source có layer vẽ gốc.
+Keep the source and the approved version. A tool can change framing, proportions, secondary details, or the number of parts even when the prompt says to keep them. Open the image and compare both the edited area and the kept area. If the request needs exact pixels, use a tool that supports a mask or composite, as the environment policy allows. Then compare the pixels of the locked areas. A prompt does not guarantee that nothing changes. Do not call a composite made from a flat image a source with the original paint layers.
 
-Nếu ảnh đầu ra khác kích thước, kiểm crop/landmark trước. Resize có thể sửa kích thước file nhưng không tự sửa cấu trúc hay phối cảnh; không kéo méo để vừa guide. Phần chỉnh sửa ảnh phải dùng công cụ được phép của phiên, không đi vòng qua hạn chế tool.
+If the output image has a different size, check the crop and landmarks first. Resizing can fix the file size. It does not fix structure or perspective. Do not stretch the image to fit a guide. Do image edits with the tools that the session allows. Do not bypass tool restrictions.
 
-So toàn hình, vùng quan trọng và kích thước đích. Đóng issue khi artifact mới chứng minh đã sửa; không lấy lời giải thích làm bằng chứng. Yêu cầu AD mới là thay brief, không phải lỗi hồi tố. Hết budget hoặc lỗi lặp thì chẩn đoán nguyên nhân và hướng khác, không retry prompt vô hạn.
+Compare the full image, the important areas, and the target size. Close an issue when the new artifact proves the fix. Do not accept an explanation as evidence. A new AD request replaces the brief. It is not a retroactive error. If the budget runs out or an error repeats, diagnose the cause and find a different direction. Do not retry the prompt without limit.

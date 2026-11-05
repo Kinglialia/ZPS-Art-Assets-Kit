@@ -1,13 +1,13 @@
-# UI accessibility theo task
+# UI accessibility by task
 
-Chốt mục tiêu và cách kiểm cho task; không tuyên bố đạt chuẩn chung từ checklist.
+Set the goal and the check method for the task. Do not claim a general standard from a checklist.
 
-- Vùng chạm sau scale, khoảng cách giữa hành động dễ nhầm, thao tác lặp, che khuất bởi tay.
-- Phóng to chữ/UI trong phạm vi hỗ trợ mà nội dung và hành động vẫn dùng được.
-- Tương phản trên nền thực tế (nền gameplay, ảnh, chuyển động), không chỉ nền phẳng.
-- Trạng thái quan trọng có tín hiệu ngoài màu: nhãn, hình, pattern.
-- Kết quả quan trọng không chỉ báo bằng âm thanh.
-- Motion không thiết yếu có phương án giảm/tắt khi thuộc yêu cầu; tránh nhấp nháy gây khó chịu.
-- Nút chỉ có icon cần nghĩa rõ; ghi nhãn, thứ tự focus và semantic khi có yêu cầu công nghệ hỗ trợ.
+- Touch area after scaling, spacing between actions that are easy to confuse, repeated actions, occlusion by the hand.
+- Enlarged text/UI within the supported range, so that content and actions stay usable.
+- Contrast on the real background (gameplay background, image, motion), not only on a flat background.
+- Important states have a signal other than color: label, shape, pattern.
+- Do not signal an important result by sound only.
+- Non-essential motion has a reduce/off option when it is in the requirements. Avoid flashing that causes discomfort.
+- A button with only an icon needs a clear meaning. Record the label, focus order and semantics when assistive technology is required.
 
-Tham khảo W3C để hiểu vấn đề ([màu](https://github.com/w3c/wcag/blob/main/understanding/20/use-of-color.html), [contrast](https://github.com/w3c/wcag/blob/main/understanding/20/contrast-minimum.html), [vùng chạm](https://github.com/w3c/wcag/blob/main/understanding/22/target-size-minimum.html), [motion](https://github.com/w3c/wcag/blob/main/understanding/21/animation-from-interactions.html)). Đây là tiêu chí web: CSS pixel không gán thẳng cho đơn vị Godot và không chứng nhận game native. Ghi đơn vị và nguồn mục tiêu của project; screen reader/focus phải đối chiếu đúng Godot, hệ điều hành và thiết bị.
+Use W3C to understand the problem ([color](https://github.com/w3c/wcag/blob/main/understanding/20/use-of-color.html), [contrast](https://github.com/w3c/wcag/blob/main/understanding/20/contrast-minimum.html), [touch area](https://github.com/w3c/wcag/blob/main/understanding/22/target-size-minimum.html), [motion](https://github.com/w3c/wcag/blob/main/understanding/21/animation-from-interactions.html)). These are web criteria. Do not assign a CSS pixel directly to a Godot unit. They do not certify a native game. Record the unit and the source of the project target. Check screen reader/focus against the actual Godot version, operating system and device.

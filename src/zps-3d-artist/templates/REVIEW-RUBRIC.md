@@ -1,57 +1,57 @@
-# Rubric review hình ảnh — 3d-artist v0.3 (từ art-3d-artist v0.1)
+# Visual review rubric — 3d-artist v0.3 (from art-3d-artist v0.1)
 
-Dùng cho mọi lượt review sản phẩm có concept. Người duyệt hình ảnh là người dùng hoặc subagent `3d-critic` với context mới mỗi lượt, chỉ nhận bộ review của đúng bước đang review. Orchestrator dùng rubric này để tự kiểm trước khi gửi; tự kiểm không thay lượt duyệt độc lập.
+Use this for every review of a product that has a concept. The visual approver is the user, or the subagent `3d-critic` with a fresh context for each round. The critic receives only the review set for the step that is under review. The orchestrator uses this rubric to self-check before it sends the set. A self-check does not replace an independent approval round.
 
-Concept orthographic (front/left/back/right) không có ConceptCam nên không có `concept_compare.png`: thay bằng `overlay_*.png` của `tools/self_build/render_views.py --input <final.glb> --mode critic` (concept đỏ, model xanh). `concept_compare.png` chỉ bắt buộc khi spec có ConceptCam.
+An orthographic concept (front/left/back/right) has no ConceptCam, so it has no `concept_compare.png`. Use the `overlay_*.png` files from `tools/self_build/render_views.py --input <final.glb> --mode critic` instead (concept in red, model in blue). `concept_compare.png` is required only when the spec has a ConceptCam.
 
-Trong vòng lặp self-build, critic nhận thêm bộ ảnh của `tools/self_build/render_views.py --mode critic` (`clay_*`, `normal_*`, `overlay_*`, `parts_*`, `prev_34`). Mục 1 (Khối) chỉ chấm trên `clay_*` và `normal_*`, vì texture che lỗi khối (research_notes §2).
+In the self-build loop, the critic also receives the image set from `tools/self_build/render_views.py --mode critic` (`clay_*`, `normal_*`, `overlay_*`, `parts_*`, `prev_34`). Score item 1 (Mass) only on `clay_*` and `normal_*`, because texture hides mass faults (research_notes §2).
 
-## Bộ review theo bước (người gửi review chuẩn bị; tên file theo script `render_rig`/`asset_checks`, không có script thì dùng ảnh tương đương chụp đúng camera game và ghi nguồn)
-| Thành phần | File | Khối | Texture | Engine |
+## Review set by step (the sender prepares it; file names follow the `render_rig`/`asset_checks` scripts; if no script exists, use equivalent images taken with the exact game camera and record the source)
+| Component | File | Mass | Texture | Engine |
 |---|---|:-:|:-:|:-:|
-| Concept đã duyệt + brief (ưu tiên đọc, camera game, góc xoay được phép, shading) | brief | ✓ | ✓ | ✓ |
-| **Clay ở camera game** — xem trước | `game_clay_crop.png`, `view*_clay.png` | ✓ | ✓ | ✓ |
-| JSON đo: budget_use, coverage, IoU, kích thước | `mesh_check`, `concept_coverage`, `iou_check` | ✓ | ✓ | ✓ |
-| Sản phẩm ở camera game, kích thước thật và phóng 2× | `game_albedo_crop.png`, `game_albedo_crop_2x.png` | | ✓ | ✓ |
-| Concept \| sản phẩm ở góc concept | `concept_compare.png` | | ✓ | ✓ |
-| Các góc xoay trong phạm vi brief | `view*_albedo.png` | | ✓ | ✓ |
-| JSON uv / export | `uv_check`, `export_check` | | uv | ✓ |
-| Ảnh engine ở camera game | ảnh chụp engine | | | ✓ |
+| Approved concept + brief (reading priority, game camera, allowed rotation angles, shading) | brief | ✓ | ✓ | ✓ |
+| **Clay at the game camera** — view this first | `game_clay_crop.png`, `view*_clay.png` | ✓ | ✓ | ✓ |
+| Measurement JSON: budget_use, coverage, IoU, dimensions | `mesh_check`, `concept_coverage`, `iou_check` | ✓ | ✓ | ✓ |
+| Product at the game camera, real size and enlarged 2× | `game_albedo_crop.png`, `game_albedo_crop_2x.png` | | ✓ | ✓ |
+| Concept \| product at the concept angle | `concept_compare.png` | | ✓ | ✓ |
+| Rotation angles within the brief scope | `view*_albedo.png` | | ✓ | ✓ |
+| uv / export JSON | `uv_check`, `export_check` | | uv | ✓ |
+| Engine image at the game camera | engine screenshot | | | ✓ |
 
-Camera game trùng camera concept (concept vẽ đè grey-box ở camera game): bỏ `game_albedo_crop.png`, dùng `concept_compare.png` và `game_albedo_crop_2x.png`.
+If the game camera is the same as the concept camera (the concept draws over the grey-box at the game camera), omit `game_albedo_crop.png`. Use `concept_compare.png` and `game_albedo_crop_2x.png`.
 
-Không gửi: bản trước, lịch sử làm việc, lời giải thích của artist. Thiếu thành phần đánh ✓ của bước đang review → người duyệt trả bộ review về người gửi, không kết luận.
+Do not send: the previous version, the work history, or the artist's explanations. If a component marked ✓ for the step under review is missing, the approver returns the review set to the sender and gives no conclusion.
 
-## Thứ tự xem — mục 1 đến 5 đều chặn
-| Mục | Khối | Texture | Engine |
+## Viewing order — items 1 to 5 all block
+| Item | Mass | Texture | Engine |
 |---|:-:|:-:|:-:|
-| 1 Khối | ✓ | ✓ | ✓ |
-| 2 Silhouette, bố cục | ✓ | ✓ | ✓ |
-| 3 Ưu tiên đọc | phần khối | ✓ | ✓ |
-| 4 Look | | ✓ (trừ chiếu sáng) | ✓ |
-| 5 Góc xoay | phần khối | ✓ | ✓ |
+| 1 Mass | ✓ | ✓ | ✓ |
+| 2 Silhouette, composition | ✓ | ✓ | ✓ |
+| 3 Reading priority | mass part | ✓ | ✓ |
+| 4 Look | | ✓ (except lighting) | ✓ |
+| 5 Rotation angles | mass part | ✓ | ✓ |
 
-Mục không thuộc bước đang review ghi vào "Chưa kiểm được", không tính là lỗi.
+Write an item that does not belong to the step under review in "Not checked". Do not count it as a fault.
 
-1. **Khối (chỉ nhìn clay ở camera game).** Clay có đọc ra ngôn ngữ khối của concept không: các mặt vát lớn, khối con, độ nghiêng mặt đỉnh. Khối tròn trịa, quá ít mặt hoặc "như ổ bánh mì" là `chưa đạt` dù texture đẹp. Xem clay trước để texture chiếu không che khối thô.
-2. **Silhouette và bố cục** ở góc concept và camera game: đường viền lớn, tỷ lệ, vị trí trước/sau, che khuất. IoU dưới `iou.min_iou` trong spec là `chưa đạt`; IoU cao không chứng minh khối đúng (với M1 IoU gần như luôn cao).
-3. **Ưu tiên đọc** ở camera game, kích thước thật: từng dòng trong brief đọc ra hay không. Bước khối chỉ xét các dòng thuộc về hình khối.
-4. **Look** so với concept: màu, nét, vật liệu, mức chi tiết; ảnh engine: kiểm chiếu sáng hai lần theo shading trong brief.
-5. **Các góc xoay trong phạm vi brief:** không kéo sọc, không mảng lặp lộ rõ, không mặt trống, không vật thể lòi qua nhau. Bước khối chỉ xét lòi qua nhau và mặt thiếu. Ngoài phạm vi brief chỉ ghi nhận xét.
+1. **Mass (look only at clay at the game camera).** Does the clay show the mass language of the concept? Check the large chamfer faces, the sub-masses, and the slope of the top face. A mass that is round, has too few faces, or looks "like a loaf of bread" is `not passed`, even if the texture is good. View the clay first, so that a projected texture does not hide the rough mass.
+2. **Silhouette and composition** at the concept angle and the game camera: large outlines, proportions, front/back position, and occlusion. An IoU below `iou.min_iou` in the spec is `not passed`. A high IoU does not prove the mass is correct (with M1, IoU is almost always high).
+3. **Reading priority** at the game camera and real size: does each line in the brief read or not? The mass step considers only the lines that belong to the form.
+4. **Look** compared with the concept: color, line, material, and level of detail. For the engine image, check the lighting twice, following the shading in the brief.
+5. **Rotation angles within the brief scope:** no stretched streaks, no obvious repeating patches, no empty faces, and no objects that poke through each other. The mass step considers only objects that poke through each other and missing faces. Outside the brief scope, record only a comment.
 
-## Ghi kết quả
+## Record the result
 ```
-BƯỚC: khối | texture | engine
-KẾT LUẬN: đạt | chưa đạt
-Lỗi (lớn trước):
-- [mục 1–5] [vị trí] → [khác concept thế nào] → [sửa gì] → [dấu hiệu đạt]
-Sửa nhỏ kèm "đạt" (chỉ lỗi kỹ thuật có script đo: pivot, tên object, padding UV, kích thước trong dung sai; ghi script + ngưỡng):
-Giữ: [những gì đã khớp concept]
-Chưa kiểm được: [...]
+STEP: mass | texture | engine
+VERDICT: pass | not passed
+Faults (largest first):
+- [item 1–5] [location] → [how it differs from the concept] → [what to fix] → [sign of pass]
+Minor fixes with "pass" (only technical faults that a script measures: pivot, object name, UV padding, size within tolerance; record the script + threshold):
+Keep: [what already matches the concept]
+Not checked: [...]
 ```
-Có một lỗi ở mục 1–5 → `chưa đạt`. Lỗi nhìn bằng mắt không được xếp vào sửa nhỏ. Người giao việc (hoặc artist, khi người giao việc cho phép) kiểm sửa nhỏ bằng cách chạy lại script đã ghi; pass thì giữ `đạt`, không review lại. Một bước chỉ được một lần `đạt` kèm sửa nhỏ.
+If there is one fault in items 1–5, the verdict is `not passed`. A fault that you see by eye is not a minor fix. The task giver (or the artist, when the task giver allows it) checks a minor fix by running the recorded script again. If it passes, keep `pass` and do not review again. One step can have only one `pass` with minor fixes.
 
-## Ví dụ (từ test 1 và bài thử M1)
-- Sai: "Đạt kèm điều kiện: thân L như xô; sửa ở bước mesh." → lỗi khối (mục 1), phải `chưa đạt`.
-- Sai: "Ảnh ở góc concept giống hệt concept, IoU 0.98 → đạt." → với M1 hai điều này đúng sẵn; phải xem clay ở camera game.
-- Đúng: "chưa đạt. [1] RockL ở camera game → clay là khối tròn, concept có ~8 mặt vát lớn và 3 khối chân → cắt thêm mặt vát theo concept → clay ở camera game thấy rõ các mặt vát lớn."
+## Examples (from test 1 and the M1 trial)
+- Wrong: "Pass with conditions: body L is like a bucket; fix in the mesh step." → This is a mass fault (item 1). It must be `not passed`.
+- Wrong: "The image at the concept angle is identical to the concept, IoU 0.98 → pass." → With M1, both of these are true already. You must view the clay at the game camera.
+- Right: "not passed. [1] RockL at the game camera → the clay is a round mass, but the concept has about 8 large chamfer faces and 3 leg masses → cut more chamfer faces as in the concept → the large chamfer faces are clearly visible in the clay at the game camera."

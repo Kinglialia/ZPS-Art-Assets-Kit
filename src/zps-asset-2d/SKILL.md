@@ -10,37 +10,62 @@ metadata:
 
 **Not for:** UI elements (zps-ui); 3D asset concepts (zps-concept-artist); textures on models (zps-surface).
 
-Theo [quy tắc chung](../.art-production-support/rules/art-operation.md) và [chuẩn chất lượng](../.art-production-support/rules/art-quality.md).
+Follow the [shared rules](../.art-production-support/rules/art-operation.md) and the [quality standard](../.art-production-support/rules/art-quality.md).
 
 ## Intake
 
-Cần: brief, Bible/style sheet, asset mẫu của bộ (theo [asset mẫu](../.art-production-support/shared/set-anchor.md)), kích thước hiển thị và file, alpha, pivot/baseline, states/frames, nền hiển thị. Thông số engine: Godot theo [tech profile](../.art-production-support/templates/tech-profile-godot.md); engine khác theo thông số project. Concept đã chốt (nếu có) làm Execution reference. Icon mới tự thiết kế trong phạm vi brief; câu hỏi thiết kế lớn (nhân vật/prop chưa chốt): báo user cần concept đã chốt. Không có Bible/style sheet đủ, chỉ có ảnh reference: đọc style theo [style read](../.art-production-support/shared/style-read.md) rồi làm cả bộ và trình duyệt một lần; chỉ làm mẫu trước khi user yêu cầu. Reference mâu thuẫn hoặc cần style cho cả project → đề xuất AD.
+Required:
+- Brief.
+- Bible/style sheet.
+- Set anchor of the set (see [set anchor](../.art-production-support/shared/set-anchor.md)).
+- Display size and file size.
+- Alpha.
+- Pivot/baseline.
+- States/frames.
+- Display background.
+
+Engine specifications: for Godot, use the [tech profile](../.art-production-support/templates/tech-profile-godot.md). For other engines, use the project specifications. An approved concept (if there is one) is the Execution reference.
+
+Design a new icon yourself within the scope of the brief. For a large design question (character/prop not yet approved), tell the user that an approved concept is needed.
+
+If there is no complete Bible/style sheet and only reference images, read the style with [style read](../.art-production-support/shared/style-read.md). Then make the whole set and present it once. Make a single sample first only if the user asks. If the references conflict, or the whole project needs a style, propose it to the AD.
 
 ## Workflow
 
-1. Đọc [production](references/production.md) khi tạo mới hoặc đổi canvas/alpha/pivot/frame/import; sửa giữ thiết kế: [revision](../.art-production-support/shared/revision.md).
-2. Ngân sách chi tiết theo **kích thước hiển thị**: ở kích thước nhỏ (ví dụ icon 64px), ưu tiên silhouette và vài điểm nhận diện chính; kiểm bằng `preview.py sheet` ở kích thước đích thay vì đếm chi tiết.
-3. Tạo theo [gen craft](../.art-production-support/shared/gen-craft.md), asset mẫu của bộ làm reference đầu vào.
-4. Hậu kỳ: tách nền, crop theo canvas cố định, đặt pivot/baseline, scale về kích thước file; không auto-crop từng frame.
-5. `preview.py sheet` (kích thước đích, nền sáng/tối/game); `tile` cho tile; `sprite_check.py` và `anim_preview.py` (filmstrip, onion skin, GIF) cho frame; `palette_report.py` khi có palette; `inspect_image.py` cho hợp đồng file.
-6. Mở preview; kiểm thêm thắt theo [chuẩn chất lượng](../.art-production-support/rules/art-quality.md), bảng lỗi ảnh gen, self-check; sửa tới khi đạt hoặc hết budget. Ảnh chưa đạt: chọn cách sửa theo [fix playbook](../.art-production-support/shared/fix-playbook.md). Task nhiều lượt hoặc cần bàn giao: ghi [task record](../.art-production-support/templates/task-record.md).
+1. Read [production](references/production.md) when you create a new asset or change canvas/alpha/pivot/frame/import. For a revision that keeps the design, use [revision](../.art-production-support/shared/revision.md).
+2. Set the detail budget by **display size**. At a small size (for example a 64px icon), give priority to the silhouette and a few main identifying points. Check with `preview.py sheet` at target size. Do not count details.
+3. Generate with [gen craft](../.art-production-support/shared/gen-craft.md). Use the set anchor of the set as the input reference.
+4. Post-process: remove the background, crop to a fixed canvas, set pivot/baseline, scale to the file size. Do not auto-crop each frame.
+5. Run these tools:
+   - `preview.py sheet` (target size; light, dark and game backgrounds).
+   - `tile` for a tile.
+   - `sprite_check.py` and `anim_preview.py` (filmstrip, onion skin, GIF) for frames.
+   - `palette_report.py` when a palette exists.
+   - `inspect_image.py` for the file contract.
+6. Open the preview. Check for added elements against the [quality standard](../.art-production-support/rules/art-quality.md), the generated-image fault table and the self-check. Fix until the asset passes or the budget ends. If an image does not pass, choose the fix with the [fix playbook](../.art-production-support/shared/fix-playbook.md). For a multi-turn task or a task that needs handoff, write a [task record](../.art-production-support/templates/task-record.md).
 
 ## Self-check
 
-- Đọc được ở kích thước hiển thị trên nền game; phân biệt với asset cùng bộ.
-- Đồng bộ bộ: cùng góc nhìn, độ dày nét, mức chi tiết, hướng sáng, scale vật.
-- Alpha sạch (không halo trên nền tối/sáng), canvas/pivot đúng hợp đồng.
-- Tile nối liền, không lộ dấu lặp; frame không rung pivot.
+- Readable at display size on the game background; distinguishable from other assets in the same set.
+- Set consistency: same viewing angle, stroke weight, detail level, light direction, object scale.
+- Clean alpha (no halo on dark/light backgrounds); canvas/pivot follow the contract.
+- Tile joins with no visible repeat mark; frames do not jitter the pivot.
 
 ## Handoff
 
-Giao cả bộ hoặc bản final: gọi [2D Review](../zps-2d-review/SKILL.md) trước khi giao (mục "Khi Asset 2D hoặc UI gọi"); sửa issue rồi chỉ kiểm lại các issue đó. Sau khi AD/user duyệt: ghi asset mẫu theo [asset mẫu](../.art-production-support/shared/set-anchor.md).
+When you deliver a full set or a final, call [2D Review](../zps-2d-review/SKILL.md) before you deliver (section "When Asset 2D or UI calls this skill"). Fix the issues, then check only those issues again. After the AD/user approves, record the set anchor as described in [set anchor](../.art-production-support/shared/set-anchor.md).
 
-PNG đúng kích thước/alpha, source thực có, contact sheet đã mở, GIF animation nếu có (cho người duyệt xem), đề xuất import (filter, mipmap, nén, atlas), trạng thái: export đã kiểm / đã import vào engine / đã xem trên thiết bị.
+The handoff contains:
+- PNG with the correct size/alpha.
+- The real source file.
+- The contact sheet you opened.
+- GIF animation, if there is one (for the approver to view).
+- Import proposal (filter, mipmap, compression, atlas).
+- Status: export checked / imported into the engine / viewed on a device.
 
 ## Gotchas
 
-- Gen icon hay thêm khung, nền tròn, bóng đổ, glow ngoài bộ: so với icon mẫu.
-- Thu nhỏ ảnh gen làm mất nét mảnh: tăng độ dày nét/khối trước, không chỉ sharpen.
-- Ảnh gen hay có nền giả trong suốt hoặc nền trắng: kiểm `alpha_extrema`.
-- Pixel art: không resample bilinear; filter Nearest.
+- Generated icons often add a frame, a round background, a drop shadow or an outer glow that is not in the set. Compare with the sample icon.
+- Shrinking a generated image loses thin lines. First increase the stroke/shape thickness. Do not only sharpen.
+- Generated images often have a fake transparent background or a white background. Check `alpha_extrema`.
+- Pixel art: do not resample with bilinear; use the Nearest filter.

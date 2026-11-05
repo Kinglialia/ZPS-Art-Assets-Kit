@@ -1,47 +1,82 @@
-# Bàn giao UI cho Godot
+# UI handoff for Godot
 
-Mốc đối chiếu: tài liệu Godot 4.5 / 4.5-stable; **không phải yêu cầu phiên bản**. Tra đúng phiên bản project trước khi chỉ định thiết lập.
+Reference point: Godot 4.5 / 4.5-stable documentation. This is **not a version requirement**. Look up the project's real version before you specify a setting.
 
 ## Contents
-- Ngữ cảnh hiển thị
-- Layout và safe area
+- Display context
+- Layout and safe area
 - Component, Theme, 9-slice
-- Chữ và localization
-- Asset và import
-- Đối chiếu bản dựng
+- Text and localization
+- Asset and import
+- Build comparison
 
-## Ngữ cảnh hiển thị
+## Display context
 
-Ghi Godot version, orientation, base size, stretch mode/aspect/scale, khoảng tỷ lệ hỗ trợ ([Multiple resolutions](https://github.com/godotengine/godot-docs/blob/4.5/tutorials/rendering/multiple_resolutions.rst)). Tách đơn vị thiết kế, đơn vị layout Godot và kích thước trên thiết bị: nút đủ lớn trong ảnh chưa chứng minh vùng chạm sau scale. Không đổi project settings để khớp screenshot.
+Record:
+- Godot version.
+- Orientation.
+- Base size.
+- Stretch mode/aspect/scale.
+- Supported aspect-ratio range ([Multiple resolutions](https://github.com/godotengine/godot-docs/blob/4.5/tutorials/rendering/multiple_resolutions.rst)).
 
-## Layout và safe area
+Keep three things apart: design units, Godot layout units and size on the device. A button that is big enough in the image does not prove the touch area after scaling. Do not change project settings to match a screenshot.
 
-| Hạng mục | Đặc tả |
+## Layout and safe area
+
+| Item | Spec |
 |---|---|
-| Màn hình | ID, kích thước tham chiếu, khoảng tỷ lệ, nội dung mẫu |
-| Bố cục | Phần cố định/co giãn, anchors hoặc Container gợi ý, minimum size, padding, alignment |
-| Responsive | Khi nào wrap, cuộn, đổi số cột, crop; thứ tự ưu tiên giữ nội dung |
-| Safe area | Phần nằm trong vùng an toàn, phần được phủ ra ngoài |
-| Lớp UI | Lớp nhận thao tác, Back/close, modal — theo đặc tả UX đã duyệt |
+| Screen | ID, reference size, aspect-ratio range, sample content |
+| Layout | Fixed/stretching parts, suggested anchors or Container, minimum size, padding, alignment |
+| Responsive | When to wrap, scroll, change the column count, crop; priority order for keeping content |
+| Safe area | Parts inside the safe area; parts allowed to extend outside it |
+| UI layers | Layer that receives input, Back/close, modal — as in the approved UX spec |
 
-Container sắp xếp Control con ([Containers](https://github.com/godotengine/godot-docs/blob/4.5/tutorials/ui/gui_containers.rst)); phần không thuộc Container dùng [anchors](https://github.com/godotengine/godot-docs/blob/4.5/tutorials/ui/size_and_anchors.rst). Không ghi đồng thời tọa độ tay mâu thuẫn. [`DisplayServer.get_display_safe_area()`](https://github.com/godotengine/godot/blob/4.5-stable/doc/classes/DisplayServer.xml) khác theo nền tảng: preview desktop chỉ chứng minh mô phỏng; Developer xác nhận trên thiết bị.
+A Container arranges child Controls ([Containers](https://github.com/godotengine/godot-docs/blob/4.5/tutorials/ui/gui_containers.rst)). For parts outside a Container, use [anchors](https://github.com/godotengine/godot-docs/blob/4.5/tutorials/ui/size_and_anchors.rst). Do not write manual coordinates that conflict with them. [`DisplayServer.get_display_safe_area()`](https://github.com/godotengine/godot/blob/4.5-stable/doc/classes/DisplayServer.xml) differs by platform. A desktop preview proves only a simulation. The developer confirms on a device.
 
 ## Component, Theme, 9-slice
 
-Ghi ID, biến thể/state, Control gợi ý, mapping tới màu, font, constant, StyleBox của project; không ép chọn node khi có cách tương đương.
+Record the ID, variant/state, suggested Control, and the mapping to the project's colors, fonts, constants and StyleBox. Do not force a node choice when an equivalent way exists.
 
-9-slice: ghi **bốn texture margin** (phần giữ hình) và **bốn content margin** (khoảng cho nội dung) riêng, cách stretch/tile mỗi trục, min/max size đã thử. Content margin có thể lấy fallback từ texture margin ([StyleBoxTexture](https://github.com/godotengine/godot/blob/4.5-stable/doc/classes/StyleBoxTexture.xml)); khác nhau thì ghi rõ.
+For 9-slice, record these separately:
+- The **four texture margins** (the parts that keep their shape).
+- The **four content margins** (the space for content).
+- How each axis stretches or tiles.
+- The min/max sizes you tested.
 
-## Chữ và localization
+Content margin can fall back to texture margin ([StyleBoxTexture](https://github.com/godotengine/godot/blob/4.5-stable/doc/classes/StyleBoxTexture.xml)). If they differ, say so.
 
-Font/fallback, cỡ, line height, màu, outline/shadow, wrap/truncate, số dòng, overflow. Kiểm theo ngôn ngữ thật: chuỗi dài, tiếng Việt có dấu (clipping dấu, fallback), số lớn, placeholder đổi vị trí; RTL chỉ khi có ngôn ngữ liên quan. Pseudolocalization tìm lỗi độ dài nhưng không thay kiểm glyph thật ([Internationalizing games](https://github.com/godotengine/godot-docs/blob/4.5/tutorials/i18n/internationalizing_games.rst)).
+## Text and localization
 
-## Asset và import
+Record:
+- Font/fallback.
+- Size.
+- Line height.
+- Color.
+- Outline/shadow.
+- Wrap/truncate.
+- Number of lines.
+- Overflow.
 
-Mặc định giao **PNG** ở kích thước base của project (thêm `@2x` nếu project cần), xuất từ SVG bằng `svg_render.py`, kèm **SVG nguồn** để sửa trong Figma hoặc xuất lại. Reviewer kiểm đúng các PNG này. Chỉ giao SVG để import thẳng khi developer hoặc project yêu cầu (ví dụ icon cần nhiều mức scale); khi đó ghi scale import đề xuất, và ghi rủi ro: Godot vẽ SVG bằng ThorVG, có thể lệch nhẹ gradient và độ dày nét so với PNG đã review; lề 9-slice tính theo kích thước sau scale.
+Check with the real languages:
+- Long strings.
+- Vietnamese text with diacritics (diacritic clipping, fallback).
+- Large numbers.
+- Placeholders that change position.
+- RTL, only when a related language exists.
 
-Ghi file, ID, nguồn, kích thước xuất/dùng, alpha, mục đích, filter/scale đề xuất. SVG được rasterize khi import, chữ trong SVG phải thành path ([Importing images](https://github.com/godotengine/godot-docs/blob/4.5/tutorials/assets_pipeline/importing_images.rst)); giữ nguồn chữ chỉnh sửa được. Filter/repeat ở Godot 4 đặt ở CanvasItem, không trong import. Mipmap, nén, atlas: đề xuất, Developer chốt theo ngân sách.
+Pseudolocalization finds length faults but does not replace a check of real glyphs ([Internationalizing games](https://github.com/godotengine/godot-docs/blob/4.5/tutorials/i18n/internationalizing_games.rst)).
 
-## Đối chiếu bản dựng
+## Asset and import
 
-Ghi bản thiết kế và build, viewport, state, nội dung. Mỗi sai lệch: vị trí, kỳ vọng, thực tế, ảnh hưởng, hướng sửa. Phân biệt thiếu thông số thiết kế với lỗi dựng; không khẳng định input, safe area, hiệu năng khi chưa thử trên môi trường tương ứng.
+By default, deliver **PNG** at the project's base size (add `@2x` if the project needs it). Export it from SVG with `svg_render.py`. Include the **source SVG** so it can be edited in Figma or exported again. The reviewer checks these PNG files.
+
+Deliver SVG for direct import only when the developer or project asks for it (for example, an icon that needs many scale levels). In that case:
+- Record the proposed import scale.
+- Record the risk. Godot draws SVG with ThorVG. Gradient and stroke weight may differ slightly from the PNG that was reviewed.
+- Calculate 9-slice margins on the size after scaling.
+
+Record the file, ID, source, export/use size, alpha, purpose and proposed filter/scale. SVG is rasterized at import, so text in an SVG must become paths ([Importing images](https://github.com/godotengine/godot-docs/blob/4.5/tutorials/assets_pipeline/importing_images.rst)). Keep an editable text source. In Godot 4, filter/repeat are set on CanvasItem, not in the import. Mipmap, compression and atlas are proposals. The Developer decides according to the budget.
+
+## Build comparison
+
+Record the design version and the build, the viewport, the state and the content. For each deviation, record: position, expectation, actual result, impact, direction of fix. Separate a missing design spec from a build fault. Do not claim input, safe area or performance results before you test them in the matching environment.

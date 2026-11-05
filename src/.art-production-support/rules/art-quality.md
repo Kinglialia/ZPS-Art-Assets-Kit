@@ -1,31 +1,31 @@
-# Chuẩn chất lượng — không giao ảnh "AI làm linh tinh"
+# Quality standard — do not deliver "random AI output"
 
-Áp dụng cho mọi ảnh do role tạo/sửa trước khi giao, kể cả bản thử; mức ghi chép theo quy mô thay đổi. Ảnh đẹp nhưng có chi tiết không có lý do vẫn là lỗi. Trước khi gọi tool gen/edit đọc [gen craft](../shared/gen-craft.md).
+Apply this to every image that the role creates or edits before delivery, including test samples. The level of record-keeping follows the scale of the change. A beautiful image that has details without a reason is still a defect. Before you call a generate/edit tool, read [gen craft](../shared/gen-craft.md).
 
-## 1. Ngân sách chi tiết và kiểm kê phần tử
+## 1. Detail budget and element inventory
 
-Trước khi tạo, đặt ngân sách chi tiết theo chức năng, kích thước hiển thị và trọng tâm thị giác của asset, đối chiếu style sheet và Execution reference ở cùng kích thước. Khi không có lý do khác, giữ mức chi tiết gần reference; tăng chi tiết chỉ khi chức năng hoặc trọng tâm cần và ghi lý do.
+Before you create the image, set a detail budget. Base it on the function, the display size, and the visual focus of the asset. Compare it with the style sheet and the Execution reference at the same size. If there is no other reason, keep the detail level close to the reference. Increase detail only when the function or focus needs it, and record the reason.
 
-Sau mỗi output, **kiểm tra thêm thắt**: mọi vật, phụ kiện, motif, hiệu ứng, chữ, nguồn sáng thấy được phải truy về brief, style sheet, công năng/cấu tạo hoặc câu chuyện đã chốt; không truy được → xóa hoặc sửa. Ghi bảng kiểm kê đầy đủ như ví dụ dưới khi tạo asset mới, làm bộ, hoặc giao bản final; sửa nhỏ chỉ ghi các phần tử đã thêm, bớt hoặc đổi.
+After each output, **check for added elements**. Every visible object, accessory, motif, effect, text, and light source must trace back to the brief, the style sheet, the function/construction, or an agreed story. If it cannot be traced, remove it or fix it. Write the full inventory table, as in the example below, when you create a new asset, make a set, or deliver a final version. For a small edit, record only the elements you added, removed, or changed.
 
 ```text
-Kiểm kê — sword_icon_v3
-- Lưỡi, chuôi, chắn tay: brief "kiếm sắt tân thủ" ✓
-- Ngọc đỏ ở chuôi: không có trong brief → xóa
-- Tia lấp lánh góc trên: style sheet không dùng sparkle → xóa
+Inventory — sword_icon_v3
+- Blade, hilt, guard: brief "novice iron sword" ✓
+- Red gem on the hilt: not in the brief → remove
+- Sparkle at the top corner: style sheet does not use sparkle → remove
 ```
 
-## 2. Vòng sửa
+## 2. Revision round
 
-1. Tạo/sửa → 2. preview ở kích thước đích, so với reference cùng loại deliverable → 3. mở ảnh: kiểm kê, bảng lỗi ảnh gen trong gen craft, 6 chiều tự kiểm → 4. chọn cách sửa theo [fix playbook](../shared/fix-playbook.md) (cách rẻ nhất có bằng chứng; cấu trúc đạt thì script/edit cục bộ trước gen lại) → 5. ghi lượt vào task record.
+1. Create/edit. 2. Preview at the target size and compare with a reference of the same deliverable type. 3. Open the image and check: the inventory, the generated-image fault table in gen craft, and the 6-dimension self-check. 4. Choose the fix method from the [fix playbook](../shared/fix-playbook.md). Use the cheapest method that has evidence. If the structure is acceptable, try a script or a local edit before you regenerate. 5. Record the round in the task record.
 
-Nhiều giả thuyết và còn budget: có thể thử các phương án, mỗi nhánh đổi một yếu tố, chấm tất cả cùng lúc. Chọn bằng mắt trước, số đo để loại và phân xử.
+If you have many hypotheses and budget remains, you can test several options. In each branch, change one factor. Score all branches at the same time. Choose by eye first. Use measurements to eliminate options and to break ties.
 
 ## 3. Budget
 
-Dùng ngân sách và giới hạn đã được giao. Không tự mở rộng ngân sách khi đổi nhánh hoặc vì một lượt có tiến bộ. Khi chưa có giới hạn, chỉ làm phần đã được yêu cầu, không tự chạy vòng lặp nhiều biến thể; đề xuất bước thử nhỏ nếu cần.
-Dừng bất kể budget khi hai lượt liên tiếp không tiến bộ ở cùng lỗi: chẩn đoán và báo user kèm phương án. Không giao bản "đỡ nhất" như bản đạt.
+Use the budget and limits that were assigned. Do not extend the budget on your own when you change branch or because one round made progress. If there is no limit yet, do only the part that was requested. Do not run a loop of many variants on your own. If needed, propose a small test step.
+Stop regardless of budget when two rounds in a row show no progress on the same defect. Diagnose it and report to the user with options. Do not deliver the "least bad" version as if it passed.
 
-## 4. Báo cáo trung thực
+## 4. Honest report
 
-Giao kèm: kiểm kê phần tử (đầy đủ hoặc phần thay đổi, theo mục 1), lỗi đã sửa, lỗi còn lại, preview đã mở. Tự kiểm đạt chỉ là `self-check`; duyệt art thuộc AD/user. Không gọi ảnh "đúng style", "game-ready" hay "hoàn thiện" khi chưa so với reference ở cùng kích thước.
+Deliver these with the image: the element inventory (full or changed parts, per section 1), the fixed defects, the remaining defects, and the previews you opened. A passing self-check is only `self-check`. Art approval belongs to the AD/user. Do not call an image "on style", "game-ready", or "finished" before you compare it with the reference at the same size.

@@ -54,4 +54,4 @@ You review a 3D prop that another agent built or optimized from a concept. You d
 }
 ```
 
-Order criteria HIGH impact first. Set `approved: true` only when no criterion is `fail` or `unclear`, every orthographic IoU in the metrics JSON is at or above the threshold given, and the block criterion passes on clay. For a missing part use `"part": "NEW: <suggested_name>"`. For a final review also fill the verdict block from `REVIEW-RUBRIC.md` in Vietnamese under `"rubric_vi"`.
+Order criteria HIGH impact first. Set `approved: true` only when no criterion is `fail` or `unclear`, every orthographic IoU in the metrics JSON is at or above the threshold given, and the block criterion passes on clay. For a missing part use `"part": "NEW: <suggested_name>"`. For a final review also fill the verdict block from `REVIEW-RUBRIC.md` under `"rubric_vi"`. Keep the template labels (`STEP:`, `VERDICT: pass | not passed`) as they are, because `tools/report.py` reads the `VERDICT` line; the key name `rubric_vi` stays for compatibility.

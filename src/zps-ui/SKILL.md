@@ -10,34 +10,57 @@ metadata:
 
 **Not for:** screen flow and UX design (UX or game design); item icons and sprites (zps-asset-2d); standalone UI review (zps-2d-review).
 
-Theo [quy tắc chung](../.art-production-support/rules/art-operation.md) và [chuẩn chất lượng](../.art-production-support/rules/art-quality.md).
+Follow the [shared rules](../.art-production-support/rules/art-operation.md) and the [quality standard](../.art-production-support/rules/art-quality.md).
 
-## Phạm vi
+## Scope
 
-Hình ảnh UI, nguồn chỉnh sửa, asset, đặc tả bàn giao để developer tự dựng scene, Theme và script (UI art giao asset + đặc tả, không viết code). **Không** thiết kế flow/wireframe, không quyết luật chơi, phần thưởng, giá; thiếu thì hỏi UX/game design. Được góp ý khi layout khó vẽ, khó đọc.
+This skill covers UI images, editable sources, assets, and the handoff spec. The developer uses the handoff spec to build the scene, Theme and script. UI art delivers assets and a spec. It does not write code.
+
+Do **not**:
+- Design flow or wireframes.
+- Decide game rules, rewards or prices. If these are missing, ask UX/game design.
+
+You may give feedback when a layout is hard to draw or hard to read.
 
 ## Intake
 
-Wireframe và đặc tả tương tác đã duyệt; style sheet hoặc UI kit; engine/version, base size, stretch, safe area (Godot: [tech profile](../.art-production-support/templates/tech-profile-godot.md)); ngôn ngữ, chuỗi dài nhất; định dạng nguồn và công cụ thực có. Không có wireframe: dùng layout đã mô tả nếu đủ rõ; chỉ hỏi phần tương tác/bố cục ảnh hưởng bản vẽ, không tự thiết kế lại UX. Không có Bible/style sheet đủ, chỉ có ảnh reference: đọc style theo [style read](../.art-production-support/shared/style-read.md) và trình một bản thử trước khi làm loạt. Reference mâu thuẫn hoặc cần style cho cả project → đề xuất AD.
+Collect:
+- Approved wireframe and interaction spec.
+- Style sheet or UI kit.
+- Engine/version, base size, stretch, safe area (Godot: [tech profile](../.art-production-support/templates/tech-profile-godot.md)).
+- Language and longest string.
+- Source format and the tools you really have.
+
+If there is no wireframe, use the described layout if it is clear enough. Ask only about interaction or layout that affects the drawing. Do not redesign the UX.
+
+If there is no complete Bible/style sheet and only reference images, read the style with [style read](../.art-production-support/shared/style-read.md). Present one test sample before you make the series. If the references conflict, or the whole project needs a style, propose it to the AD.
 
 ## Workflow
 
-1. **Chưa có UI style**: số hướng theo yêu cầu trên cùng wireframe (hai hướng là một lựa chọn khi cần so sánh), khác hình khối chứ không chỉ palette, trên màn hình mẫu khó nhất; nếu không ai yêu cầu dừng để chọn hướng: tự chọn một hướng, ghi lý do, làm cả bộ và trình duyệt một lần; các hướng còn lại chỉ nêu ngắn để AD/user đổi nếu muốn. Đọc [UI system](references/ui-system.md).
-2. **Hệ thống vừa đủ**: màu theo vai trò, cấp chữ, spacing, component có ID, state cần thiết; ưu tiên token/component sẵn có.
-3. **Sản xuất**: chữ, layout, component sửa độc lập; ghi nguồn → cách xuất → file runtime. Chọn nguồn theo loại UI trong [UI system](references/ui-system.md): component hình học và UI phẳng mặc định **SVG** (xuất PNG bằng `svg_render.py`); khung vẽ tay và illustration dùng ảnh gen theo [gen craft](../.art-production-support/shared/gen-craft.md); được kết hợp. Ảnh phẳng không làm nguồn cả màn hình.
-4. **Bàn giao cho developer**: điền [UI handoff](templates/ui-handoff.md); project Godot thì đọc thêm [Godot handoff](references/ui-godot-handoff.md). Không đổi project settings/Theme production để preview.
-5. **Review trước khi giao**: giao màn hình UI, cả bộ component hoặc bản final thì gọi [2D Review](../zps-2d-review/SKILL.md) (mục "Khi Asset 2D hoặc UI gọi"). Sau khi AD/user duyệt: ghi hướng hoặc màn hình mẫu theo [asset mẫu](../.art-production-support/shared/set-anchor.md).
-6. **QA**: chọn kiểm theo rủi ro trong [UI QA](references/ui-qa.md); accessibility theo task: [UI accessibility](references/ui-accessibility.md). Ảnh chưa đạt: chọn cách sửa theo [fix playbook](../.art-production-support/shared/fix-playbook.md). Task nhiều lượt hoặc cần bàn giao: ghi [task record](../.art-production-support/templates/task-record.md).
+1. **No UI style yet:**
+   - Make the number of directions the request asks for, on the same wireframe. Two directions count as one choice when a comparison is needed.
+   - The directions must differ in form, not only in palette. Show them on the hardest sample screen.
+   - If nobody asks you to stop and choose a direction, choose one direction yourself and record the reason. Make the whole set and present it once. Name the other directions briefly, so the AD/user can switch if they want.
+   - Read [UI system](references/ui-system.md).
+2. **Just-enough system:** colors by role, type levels, spacing, components with IDs, the necessary states. Prefer existing tokens/components.
+3. **Production:**
+   - Text, layout and components are edited independently.
+   - Record source → export method → runtime file.
+   - Choose the source by UI type in [UI system](references/ui-system.md). Geometric components and flat UI default to **SVG** (export PNG with `svg_render.py`). Hand-drawn frames and illustrations use generated images per [gen craft](../.art-production-support/shared/gen-craft.md). You may combine them.
+   - A flat image is not a source for a whole screen.
+4. **Handoff to the developer:** fill in the [UI handoff](templates/ui-handoff.md). For a Godot project, also read [Godot handoff](references/ui-godot-handoff.md). Do not change production project settings/Theme to preview.
+5. **Review before delivery:** when you deliver a UI screen, a full component set or a final, call [2D Review](../zps-2d-review/SKILL.md) (section "When Asset 2D or UI calls this skill"). After the AD/user approves, record the direction or sample screen as described in [set anchor](../.art-production-support/shared/set-anchor.md).
+6. **QA:** choose checks by risk in [UI QA](references/ui-qa.md). For accessibility, follow the task: [UI accessibility](references/ui-accessibility.md). If an image does not pass, choose the fix with the [fix playbook](../.art-production-support/shared/fix-playbook.md). For a multi-turn task or a task that needs handoff, write a [task record](../.art-production-support/templates/task-record.md).
 
 ## Self-check
 
-- Đúng wireframe; thứ tự chú ý rõ ở kích thước và nền thật.
-- Đủ state đã yêu cầu; vùng chạm sau scale đạt mục tiêu project.
-- 9-slice co giãn đúng ở min/max size; chữ dài và tiếng Việt có dấu không tràn/cắt.
-- Asset alpha sạch, tên và kích thước đúng đặc tả; đổi chữ/icon đại diện rồi xuất lại được.
+- Matches the wireframe; attention order is clear at the real size and background.
+- All required states are present; touch area after scaling meets the project target.
+- 9-slice stretches correctly at min/max size; long text and Vietnamese text with diacritics do not overflow or clip.
+- Asset alpha is clean; names and sizes match the spec; you can change the representative text/icon and export again.
 
 ## Gotchas
 
-- Ảnh gen UI hay có chữ giả, khung lồng nhau, glow thừa: kiểm kê phần tử.
-- Ảnh tĩnh không chứng minh flow, cảm giác chạm, motion, safe area.
-- Review riêng một màn hình: dùng zps-2d-review với tiêu chí trong UI QA.
+- Generated UI images often have fake text, nested frames and extra glow. Do an element inventory.
+- A still image does not prove flow, touch feel, motion or safe area.
+- To review one screen alone, use zps-2d-review with the criteria in UI QA.

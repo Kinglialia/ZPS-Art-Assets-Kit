@@ -1,44 +1,44 @@
-# Bàn giao 3D ↔ Texture
+# 3D ↔ Texture handoff
 
-Mẫu chung cho 3D Artist và Texture Artist. 3D điền phần A khi gọi Texture; Texture điền phần B khi trả kết quả. Task nhỏ chỉ ghi các dòng liên quan, trong record hiện có.
+A shared template for the 3D Artist and the Texture Artist. The 3D Artist fills in part A when calling the Texture Artist. The Texture Artist fills in part B when returning the result. For a small task, write only the relevant lines, in an existing record.
 
-## A. 3D → Texture (yêu cầu)
+## A. 3D → Texture (request)
 
 ```markdown
-# Texture cho <asset> — model v<số>, UV v<số>
-- File model: <đường dẫn GLB/FBX>
-- Lý do gọi: model mới | sau retopo, texture cũ không đạt (nêu lý do) | khác: …
-- Cách làm texture: <theo yêu cầu của …> | chưa ai yêu cầu (Texture tự chọn)
-- UV: UV0 có/không; chồng/mirror/stack có chủ đích ở: <vùng> | không có; trong 0–1 | tile
-- Cách làm texture đã biết lúc unwrap: <cách, nguồn> | chưa biết (UV riêng, không chồng)
-- Vùng vật liệu: <phần → vật liệu, ví dụ thân → gỗ, đai → kim loại> (từ trường `material` trong part_graph.json khi self-build); ảnh `parts_<view>.png`: <đường dẫn>
-- Material: một material (mặc định) | đã tách slot theo yêu cầu của Texture Planning: <slot → vùng>
-- Kiểm UV: kết quả uv_check <đường dẫn JSON>; ảnh checker <đường dẫn>
-- Camera và kích thước trên màn hình: <từ spec>
-- Map đã bake (normal/AO…) và quy ước: <có/không, đường dẫn>
-- Texture tạm từ pipeline 3D (chiếu concept/bake): <có/không, đường dẫn> — bản tạm, Texture quyết định giữ/sửa/làm lại
-- Concept/view dùng; mặt khuất là suy luận: <vùng>
+# Texture for <asset> — model v<number>, UV v<number>
+- Model file: <GLB/FBX path>
+- Reason for the call: new model | after retopo, old texture does not pass (state the reason) | other: …
+- Texture method: <as requested by …> | nobody requested (Texture chooses)
+- UV: UV0 yes/no; intentional overlap/mirror/stack at: <area> | none; within 0–1 | tile
+- Texture method known at unwrap time: <method, source> | unknown (separate UV, no overlap)
+- Material areas: <part → material, for example body → wood, band → metal> (from the `material` field in part_graph.json when self-built); `parts_<view>.png` image: <path>
+- Material: one material (default) | slots split as requested by Texture Planning: <slot → area>
+- UV check: uv_check result <JSON path>; checker image <path>
+- Camera and on-screen size: <from the spec>
+- Baked maps (normal/AO…) and convention: <yes/no, path>
+- Temporary texture from the 3D pipeline (concept projection/bake): <yes/no, path> — temporary; Texture decides to keep/fix/redo
+- Concept/view used; hidden parts are inferred: <area>
 - Engine: <Godot/…>
 ```
 
-## B. Texture → 3D (kết quả)
+## B. Texture → 3D (result)
 
 ```markdown
-# Texture <asset> — cho model v<số>, UV v<số>
-- Cách làm đã dùng: <author × shader> — <theo yêu cầu của … | tự chọn vì …>
-- Map/atlas giao: <file, kích thước, kênh, color space>
-- Gắn vào material slot: <slot → map>
-- Ghi chú thiết lập material cho người đưa vào engine: lit | unlit; nén; mipmap bật/tắt; ảnh nào là normal map (quy ước OpenGL/DirectX)
-- Render on-model đã mở: <đường dẫn, renderer>
-- Yêu cầu 3D sửa UV hoặc tách material slot (nếu có, gom một lần): <…>
-- Phần chưa kiểm / còn lỗi:
+# Texture <asset> — for model v<number>, UV v<number>
+- Method used: <author × shader> — <as requested by … | self-chosen because …>
+- Maps/atlas delivered: <file, size, channels, color space>
+- Attached to material slot: <slot → map>
+- Material setup notes for the person who imports the asset into the engine: lit | unlit; compression; mipmap on/off; which image is the normal map (OpenGL/DirectX convention)
+- On-model render opened: <path, renderer>
+- Request to 3D to fix the UV or split material slots (if any, combine into one request): <…>
+- Parts not checked / remaining defects:
 ```
 
-## Quy tắc dùng
+## Usage rules
 
-- Mặc định một material và UV riêng, không chồng. Thông tin vùng vật liệu đi theo bảng "phần → vật liệu" và ảnh parts, không cần material slot riêng. Chỉ tách slot khi Texture Planning yêu cầu shader khác nhau theo vùng.
-- Texture cần UV khác hoặc slot riêng: gom mọi yêu cầu vào một lần gửi cho 3D.
+- The default is one material and a separate UV with no overlap. Material area information travels in the "part → material" table and the parts image. It does not need a separate material slot. Split slots only when Texture Planning requires different shaders per area.
+- If the Texture Artist needs a different UV or a separate slot, combine all requests into one message to the 3D Artist.
 
-- Texture tự đo những gì đo được bằng `inspect_model.py` (UV, material, vertex color, texel density); không hỏi lại các mục đó.
-- Chỉ hỏi những gì không đo được: ý đồ UV chồng, vùng nào là vật liệu gì, camera. Thiếu nhiều mục thì gom thành **một lần hỏi**.
-- Model hoặc UV đổi version sau khi gửi: phần A phải gửi lại; texture làm cho version cũ phải kiểm lại.
+- The Texture Artist measures by itself what `inspect_model.py` can measure (UV, material, vertex color, texel density). Do not ask about those items again.
+- Ask only about what cannot be measured: the intent of overlapping UV, which area is which material, and the camera. If many items are missing, combine them into **one question**.
+- If the model or UV changes version after you send, send part A again. Check again any texture made for the old version.

@@ -10,47 +10,74 @@ metadata:
 
 **Not for:** choosing the method (zps-texture-planning); standalone review (zps-texture-review).
 
-Theo [quy tắc chung](../.art-production-support/rules/art-operation.md) và [chuẩn chất lượng](../.art-production-support/rules/art-quality.md).
+Follow the [shared rules](../.art-production-support/rules/art-operation.md) and the [quality standard](../.art-production-support/rules/art-quality.md).
 
 ## Intake
 
-Phương pháp: người gọi nêu cụ thể (hoặc yêu cầu theo tài liệu Art Style) thì làm theo; không ai nêu → dùng zps-texture-planning để tự chọn. Khi 3D Artist gọi, nhận theo phần A của [bàn giao 3D ↔ Texture](../.art-production-support/templates/3d-texture-handoff.md); tự đo phần đo được bằng `inspect_model.py`, chỉ hỏi phần không đo được và gom thành một lần hỏi. Cần: model/UV/shader version, vùng được giao, style sheet, hợp đồng map (kênh, color space, kích thước, normal convention từ thông số project; Godot: [tech profile](../.art-production-support/templates/tech-profile-godot.md)), người nhận. Thiết kế mới (motif, biểu tượng): chuyển phần thiết kế sang Concept/AD nếu thuộc task; không tự đổi identity đã khóa. Không có Bible/style sheet đủ, chỉ có ảnh reference: đọc style theo [style read](../.art-production-support/shared/style-read.md) và trình một bản thử trên model trước khi làm loạt. Reference mâu thuẫn hoặc cần style cho cả project → đề xuất AD.
+Method: if the caller names a method (or the Art Style document requires one), use it. If nobody names a method, use zps-texture-planning to choose one.
+
+If the 3D Artist calls this skill, take the input from part A of the [3D ↔ Texture handoff](../.art-production-support/templates/3d-texture-handoff.md). Measure what you can with `inspect_model.py`. Ask only for what you cannot measure, and put all questions into one message.
+
+Required input:
+- Model, UV and shader version.
+- Assigned areas.
+- Style sheet.
+- Map contract: channels, color space, size, and normal convention from the project specification. For Godot, see the [tech profile](../.art-production-support/templates/tech-profile-godot.md).
+- Recipient.
+
+New design (motif, symbol): if the design belongs to the task, pass it to Concept/AD. Do not change a locked identity yourself.
+
+If there is no complete Bible or style sheet and only reference images exist, read the style with [style read](../.art-production-support/shared/style-read.md). Show one test sample on the model before you make a series. If the references conflict, or the whole project needs a style, propose it to the AD.
 
 ## Workflow
 
-1. Đọc **chỉ** file của phương pháp đã chốt (cộng file chung khi cần):
+1. Read **only** the file for the chosen method (plus the shared files when needed):
 
-| Phương pháp | Đọc |
+| Method | Read |
 |---|---|
-| Hand-painted | [Hand-painted](references/hand-painted.md); recipe: [painting practice](references/painting-practice.md) |
+| Hand-painted | [Hand-painted](references/hand-painted.md); recipes: [painting practice](references/painting-practice.md) |
 | Flat color, gradient atlas, vertex color | [Flat color](references/flat-color.md) |
 | PBR, bake, data maps | [PBR](references/pbr.md) |
 | Tileable, trim sheet, decal, triplanar | [Tileable/trim](references/tileable-trim.md) |
 | Pixel texture | [Pixel texture](references/pixel-texture.md) |
 | Photo/scan | [Photo/scan](references/photo-scan.md) |
-| Paint view để chiếu | [Projection](references/projection.md) |
-| Chung: phân mảng vật liệu mới | [Surface craft](references/surface-craft.md) |
-| Chung: UV, seam, bake, import | [Mapping](references/mapping-validation.md) |
+| Paint view for projection | [Projection](references/projection.md) |
+| Shared: new material segmentation | [Surface craft](references/surface-craft.md) |
+| Shared: UV, seam, bake, import | [Mapping](references/mapping-validation.md) |
 
-2. Cần render **checker + clay** (`render_model.py`) khi chưa có render còn hiệu lực cho đúng mesh/UV version, khi mesh/UV đổi, hoặc khi lỗi có thể do UV/scale. Sửa màu nhỏ trên mesh/UV không đổi thì dùng lại bằng chứng cũ. Không có Blender: xin 3D Artist ảnh render.
-3. Material intent và ngân sách chi tiết theo style sheet.
-4. Tạo theo phương pháp; phần gen/edit theo [gen craft](../.art-production-support/shared/gen-craft.md).
-5. Gắn lên model, render nhiều góc, ánh sáng game nếu biết.
-6. Kiểm thêm thắt theo chuẩn chất lượng, bảng lỗi ảnh gen, self-check; sửa nguyên nhân (UV, scale, shading) trước khi làm lại. Ảnh chưa đạt: chọn cách sửa theo [fix playbook](../.art-production-support/shared/fix-playbook.md). Task nhiều lượt hoặc cần bàn giao: ghi [task record](../.art-production-support/templates/task-record.md).
+2. Make a **checker + clay** render (`render_model.py`) in these cases:
+   - No valid render exists for this mesh/UV version.
+   - The mesh or UV changed.
+   - The fault could come from UV or scale.
 
-## Self-check (trên render model)
+   For a small color fix on an unchanged mesh/UV, reuse the old evidence. If Blender is not available, ask the 3D Artist for a render image.
+3. Set the material intent and the detail budget from the style sheet.
+4. Make the texture with the chosen method. For parts you generate or edit, follow [gen craft](../.art-production-support/shared/gen-craft.md).
+5. Apply the texture to the model. Render from several angles. Use the game lighting if you know it.
+6. Check for added elements against the quality standard, the generated-image fault table and the self-check. Fix the cause (UV, scale, shading) before you redo the work. If the image does not pass, choose the fix with the [fix playbook](../.art-production-support/shared/fix-playbook.md). If the task has many rounds or needs a handoff, write a [task record](../.art-production-support/templates/task-record.md).
 
-- Đúng phương pháp, style sheet; so render asset đã duyệt cùng loại.
-- Seam không lộ ở góc game; chi tiết theo khối, không theo cạnh UV.
-- Lit/PBR: không bake highlight/bóng cố định vào albedo; kênh, color space đúng.
-- Không chi tiết ngoài kiểm kê.
+## Self-check (on the model render)
+
+- The result matches the method and the style sheet. Compare it with the render of an approved asset of the same type.
+- Seams are not visible from the game angles. Detail follows the forms, not the UV edges.
+- For lit/PBR, no fixed highlight or shadow is baked into the albedo. Channels and color space are correct.
+- No detail outside the element inventory.
 
 ## Handoff
 
-Giao theo phần B của [bàn giao 3D ↔ Texture](../.art-production-support/templates/3d-texture-handoff.md): cách làm đã dùng và lý do (khi tự chọn), maps/atlas/paint views, render đã mở (renderer: Blender không phải engine đích), hợp đồng map, bảng ô atlas hoặc dải trim nếu có, **ghi chú thiết lập material** cho người đưa vào engine (lit/unlit, nén, mipmap, ảnh nào là normal map), phần chưa kiểm. Texture không tự tạo material trong project engine trừ khi task giao rõ. Khi 3D Artist gọi, trả kết quả cho 3D để gắn vào model và xuất file cuối.
+Hand off with part B of the [3D ↔ Texture handoff](../.art-production-support/templates/3d-texture-handoff.md). Include:
+- The method used, and why (when you chose it yourself).
+- Maps, atlas and paint views.
+- The renders you opened. State the renderer: Blender is not the target engine.
+- The map contract.
+- The atlas cell table or trim strip table, if there is one.
+- **Material setup notes** for the person who imports the asset into the engine: lit/unlit, compression, mipmap, which image is the normal map.
+- Parts not checked.
+
+Do not create a material in the engine project unless the task clearly assigns it. If the 3D Artist called this skill, return the result to the 3D Artist. The 3D Artist applies it to the model and exports the final file.
 
 ## Gotchas
 
-- Gen lên UV layout thường vẽ sáng/bóng theo atlas: luôn render kiểm.
-- Vùng vật liệu lấy từ bảng "phần → vật liệu" và ảnh parts trong phần A của mẫu bàn giao; model mặc định chỉ có một material. Cần 3D sửa UV hoặc tách slot: gom mọi yêu cầu vào một lần gửi.
-- Normal map engine khác có thể DirectX-style; Godot cần OpenGL Y+.
+- A generated image placed on a UV layout often has light and shadow painted along the atlas. Always check it in a render.
+- Take material areas from the "part → material" table and the parts image in part A of the handoff template. By default, a model has only one material. If you need the 3D Artist to fix UVs or split slots, put all requests into one message.
+- Other engines may use a DirectX-style normal map. Godot needs OpenGL Y+.

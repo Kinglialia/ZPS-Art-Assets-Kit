@@ -1,21 +1,28 @@
-# Projection paint — tách stage paint và integration
+# Projection paint — separate the paint stage and the integration stage
 
-## Hợp đồng tối thiểu
+## Minimum contract
 
-Nếu được giao **tô view**: nhận render guide mỗi góc, thiết kế/reference có vai trò, phần giữ/đổi, output size/framing và lighting model. Source model/version và camera được nhận bằng ID/thông tin từ caller; không bắt artist mở mesh/UV nếu caller sở hữu projection/bake. Clay + mask/landmark có thể đủ cho paint đơn giản; depth/normal/position/UV/material-ID chỉ bắt buộc khi phương pháp/check cụ thể cần. Pass thiếu encoding/hệ tọa độ không được dùng như số đo chính xác.
+If the task assigns **painting a view**, you receive:
+- A guide render for each angle.
+- The design/reference, with its role.
+- What to keep and what to change.
+- Output size/framing.
+- The lighting model.
 
-Nếu được giao **bake và xác minh trên model**: cần mesh/camera/mapping và công cụ phù hợp. Stage này có owner rõ, không mặc định artist phải làm thêm sau khi đã giao view.
+The source model/version and the camera come from the caller as IDs or information. Do not require the artist to open the mesh/UV if the caller owns projection/bake. For simple paint, clay + mask/landmark may be enough. Depth, normal, position, UV and material-ID passes are required only when the method or a specific check needs them. Do not use a pass with missing encoding or coordinate system as an exact measurement.
 
-## Tô view
+If the task assigns **baking and verifying on the model**, you need the mesh, camera, mapping and suitable tools. This stage has a clear owner. Do not assume the artist must do more work after the views are handed off.
 
-Tool phải nhận source và chỉnh bố cục; thiếu thì báo blocked phần paint. Chọn anchor, giữ màu/vật liệu/landmark giữa các góc. Không tô specular/rim phụ thuộc camera vào màu chiếu trừ thiết kế/đích cho phép; phân biệt nét cạnh thực với viền silhouette. Đọc hand-painted/PBR chỉ khi cần giải vấn đề nét hoặc shading, không bắt toàn bộ surface pipeline.
+## Paint the view
 
-Mở output, kiểm framing, kích thước, landmark và phần giữ. Resize sửa canvas, không chứng minh alignment. Alpha vừa áp bằng mask chỉ xác minh masking, không chứng minh nội dung bám geometry. Xử lý ảnh theo tool/quyền của phiên. Vùng khuất không có nguồn phải ghi suy luận; không tự mở lại thiết kế.
+The tool must accept the source and let you adjust the layout. If it does not, report the paint part as blocked. Choose an anchor. Keep color, material and landmarks between angles. Do not paint camera-dependent specular or rim light into the projected color, unless the design or the target allows it. Tell a real edge stroke apart from a silhouette outline. Read hand-painted or PBR only when you need to solve a stroke or shading problem. Do not require the whole surface pipeline.
 
-## Khi có integration evidence
+Open the output. Check framing, size, landmarks and the kept parts. Resizing fixes the canvas. It does not prove alignment. Alpha that you just applied with a mask only verifies masking. It does not prove that the content fits the geometry. Process the image with the tools and permissions of the session. For hidden parts with no source, record the inference. Do not reopen the design yourself.
 
-Owner chiếu/bake rồi render view nguồn và góc chưa dùng author khi cần xác nhận coverage/seam. Artist dùng kết quả đó để sửa vùng được giao; không bake trùng. View nghiêng/occluded cần weighting/visibility hợp lý; blend đều có thể làm nhòe chi tiết. Cạnh họa tiết phẳng không cần trùng depth edge. So màu tại vùng bề mặt tương ứng, cùng không gian/điều kiện; không áp ngưỡng ΔE/px chung chưa định nghĩa.
+## When integration evidence exists
 
-## Bàn giao đúng phạm vi
+The owner projects or bakes, then renders the source views and, when needed, angles the author did not use, to confirm coverage and seams. The artist uses the result to fix the assigned areas. Do not bake again. Grazing or occluded views need suitable weighting/visibility. Even blending can blur detail. The edge of a flat pattern does not need to match a depth edge. Compare color at the matching surface area, in the same space and conditions. Do not apply a ΔE or pixel threshold that nobody defined.
 
-Giao paint_<view>, source guide/version, checks và suy luận; palette/schema chỉ khi caller cần. Paint đạt contract thì có thể ghi hoàn tất stage paint, integration chưa kiểm/thuộc caller. Nếu task yêu cầu cả integration mà thiếu thì ghi phần đó partial/blocked. Không nhận seamless hay game-ready từ chỉ paint views. Ánh sáng bake đi theo object khi quay: ghi phạm vi pose/ánh sáng đã kiểm.
+## Hand off within scope
+
+Hand off paint_<view>, the source guide/version, the checks and the inferences. Hand off the palette/schema only if the caller needs them. If the paint meets the contract, you may record the paint stage as complete, and integration as not checked or owned by the caller. If the task requires integration as well and it is missing, record that part as partial/blocked. Do not claim seamless or game-ready from paint views alone. Baked lighting rotates with the object. Record the pose/lighting range that you checked.

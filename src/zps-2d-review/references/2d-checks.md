@@ -1,60 +1,69 @@
-# 2D checks — cách kiểm và chẩn đoán
+# 2D checks — how to check and diagnose
 
-Đọc khi cần kiểm sâu một nhóm trong bảng ở SKILL.md hoặc khi nguyên nhân chưa rõ. Quy cách sản xuất và đề xuất import nằm ở [Sản xuất asset 2D](../../zps-asset-2d/references/production.md); UI ở [UI QA](../../zps-ui/references/ui-qa.md). File này nói reviewer kiểm gì, bằng gì và kết luận được tới đâu.
+Read this file when you need a deep check of one group in the table in SKILL.md, or when the cause is unclear. Production rules and import proposals are in [Asset 2D production](../../zps-asset-2d/references/production.md). UI rules are in [UI QA](../../zps-ui/references/ui-qa.md). This file says what the reviewer checks, with what, and how far the conclusion can go.
 
-## Bằng chứng tối thiểu theo câu hỏi
+## Minimum evidence by question
 
-| Câu hỏi review | Bằng chứng cần | Không đủ để kết luận |
+| Review question | Evidence needed | Not enough to conclude |
 |---|---|---|
-| Đọc được trong game không | Preview ở kích thước hiển thị trên nền game thật hoặc ảnh chụp màn hình game | Ảnh phóng to; nền trắng trơn |
-| Alpha sạch không | `inspect_image.py` (alpha_extrema) và xem trên nền tối + sáng | File là RGBA |
-| Pivot/frame ổn không | `sprite_check.py` trên cả sequence | Xem từng frame riêng |
-| Chuyển động đúng quỹ đạo, không giật | Onion skin + filmstrip từ `anim_preview.py` | Từng frame riêng; agent tự xem GIF |
-| Nhịp, cảm giác chuyển động | Người xem GIF ở fps đích, hoặc chạy trong game | Onion skin (chỉ thấy quỹ đạo) |
-| Đồng bộ với bộ không | So với asset mẫu theo [asset mẫu](../../.art-production-support/shared/set-anchor.md); chưa có mẫu thì so cả bộ cạnh nhau | So với concept hay reference cảnh |
-| Ghi chú import đúng | Đối chiếu bảng import trong [Sản xuất asset 2D](../../zps-asset-2d/references/production.md) | Tên file, "đã xuất PNG" |
-| Tile liền không | `preview.py tile` nhiều ô | Xem một ô |
-| UI chịu được chữ dài không | Render với chuỗi dài nhất thật, có dấu tiếng Việt | Chữ mẫu ngắn tiếng Anh |
-| Chạy đúng trong engine/thiết bị | Import thật / thử trên thiết bị | Preview từ script |
+| Is it readable in the game? | Preview at display size on the real game background, or a game screenshot | Enlarged image; plain white background |
+| Is the alpha clean? | `inspect_image.py` (alpha_extrema) and a view on dark + light backgrounds | The file is RGBA |
+| Are pivot/frames stable? | `sprite_check.py` on the whole sequence | Viewing each frame alone |
+| Does the motion follow the right path, without jerks? | Onion skin + filmstrip from `anim_preview.py` | Each frame alone; the agent viewing the GIF itself |
+| Rhythm and motion feel | A person views the GIF at target fps, or runs it in the game | Onion skin (shows only the path) |
+| Does it match the set? | Compare with the set anchor, as in [set anchor](../../.art-production-support/shared/set-anchor.md). If there is no anchor yet, compare the whole set side by side | Comparison with the concept or a scene reference |
+| Are the import notes correct? | Check against the import table in [Asset 2D production](../../zps-asset-2d/references/production.md) | File name; "PNG exported" |
+| Does the tile join? | `preview.py tile` with many cells | Viewing one cell |
+| Does the UI survive long text? | Render with the real longest string, with Vietnamese diacritics | Short English sample text |
+| Does it work in the engine/on a device? | Real import / test on a device | Preview from a script |
 
-Thiếu bằng chứng ở hàng nào thì kết luận hàng đó là `not_checked`, không phải pass hay fail.
+If evidence is missing for a row, record the conclusion for that row as `not_checked`. It is neither pass nor fail.
 
-## Cây chẩn đoán nhanh
+## Quick diagnosis tree
 
-- **Khó đọc ở kích thước nhỏ:** silhouette không rõ → quá nhiều điểm nhận diện → value giữa vật và nền quá gần → nét mảnh mất khi thu nhỏ. Sửa bằng đơn giản hóa khối hoặc tăng độ dày nét trước khi sharpen.
-- **Lệch bộ:** góc nhìn, độ dày nét, mức chi tiết, hướng sáng hay scale vật khác asset mẫu. Ghi rõ trục nào lệch.
-- **Viền sáng/tối quanh asset:** halo do tách nền, premultiplied/straight alpha sai, hoặc thiếu alpha border khi lọc.
-- **Nhân vật rung khi chạy animation:** canvas/pivot không cố định giữa frame, thường do auto-crop từng frame.
-- **Tile lộ nối:** cạnh không khớp, hoặc dấu nổi bật lặp đều. Tách hai trường hợp vì cách sửa khác nhau.
-- **Pixel art nhòe:** resample bilinear hoặc scale không nguyên lần; hoặc ghi chú import đề xuất filter Linear.
-- **Animation giật:** khoảng cách giữa các pose trên onion skin không đều ở đoạn cần đều; một frame lệch quỹ đạo; volume nhân vật co giãn giữa frame.
+- **Hard to read at small size:** The silhouette is unclear → too many identifying points → value between object and background is too close → thin lines disappear when scaled down. Fix by simplifying the shapes or increasing the stroke weight before you sharpen.
+- **Set mismatch:** Viewing angle, stroke weight, detail level, light direction or object scale differs from the set anchor. State which axis differs.
+- **Light/dark outline around the asset:** It is a halo from background removal, wrong premultiplied/straight alpha, or a missing alpha border when filtering.
+- **Character jitters during animation:** Canvas/pivot is not fixed between frames. The usual cause is per-frame auto-crop.
+- **Tile shows its seam:** The edges do not match, or a prominent mark repeats at regular intervals. Separate the two cases because the fixes differ.
+- **Pixel art looks blurry:** Bilinear resampling or non-integer scale. Or the import notes propose the Linear filter.
+- **Animation is jerky:** Pose spacing on the onion skin is uneven where it must be even. Or one frame is off the path. Or character volume changes between frames.
 
-## Phân mức
+## Severity levels
 
-- **blocker:** không đọc/phân biệt được ở kích thước game khi đó là chức năng chính (ví dụ icon vật phẩm, trạng thái UI); alpha/canvas/pivot sai hợp đồng làm asset hiển thị sai; ghi chú import sai làm asset hiển thị sai (pixel art không Nearest, thiếu padding atlas gây lem); chữ UI tràn/cắt ở chuỗi bắt buộc.
-- **major:** lệch bộ rõ; halo thấy được trên nền game; tile lộ nhịp lặp ở khoảng nhìn thường.
-- **minor:** chi tiết phụ chưa gọn; lỗi chỉ thấy khi phóng to.
-- Ghi riêng **preference** cho lựa chọn thẩm mỹ không vi phạm brief.
+- **blocker:**
+  - Cannot be read or distinguished at game size when this is the main function (for example an item icon, a UI state).
+  - Alpha/canvas/pivot break the contract and the asset displays wrong.
+  - Wrong import notes make the asset display wrong (pixel art without Nearest, missing atlas padding that causes bleeding).
+  - UI text overflows or clips in a required string.
+- **major:**
+  - Clear set mismatch.
+  - Halo visible on the game background.
+  - Tile shows its repeat rhythm at the normal viewing distance.
+- **minor:**
+  - Secondary details not yet tidy.
+  - A fault visible only when zoomed in.
+- Record a **preference** separately for an aesthetic choice that does not violate the brief.
 
-## Review UI
+## UI review
 
-Tiêu chí kiểm lấy từ [UI QA](../../zps-ui/references/ui-qa.md). Phần dưới bổ sung bằng chứng và phân mức từ góc nhìn reviewer.
+Take the check criteria from [UI QA](../../zps-ui/references/ui-qa.md). The part below adds evidence and severity levels from the reviewer's view.
 
-| Câu hỏi | Bằng chứng cần | Không đủ để kết luận |
+| Question | Evidence needed | Not enough to conclude |
 |---|---|---|
-| Chữ có tràn/cắt không | Render với chuỗi dài nhất thật, có tiếng Việt có dấu | Chữ mẫu ngắn |
-| Đủ state không | Ảnh từng state đã yêu cầu (bình thường, nhấn, khóa, chọn…) | Một state đại diện |
-| 9-slice đúng không | Render ở kích thước nhỏ nhất và lớn nhất sẽ dùng | Ảnh frame gốc |
-| Đọc được trên game không | Màn hình ở độ phân giải đích, trên nền game bận nhất | Nền trơn |
-| Vùng chạm đủ không | Số đo sau scale ở độ phân giải đích | Kích thước ảnh |
-| Đúng wireframe không | Đặt cạnh wireframe đã duyệt | Mô tả bằng lời |
-| Nguồn SVG đúng luật không | Cảnh báo của `svg_render.py` (chữ trong SVG, filter, mask…); tên group theo component/state | Chỉ xem PNG |
+| Does the text overflow or clip? | Render with the real longest string, with Vietnamese text with diacritics | Short sample text |
+| Are all states present? | An image of each required state (normal, pressed, locked, selected...) | One representative state |
+| Is the 9-slice correct? | Render at the smallest and largest size that will be used | The source frame image |
+| Is it readable on the game? | Screen at target resolution, on the busiest game background | Plain background |
+| Is the touch area big enough? | Measurement after scaling at target resolution | Image size |
+| Does it match the wireframe? | Place it next to the approved wireframe | A description in words |
+| Does the SVG source follow the rules? | Warnings from `svg_render.py` (text in SVG, filter, mask...); group names by component/state | Viewing only the PNG |
 
-- **blocker:** chữ bắt buộc tràn/cắt; thiếu state bắt buộc; 9-slice vỡ ở kích thước dùng thật; vùng chạm dưới mục tiêu của project; sai wireframe đã duyệt.
-- **major:** thứ tự chú ý sai; HUD khó đọc trên nền bận; lệch UI kit hoặc hướng đã chọn.
-- **minor:** lệch căn lề nhỏ; trang trí thừa không ảnh hưởng đọc.
-- Vấn đề flow/UX: ghi cho UX/game design, không chấm là lỗi art.
+- **blocker:** required text overflows/clips; a required state is missing; 9-slice breaks at the real size; touch area is below the project target; differs from the approved wireframe.
+- **major:** wrong attention order; HUD hard to read on a busy background; deviates from the UI kit or the chosen direction.
+- **minor:** small alignment deviation; extra decoration that does not affect reading.
+- Flow/UX problem: record it for UX/game design. Do not score it as an art fault.
 
-## Ranh giới role
+## Role boundaries
 
-Reviewer kết luận vấn đề có bằng chứng. Sửa asset thuộc Asset 2D hoặc UI; vấn đề flow/wireframe thuộc UX/game design; đổi style thuộc AD.
+The reviewer concludes on issues that have evidence. Fixing the asset belongs to Asset 2D or UI. Flow/wireframe problems belong to UX/game design. A style change belongs to the AD.

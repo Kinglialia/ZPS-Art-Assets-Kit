@@ -1,21 +1,21 @@
-# UI QA theo rủi ro
+# UI QA by risk
 
-Chọn kiểm theo đầu ra và rủi ro; không thay kiểm thị giác bằng tên file hay exit code. Ghi kiểm bắt buộc và kiểm bổ sung; không tự hạ kiểm bắt buộc khi thiếu công cụ.
+Choose checks by output and risk. Do not replace a visual check with a file name or an exit code. Record the required checks and the extra checks. Do not lower a required check on your own when a tool is missing.
 
-| Rủi ro | Trường hợp đại diện | Công cụ |
+| Risk | Representative case | Tool |
 |---|---|---|
-| Tràn chữ | Chuỗi dài nhất, tiếng Việt có dấu, fallback, scale biên | Render với chuỗi thật |
-| HUD khó đọc | Nền sáng/tối/bận, khung chuyển động | `preview.py compare` trên ảnh nền game |
-| Layout vỡ | Tỷ lệ hẹp/rộng trong phạm vi, safe area | Render ở các tỷ lệ cam kết |
-| Frame/asset lỗi | 9-slice ở min/max size, alpha trên nền sáng/tối, crop | `preview.py sheet`, `inspect_image.py` |
-| Chạm nhầm | Hành động sát nhau, che khuất bởi tay | Đo vùng chạm sau scale |
-| Nguồn không dùng được | Đổi chữ dài, thay icon, resize một component rồi xuất lại | Ghi kết quả xuất lại |
-| Bàn giao thiếu | Người nhận dựng lại một component chỉ từ nguồn + đặc tả | Tự rà ghi rõ là tự rà |
+| Text overflow | Longest string, Vietnamese text with diacritics, fallback, edge scale | Render with the real string |
+| HUD hard to read | Light/dark/busy background, moving frame | `preview.py compare` on a game background image |
+| Layout breaks | Narrow/wide aspect ratios within range, safe area | Render at the committed aspect ratios |
+| Frame/asset fault | 9-slice at min/max size, alpha on light/dark background, crop | `preview.py sheet`, `inspect_image.py` |
+| Wrong touch | Actions close together, occlusion by the hand | Measure the touch area after scaling |
+| Unusable source | Change to a long text, replace an icon, resize one component, then export again | Record the result of the new export |
+| Incomplete handoff | The recipient rebuilds one component from the source + spec only | Self-review; state clearly that it is a self-review |
 
-Không bắt task icon đơn lẻ chạy test layout; ghi lý do N/A. Một mẫu đạt không xác nhận mọi kích thước hay trạng thái.
+Do not require a single-icon task to run a layout test. Record the reason as N/A. One passing sample does not confirm every size or state.
 
-**Kết quả:** pass / fail / not_checked / not_applicable (có lý do). **Mức độ:** blocker / major / minor theo [mẫu review](../../.art-production-support/templates/review.md). Duyệt là trạng thái riêng.
+**Result:** pass / fail / not_checked / not_applicable (with a reason). **Severity:** blocker / major / minor, as in the [review template](../../.art-production-support/templates/review.md). Approval is a separate status.
 
-**Hiệu lực:** mỗi kiểm ghi bản, môi trường, kích thước, dữ liệu, tiêu chí, bằng chứng. Đổi layout, token, font, asset hay thiết lập render → đánh dấu các kiểm bị ảnh hưởng là cần chạy lại; PASS cũ không là bằng chứng hiện tại.
+**Validity:** for each check, record the version, environment, size, data, criterion and evidence. If you change the layout, token, font, asset or render setting, mark the affected checks as needing a new run. An old PASS is not current evidence.
 
-Ba mức xác nhận tách riêng: đã kiểm thiết kế; đã đối chiếu trong Godot; đã thử trên thiết bị. Không dùng mức này để xác nhận mức khác. Phần Godot/thiết bị chưa làm ghi rõ ai làm tiếp, không tính là PASS.
+Three confirmation levels are separate: design checked; compared in Godot; tested on a device. Do not use one level to confirm another. For the Godot/device part that is not done, record who does it next. It does not count as PASS.

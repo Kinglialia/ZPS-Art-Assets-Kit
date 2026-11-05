@@ -92,7 +92,7 @@ def critic(work):
     d = read(path) or {}
     concl = None
     for line in str(d.get("rubric_vi") or "").splitlines():
-        if line.upper().startswith(("KẾT LUẬN", "KET LUAN")):
+        if line.upper().startswith(("VERDICT", "KẾT LUẬN", "KET LUAN")):  # rubric v0.7+ uses VERDICT
             concl = line.split(":", 1)[-1].strip()
     return {"source": rel(work, path), "approved": d.get("approved"), "conclusion_vi": concl,
             "summary": d.get("summary"), "step": d.get("step"),

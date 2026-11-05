@@ -49,7 +49,7 @@ Fix the game camera first: the first `render_rig` run without `camera.distance_m
 
 Multi-object assets: the optimize path joins every mesh into one object named after the asset (audit records the original names). Per-object spec keys (`objects`, `dimensions_m`, `expected_parts`, contacts between those objects) then report `not_checked` with that reason. Check per-object facts on the input before optimizing, and say in the report which checks ran on the input only.
 
-Then the visual review: `render_rig` produced `sheet.png`, clay crops at the game camera, and `concept_compare.png` (only with a ConceptCam; otherwise use `render_views.py --input <final> --mode critic` overlays). Review the image set listed in `templates/REVIEW-RUBRIC.md`. Label self-review versus independent review; neither grants owner approval. `chưa đạt` → one fix cycle (rule 6), then re-run the gate.
+Then the visual review: `render_rig` produced `sheet.png`, clay crops at the game camera, and `concept_compare.png` (only with a ConceptCam; otherwise use `render_views.py --input <final> --mode critic` overlays). Review the image set listed in `templates/REVIEW-RUBRIC.md`. Label self-review versus independent review; neither grants owner approval. `not passed` → one fix cycle (rule 6), then re-run the gate.
 
 When required QA checks pass and the configured visual review milestone is satisfied: `tools/.deps/venv/bin/python tools/finalize.py --work output/<asset> --from <baked GLB> [--min-pass <baked GLB>]`. It refuses while any QA result is `fail` or `error` and names them; otherwise it writes `final.glb` (and `final_budget.glb` / `final_min_pass.glb`).
 

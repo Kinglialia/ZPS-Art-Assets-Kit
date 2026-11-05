@@ -1,25 +1,36 @@
-# Stylized lit và PBR
+# Stylized lit and PBR
 
-## Tách nghệ thuật khỏi hợp đồng dữ liệu
+## Separate art from the data contract
 
-Stylized có thể dùng PBR. Chọn tỷ lệ, palette, roughness distribution và chi tiết có chủ đích; không cần thêm micro-noise để “đúng PBR”. Độ đẹp và độ hợp lý vật liệu cần xem trên shader, không đọc từ histogram.
+Stylized work can use PBR. Choose proportions, palette, roughness distribution and detail on purpose. Do not add micro-noise to be "correct PBR". Judge beauty and material plausibility on the shader. Do not read them from a histogram.
 
-Với metallic-roughness, base color phi kim mô tả màu diffuse; kim loại mô tả phản xạ có màu. Kim loại có màu không đòi mọi kênh RGB cao như nhau. Metallic thường chọn vật liệu thuần 0/1; giá trị trung gian có thể do pha trộn/coverage, phải có ý nghĩa. Roughness điều khiển độ rộng/đặc tính phản xạ theo shader, không đồng nghĩa độ tối. Không suy cả roughness/height/normal đúng từ một ảnh RGB.
+For metallic-roughness: the base color of a non-metal describes the diffuse color. For a metal, it describes a colored reflection. A colored metal does not need all RGB channels to be equally high. Metallic is usually 0 or 1 for pure materials. An intermediate value can come from mixing or coverage, and it must have a meaning. Roughness controls the width and character of reflection according to the shader. It is not the same as darkness. Do not infer correct roughness, height and normal from one RGB image.
 
-Texture màu thường được encode sRGB; map dữ liệu không áp chuyển sRGB. glTF dùng roughness G, metallic B và base-color RGB sRGB với alpha linear, straight alpha. Đó là hợp đồng glTF, không mặc định mọi engine cùng packing. Filament shader input dùng linear và quy ước alpha riêng; không lẫn shader value với bytes của texture. Normal theo tangent basis/convention thực, kiểm DirectX/OpenGL và mirrored UV, không chỉ đổi tên file.
+Color textures are usually encoded as sRGB. Data maps do not get an sRGB transform. glTF uses roughness in G, metallic in B, and base-color RGB in sRGB with linear, straight alpha. That is the glTF contract. Do not assume that every engine uses the same packing. Filament shader inputs are linear and use their own alpha convention. Do not mix shader values with texture bytes. Normals follow the real tangent basis and convention. Check DirectX/OpenGL and mirrored UV. Do not only rename the file.
 
-## Author và chẩn đoán
+## Author and diagnose
 
-Với look mới hoặc rủi ro chưa giải, làm material swatch trên bề mặt có nhiều hướng; dùng lại mẫu đã đạt nếu điều kiện còn đúng. Kiểm base color riêng, roughness/metallic và normal, rồi tổng hợp khi cần tìm nguyên nhân. Dùng neutral light để chẩn đoán và lighting của game để duyệt look; giữ exposure, tone mapping, camera, environment giữa bản so. Không dùng emissive để che màu tối trừ khi brief yêu cầu phát sáng.
+For a new look or an unresolved risk, make a material swatch on a surface with many directions. Reuse a passed swatch if its conditions still apply. Check base color alone, then roughness/metallic and normal, then the combination when you need to find a cause. Use neutral light to diagnose and the game lighting to approve the look. Keep exposure, tone mapping, camera and environment the same between compared versions. Do not use emissive to hide a dark color, unless the brief asks for a glow.
 
-Với dynamic lighting, tránh bake highlight hoặc cast shadow cố định vào base color. Một chút art shading có thể hợp stylized-lit nhưng cần kiểm trong vùng sáng/tối và góc xoay thực; không gọi đây là albedo vật lý sạch.
+With dynamic lighting, do not bake fixed highlights or cast shadows into the base color. A little art shading can suit stylized-lit, but check it in lit and dark areas and at the real rotation angles. Do not call this a clean physical albedo.
 
-Normal không thay silhouette. Height cần scale/range và shader hỗ trợ. Roughness có thể thiết kế theo vùng lớn–vừa, tránh hạt li ti không ổn định ở mip thấp. Chi tiết biến mất khi thu nhỏ cần đánh giá trong mục tiêu, không tự tăng resolution.
+A normal map does not replace the silhouette. Height needs a scale/range and a shader that supports it. Roughness can be designed in large and medium areas. Avoid tiny grain that is unstable at low mips. Detail that disappears when shrunk must be judged against the target. Do not raise the resolution by default.
 
-## Bake và smart material
+## Bake and smart material
 
-Bake chuyển chi tiết từ high-poly sang low-poly (normal, AO, curvature, thickness) để làm nền cho vật liệu. Cần: high-poly và low-poly khớp, UV low-poly không chồng ở vùng có chi tiết riêng, cage/khoảng ray phù hợp, cùng quy ước tangent với engine. Một owner bake (thường 3D Artist); artist dùng map bake làm mask cho mòn cạnh, bụi khe, không vẽ tay lại AO. Smart material (Substance…) là DCC ngoài khả năng tự chạy của role: đề xuất thông số, kiểm kết quả trên model. Godot có `ORMMaterial3D` dùng một texture gộp occlusion/roughness/metallic.
+A bake transfers detail from high-poly to low-poly (normal, AO, curvature, thickness) as a base for the material. Requirements:
+- The high-poly and low-poly match.
+- The low-poly UV does not overlap in areas with unique detail.
+- The cage/ray distance is suitable.
+- The tangent convention is the same as the engine's.
 
-## Xác minh
+A bake has one owner (usually the 3D Artist). The artist uses the baked maps as masks for edge wear and crevice dust. Do not repaint AO by hand. A smart material (Substance and similar) is an external DCC that this role cannot run by itself. Propose parameters, and check the result on the model. Godot has `ORMMaterial3D`, which uses one texture that combines occlusion, roughness and metallic.
 
-Chọn kiểm theo thay đổi: repaint look cần xem phản ứng ánh sáng; đổi normal cần kiểm convention/tangent; chỉ repack cần đối chiếu giá trị từng kênh và import đích, không author lại swatch. Quay model hoặc đèn độc lập khi cần lộ phản xạ bị vẽ sai, inversion và seam. Kiểm compression/mip và runtime material thật khi thuộc đầu ra; Workbench/clay không xác nhận PBR. Chưa có engine thì giao mức đã kiểm trong DCC, ghi rõ runtime chưa kiểm. Nguồn chuẩn kỹ thuật: glTF 2.0, Filament và tài liệu engine phiên bản được chọn.
+## Verification
+
+Choose checks by the change:
+- Repaint of the look: check the light response.
+- Normal change: check the convention and tangent.
+- Repack only: compare the values of each channel and the target import. Do not author the swatch again.
+
+When needed, rotate the model or the light independently, to expose reflections that were painted wrongly, inversion and seams. If compression/mip and the real runtime material are part of the output, check them. Workbench and clay do not confirm PBR. If no engine is available, hand off the level checked in the DCC, and state clearly that the runtime is not checked. Technical standards: glTF 2.0, Filament, and the documentation of the chosen engine version.

@@ -1,35 +1,35 @@
 # Flat color — palette atlas, gradient atlas, vertex color
 
-Bề mặt là màu theo vùng vật liệu; hình khối, sáng tối và chiều sâu do mesh, ánh sáng engine và sương/khí quyển. Chất lượng nằm ở **chọn màu và phân vùng**, không ở chi tiết vẽ.
+The surface is a color per material area. The mesh, the engine lighting and fog/atmosphere give form, light and shade, and depth. Quality comes from **choosing colors and dividing areas**, not from painted detail.
 
-## Chọn biến thể
+## Choose a variant
 
-| Biến thể | Dùng khi | Lưu ý |
+| Variant | Use when | Notes |
 |---|---|---|
-| Palette atlas | Nhiều asset chung palette; muốn đổi màu bằng thay atlas | Một texture nhỏ chung cho cả bộ, ít material → ít draw call |
-| Gradient atlas | Cần chuyển sáng/tối có chủ đích trong một vùng (tán cây, đá, tường) | Hướng gradient do UV; giữ cùng hướng trong bộ |
-| Vertex color | Không muốn texture; mesh có đủ đỉnh ở ranh giới màu | Godot: bật Vertex Color → Use as Albedo (+ Is sRGB); gán màu là việc của 3D Artist hoặc DCC |
+| Palette atlas | Many assets share one palette; you want to change colors by swapping the atlas | One small texture shared by the whole set, few materials → fewer draw calls |
+| Gradient atlas | You need a deliberate light-to-dark change inside one area (tree canopy, rock, wall) | UV sets the gradient direction. Keep the same direction across the set |
+| Vertex color | You want no texture; the mesh has enough vertices at the color boundaries | Godot: turn on Vertex Color → Use as Albedo (+ Is sRGB). Assigning the colors is the job of the 3D Artist or the DCC |
 
-## Lập atlas
+## Build the atlas
 
-1. Lấy palette từ style sheet (đo bằng `palette_report.py`/`--profile` trên reference cùng loại); mỗi vật liệu một ô, đặt tên ô theo vật liệu.
-2. Ô đủ lớn để mipmap không lem sang ô bên: chừa padding giữa ô, kích thước atlas theo tech profile. Kiểm ở khoảng nhìn xa nhất.
-3. Gradient: ô kéo dài theo một trục; ghi trục nào là "trên/dưới" để 3D Artist đặt UV đúng.
-4. Biến thể mùa/skin: atlas cùng bố cục ô, chỉ đổi màu; không vẽ lại.
+1. Take the palette from the style sheet. Measure it with `palette_report.py` or `--profile` on a reference of the same type. Give each material one cell. Name each cell after its material.
+2. Make each cell large enough that mipmaps do not bleed into the next cell. Leave padding between cells. Set the atlas size from the tech profile. Check at the longest viewing distance.
+3. Gradient: stretch the cell along one axis. Record which direction is "top/bottom" so the 3D Artist can place the UV correctly.
+4. Season/skin variants: use an atlas with the same cell layout. Change only the colors. Do not repaint.
 
-## Gán UV vào ô
+## Assign UV to cells
 
-UV của mỗi vùng thu gọn trong ô màu của nó (gần như một điểm với ô phẳng; trải theo trục với ô gradient). Không cần UV trải đều, không cần tránh chồng giữa các mặt cùng màu. Gán UV là việc của 3D Artist; artist giao atlas + bảng ô.
+Shrink the UV of each area into its color cell. For a flat cell, the UV is almost a single point. For a gradient cell, the UV spreads along the axis. UV does not need an even layout. UV may overlap between faces of the same color. Assigning UV is the job of the 3D Artist; the artist delivers the atlas and the cell table.
 
-## Tự kiểm
+## Self-check
 
-- `render_model.py` nhiều góc dưới ánh sáng game: vùng vật liệu đọc rõ ở kích thước màn hình; màu không lệch giữa mặt sáng và mặt tối quá mức style.
-- So với render asset đã duyệt cùng bộ (`preview.py compare`, `score_variants.py`).
-- Không nét, vân, noise, bóng vẽ sẵn nếu style không có (bảng lỗi trong gen craft).
-- Ở mip thấp không lem màu ô bên.
+- Render with `render_model.py` from several angles under game lighting. Material areas must read clearly at screen size. The color must not shift between lit and dark faces more than the style allows.
+- Compare with the render of an approved asset of the same set (`preview.py compare`, `score_variants.py`).
+- No strokes, grain, noise or painted shadow, unless the style has them (fault table in gen craft).
+- At low mips, color does not bleed into the next cell.
 
 ## Gotchas
 
-- Gen ảnh để làm atlas thường thêm vân và sáng tối: atlas nên tạo bằng màu đo từ style sheet, không gen.
-- Màu đẹp trên ô phẳng có thể quá tối/sáng trên model dưới ánh sáng engine: luôn chọn màu trên render.
-- Vertex color phụ thuộc mật độ đỉnh: ranh giới màu cong cần thêm cạnh, đề xuất với 3D Artist thay vì đổi sang texture.
+- A generated image used for an atlas often adds grain and light/shade. Make the atlas with colors measured from the style sheet. Do not generate it.
+- A color that looks good on a flat cell can be too dark or too bright on a model under engine lighting. Always choose colors on a render.
+- Vertex color depends on vertex density. A curved color boundary needs more edges. Propose this to the 3D Artist instead of switching to a texture.

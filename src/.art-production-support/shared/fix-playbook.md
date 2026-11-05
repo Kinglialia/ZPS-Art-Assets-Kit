@@ -1,59 +1,59 @@
-# Fix playbook — chọn cách sửa theo triệu chứng
+# Fix playbook — choose a fix by symptom
 
-Đọc khi ảnh chưa đạt và phải chọn bước tiếp. Thứ tự cách sửa dựa trên thử nghiệm thật; độ tin ghi theo lượng bằng chứng (thấp = một subject/style/tool). Bằng chứng chi tiết nằm ở repo nguồn (`research/trials/`), không nằm trong package.
+Read this when an image does not pass and you must choose the next step. The order of fixes is based on real trials. Confidence follows the amount of evidence (low = one subject/style/tool). The detailed evidence is in the source repo (`research/trials/`), not in the package.
 
 ## Contents
-- Quy trình chọn
-- Đo bằng gì theo deliverable
-- Bảng triệu chứng → cách sửa
-- Chọn phương án
-- Ghi bài học và khi nào dừng
+- Selection procedure
+- What to measure for each deliverable
+- Symptom → fix table
+- Choosing an option
+- Recording lessons and when to stop
 
-## Quy trình chọn
+## Selection procedure
 
-1. **Chẩn đoán bằng số + mắt.** Số cho biết lệch ở đâu; mắt thấy cái số không thấy (kiểu render, chi tiết lạ, cấu tạo).
-2. **Phân loại lỗi**: *cấu trúc* (render, hình, bố cục, phần tử) · *màu/tông* (cast, palette, value) · *cục bộ* (một vùng) · *kỹ thuật* (alpha, canvas, pivot, seam).
-3. **Chọn cách rẻ nhất có bằng chứng** theo bảng. Cấu trúc đã đạt → ưu tiên cách xác định (script, edit cục bộ) trước gen lại.
-4. **≥2 giả thuyết**: chọn thử tuần tự (giả thuyết khả năng cao/rẻ nhất trước) hoặc song song khi budget cho phép và song song rẻ hơn tổng số lượt; mỗi nhánh đổi đúng một yếu tố. Không tự tăng budget hay số agent để thử song song.
-5. Khi có nhiều phương án, **chấm lại cùng lúc** trong cùng điều kiện, review mắt top 2–3, chọn và ghi lý do.
+1. **Diagnose with numbers and your eyes.** Numbers show where the image deviates. Your eyes see what numbers do not see (render style, odd details, construction).
+2. **Classify the defect**: *structure* (render, shape, layout, elements); *color/tone* (cast, palette, value); *local* (one area); *technical* (alpha, canvas, pivot, seam).
+3. **Choose the cheapest method that has evidence**, using the table. If the structure is acceptable, prefer deterministic methods (script, local edit) before you regenerate.
+4. **With 2 or more hypotheses**, test them in sequence (the most likely or cheapest hypothesis first). Or test them in parallel when the budget allows and parallel is cheaper than the total number of rounds. In each branch, change exactly one factor. Do not raise the budget or the number of agents on your own to test in parallel.
+5. When you have several options, **score them again at the same time** under the same conditions. Review the top 2–3 by eye. Choose one and record the reason.
 
-## Đo bằng gì theo deliverable
+## What to measure for each deliverable
 
-Reference để chấm phải **cùng loại** với đầu ra.
+The reference used for scoring must be **the same type** as the output.
 
-| Deliverable | Reference để so | Công cụ |
+| Deliverable | Reference to compare | Tool |
 |---|---|---|
-| Concept/cảnh | Execution reference cùng loại cảnh | `preview.py compare`, `value`; `score_variants.py` |
-| Icon/sprite/asset bộ | Asset mẫu đã duyệt trong cùng bộ | `preview.py sheet` (kích thước đích, nền game), `compare`; `score_variants.py`; `inspect_image.py`; `sprite_check.py` cho frame |
-| Tile/background | Tile/background đã duyệt | `preview.py tile`, `compare` |
-| Texture trên model | Render on-model của asset đã duyệt cùng ánh sáng | `render_model.py` nhiều góc + `compare` |
-| Bản edit của ảnh có sẵn | Ảnh gốc | `structure_diff.py` (giữ hình), `inspect_image.py --lock-mask` (giữ pixel) |
+| Concept/scene | Execution reference of the same scene type | `preview.py compare`, `value`; `score_variants.py` |
+| Icon/sprite/set asset | Approved set anchor in the same set | `preview.py sheet` (target size, game background), `compare`; `score_variants.py`; `inspect_image.py`; `sprite_check.py` for frames |
+| Tile/background | Approved tile/background | `preview.py tile`, `compare` |
+| Texture on a model | On-model render of an approved asset under the same lighting | `render_model.py` with several angles + `compare` |
+| Edit of an existing image | Source image | `structure_diff.py` (keep shape), `inspect_image.py --lock-mask` (keep pixels) |
 
-## Bảng triệu chứng → cách sửa
+## Symptom → fix table
 
-| Triệu chứng | Đo | Thử trước | Thử sau | Không nên | Tin |
+| Symptom | Measure | Try first | Try after | Do not | Confidence |
 |---|---|---|---|---|---|
-| Sai kiểu render (ra minh họa 2D, painterly, bán-realistic…) | Mắt, `compare` | Gen lại **có ảnh Execution reference**, gọi đúng tên loại ảnh đích | Đổi/thêm reference đúng kiểu render | Thêm tính từ style vào prompt chữ | trung bình |
-| Palette lệch toàn ảnh, cấu trúc đạt | `score_variants` cast_*, off_palette | `tone_match.py --bands shadows midtones`, rồi `structure_diff` xác nhận giữ hình | Edit "change only colors" kèm ảnh chuẩn màu, rồi `tone_match` kéo về | Gen lại toàn ảnh chỉ vì màu; hex trong prompt; tính từ màu mạnh | trung bình |
-| Màu bị kéo theo một reference lệch tông | Palette/`--profile` từng reference | Bỏ reference lệch tông hoặc đánh dấu "structure only" | Giảm số reference | Thêm reference "cho đủ" | thấp |
-| Vùng tối/ánh sáng sai tông (nâu thay vì xám lạnh, cam thay vì trung tính) | `score_variants` dark_hue_gap, cast_shadows/highlights | `tone_match` đúng dải; không chỉnh dải sáng khi trời/highlight đã đúng | Gen lại với reference đúng ánh sáng làm chuẩn màu; kiểm lại kiểu render | Mô tả màu tối bằng lời trong prompt | thấp |
-| Chi tiết lạ, phần tử ngoài brief | Kiểm kê phần tử | Edit cục bộ xóa (mask nếu tool có); `structure_diff` kiểm phần còn lại | Gen lại với danh sách loại trừ rõ hơn | Giữ vì "trông đẹp" | chưa thử |
-| Lệch bộ: nét, góc nhìn, mức chi tiết, hướng sáng khác asset mẫu | `sheet` + `compare` cạnh asset mẫu, cùng kích thước | Gen lại với asset mẫu của bộ làm reference chính | Edit cục bộ vùng lệch | So với reference cảnh thay vì asset mẫu | chưa thử |
-| Cấu tạo/phối cảnh sai một vùng | Mắt, phóng to | Edit cục bộ + nhắc invariant; `structure_diff` vùng ngoài | Gen lại với reference cấu tạo | Sửa màu để che | chưa thử |
-| Texture không theo khối, seam lộ, sáng/bóng vẽ theo atlas | `render_model` checker + textured nhiều góc | Sửa trên UV/paint view theo hướng khối, render lại | Báo UV cho 3D Artist | Đánh giá trên atlas phẳng | chưa thử |
-| Sprite trôi pivot/baseline, canvas lệch | `sprite_check.py` | Đặt lại canvas/pivot bằng script | Gen lại frame lệch với frame chuẩn làm reference | Auto-crop từng frame | chưa thử |
-| Mất alpha, halo, nền giả trong suốt | `inspect_image --require-alpha`, `sheet` nền tối | Yêu cầu nền trong suốt thật; tách nền lại | — | Tin alpha có là sạch | chưa thử |
+| Wrong render style (comes out as 2D illustration, painterly, semi-realistic…) | Eyes, `compare` | Regenerate **with an Execution reference image**. Name the correct target image type | Change or add a reference with the correct render style | Add style adjectives to the text prompt | medium |
+| Palette is off across the whole image, structure is acceptable | `score_variants` cast_*, off_palette | `tone_match.py --bands shadows midtones`, then `structure_diff` to confirm the shape is kept | Edit "change only colors" with a color-standard image, then pull back with `tone_match` | Regenerate the whole image just for color; hex codes in the prompt; strong color adjectives | medium |
+| Color is pulled by one reference with an off tone | Palette/`--profile` of each reference | Remove the off-tone reference or mark it "structure only" | Reduce the number of references | Add references "to have enough" | low |
+| Dark areas/light have the wrong tone (brown instead of cool grey, orange instead of neutral) | `score_variants` dark_hue_gap, cast_shadows/highlights | `tone_match` on the correct band. Do not adjust the light band when the sky/highlight is already correct | Regenerate with a reference that has the correct light as the color standard. Check the render style again | Describe dark colors in words in the prompt | low |
+| Odd details, elements outside the brief | Element inventory | Local edit to remove (use a mask if the tool has one). Use `structure_diff` to check the remaining parts | Regenerate with a clearer exclusion list | Keep it because it "looks good" | not tried |
+| Set mismatch: line, viewing angle, detail level, light direction differ from the set anchor | `sheet` + `compare` next to the set anchor, same size | Regenerate with the set anchor of the set as the main reference | Local edit of the mismatched area | Compare with a scene reference instead of the set anchor | not tried |
+| Construction/perspective wrong in one area | Eyes, zoom in | Local edit + restate the invariant. Use `structure_diff` on the area outside | Regenerate with a construction reference | Fix the color to hide it | not tried |
+| Texture does not follow the form, seams show, light/gloss painted per atlas | `render_model` checker + textured, several angles | Fix on the UV/paint view following the form, then render again | Report the UV to the 3D Artist | Evaluate on the flat atlas | not tried |
+| Sprite pivot/baseline drifts, canvas is off | `sprite_check.py` | Reset the canvas/pivot with a script | Regenerate the off frame with a standard frame as reference | Auto-crop each frame | not tried |
+| Alpha lost, halo, fake transparent background | `inspect_image --require-alpha`, `sheet` on a dark background | Require a real transparent background. Remove the background again | — | Trust that an alpha channel is clean | not tried |
 
-Script màu (`tone_match`, `score_variants`) bỏ qua pixel trong suốt và giữ alpha.
+Color scripts (`tone_match`, `score_variants`) skip transparent pixels and keep alpha.
 
-## Chọn phương án
+## Choosing an option
 
-- **Mắt trước** (bắt buộc): đúng kiểu render, kiểm kê phần tử, bảng lỗi ảnh gen, 6 chiều tự kiểm.
-- **Số sau, chỉ để phân xử**: số đo giúp loại phương án lệch rõ và phân xử khi các phương án đạt mắt gần ngang nhau. Total `score_variants` thấp hơn không tự chứng minh phương án tốt hơn về art; trọng số là ước lượng chưa calibrate, chỉ so total trong cùng lần chấm, cùng reference. Số đo màu không thấy kiểu render, cá tính hay biểu đạt.
-- Bản edit phải qua `structure_diff` nếu yêu cầu giữ hình.
+- **Eyes first** (required): correct render style, element inventory, generated-image fault table, 6-dimension self-check.
+- **Numbers after, only to break ties**: measurements help eliminate clearly deviating options. They also break ties when the options look almost equal by eye. A lower `score_variants` total does not prove by itself that an option is better as art. The weights are uncalibrated estimates. Compare totals only within the same scoring run and the same reference. Color measurements do not see render style, personality, or expression.
+- An edit must pass `structure_diff` if the request is to keep the shape.
 
-## Ghi bài học và khi nào dừng
+## Recording lessons and when to stop
 
-- Ghi cách đã thử, số trước/sau, lựa chọn vào **task record**; điều riêng của style/project (reference nào chỉ dùng cấu tạo, cách sửa đã hiệu quả) vào **mục Ghi chú sản xuất của style sheet**. Không sửa file skill đã cài.
-- Phát hiện có vẻ đúng chung cho tool/loại lỗi: đề xuất owner kèm bằng chứng để cập nhật playbook ở repo nguồn.
-- Dừng theo budget trong [chuẩn chất lượng](../rules/art-quality.md). Một loại lỗi đã thử ≥2 cách không tiến bộ: dừng, chẩn đoán lại và báo cách khác kèm bằng chứng (sửa tay trong DCC, đổi tool/model, đổi reference). Đổi tiêu chí là quyết định riêng của AD/owner, không phải cách để đạt pass.
+- Record the methods you tried, the before/after numbers, and the choice in the **task record**. Record style-specific or project-specific points (which reference is used only for construction, which fix worked) in the **Production notes section of the style sheet**. Do not edit installed skill files.
+- If a finding seems generally true for a tool or error type, propose it to the owner with evidence so the playbook in the source repo can be updated.
+- Stop according to the budget in the [quality standard](../rules/art-quality.md). If you tried 2 or more methods for one error type and none made progress, stop. Diagnose again and report a different method with evidence (hand edit in a DCC, change the tool/model, change the reference). Changing the criteria is a separate decision of the AD/owner. It is not a way to get a pass.

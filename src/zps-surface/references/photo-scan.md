@@ -1,28 +1,28 @@
 # Photo / scan-based texture
 
-Dùng ảnh chụp hoặc scan làm nguồn vật liệu, cho realistic hoặc stylized dựa trên ảnh.
+Use a photo or a scan as the material source, for realistic or photo-based stylized work.
 
-## Quyền và nguồn
+## Rights and source
 
-- Chỉ dùng ảnh có quyền sử dụng trong sản phẩm (ảnh tự chụp, thư viện có license, nguồn project cung cấp). Ảnh xem được trên web không tự có quyền. Ghi nguồn và license vào task record.
-- Ảnh screenshot game khác chỉ để học nguyên tắc, không làm nguồn texture.
+- Use only images that you have the right to use in the product: your own photos, licensed libraries, sources the project provides. An image you can see on the web does not come with the right to use it. Record the source and license in the task record.
+- Use screenshots of other games only to learn principles. Do not use them as a texture source.
 
-## Quy trình
+## Process
 
-1. **Chọn ảnh** chụp thẳng góc, ánh sáng đều/u ám, độ phân giải đủ theo texel density đích.
-2. **Khử ánh sáng (delight)**: bỏ bóng đổ, highlight, AO nướng sẵn khỏi albedo để engine tự chiếu sáng; giữ lại khi style là unlit có ánh sáng vẽ sẵn.
-3. **Cân màu** về palette/value của style sheet; `tone_match.py` có thể kéo cast màu về reference, `structure_diff.py` xác nhận không đổi hình.
-4. **Làm liền/tile** nếu là vật liệu lặp (xem tileable-trim).
-5. **Map dữ liệu** (normal, roughness) nếu PBR: suy từ ảnh chỉ là xấp xỉ; kiểm dưới đèn xoay, đọc pbr.
-6. **Stylize** nếu style yêu cầu: giảm chi tiết tần số cao, gom mảng, giữ đặc trưng vật liệu; so với reference cùng loại.
+1. **Choose the image.** It must be shot straight on, with even or overcast light, at a resolution that is enough for the target texel density.
+2. **Remove the lighting (delight).** Remove cast shadows, highlights and baked AO from the albedo, so the engine can light it. If the style is unlit with painted lighting, keep them.
+3. **Balance color** to the palette/value of the style sheet. `tone_match.py` can pull the color cast toward the reference. `structure_diff.py` confirms the shape did not change.
+4. **Make it seamless/tileable** if the material repeats (see tileable-trim).
+5. **Data maps** (normal, roughness) if PBR: what you infer from a photo is only an approximation. Check under a rotating light and read pbr.
+6. **Stylize** if the style requires it: reduce high-frequency detail, group blocks, keep the character of the material. Compare with a reference of the same type.
 
-## Tự kiểm
+## Self-check
 
-- Albedo không còn bóng/highlight cố định (trừ style unlit).
-- Màu và value khớp style sheet; không lệch giữa các asset chung cảnh.
-- Lặp không lộ; độ sắc nét đồng nhất với asset khác ở khoảng nhìn game.
+- The albedo has no fixed shadow or highlight left (except for an unlit style).
+- Color and value match the style sheet. They do not differ between assets in the same scene.
+- The repeat is not visible. Sharpness matches other assets at the game viewing distance.
 
 ## Gotchas
 
-- Ảnh chụp mang ánh sáng và góc nhìn của lúc chụp: khi xoay model hoặc đổi đèn sẽ lộ.
-- Chi tiết ảnh thật dễ "lạc style" cạnh asset stylized: kiểm cạnh asset đã duyệt.
+- A photo carries the light and the viewing angle of the moment it was shot. This shows when you rotate the model or change the light.
+- Real photo detail easily goes "off style" next to a stylized asset. Check it next to an approved asset.

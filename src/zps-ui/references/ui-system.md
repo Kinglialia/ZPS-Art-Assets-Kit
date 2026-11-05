@@ -1,56 +1,64 @@
-# UI system, hướng visual và nguồn/asset
+# UI system, visual direction and source/asset
 
 ## Contents
-- Hai hướng visual
-- Hệ thống vừa đủ
-- Nguồn chỉnh sửa và xuất
-- Quyền sử dụng
+- Two visual directions
+- Just-enough system
+- Editable source and export
+- Usage rights
 
-## Hai hướng visual
+## Two visual directions
 
-Chỉ khi project chưa có UI style. Dựng trên cùng wireframe và nội dung đã duyệt. Mỗi hướng nêu: cảm giác chủ đạo và liên hệ thế giới game; ngôn ngữ hình khối (silhouette, góc, độ dày, nhịp lặp); typography, vật liệu, mức trang trí; thứ tự chú ý; đánh đổi về khả năng đọc và công sản xuất; một khuyến nghị. Glow, gradient, đối xứng không phải lỗi mặc định: đánh giá theo style, trọng tâm và khả năng đọc.
+Do this only when the project has no UI style yet. Build on the same approved wireframe and content. For each direction, state:
+- The main feeling and the link to the game world.
+- The form language (silhouette, corners, thickness, repeat rhythm).
+- Typography, material, level of decoration.
+- Attention order.
+- The trade-off in readability and production effort.
+- One recommendation.
 
-## Hệ thống vừa đủ
+Glow, gradient and symmetry are not faults by default. Judge them by style, focal point and readability.
 
-| Nhóm | Đặc tả theo phạm vi |
+## Just-enough system
+
+| Group | Spec by scope |
 |---|---|
-| Màu | Vai trò nền, chữ, hành động, trạng thái/rarity; không dùng cùng tín hiệu cho ý nghĩa xung đột |
-| Chữ | Font, cấp chữ, line height, outline/shadow, fallback, quy tắc chữ dài |
-| Layout | Spacing, padding, alignment, minimum size, co giãn, overflow |
-| Component | ID ổn định, cấu trúc, biến thể, state cần thiết, vùng chạm |
-| Icon trạng thái | Hình khối, độ dày, chi tiết theo kích thước dùng thật |
-| Trang trí | Frame, viền, vật liệu và giới hạn dùng |
-| Motion | Mục đích, trigger, thời lượng đề xuất, phương án giảm motion nếu áp dụng |
+| Color | Roles: background, text, action, state/rarity. Do not use the same signal for conflicting meanings |
+| Text | Font, type levels, line height, outline/shadow, fallback, long-text rules |
+| Layout | Spacing, padding, alignment, minimum size, stretching, overflow |
+| Component | Stable ID, structure, variants, necessary states, touch area |
+| State icon | Shape, thickness, detail at the real use size |
+| Decoration | Frame, border, material and limits of use |
+| Motion | Purpose, trigger, proposed duration, reduce-motion option if it applies |
 
-Không tạo token, biến thể hay state chưa có nhu cầu. Hover không cần cho UI chỉ dùng touch.
+Do not create a token, variant or state that nobody needs. Hover is not needed for a UI that uses touch only.
 
-## Nguồn chỉnh sửa và xuất
+## Editable source and export
 
-Có yêu cầu cụ thể về định dạng nguồn (AD, tài liệu Art Style, project) thì làm theo. Không ai nêu thì chọn theo loại UI và ghi lý do một dòng:
+If there is a specific source-format requirement (AD, Art Style document, project), follow it. If nobody states one, choose by UI type and record the reason in one line:
 
-| Loại UI | Nguồn mặc định |
+| UI type | Default source |
 |---|---|
-| Nút, panel, thanh, khung 9-slice phẳng hoặc gradient đơn giản; icon trạng thái dạng khối/nét; UI phẳng, sci-fi, tối giản | **SVG** (LLM viết được, sửa được trong Figma, sắc nét mọi kích thước) |
-| Khung trang trí vẽ tay (gỗ, kim loại chạm, đá, fantasy nhiều họa tiết), illustration, nền | **Ảnh gen** theo [gen craft](../../.art-production-support/shared/gen-craft.md); raster riêng là nguồn illustration |
-| Kết hợp | Khung SVG + một lớp texture raster; ghi rõ lớp nào là nguồn nào |
+| Button, panel, bar, flat or simple-gradient 9-slice frame; state icon made of shapes/strokes; flat, sci-fi, minimalist UI | **SVG** (an LLM can write it, it can be edited in Figma, and it is sharp at every size) |
+| Hand-drawn decorative frame (wood, carved metal, stone, fantasy with many patterns), illustration, background | **Generated image** per [gen craft](../../.art-production-support/shared/gen-craft.md); the separate raster is the illustration source |
+| Combination | SVG frame + one raster texture layer; state clearly which layer is which source |
 
-Luật cho SVG nguồn:
-- **Chữ không nằm trong SVG.** Chữ là chữ sống trong engine. Chỉ logo hoặc tiêu đề trang trí mới chuyển thành path.
-- **Mở được trong Figma:** chỉ dùng path, shape, gradient và group. Group đặt tên theo component/state (ví dụ `btn_play_pressed`), hoặc mỗi state một file. Không dùng filter, mask, script, foreignObject.
-- Kích thước 1x của SVG (width/height theo px) bằng kích thước hiển thị ở base size của project.
-- Xuất PNG bằng `svg_render.py` (xem [scripts](../../.art-production-support/shared/scripts/README.md#svg)); script báo khi SVG có chữ hoặc tính năng rủi ro.
+Rules for the SVG source:
+- **Text does not go in the SVG.** Text is live text in the engine. Convert to paths only a logo or a decorative title.
+- **It must open in Figma.** Use only paths, shapes, gradients and groups. Name groups by component/state (for example `btn_play_pressed`), or use one file per state. Do not use filter, mask, script or foreignObject.
+- The 1x size of the SVG (width/height in px) equals the display size at the project's base size.
+- Export PNG with `svg_render.py` (see [scripts](../../.art-production-support/shared/scripts/README.md#svg)). The script warns when the SVG has text or risky features.
 
-`.tscn`, `.tres` không là nguồn mặc định. Không tạo được định dạng bắt buộc → báo trước khi sản xuất, đề xuất thay thế.
+`.tscn` and `.tres` are not default sources. If you cannot create a required format, say so before production and propose a replacement.
 
-| Thành phần | Yêu cầu |
+| Part | Requirement |
 |---|---|
-| Layout, chữ, nút | Sửa độc lập; chữ động tách khỏi trang trí, không nướng vào ảnh |
-| Frame | Vùng cố định, vùng stretch/tile, content padding, size tối thiểu |
-| Icon/illustration | Nguồn + bản xuất; raster riêng có thể là nguồn illustration |
-| Background | Crop, tile, scale và vùng cần giữ |
+| Layout, text, button | Edited independently; dynamic text is separate from decoration and is not baked into the image |
+| Frame | Fixed area, stretch/tile area, content padding, minimum size |
+| Icon/illustration | Source + export; a separate raster can be the illustration source |
+| Background | Crop, tile, scale and the areas to keep |
 
-Ghi chuỗi nguồn → công cụ/phiên bản và thao tác xuất → file runtime; liệt kê font và dependency, không đường dẫn riêng của máy. Kích thước xuất theo diện tích hiển thị và ngân sách; phân biệt kích thước ảnh, kích thước hiển thị và vùng chạm. Thử đổi chữ dài, thay icon hoặc resize một component rồi xuất lại; ghi kết quả.
+Record the chain source → tool/version and export steps → runtime file. List fonts and dependencies. Do not list machine-specific paths. Set the export size by display area and budget. Keep image size, display size and touch area apart. Try changing to a long text, replacing an icon, or resizing one component, then export again. Record the result.
 
-## Quyền sử dụng
+## Usage rights
 
-Tài nguyên đưa vào sản phẩm: ghi nguồn, tác giả, license, attribution; chưa xác minh → pending. Reference phân tích không tự được phép phát hành. Ảnh gen: ghi công cụ và vai trò.
+For a resource that goes into the product, record the source, author, license and attribution. If not yet verified, mark it pending. A reference used for analysis is not automatically allowed for release. For a generated image, record the tool and its role.

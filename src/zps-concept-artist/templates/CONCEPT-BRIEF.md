@@ -1,34 +1,34 @@
 # Concept brief — <asset / version>
 
-Mẫu tùy chọn: tái sử dụng brief hiện có, bỏ các trường không liên quan. Agent được tổng hợp thông tin đã cung cấp và đề xuất phần còn mở, ghi rõ nguồn/giả định; không tự điền phê duyệt của người khác.
+Optional template: reuse an existing brief and drop the fields that are not relevant. The agent may combine the information provided and propose the open parts. Record the source/assumption clearly. Do not fill in approvals of other people.
 
-## A. Chức năng và yêu cầu
-- Asset / mục đích / thông tin gameplay cần đọc:
-- Bối cảnh, số lượng xuất hiện cùng màn hình nếu ảnh hưởng thiết kế:
-- Kích thước thật và mốc đo (nếu đã biết):
-- Budget kỹ thuật được cung cấp; nguồn và trạng thái (đề xuất/chốt/chưa có):
+## A. Function and requirements
+- Asset / purpose / gameplay information that must be readable:
+- Context, number that appear on screen together if it affects the design:
+- Real size and measurement reference (if known):
+- Technical budget provided; source and status (proposed/final/none):
 
-## B. Direction và bối cảnh nhìn
-- Bible/direction/version; đặc trưng phải giữ; phần được khám phá:
-- Reference đã duyệt và phạm vi duyệt:
-- Camera: nguồn engine hoặc giả định; phối cảnh/ortho; FOV dọc hoặc ortho size (đơn vị/quy ước engine):
-- Góc nhìn xuống / phương vị; framing:
-- Kích thước hiển thị asset (px) và độ phân giải màn hình nếu đã biết:
-- Phạm vi xoay / view cần thêm:
-- Shading pipeline; ảnh presentation hay projection; alpha/nền trơn:
-- Grey-box/ảnh gốc/version; khối khóa và phần được sửa:
+## B. Direction and visual context
+- Bible/direction/version; features that must be kept; explorable parts:
+- Approved references and the scope of approval:
+- Camera: engine source or assumption; perspective/ortho; vertical FOV or ortho size (engine unit/convention):
+- Downward angle / azimuth; framing:
+- Asset display size (px) and screen resolution if known:
+- Rotation scope / extra views needed:
+- Shading pipeline; presentation image or projection; alpha/plain background:
+- Grey-box/source image/version; locked forms and editable parts:
 
-## C. Thực hiện và bàn giao
-- Gốc / Giữ / Đổi:
-- File, phiên bản; định dạng; phẳng hay có layer:
-- Camera đã dùng; mức đối chiếu với camera game:
-- Phần khuất / giả định / sai lệch chưa xử lý:
-- Kiểm tra thực tế đã làm và kết quả:
-- Câu hỏi còn mở ảnh hưởng bước dựng:
+## C. Execution and handoff
+- Source / Keep / Change:
+- File, version; format; flat or layered:
+- Camera used; level of comparison with the game camera:
+- Hidden parts / assumptions / deviations not yet resolved:
+- Real checks done and results:
+- Open questions that affect the modeling step:
 
-## D. Quyết định và giới hạn
-- Tự kiểm: ai, phạm vi, bằng chứng:
-- Phê duyệt mỹ thuật: chờ / người duyệt, ngày, phạm vi nếu có:
-- Xác nhận đủ thông tin dựng: chờ / người dựng và phạm vi nếu có:
-- Ngân sách dịch vụ và giới hạn vòng sửa: chỉ ghi mức đã được giao:
-- Điều kiện cần quay lại trao đổi:
+## D. Decisions and limits
+- Self-check: who, scope, evidence:
+- Art approval: pending / approver, date, scope if any:
+- Confirmation that modeling information is sufficient: pending / modeler and scope if any:
+- Service budget and revision round limit: record only the level that was assigned:
+- Conditions that require going back to discussion:

@@ -10,51 +10,74 @@ metadata:
 
 **Not for:** 2D sprites and UI (zps-2d-review); mesh and topology checks (zps-3d-artist); concept or cross-domain critique (zps-artistic-critique). Self-checks stay in zps-surface.
 
-Theo [quy tắc chung](../.art-production-support/rules/art-operation.md). Review không cần tool tạo ảnh, nhưng phải mở được ảnh/render thật. Texture được đánh giá **trên model**: một atlas phẳng đẹp chưa chứng minh texture đạt.
+Follow the [shared rules](../.art-production-support/rules/art-operation.md). Review does not need an image-generation tool, but you must be able to open the real image/render. Judge a texture **on the model**. A flat atlas that looks good does not prove that the texture passes.
 
 ## Intake
 
-Artifact/version của **texture và model/UV/material** đang xem; brief, Bible/style sheet version; phương pháp texture (hand-painted, flat/vertex color, PBR, tileable/trim, pixel, projection…) lấy theo thứ tự: yêu cầu cụ thể của người gọi (AD, user, tài liệu Art Style) → cách Texture Artist đã ghi khi tự chọn (phần B của [bàn giao 3D ↔ Texture](../.art-production-support/templates/3d-texture-handoff.md)). Không tìm thấy: suy ra từ texture, ghi là giả định, và ghi issue "chưa ghi phương pháp". Khi Texture tự chọn, kiểm thêm lựa chọn đó có hợp brief và model không; hợp đồng map (kênh, color space, kích thước, normal convention) nếu có; stage (bản thử / final); camera, khoảng cách và lighting đích; renderer của ảnh được gửi (Workbench, Eevee, Cycles hay engine thật). Không có Bible: nhận xét theo brief, ghi mức phù hợp project là tạm thời. Thiếu render on-model và không tự render được: chỉ nhận xét được atlas, ghi phần on-model là `not_checked`, và verdict không thể là `meets_checked_criteria` cho tiêu chí on-model.
+Collect:
+- Artifact/version of the **texture and the model/UV/material** you are viewing.
+- Brief, Bible/style sheet version.
+- Texture method (hand-painted, flat/vertex color, PBR, tileable/trim, pixel, projection...). Take it in this order:
+  1. A specific requirement from the caller (AD, user, Art Style document).
+  2. The method that the Texture Artist recorded when it chose the method itself (part B of the [3D ↔ Texture handoff](../.art-production-support/templates/3d-texture-handoff.md)).
+  3. If you cannot find it, infer it from the texture, record it as an assumption, and record the issue "method not recorded".
+- If Texture chose the method itself, also check that the choice fits the brief and the model.
+- Map contract (channels, color space, size, normal convention), if there is one.
+- Stage (test sample / final).
+- Target camera, distance and lighting.
+- The renderer of the image that was sent (Workbench, Eevee, Cycles or the real engine).
+
+If there is no Bible, review against the brief. Record the project-fit level as provisional.
+
+If the on-model render is missing and you cannot render it yourself, you can only comment on the atlas. Record the on-model part as `not_checked`. The verdict cannot be `meets_checked_criteria` for on-model criteria.
 
 ## Workflow
 
-1. Mở render: nhìn tổng thể → soi vùng giải thích nhận định → nhìn lại tổng thể. Ưu tiên góc và khoảng cách camera game. Reviewer được tự chạy `render_model.py` (checker/clay/textured), `inspect_model.py` và `preview.py` khi có Blender/Pillow, để tự lấy bằng chứng thay vì hỏi lại; không sửa model hay texture.
-2. Kiểm mỹ thuật và độ phù hợp style (những chiều liên quan trong 6 chiều: composition, shape/silhouette, color/value, lighting, material/texture, visual appeal) — tách riêng với kiểm kỹ thuật ở bước 3.
-3. Chạy các kiểm chuyên môn texture bên dưới theo phương pháp và rủi ro; chi tiết trong [texture checks](references/texture-checks.md).
-4. Chẩn đoán trước khi đề xuất sửa: cùng một biểu hiện có thể do map, UV, normal/tangent, shader hoặc lighting. Ghi nguyên nhân là giả thuyết khi chưa có bằng chứng phân biệt, và đề xuất một kiểm phân biệt rẻ.
-5. Soi bảng lỗi ảnh gen trong [gen craft](../.art-production-support/shared/gen-craft.md) khi texture có phần do AI tạo; chi tiết không truy được về brief là issue. Review giao cho người/agent khác: gửi theo [review request](../.art-production-support/templates/review-request.md).
-6. Review nhanh: nêu vài vấn đề có bằng chứng, không bắt buộc score/ID. Khi theo dõi revision hoặc nghiệm thu, ghi issue theo [mẫu review](../.art-production-support/templates/review.md) — cùng trường với AD: id, priority, region, viewing_condition, evidence, consequence, confidence, repair, preserve, acceptance, status. `region` ghi vùng trên model và, khi biết, vùng/ô trên atlas.
-7. Ưu tiên 1–3 việc tác động lớn nhất; giữ danh sách đầy đủ khi tracked.
-8. Bản sửa: giữ id, chỉ `resolved` khi render mới cùng điều kiện chứng minh acceptance; tìm regression và điểm mạnh bị mất. Nếu mesh/UV đã đổi giữa hai bản, ghi bằng chứng cũ không còn hiệu lực cho vùng bị ảnh hưởng.
+1. Open the render. Look at the whole image, then inspect the area that explains your judgment, then look at the whole image again. Prefer the angle and camera distance of the game. When Blender/Pillow is available, the reviewer may run `render_model.py` (checker/clay/textured), `inspect_model.py` and `preview.py` itself, to get evidence without asking again. Do not edit the model or the texture.
+2. Check art quality and style fit. Use the relevant dimensions of the 6 (composition, shape/silhouette, color/value, lighting, material/texture, visual appeal). Keep this separate from the technical check in step 3.
+3. Run the texture specialist checks below by method and risk. Details are in [texture checks](references/texture-checks.md).
+4. Diagnose before you propose a fix. The same symptom can come from the map, UV, normal/tangent, shader or lighting. If you have no evidence that tells the causes apart, record the cause as a hypothesis and propose one cheap check that tells them apart.
+5. When part of the texture is AI-made, check the generated-image fault table in [gen craft](../.art-production-support/shared/gen-craft.md). A detail that you cannot trace to the brief is an issue. If another person or agent does the review, send the request with the [review request](../.art-production-support/templates/review-request.md) template.
+6. For a quick review, state a few issues with evidence. Score and ID are not required. When you track revisions or do acceptance, record each issue with the [review template](../.art-production-support/templates/review.md). It has the same fields as the AD template: id, priority, region, viewing_condition, evidence, consequence, confidence, repair, preserve, acceptance, status. In `region`, write the area on the model and, when known, the area/cell on the atlas.
+7. Prioritize the 1-3 items with the largest impact. Keep the full list when the review is tracked.
+8. For a revised texture, keep the id. Set `resolved` only when a new render under the same conditions proves the acceptance criterion. Look for regressions and for strengths that were lost. If the mesh/UV changed between the two versions, record that the old evidence is no longer valid for the affected areas.
 
-Đọc [phương pháp sâu](../.art-production-support/shared/visual-review.md) khi nhiều tiêu chí, nhiều vòng hoặc nguyên nhân chưa rõ.
+Read the [deep method](../.art-production-support/shared/visual-review.md) when there are many criteria, many rounds or an unclear cause.
 
-## Kiểm chuyên môn texture (chọn theo phương pháp và rủi ro)
+## Texture specialist checks (choose by method and risk)
 
-| Nhóm | Kiểm gì |
+| Group | What to check |
 |---|---|
-| Seam | Seam lộ ở góc/khoảng cách game; lệch màu, value hoặc hướng nét qua đường cắt UV; seam chỉ lộ ở mip thấp |
-| Texel và scale | Mật độ texel giữa các mảnh nhìn cạnh nhau; vùng ưu tiên đủ độ phân giải; scale vân/nét đồng nhất giữa vùng cùng vật liệu |
-| Theo khối | Chi tiết, nét và chuyển sắc đi theo khối của model, không theo cạnh/island UV; không có vết vẽ cắt ngang khối |
-| Ánh sáng trong map | Lit/PBR: không bake highlight, bóng đổ cố định hoặc AO quá nặng vào albedo. Unlit/hand-painted: ánh sáng vẽ sẵn cùng hướng với quy ước và nhất quán giữa các mảnh |
-| Map contract | Đủ kênh theo hợp đồng; color space đúng (albedo sRGB; roughness/metal/AO/normal linear); normal đúng convention của engine đích (Godot: OpenGL Y+); packing kênh đúng thứ tự |
-| Lặp và tiling | Dấu nổi bật lặp lộ ở nhiều ô; trim/decal đúng hướng, scale, mép và blending |
-| Xa và nén | Ở khoảng cách xa nhất: lấm tấm, mờ hoặc banding do mip/compression; alpha/cutout giữ được hình |
-| Mirror/stack | Chi tiết riêng (chữ, vết, logo) bị lật hoặc lặp vì UV mirror/stack; chỉ là lỗi khi vùng đó cần thông tin riêng |
-| Vật liệu đọc được | Các vùng vật liệu phân biệt được ở kích thước game; độ chi tiết theo phân cấp thị giác, không phủ đều mọi bề mặt |
+| Seam | Seam shows at the game angle/distance; color, value or stroke-direction mismatch across a UV cut; seam shows only at low mip |
+| Texel and scale | Texel density between pieces that are seen side by side; priority areas have enough resolution; grain/stroke scale is uniform across areas of the same material |
+| Follows the form | Detail, strokes and color transitions follow the form of the model, not the UV edge/island; no paint mark cuts across a form |
+| Light in the map | Lit/PBR: no baked highlight, fixed cast shadow or heavy AO in the albedo. Unlit/hand-painted: the painted-in light has the same direction as the convention and is consistent between pieces |
+| Map contract | All channels as in the contract; correct color space (albedo sRGB; roughness/metal/AO/normal linear); normal follows the convention of the target engine (Godot: OpenGL Y+); channel packing in the correct order |
+| Repeat and tiling | Prominent mark repeats over many cells; trim/decal has the correct direction, scale, edge and blending |
+| Far view and compression | At the farthest distance: speckle, blur or banding from mip/compression; alpha/cutout keeps its shape |
+| Mirror/stack | Unique detail (text, marks, logo) is flipped or repeated because of UV mirror/stack. It is a fault only when that area needs its own information |
+| Readable materials | Material areas can be told apart at game size; detail follows visual hierarchy and does not cover every surface evenly |
 
 ## Output
 
-Phương pháp đã dùng làm chuẩn kiểm và nguồn của nó → điểm mạnh cần giữ → issue ưu tiên (ghi rõ nghi do map / UV / lighting / shader) → việc tiếp theo và ai làm (Surface sửa map; 3D Artist sửa UV/mesh/bake) → phần chưa đủ bằng chứng → verdict: meets_checked_criteria / needs_revision / insufficient_evidence. Ghi self-review hay reviewer độc lập thật, renderer đã dùng, và ảnh Blender không chứng minh kết quả trong engine. Verdict không phải AD approval.
+Write in this order:
+1. The method used as the check standard, and its source.
+2. Strengths to keep.
+3. Priority issues (state clearly whether you suspect the map / UV / lighting / shader).
+4. Next steps and who does them (Surface fixes the map; 3D Artist fixes UV/mesh/bake).
+5. Parts without enough evidence.
+6. Verdict: meets_checked_criteria / needs_revision / insufficient_evidence.
+
+State whether it is a self-review or a real independent reviewer, and which renderer you used. A Blender image does not prove the result in the engine. The verdict is not AD approval.
 
 ## Gotchas
 
-- Không bịa lỗi để có đủ danh sách; "không cần sửa" là kết luận hợp lệ.
-- Atlas phẳng hay paint view đẹp không chứng minh texture on-model đạt; luôn xin hoặc tự render trên model.
-- Lỗi đen/sai màu: kiểm color space, alpha, normal và material link trước khi đề nghị vẽ lại. Lỗi seam: kiểm UV/tangent/bake/padding trước khi blur.
-- So bản trước/sau chỉ hợp lệ khi cùng camera, lighting, exposure, tone mapping và import.
-- Ảnh tĩnh không chứng minh animation, topology hay hiệu năng; không suy texture resolution từ ảnh render.
-- Khi được giao cả sửa: chuyển issue cho skill sản xuất, không review lại toàn bộ.
-- Issue ngoài phạm vi role (mesh, UV layout, bake high→low): ghi issue, đánh dấu cho 3D Artist; không tự sửa.
+- Do not invent faults to fill a list. "No fix needed" is a valid conclusion.
+- A good-looking flat atlas or paint view does not prove that the texture passes on the model. Always ask for, or make, a render on the model.
+- Black or wrong-color fault: check color space, alpha, normal and material link before you ask for a repaint. Seam fault: check UV/tangent/bake/padding before you blur.
+- A before/after comparison is valid only with the same camera, lighting, exposure, tone mapping and import.
+- A still image does not prove animation, topology or performance. Do not infer texture resolution from a render image.
+- If you are also asked to fix: hand the issues to the production skill. Do not review everything again.
+- Issue outside the scope of the role (mesh, UV layout, high→low bake): record the issue and mark it for the 3D Artist. Do not fix it yourself.
 
-[Gate kỹ thuật](../.art-production-support/shared/scripts/README.md#evidence-gate) chỉ khi caller cần nghiệm thu máy đọc được.
+Use the [technical gate](../.art-production-support/shared/scripts/README.md#evidence-gate) only when the caller needs a machine-readable acceptance.

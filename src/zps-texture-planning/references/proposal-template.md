@@ -1,14 +1,14 @@
-# Mẫu đề xuất phương pháp texture
+# Texture method proposal template
 
 ```markdown
-# Đề xuất texture <asset> <version>
+# Texture proposal <asset> <version>
 - Model: <triangles, material, UV set, coverage/overlap/out-of-range, vertex color, texel density @size>
-- Concept/style: <quan sát, link style sheet>
-- Phương án A: <author × shader> — vì … — đánh đổi … — role tự làm: có/không (cần …)
-- Phương án B: …
-- Khuyến nghị: A, vì …
-- Bản thử: <vùng, góc, tiêu chí đạt>
-- Cần AD/3D Artist trả lời: …
+- Concept/style: <observations, style sheet link>
+- Option A: <author × shader> — because … — trade-off … — role can do it: yes/no (needs …)
+- Option B: …
+- Recommendation: A, because …
+- Test sample: <area, angle, acceptance criteria>
+- Needs an answer from AD/3D Artist: …
 ```
 
-Task nhỏ: chỉ ghi các dòng liên quan.
+For a small task, write only the relevant lines.

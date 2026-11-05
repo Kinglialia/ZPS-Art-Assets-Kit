@@ -132,7 +132,7 @@ def build(edition, version, run_tests):
     if errors:
         print(f'[{edition}] FAILED:\n  ' + '\n  '.join(errors))
         return False
-    zpath = stage.with_suffix('.zip')
+    zpath = stage.parent / (stage.name + '.zip')
     if zpath.exists():
         zpath.unlink()
     with zipfile.ZipFile(zpath, 'w', zipfile.ZIP_DEFLATED) as z:

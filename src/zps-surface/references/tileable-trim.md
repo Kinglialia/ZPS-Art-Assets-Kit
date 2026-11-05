@@ -1,37 +1,37 @@
 # Tileable, trim sheet, decal, triplanar
 
-Cho môi trường và kiến trúc: ít texture, dùng chung cho nhiều mesh, chi tiết riêng bằng decal.
+For environments and architecture: few textures, shared by many meshes, with unique detail added by decals.
 
-## Chọn cách
+## Choose a technique
 
-| Cách | Dùng khi | Lưu ý |
+| Technique | Use when | Notes |
 |---|---|---|
-| Tileable | Bề mặt lớn liên tục: đất, tường, sàn, mái | Lặp phải không lộ; texel density thống nhất giữa asset |
-| Trim sheet | Viền, nẹp, gờ, ván, ống lặp theo một trục | UV đặt theo dải của trim; quy ước dải ghi trong bảng giao |
-| Decal | Chi tiết riêng trên bề mặt lặp: vết bẩn, biển, nứt | Godot Mobile: tối đa 8 decal mỗi mesh resource; Compatibility không có decal (dùng Sprite3D cho mặt gần phẳng) |
-| Triplanar | Địa hình, đá, khối không có UV tốt | World space để liền giữa các mesh; mờ ở góc giao; tốn shader hơn |
+| Tileable | Large continuous surfaces: ground, wall, floor, roof | The repeat must not show. Texel density is uniform across assets |
+| Trim sheet | Borders, battens, ledges, planks, pipes that repeat along one axis | Place UV by the trim strip. Record the strip convention in the handoff table |
+| Decal | Unique detail on a repeating surface: stains, signs, cracks | Godot Mobile: at most 8 decals per mesh resource. Compatibility has no decals (use Sprite3D for nearly flat surfaces) |
+| Triplanar | Terrain, rock, forms without good UV | Use world space so meshes join seamlessly. It blurs at intersection corners. It costs more shader time |
 
-## Làm tileable
+## Make a tileable
 
-1. Thiết kế mảng lớn/trung/nhỏ theo style; tránh một dấu nổi bật dễ nhận ra khi lặp.
-2. Tạo nguồn (gen theo gen craft, hoặc vẽ), rồi làm liền mép (offset nửa ô, sửa vết nối).
-3. Kiểm `preview.py tile --repeat 3` và trên model ở khoảng nhìn game; tìm dấu lặp và vết nối.
-4. Biến thể giảm lặp: 2–3 tile cùng palette, hoặc decal/vertex color phủ lên.
+1. Design large, medium and small blocks by the style. Avoid one standout mark that is easy to recognize when it repeats.
+2. Make the source (generate it by gen craft, or paint it). Then make the edges seamless (offset by half a tile, fix the join marks).
+3. Check with `preview.py tile --repeat 3` and on the model at the game viewing distance. Look for repeat marks and join marks.
+4. Variants that reduce repetition: 2–3 tiles with the same palette, or a decal/vertex color laid over it.
 
-## Làm trim sheet
+## Make a trim sheet
 
-1. Liệt kê chi tiết cần dùng chung (ván, gờ, viền kim loại…) và chiều rộng thực.
-2. Xếp dải ngang theo thứ tự, chiều cao dải tỷ lệ với kích thước thực theo texel density chung.
-3. Mỗi dải lặp được theo chiều ngang; giao bảng dải (tên, vị trí v, chiều rộng thực).
-4. Kiểm trên vài mesh mẫu do 3D Artist map: mép dải không lem, chi tiết không méo.
+1. List the shared details you need (planks, ledges, metal borders, and so on) and their real widths.
+2. Arrange the strips horizontally in order. Make the strip height proportional to the real size, at the shared texel density.
+3. Each strip must repeat horizontally. Hand off the strip table (name, v position, real width).
+4. Check on a few sample meshes that the 3D Artist maps. Strip edges must not bleed. Detail must not distort.
 
-## Tự kiểm
+## Self-check
 
-- Texel density đồng nhất giữa asset cùng cảnh (`inspect_model.py` texel_density cho từng mesh).
-- Lặp không lộ ở góc game; decal hợp ánh sáng và palette.
-- Mip thấp: không lem dải bên (trim) hay vết nối (tile).
+- Texel density is uniform across assets in the same scene (`inspect_model.py` texel_density for each mesh).
+- The repeat is not visible from the game angles. Decals fit the lighting and palette.
+- At low mips: no bleed from the neighboring strip (trim) or join marks (tile).
 
 ## Gotchas
 
-- Ảnh gen thường có ánh sáng một phía: tileable phải khử sáng/phẳng sáng, nếu không lặp sẽ thành sọc sáng tối.
-- Trim sheet chỉ hiệu quả khi 3D Artist map theo quy ước: thống nhất bảng dải trước khi vẽ.
+- A generated image often has light from one side. A tileable must be delit or have flat lighting. If not, the repeat becomes light and dark stripes.
+- A trim sheet works only if the 3D Artist maps by the convention. Agree on the strip table before you paint.

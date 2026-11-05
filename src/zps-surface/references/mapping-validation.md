@@ -1,19 +1,19 @@
-# Mapping, bake và kiểm tại đích
+# Mapping, bake and checks at the target
 
-## Preflight theo phương pháp
+## Preflight by method
 
-Tái dùng mesh/UV version, UV set, materials, units/scale, shader, texture resolution và view đã có; chỉ bổ sung dữ liệu cần cho thao tác. Repack maps theo hợp đồng có sẵn không bắt mở mesh nếu chỉ được giao đổi kênh. UV không bắt buộc cho mọi procedural/vertex-color; đầu ra texture UV thì cần mapping tương ứng. Gửi lỗi mesh/UV đúng owner với vùng bị chặn. High→low bake chỉ một owner; giữ cage, triangulation và tangent conventions.
+Reuse the existing mesh/UV version, UV set, materials, units/scale, shader, texture resolution and views. Add only the data the operation needs. If the task only assigns a channel change, repack the maps under the existing contract. Do not open the mesh for this. UV is not required for every procedural or vertex-color output. A texture output with UV needs the matching mapping. Send mesh/UV faults to the right owner, with the blocked area. A high→low bake has one owner. Keep the cage, triangulation and tangent conventions.
 
-Kiểm distortion bằng checker trên model; density theo vùng ưu tiên, không bắt mọi pixel/mọi asset bằng nhau. Shared atlas cần xét overlap giữa **mọi object dùng cùng ảnh**, không chỉ từng object. Mirror/stack/UDIM/tiling có thể hợp lệ nhưng ảnh hưởng bake và unique marks. Script đơn giản 0–1 không chứng minh UDIM hợp lệ.
+Check distortion with a checker on the model. Set density by priority area. Do not require every pixel or every asset to be equal. For a shared atlas, check overlap between **all objects that use the same image**, not only each object. Mirror, stack, UDIM and tiling can be valid, but they affect the bake and unique marks. A simple 0–1 script does not prove that UDIM is valid.
 
-Tiling: offset giúp tìm seam nhưng vẫn cần nhìn lặp nhiều ô và trên bề mặt. Trim theo chiều/hướng vật liệu; decal kiểm mép, scale và blending. Không dùng perspective warp một concept để mặc định thành texture sạch ánh sáng.
+Tiling: an offset helps find seams, but you must still look at many repeated tiles and at the surface. Trim: follow the direction and dimension of the material. Decal: check the edge, scale and blending. Do not use a perspective warp on one concept image and assume it gives a texture clean of lighting.
 
-## Padding và filtering
+## Padding and filtering
 
-Khoảng cách giữa islands khác phần dilation màu ra ngoài island. Chọn theo resolution, mip lớn nhất sử dụng, filtering, compression và export. Không có bảng px nào bảo đảm mọi trường hợp. Test seam ở khoảng nhìn đích và mip thấp; không mặc định tắt mip để chữa. Map có alpha kiểm nền sáng/tối, straight/premultiplied theo renderer; RGBA PNG tự nó không xác nhận convention.
+The gap between islands is not the same as the color dilation outside an island. Choose both by resolution, the largest mip in use, filtering, compression and export. No table of pixel values is valid for every case. Test seams at the target viewing distance and at low mips. Do not turn off mips as the default fix. For a map with alpha, check on light and dark backgrounds, and straight or premultiplied alpha as the renderer needs. An RGBA PNG does not confirm the convention by itself.
 
-## Điều kiện xem và nguyên nhân
+## Viewing conditions and causes
 
-Khóa camera, lighting, exposure, tone mapping và import giữa bản đối chiếu. Lỗi mờ: ảnh gốc → diện tích/distortion UV → sampler/mip/compression → shader/lighting. Lỗi đen: color space/alpha/normals/material links trước repaint. Lỗi seam: UV/tangent/bake/packing trước blur. Tách perceived material và implementation; một ảnh đẹp không chứng minh map đúng.
+Lock the camera, lighting, exposure, tone mapping and import between comparison versions. Blur fault: source image → UV area/distortion → sampler/mip/compression → shader/lighting. Black fault: color space, alpha, normals and material links, before you repaint. Seam fault: UV, tangent, bake and packing, before you blur. Separate the perceived material from the implementation. A good-looking image does not prove that the maps are correct.
 
-Bằng chứng cần khớp artifact/version. Script chỉ ghi pass cho check đã chạy; mandatory not_checked thì chưa đủ điều kiện. Import lại GLB kiểm cấu trúc hữu ích nhưng chưa thay kiểm engine. Nêu rõ ảnh được render bằng Workbench, Eevee, Cycles hay engine thật. Giao map/channel/color-space/normal/UV/resolution/source và file ngoại liên quan; đo kích thước thực, không lấy số trong prompt.
+Evidence must match the artifact and its version. A script records pass only for the checks it ran. If a mandatory check is `not_checked`, the result is not ready. Re-importing the GLB to check structure is useful, but it does not replace an engine check. State clearly whether the image was rendered with Workbench, Eevee, Cycles or the real engine. Hand off the map, channel, color space, normal, UV, resolution, source, and the related external files. Measure the real size. Do not take the number from the prompt.

@@ -1,24 +1,36 @@
-# Sản xuất asset 2D cho game
+# 2D asset production for games
 
-Nhận loại output: icon, sprite, tile, decal, portrait, background hay frame sequence. Canvas, pivot, safe area, target size, states và source editability là các yêu cầu độc lập; DPI không thay pixel dimensions. Kiểm prototype trong layout/game khi có.
+First, get the output type: icon, sprite, tile, decal, portrait, background or frame sequence. Canvas, pivot, safe area, target size, states and source editability are separate requirements. DPI does not replace pixel dimensions. Check a prototype in the layout/game when one exists.
 
-Icon: silhouette và điểm nhận diện ở kích thước nhỏ, nhịp/scale đồng bộ trong bộ; không cố nhét mọi chi tiết concept. Sprite: giữ pivot, baseline và khoảng crop; không auto-crop từng frame làm nhân vật rung. Frame sequence: kiểm pose, volume, phụ kiện, màu và nhịp khi chạy thật; tĩnh không chứng minh animation. Background: các lớp đủ vùng parallax/occlusion theo scope, giữ camera và scale.
+Icon: check the silhouette and identifying points at small size. Keep rhythm/scale consistent in the set. Do not force every concept detail into the icon.
 
-Tile: kiểm biên nối, lặp nhiều ô và dấu nổi bật bị lặp. Atlas cần extrusion/padding đúng importer; transparent pixels cũng có thể làm viền sai khi lọc. Decal kiểm alpha/blend trên vật liệu đích. Với pixel art: grid, cluster, palette và filtering theo project; không tự resample bằng bilinear.
+Sprite: keep the pivot, baseline and crop margin. Do not auto-crop each frame, because the character will jitter.
 
-Giữ source có lớp khi công cụ thực tạo được; file phẳng chỉ là file phẳng. Export rõ resolution, alpha mode, frame order/duration, pivot và tài nguyên phụ thuộc. Kiểm nền sáng/tối/nền game; metadata không chứng minh edge sạch.
+Frame sequence: check pose, volume, accessories, color and rhythm when it really runs. A still image does not prove an animation.
 
-## Godot 4 — đề xuất import cho asset 2D
+Background: the layers must have enough area for parallax/occlusion for the scope. Keep the camera and scale.
 
-Thông số project lấy từ tech profile; dưới đây là điểm phải đề xuất rõ khi giao, không tự sửa `.import` hay project settings ngoài quyền. Theo [tài liệu import của Godot](https://github.com/godotengine/godot-docs/blob/master/tutorials/assets_pipeline/importing_images.rst): mặc định 2D là Lossless, không mipmap; filter/repeat từ Godot 4 đặt ở CanvasItem (project setting làm mặc định), không nằm trong import.
+Tile: check the joining edges, many cells in a repeat, and prominent marks that repeat.
 
-| Loại | Đề xuất cần ghi | Lý do kiểm |
+Atlas: it needs extrusion/padding that is correct for the importer. Transparent pixels can also cause a wrong edge when filtering.
+
+Decal: check alpha/blend on the target material.
+
+Pixel art: follow the project for grid, clusters, palette and filtering. Do not resample with bilinear yourself.
+
+Keep a layered source when the real tool can create it. A flat file is only a flat file. Export with a clear resolution, alpha mode, frame order/duration, pivot and dependent resources. Check on light, dark and game backgrounds. Metadata does not prove a clean edge.
+
+## Godot 4 — import proposals for 2D assets
+
+Take project specifications from the tech profile. The items below are what you must propose clearly at handoff. Do not edit `.import` or project settings outside your authority. Follow the [Godot import documentation](https://github.com/godotengine/godot-docs/blob/master/tutorials/assets_pipeline/importing_images.rst): the 2D default is Lossless, no mipmap. Since Godot 4, filter/repeat are set on CanvasItem (a project setting gives the default). They are not in the import.
+
+| Type | Proposal to record | Reason to check |
 |---|---|---|
-| UI icon/sprite hiển thị gần 1:1 | Lossless, mipmap tắt; filter Linear ở CanvasItem | Giữ nét icon nhỏ; mipmap tăng ~33% bộ nhớ mà không lợi khi không thu nhỏ |
-| Sprite thu nhỏ mạnh theo camera | Bật mipmap; xem ở mức zoom xa nhất | Tránh lấm tấm khi thu nhỏ |
-| Pixel art | Lossless, không mipmap; filter Nearest; scale nguyên lần | Giữ cạnh pixel |
-| Background lớn | Cân nhắc VRAM Compressed (mặc định ETC2 trên mobile, ASTC khi bật high quality); kiểm banding | Bộ nhớ mobile |
-| Có alpha | Straight alpha; giữ Fix Alpha Border (mặc định bật) | Giảm viền tối khi lọc bilinear |
-| Atlas | Padding/extrude giữa ô theo tech profile | Tránh lem màu ô bên |
+| UI icon/sprite shown near 1:1 | Lossless, mipmap off; Linear filter on CanvasItem | Keeps small icons sharp; mipmap adds ~33% memory and gives no gain when the image is not scaled down |
+| Sprite strongly scaled down by the camera | Mipmap on; check at the farthest zoom level | Avoids speckle when scaled down |
+| Pixel art | Lossless, no mipmap; Nearest filter; integer scale | Keeps pixel edges |
+| Large background | Consider VRAM Compressed (default ETC2 on mobile, ASTC when high quality is on); check for banding | Mobile memory |
+| With alpha | Straight alpha; keep Fix Alpha Border (on by default) | Reduces dark edges with bilinear filtering |
+| Atlas | Padding/extrude between cells as in the tech profile | Avoids color bleeding from the next cell |
 
-Giao ảnh đã kiểm và ghi mức: export đã kiểm / đã import Godot / đã xem trên thiết bị. Web export để mục riêng sau. Thu nhỏ là diagnostic, không chứng nhận gameplay readability hay accessibility.
+Deliver checked images and record the level: export checked / imported into Godot / viewed on a device. For web export, use a separate section later. Scaling down is a diagnostic. It does not certify gameplay readability or accessibility.

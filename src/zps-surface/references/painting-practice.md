@@ -1,27 +1,27 @@
-# Thực hành nét vẽ và chất liệu stylized
+# Stylized stroke and material practice
 
-Đây là bài hướng dẫn có điều kiện, không preset cho mọi style. Dùng công cụ paint/edit có thực và quyền của phiên; source có layer chỉ được khai khi thực sự tạo được. Nếu dùng công cụ sinh ảnh, mô tả quan hệ thị giác này bằng reference/edit rồi kiểm kết quả, không giả đã thao tác brush thủ công.
+This is a conditional guide, not a preset for every style. Use the paint/edit tools and the permissions that the session really has. Declare a source with layers only if you really made the layers. If you use an image generation tool, describe these visual relationships through a reference or an edit, then check the result. Do not claim you used a manual brush.
 
-## Đặt nét có mục đích
+## Place strokes with purpose
 
-Làm từ khối/mảng lớn bằng nét đủ rộng; nét nhỏ quá sớm dễ biến thành noise. Hard/soft edge do cấu trúc, ánh sáng và ngôn ngữ hình quyết định. Nét sắc cho chỗ cần đọc, chuyển mềm cho mặt cong khi hợp style; không airbrush toàn ảnh làm mất plane. Giảm opacity nhiều lớp có thể làm màu đục nếu chỉ trộn tối/sáng; kiểm vai trò hue/value/saturation thay vì thêm lớp vô hạn.
+Work from large forms and blocks with strokes that are wide enough. Small strokes made too early easily become noise. Structure, lighting and the shape language decide hard or soft edges. Use sharp strokes where the image must read. Use soft transitions on curved faces when the style allows. Do not airbrush the whole image, because planes are lost. Many low-opacity layers can make color muddy if they only mix dark and light. Check the role of hue, value and saturation instead of adding endless layers.
 
-Nhóm stroke theo bề mặt: vân gỗ theo thớ/cách cắt; đá theo plane và nứt; vải theo lực và cách dệt. Nét đi qua UV seam phải tiếp tục trên model, không nối chỉ vì hai mép gần nhau trên atlas. Mỗi nhóm có khoảng nghỉ, độ dài/dày biến thiên theo ý đồ. Brush texture là phương tiện tạo dấu, không thay phân bố có lý do.
+Group strokes by surface. Wood grain follows the grain and the cut. Stone follows planes and cracks. Cloth follows force and weave. A stroke that crosses a UV seam must continue on the model. Do not join strokes only because two edges are close on the atlas. Each group has rest areas. Stroke length and thickness vary by intent. A brush texture is a way to make marks. It does not replace a distribution that has a reason.
 
-Với unlit có ánh sáng vẽ sẵn, xác định hướng sáng và nhóm mặt nhận sáng trước. Mặt lồi, khe tiếp xúc và ranh giới vật liệu tạo các loại chuyển khác nhau; không viền sáng mọi cạnh hoặc tô đen mọi khe. Với dynamic-lit, tách các dấu vật liệu khỏi highlight/cast shadow phụ thuộc đèn. Không dùng màu bóng trong concept như màu vật liệu đo được.
+For unlit with painted lighting, first define the light direction and which face groups receive light. Convex faces, contact crevices and material boundaries make different kinds of transitions. Do not outline every edge with light. Do not paint every crevice black. For dynamic-lit, separate the material marks from light-dependent highlights and cast shadows. Do not use the shadow color in the concept as the measured material color.
 
-## Recipe A — gỗ đẽo cho prop nhỏ
+## Recipe A — hewn wood for a small prop
 
-Mục tiêu giả định: rõ khối, có lịch sử sử dụng, không realistic noise. Dựng mảng mỗi tấm theo silhouette/plane, đặt hướng thớ và mối nối. Chọn vài cụm thớ góp nhận diện, thay mật độ và để vùng yên. Mép mẻ phải liên quan cấu tạo/va chạm; vết gần tay cầm có lý do dùng. Kiểm từ góc game: nếu thớ thành sọc đều cạnh tranh khối, gom hoặc giảm nhịp. PBR/lit: thử roughness của vùng mòn riêng, không bake vệt specular vào màu.
+Assumed goal: clear form, signs of use, no realistic noise. Build one block per plank, following the silhouette and planes. Set the grain direction and the joints. Choose a few grain clusters that support identity. Change their density and leave quiet areas. A chipped edge must relate to construction or impact. A mark near a handle has a reason to be there. Check from the game angle. If the grain becomes even stripes that compete with the form, group the grain or reduce its rhythm. For PBR/lit, test the roughness of worn areas separately. Do not bake specular streaks into the color.
 
-## Recipe B — đá có mặt phẳng
+## Recipe B — faceted stone
 
-Mục tiêu giả định: đọc plane lớn và độ nặng. Trước hết cần geometry/silhouette phù hợp. Màu biến thiên theo nhóm mặt/vật liệu, không chỉ random từng polygon. Chọn nứt theo lực/khối và phân nhóm, tránh mạng nứt đều. Painted edge cần bề rộng có nhịp và nguyên nhân; đừng thêm highlight để giả một mặt vát không có khi camera quay. Kiểm clay và surface riêng để phát hiện texture đang che form yếu.
+Assumed goal: read the large planes and the weight. First you need suitable geometry and silhouette. Color varies by face group or material, not only by random polygon. Choose cracks by force and form, and group them. Avoid an even network of cracks. A painted edge needs a width with rhythm and a cause. Do not add a highlight to fake a bevel that does not exist when the camera rotates. Check clay and surface separately to find texture that hides a weak form.
 
-## Recipe C — vải, da và kim loại cùng prop
+## Recipe C — cloth, leather and metal on one prop
 
-Giữ cùng mức stylization nhưng khác cảm giác: vải có nếp theo lực và cạnh mềm thích hợp; da có seam, vùng uốn/mòn; kim loại có phản ứng phản xạ theo roughness/ánh sáng hoặc ngôn ngữ minh họa đã chốt. Không phân biệt chỉ bằng ba màu. Thử vùng giao vật liệu để xem scale nét và độ sắc có hòa hợp, tránh mỗi phần trông thuộc game khác.
+Keep the same level of stylization, but make each material feel different. Cloth has folds that follow force and suitable soft edges. Leather has seams and bend/wear areas. Metal reacts by reflection according to roughness and lighting, or by an approved illustration language. Do not separate materials by three colors alone. Test where materials meet. Check that stroke scale and sharpness fit together. Avoid parts that look as if they belong to different games.
 
-## Bài thử nhỏ trước khi mở rộng
+## Small test before you scale up
 
-So cùng model/camera ba trạng thái: mảng nền, thêm cấu trúc, thêm điểm nhấn. Mỗi lần thêm phải giải thích được lợi ích ở target size. Giữ bản trước để thấy khi polish làm xấu hierarchy. Với mẫu mới, thử góc không dùng author và điều kiện nền/đèn quan trọng; không coi swatch đẹp trên sphere là đủ cho mọi asset.
+Compare three states on the same model and camera: base blocks, added structure, added accents. Each addition must have a benefit that you can explain at the target size. Keep the previous version, so you can see when polish damages the hierarchy. For a new sample, test angles that the author did not use, and the important background and light conditions. A swatch that looks good on a sphere is not enough for every asset.

@@ -1,32 +1,32 @@
-# Gen craft — viết yêu cầu cho tool gen/edit và soi lỗi ảnh gen
+# Gen craft — write requests for generate/edit tools and find generated-image faults
 
-Đọc trước khi gọi tool tạo/sửa ảnh và khi tự kiểm output. Áp dụng cho mọi tool (Codex `image_gen`, API ảnh, edit có mask).
+Read this before you call a tool that creates or edits images, and when you self-check the output. It applies to every tool (Codex `image_gen`, image APIs, masked edit).
 
 ## Contents
-- Viết yêu cầu
-- Lỗi đặc trưng của ảnh gen
+- Write the request
+- Typical faults of generated images
 
-## Viết yêu cầu
+## Write the request
 
-1. **Đưa ảnh Execution reference vào tool** khi tool nhận ảnh; ghi vai trò từng ảnh (Image 1: style/màu chuẩn; Image 2: structure only…). Chữ mô tả style không thay ảnh: prompt chỉ có chữ dễ trôi sang kiểu render khác.
-2. **Chọn reference theo màu**: model bám màu ảnh hơn mã hex. Reference lệch tông so với style sheet → bỏ, hoặc ghi "structure only, ignore its colors".
-3. **Gọi đúng tên loại ảnh đích** theo deliverable: "in-game screenshot of a real-time 3D game", "game UI icon on transparent background", "tileable texture, flat lighting"… Từ "concept art", "illustration", "keyframe" kéo về tranh vẽ.
-4. **Mô tả bằng danh từ cụ thể**: vật, vật liệu, góc nhìn, bố cục. Không chồng tính từ ("epic, highly detailed, intricate" là lệnh thêm chi tiết). Kinh nghiệm với các tool đã thử (chưa kiểm rộng): tính từ màu mạnh ("vivid", "saturated", tên màu viết hoa) hay làm màu vượt đích; khi có ảnh chuẩn màu, ưu tiên "match the colors of Image N".
-5. **Luôn ghi ràng buộc loại trừ**: không chữ, không logo, không phụ kiện/hiệu ứng ngoài danh sách, nền theo hợp đồng.
-6. **Edit**: ghi "change only X; keep everything else unchanged" và nhắc lại mỗi lượt; dùng mask khi tool có. Khi yêu cầu giữ hình/bố cục, chạy `structure_diff.py` so với ảnh gốc; task chủ đích đổi cấu trúc thì so bằng mắt các vùng phải giữ.
-7. **Ghi lại** prompt, ảnh đầu vào và vai trò, tool/model, tham số vào task record.
+1. **Give the Execution reference image to the tool** when the tool accepts images. State the role of each image (Image 1: style/color standard; Image 2: structure only…). Words that describe a style do not replace an image. A prompt with text only tends to drift to another render style.
+2. **Choose references by color.** The model follows the colors of an image more than hex codes. If a reference has a tone that differs from the style sheet, remove it, or write "structure only, ignore its colors".
+3. **Name the correct target image type** for the deliverable: "in-game screenshot of a real-time 3D game", "game UI icon on transparent background", "tileable texture, flat lighting"… The words "concept art", "illustration", and "keyframe" pull the result toward a painting.
+4. **Describe with concrete nouns**: object, material, viewing angle, layout. Do not stack adjectives. "Epic, highly detailed, intricate" is a command to add detail. Experience with the tools tried so far (not tested widely): strong color adjectives ("vivid", "saturated", capitalized color names) often make the color exceed the target. When you have a color-standard image, prefer "match the colors of Image N".
+5. **Always state exclusion constraints**: no text, no logo, no accessory or effect outside the list, background as set by the contract.
+6. **Edit**: write "change only X; keep everything else unchanged" and repeat it in every round. Use a mask when the tool has one. When the request is to keep the shape or layout, run `structure_diff.py` against the source image. If the task intentionally changes the structure, compare by eye the areas that must stay.
+7. **Record** the prompt, the input images and their roles, the tool/model, and the parameters in the task record.
 
-## Lỗi đặc trưng của ảnh gen
+## Typical faults of generated images
 
-Mở ảnh ở kích thước đích **và** phóng to vùng chi tiết. Phân mức theo mẫu review: **blocker** khi lỗi làm hỏng yêu cầu bắt buộc hoặc khả năng đọc/phân biệt gameplay ở điều kiện xem đích; **major** khi ảnh hưởng chất lượng/nhất quán đáng kể; **minor** khi chỉ là polish. Lỗi nhìn thấy được chưa tự động là blocker; lỗi thêm thắt ngoài brief vẫn phải ghi và xử lý.
+Open the image at the target size **and** zoom in on the detail areas. Set the level with the review template. **blocker**: the fault breaks a mandatory requirement, or breaks gameplay readability/distinction under the target viewing conditions. **major**: the fault significantly affects quality or consistency. **minor**: the fault is only polish. A visible fault is not automatically a blocker. An added element outside the brief must still be recorded and handled.
 
-| Nhóm | Dấu hiệu cần bắt |
+| Group | Signs to catch |
 |---|---|
-| Thêm thắt | Hoa văn phủ mọi bề mặt; ngọc, dây, đai, quai không công năng; motif nhân bản; hạt sáng, bokeh, sparkle, glow, khói, lá bay không được yêu cầu; đồ vật lạ ở nền |
-| Cấu tạo | Ngón tay thừa/dính, chi không nối thân, khớp cơ khí không chịu lực, dây xuyên vật, đối xứng sai một bên |
-| Chữ & ký hiệu | Chữ giả, glyph vô nghĩa, logo/watermark mờ, rune trang trí ngoài brief |
-| Ánh sáng | Nhiều hướng sáng mâu thuẫn, rim light quanh mọi cạnh, bóng đổ không khớp nguồn, highlight bóng loáng trong style matte/flat, toàn ảnh ám tông khác reference |
-| Bề mặt | Noise/vân giả làm "chi tiết", gradient airbrush trong style cel/flat, cạnh nhòe, texture đổi scale giữa hai vùng cùng vật liệu |
-| Style trôi | Kiểu render khác reference (minh họa thay vì game render…), nét/độ bão hòa khác, bán-realistic chen vào stylized |
-| Phối cảnh | Hai điểm tụ cho cùng họ cạnh, ellipse sai mặt phẳng, vật trôi không chạm sàn |
-| Kỹ thuật | Halo/fringe trên alpha, nền giả trong suốt, crop mất phần, kích thước khác hợp đồng |
+| Added elements | Patterns covering every surface; gems, cords, belts, handles without a function; duplicated motifs; light particles, bokeh, sparkle, glow, smoke, flying leaves that were not requested; strange objects in the background |
+| Construction | Extra or fused fingers, limbs not connected to the body, mechanical joints that carry no load, cords passing through objects, wrong symmetry on one side |
+| Text & symbols | Fake text, meaningless glyphs, faint logo/watermark, decorative runes outside the brief |
+| Lighting | Several conflicting light directions, rim light around every edge, cast shadows that do not match the source, glossy highlights in a matte/flat style, whole image tinted differently from the reference |
+| Surface | Noise/veins faked as "detail", airbrush gradients in a cel/flat style, blurred edges, texture that changes scale between two areas of the same material |
+| Style drift | Render style differs from the reference (illustration instead of game render…), line/saturation differs, semi-realistic mixed into stylized |
+| Perspective | Two vanishing points for the same family of edges, ellipses on the wrong plane, objects floating without touching the floor |
+| Technical | Halo/fringe on alpha, fake transparent background, crop that loses parts, size differs from the contract |

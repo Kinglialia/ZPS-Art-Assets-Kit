@@ -1,23 +1,31 @@
-# Thiết kế texture đẹp và có cá tính
+# Designing beautiful textures with character
 
-Phần chung cho mọi phương pháp. Cách author (vẽ tay, flat color, procedural, ảnh…) và shader (unlit, lit/toon, PBR) là hai lựa chọn độc lập, do style sheet/Bible của project quyết định.
+This part is shared by all methods. The authoring way (hand painting, flat color, procedural, photo, and so on) and the shader (unlit, lit/toon, PBR) are two independent choices. The style sheet or the Bible of the project decides both.
 
-## Material intent trước map
+## Material intent before maps
 
-Mỗi vùng ghi vật liệu/cách chế tác, scale, hướng cấu trúc, cách sử dụng, mức stylization và vai trò trong hierarchy. “Gỗ” chưa đủ: gỗ mềm sơn, gỗ thô đẽo hay gỗ đánh bóng tạo hình và phản ứng khác nhau. Đặc trưng phải đọc trong diện tích/pixel thực, không chỉ crop phóng to.
+For each area, record:
+- Material or making method.
+- Scale.
+- Structure direction.
+- Way of use.
+- Level of stylization.
+- Role in the hierarchy.
 
-Tạo nét riêng từ quan hệ vật liệu và thế giới: cách chạm khắc, nối, vá, dệt; motif có logic và vài đặc điểm nổi bật được chọn. Dùng reference để hiểu nguyên lý, tránh lấy nguyên biểu tượng/chi tiết nhận diện. “Độc đáo” là đánh giá tương đối với nguồn đã xem, không chứng nhận chưa từng có.
+"Wood" is not enough. Soft painted wood, rough hewn wood and polished wood give different forms and reactions. The characteristic must read at the real area and pixels, not only in an enlarged crop.
 
-## Bố cục bề mặt
+Build character from the relationships between the material and the world: how it is carved, joined, patched, woven. Use motifs with logic and a few chosen standout traits. Use references to understand principles. Do not copy a symbol or a recognizable detail. "Unique" is a judgment relative to the sources you have seen. It does not certify that nothing like it exists.
 
-Thiết kế mảng lớn/trung/nhỏ có chủ đích: vùng nghỉ, vùng cấu trúc, điểm nhấn. Không áp tỷ lệ phần trăm cố định. Theo mặt khối và camera game; seam UV không phải đường bố cục tự nhiên. Hướng nét/vân theo cấu trúc vật liệu, không theo cạnh atlas.
+## Surface layout
 
-Màu, độ sáng, độ bóng và scale vân cùng tạo cảm giác chất liệu. Tách vật liệu bằng quan hệ đủ dùng; không bắt mỗi vùng phải tương phản cực mạnh. Chú ý màu lân cận và ánh sáng làm sai cảm nhận màu map.
+Design large, medium and small blocks on purpose: rest areas, structure areas, accents. Do not apply a fixed percentage. Follow the faces of the form and the game camera. A UV seam is not a natural layout line. Stroke and grain direction follow the material structure, not the atlas edges.
 
-Mỗi dấu mòn cần nguyên nhân: cầm nắm, ma sát, va chạm, nước đọng, nắng, bụi. Dấu có phân bố và hướng hợp lý; không phủ cạnh sáng/noise đồng đều. Stylized có thể cường điệu nguyên nhân nhưng giữ ngôn ngữ của game. Vùng chưa cần hao mòn có thể sạch.
+Color, brightness, gloss and grain scale together create the feeling of a material. Separate materials with a relationship that is enough. Do not require every area to have very strong contrast. Watch for nearby colors and lighting that make you read the map color wrongly.
 
-## Cách thử tiết kiệm
+Each wear mark needs a cause: handling, friction, impact, standing water, sun, dust. A mark has a reasonable distribution and direction. Do not cover edges with even light lines or noise. Stylized work can exaggerate the cause, but must keep the language of the game. An area that does not need wear can stay clean.
 
-Chọn vùng chứa tương tác quan trọng: gỗ–kim loại, mép vải–da, mặt đổi hướng và seam. Làm mảng nền/nhịp chính rồi gắn lên model ngay. Nếu nét không đọc do UV nhỏ, xác định nguyên nhân trước tăng resolution. Dùng mẫu còn hiệu lực thay vì thử lại từ đầu.
+## Economical testing
 
-So bản cũ/mới trong cùng camera/đèn/exposure; xem model quay và kích thước đích. Nét “đẹp” trên atlas có thể sai hướng, thành noise hoặc mất hình trên model. Tách mục đạt mỹ thuật khỏi map hợp lệ kỹ thuật. Chỉ thêm polish giải quyết vấn đề thực, không mặc định thêm chi tiết làm tăng giá trị.
+Choose an area that holds important interactions: wood–metal, cloth edge–leather, a face that changes direction, and seams. Make the base blocks and the main rhythm, then apply them to the model at once. If a stroke does not read because the UV is small, find the cause before you raise the resolution. Use a sample that is still valid instead of testing from the start again.
+
+Compare the old and new versions with the same camera, light and exposure. Look at the model rotating and at the target size. A "beautiful" stroke on the atlas can face the wrong way, become noise, or lose its shape on the model. Separate the aesthetic result from technical map validity. Add polish only where it solves a real problem. Do not assume that more detail adds value.

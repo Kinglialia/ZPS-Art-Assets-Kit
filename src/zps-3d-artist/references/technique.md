@@ -1,58 +1,58 @@
-> Vai trò trong skill này: "người giao việc", "người giữ chuẩn hình ảnh", "người duyệt" = người dùng. "Review độc lập" chỉ khi có reviewer tách biệt thực sự; không mặc định gọi subagent. Ngưỡng nằm trong `task/spec.json`; số đo lấy từ script trong `tools/`. Nguồn: skill art-3d-artist v0.1.0.
+> Roles in this skill: "task giver", "visual standard keeper", and "approver" all mean the user. Use "independent review" only when a truly separate reviewer exists. Do not call a subagent by default. Thresholds are in `task/spec.json`. Take measurements from the scripts in `tools/`. Source: skill art-3d-artist v0.1.0.
 
-# Chọn và kiểm chứng giải pháp dựng
+# Choose and verify a build solution
 
-## 1. Phân tích trước khi chọn
+## 1. Analyze before you choose
 
-Đọc concept, chuẩn hình ảnh, asset mẫu và tiêu chí task. Xác định camera, kích thước hiển thị, yêu cầu chuyển động/tương tác, engine/shader và budget đã biết. Thiếu dữ kiện ảnh hưởng lựa chọn thì nêu giả định cùng tác động.
+Read the concept, the visual standard, the set anchor, and the task criteria. Identify the camera, the display size, the motion and interaction requirements, the engine/shader, and the known budget. If missing information affects the choice, state an assumption and its effect.
 
-Dùng ưu tiên đọc trong brief: chức năng/thông tin do người giao việc xác định, đặc trưng hình ảnh do người duyệt hình ảnh xác định. Xem tại các góc, khoảng nhìn và kích thước hiển thị được phép; không suy độ quan trọng chỉ từ diện tích trong concept hoặc ảnh render phóng lớn. Thiếu dữ kiện thì ghi đề xuất/giả định, chỉ hỏi phần làm thay đổi quyết định.
+Use the reading priority in the brief. The task giver defines function and information. The visual approver defines visual features. View at the allowed angles, viewing distances, and display sizes. Do not infer importance only from the area in the concept or from an enlarged render. If information is missing, record a recommendation or an assumption. Ask only about what would change the decision.
 
-Phân loại chi tiết theo vai trò: hình khối/đường viền; cấu tạo và mối nối; chuyển động/tương tác; phản ứng ánh sáng; màu và hoa văn. Một chi tiết có thể giữ nhiều vai trò.
+Classify each detail by role: mass/outline; construction and joints; motion/interaction; light response; color and pattern. One detail can have several roles.
 
-## 2. Chọn kỹ thuật theo tác dụng
+## 2. Choose a technique by its effect
 
-| Kỹ thuật | Khi cân nhắc | Cần kiểm |
+| Technique | When to consider it | What to check |
 |---|---|---|
-| **Geometry** | Chi tiết ảnh hưởng silhouette, độ dày, khoảng hở, chuyển động, bóng đổ hoặc tương tác | Hình ở các góc cần dùng; chất lượng có xứng chi phí geometry |
-| **Bevel + custom/weighted normals** | Cạnh cần bắt sáng, mặt lớn cần shading ổn định | Bevel đủ thấy ở camera đích; không méo khối hoặc tạo shading lỗi |
-| **Normal map** | Chi tiết cần thay đổi phản ứng ánh sáng nhưng không cần khối hoặc khoảng hở thật | Có đọc được ở kích thước đích; tangent, UV, compression và shader đúng |
-| **Texture màu/hand-painted** | Phân vùng màu, hoa văn hoặc sáng tối theo style | Khớp ngôn ngữ hình ảnh; painted lighting phù hợp cách chiếu sáng đích |
-| **Trim sheet/tiling** | Chi tiết hoặc vật liệu lặp trên nhiều bề mặt/asset | Scale, hướng pattern, seam, repetition và khả năng dùng chung material |
-| **Decal** | Ký hiệu hoặc chi tiết cục bộ cần đặt độc lập trên bề mặt | Hỗ trợ của renderer, layering, chi phí và khả năng nhìn ở góc xiên |
-| **Cards + alpha** | Hình mỏng như lá, tóc hoặc cụm chi tiết phù hợp mặt phẳng | Góc nhìn, silhouette, bóng, mip/alpha và overdraw; không mặc định rẻ hơn geometry |
-| **Parallax/POM** | Bề mặt cần cảm giác sâu hơn normal map, shader đích hỗ trợ | Góc xiên, artifact, chi phí GPU và giới hạn tại mép vật thể |
-| **LOD** | Asset xuất hiện ở nhiều kích thước hiển thị và giảm chi tiết có lợi | Mất silhouette, shading, chi tiết nhận diện và chuyển cấp; không ép tỷ lệ giảm cố định |
+| **Geometry** | The detail affects the silhouette, thickness, gaps, motion, shadow, or interaction | The shape at the needed angles; whether the quality is worth the geometry cost |
+| **Bevel + custom/weighted normals** | Edges need to catch light, and large faces need stable shading | The bevel is visible enough at the target camera; it does not distort the mass or create shading faults |
+| **Normal map** | The detail must change the light response but does not need real mass or gaps | It reads at the target size; tangent, UV, compression, and shader are correct |
+| **Color texture/hand-painted** | Color zones, patterns, or light and dark in the style | It matches the visual language; painted lighting fits the target lighting |
+| **Trim sheet/tiling** | The detail or material repeats across many surfaces or assets | Scale, pattern direction, seams, repetition, and whether the material can be shared |
+| **Decal** | A symbol or local detail must be placed independently on a surface | Renderer support, layering, cost, and visibility at oblique angles |
+| **Cards + alpha** | A thin form such as a leaf, hair, or a cluster of details that fits a flat plane | View angle, silhouette, shadow, mip/alpha, and overdraw; do not assume it is cheaper than geometry |
+| **Parallax/POM** | The surface needs more depth than a normal map gives, and the target shader supports it | Oblique angles, artifacts, GPU cost, and limits at the edge of the object |
+| **LOD** | The asset appears at many display sizes and reducing detail helps | Loss of silhouette, shading, and identifying detail, and the transition between levels; do not force a fixed reduction ratio |
 
-Phối hợp kỹ thuật theo từng phần của asset. Không chọn chỉ từ tên loại asset hoặc nền tảng; không áp ngưỡng độ sâu theo cm cho mọi trường hợp.
+Combine techniques for each part of the asset. Do not choose only from the asset type or the platform. Do not apply one depth threshold in cm to every case.
 
-Chi tiết chỉ đổi màu/hoa văn ưu tiên texture màu hoặc material; chi tiết cần phản ứng ánh sáng nhưng không cần khối thật cân nhắc normal. Geometry giữ silhouette, độ dày, khoảng hở, bóng, chuyển động hoặc tương tác có ý nghĩa theo brief. Normal không thay đường viền hoặc cấu tạo đã bỏ.
+For a detail that only changes color or pattern, prefer a color texture or a material. For a detail that needs a light response but not real mass, consider a normal map. Use geometry to keep the silhouette, thickness, gaps, shadow, motion, or interaction that matters in the brief. A normal map does not replace an outline or a construction that you removed.
 
-Chưa chắc thì dùng phép thử nhỏ trong bước proof hiện có: bỏ geometry của vùng đại diện, thay bằng texture/normal phù hợp và so cùng camera/light/kích thước ở các góc sử dụng. Chấp nhận khi vẫn giữ ưu tiên đọc và chức năng; không kết luận phương pháp thất bại chỉ vì map thử chưa đúng. Có chuẩn/mẫu phù hợp thì dùng lại, không thử từng vết xước hoặc mở thêm gate. Phối hợp bên texture/material khi có; thay cách thể hiện đã duyệt vẫn phải trình người duyệt hình ảnh.
+If you are not sure, use a small test in the existing proof step. Remove the geometry of a representative area. Replace it with a suitable texture or normal. Compare under the same camera, light, and size at the usage angles. Accept the result if it keeps the reading priority and the function. Do not conclude that the method failed only because the test map is not right. If a suitable standard or sample exists, reuse it. Do not test every scratch, and do not open an additional gate. Coordinate with the texture/material side when it exists. If you change an approved way of showing something, you must still submit it to the visual approver.
 
-## 3. Chọn cách dựng hình
+## 3. Choose how to build the shape
 
-- **Mesh trực tiếp:** khối cần kiểm soát đỉnh, cạnh và topology cụ thể.
-- **Curve/sweep:** hình chạy theo đường dẫn như dây, ống, viền và các cấu kiện cong.
-- **Sculpt:** hình hữu cơ hoặc biến dạng cần xử lý trực tiếp trên bề mặt; retopo khi yêu cầu đích cần.
-- **Boolean:** tạo giao/cắt phù hợp cấu tạo; kiểm kết quả shading và topology sau thao tác.
-- **Procedural/modular:** cấu trúc lặp, có quy luật hoặc cần chỉnh nhiều biến thể; kiểm cả mối nối và sự lặp dễ nhận thấy.
-- **Mesh từ generator:** dùng khi phù hợp quyền và công cụ; kiểm thiết kế, mesh, UV và export như mọi nguồn khác.
+- **Direct mesh:** for masses that need control of specific vertices, edges, and topology.
+- **Curve/sweep:** for shapes that follow a path, such as cables, tubes, trims, and curved components.
+- **Sculpt:** for organic or deformed shapes that you work directly on the surface. Do retopo when the target requires it.
+- **Boolean:** to make intersections or cuts that fit the construction. Check the shading and topology after the operation.
+- **Procedural/modular:** for repeating or rule-based structures, or when you must edit many variants. Check the joints and any repetition that is easy to notice.
+- **Mesh from a generator:** use it when it fits your authority and tools. Check the design, mesh, UV, and export like any other source.
 
-Có thể phối hợp nhiều cách. Chọn phương pháp giúp giữ thiết kế, sửa thuận lợi và đáp ứng đích sử dụng.
+You can combine several ways. Choose the method that keeps the design, is convenient to edit, and meets the target use.
 
-Dựng một bản runtime chính trong budget trước. Chỉ thêm LOD khi camera/kích thước hiển thị và yêu cầu đích có lợi; tạo từ source chung khi phù hợp, dùng chung texture/material nếu giữ được look. Không mặc định dựng ba bản Low/Medium/High độc lập hoặc giảm mặt theo phần trăm cố định. Bản sculpt high-poly để bake là nguồn riêng khi cần chi tiết bề mặt; không đồng nhất với mức chi tiết cao nhất của bộ LOD.
+First, build one main runtime version within the budget. Add LOD only when the camera, the display size, and the target requirements make it useful. Create LODs from a shared source when it fits. Share textures and materials if the look stays. Do not build three independent Low/Medium/High versions by default. Do not reduce faces by a fixed percentage. A high-poly sculpt for baking is a separate source when you need surface detail. It is not the same as the highest detail level of the LOD set.
 
-## 4. Dùng chuẩn hoặc thử nhỏ
+## 4. Use a standard or a small test
 
-Có chuẩn/asset mẫu còn phù hợp thì dùng lại, ghi phiên bản và điều kiện áp dụng. Khi xuất hiện rủi ro mới, chọn vùng nhỏ nhất đủ bộc lộ vấn đề và thử trước khi mở rộng.
+If a standard or a set anchor still fits, reuse it. Record the version and the conditions of use. When a new risk appears, choose the smallest area that is enough to show the problem. Test it before you expand.
 
-Nếu cần so hai giải pháp, giữ cùng camera, kích thước hiển thị, ánh sáng và material tương đương. So chất lượng nhìn thấy, khả năng sửa và dữ liệu chi phí liên quan. Chưa đo runtime thì chỉ ghi chi phí dự kiến.
+If you must compare two solutions, keep the same camera, display size, light, and an equivalent material. Compare the visible quality, the editability, and the relevant cost data. If you have not measured the runtime, record only the expected cost.
 
-Ví dụ: so vết khắc bằng geometry và normal trên cùng một vùng; không dựng hai asset hoàn chỉnh chỉ để trả lời câu hỏi này.
+Example: compare an engraved mark made with geometry and with a normal map on the same area. Do not build two complete assets only to answer this question.
 
-## 5. Quyết định và chuyển duyệt
+## 5. Decide and submit for approval
 
-Ghi ngắn trong hồ sơ task: `phần cần thể hiện | kỹ thuật chọn | lý do | chuẩn/mẫu dùng lại hoặc kết quả thử | phần chưa kiểm`.
+Write a short entry in the task record: `part to show | chosen technique | reason | standard/sample reused or test result | not checked`.
 
-3D Artist tự quyết giải pháp trong chuẩn và budget. Phối hợp bên texture/material khi liên quan map/material/bake (tự làm thì ghi rõ là tự làm). Thay cách thể hiện đã duyệt thì trình người duyệt hình ảnh; vượt budget hoặc quyền task thì đưa đề nghị cùng đánh đổi.
+The 3D Artist decides the solution within the standard and the budget. Coordinate with the texture/material side when maps, materials, or bake are involved. If you do the work yourself, say so clearly. If you change an approved way of showing something, submit it to the visual approver. If the solution goes beyond the budget or the task authority, give a recommendation with the tradeoffs.

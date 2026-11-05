@@ -1,27 +1,27 @@
-# Asset mẫu của bộ
+# Set anchor
 
-Dùng chung cho Asset 2D, UI Art và 2D Review. Asset mẫu là asset **đã được AD hoặc user duyệt**, làm thước đo đồng bộ cho các asset còn lại cùng bộ: góc nhìn, độ dày nét, mức chi tiết, hướng sáng, scale, khoảng đệm. Với UI, mẫu là hướng visual hoặc màn hình đã được chọn.
+Shared by Asset 2D, UI Art, and 2D Review. The set anchor is an asset that the **AD or user has approved**. It is the measuring standard that keeps the other assets in the same set consistent: viewing angle, line thickness, detail level, light direction, scale, and padding. For UI, the anchor is the visual direction or the screen that was chosen.
 
-## Khi chưa có mẫu
+## When there is no anchor
 
-- **Làm luôn cả bộ** rồi trình cả bộ để duyệt một lần. Chỉ làm mẫu trước khi user yêu cầu.
-- **Asset đầu tiên hoặc asset lẻ:** so với brief và style sheet; ghi đồng bộ bộ là `not_checked`.
-- **Cả bộ làm cùng lúc:** đặt tất cả cạnh nhau cùng kích thước hiển thị (`preview.py compare` hoặc `sheet`) và kiểm đồng bộ **trong bộ**.
+- **Make the whole set** and present the whole set for one approval. Make an anchor first only when the user asks.
+- **First asset or single asset:** compare with the brief and the style sheet. Record set consistency as `not_checked`.
+- **Whole set made at the same time:** put all assets side by side at the same display size (`preview.py compare` or `sheet`). Check consistency **within the set**.
 
-## Khi đã có mẫu
+## When there is an anchor
 
-So từng asset với mẫu ở cùng kích thước và nền. Không so với concept hay reference cảnh thay cho mẫu.
+Compare each asset with the anchor at the same size and on the same background. Do not compare with the concept or a scene reference in place of the anchor.
 
-## Ghi mẫu sau khi duyệt
+## Record the anchor after approval
 
-Khi AD hoặc user duyệt một asset hoặc cả bộ, ghi asset mẫu (cả bộ được duyệt thì chọn một asset tiêu biểu). Lưu ở phía project, không bao giờ trong thư mục skill:
+When the AD or user approves an asset or a whole set, record the set anchor. If a whole set is approved, choose one representative asset. Store the record on the project side. Never store it in the skill folder:
 
-| Tình huống | Ghi ở đâu |
+| Situation | Where to record |
 |---|---|
-| Project có style sheet hoặc tài liệu Art Style | Mục Ghi chú sản xuất của style sheet |
-| Project chưa có style sheet | File `_mau.md` đặt cạnh bộ asset |
-| Gọi global, không có project | Ghi trong kết quả giao; lần sau user gửi lại ảnh mẫu |
+| The project has a style sheet or an Art Style document | The Production notes section of the style sheet |
+| The project has no style sheet | A `_set-anchor.md` file placed next to the asset set |
+| Global call, no project | Record it in the delivery result. Next time, the user sends the anchor image again |
 
-Nội dung ghi: tên bộ, file mẫu và version, người duyệt, ngày, phạm vi (ví dụ "mẫu cho nét và mức chi tiết, chưa chốt palette").
+What to record: the set name, the anchor file and version, the approver, the date, and the scope (for example "anchor for line and detail level, palette not final yet").
 
-Trước khi làm thêm hoặc review một bộ, tìm mẫu theo đúng thứ tự trong bảng trên.
+Before you add to a set or review a set, look for the anchor in the exact order of the table above.

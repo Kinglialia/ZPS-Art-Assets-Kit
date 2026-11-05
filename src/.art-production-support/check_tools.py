@@ -1,6 +1,6 @@
 """Report which tools the ZPS art skills need on this machine, and how to install what is missing.
 Standard library only. It installs nothing. Run the installed copy:
-  python3 ~/.agents/skills/.art-production-support/check_tools.py [--json]
+  python3 {{INSTALL_ROOT}}/.art-production-support/check_tools.py [--json]
 Exit 0 when every required tool is present, 1 when something required is missing."""
 import argparse
 import importlib.util

@@ -1,66 +1,76 @@
-# Texture methods — chọn cách author × shader
+# Texture methods — choose the author × shader approach
 
-Một kiểu bề mặt = **cách tạo màu (author)** × **cách engine chiếu sáng (shader)**. Hai lựa chọn độc lập: vẽ tay có thể chạy unlit hoặc PBR; màu phẳng có thể lit hoặc toon.
+A surface style = **how the color is created (author)** × **how the engine lights it (shader)**. These are two independent choices. A hand-painted texture can run unlit or PBR. A flat color can be lit or toon.
 
 ## Contents
-- Cách author
+- Author methods
 - Shader
-- Đọc input → gợi ý
-- Ràng buộc Godot mobile
-- Năng lực thực của role
+- Read the input → suggestion
+- Godot mobile constraints
+- Real capability of the role
 
-## Cách author
+## Author methods
 
-| Cách | Bản chất | Hợp khi | Đánh đổi | Đọc khi làm |
+| Method | Nature | Fits when | Trade-off | Read when working |
 |---|---|---|---|---|
-| Hand-painted | Vẽ màu, sáng tối, vân vào albedo | Concept có nét vẽ tay, ánh sáng vẽ sẵn, camera ổn định | Công vẽ cao; ánh sáng vẽ sẵn sai khi xoay đèn | hand-painted, painting-practice |
-| Flat color / palette atlas | Mỗi vùng vật liệu là ô màu phẳng; khối do engine | Low-poly, mặt phẳng rõ, màu theo khối, nhiều asset chung palette | Ít chi tiết bề mặt; phụ thuộc hình khối và ánh sáng | flat-color |
-| Gradient atlas | Ô màu chuyển trong ô | Như trên nhưng cần chiều sâu (gốc tối, ngọn sáng) | Hướng gradient gắn với UV | flat-color |
-| Vertex color | Màu gán vào đỉnh, không texture | Mobile rất nhẹ, mesh đủ đỉnh để giữ ranh giới màu | Ranh giới màu theo cạnh mesh; khó chi tiết | flat-color |
-| Bake + material | Bake normal/AO/curvature từ high-poly rồi phủ vật liệu | Hero asset, PBR, cận cảnh | Cần high-poly và DCC (Substance…); nặng hơn | pbr |
-| Tileable / trim sheet / decal | Texture lặp hoặc dải dùng chung, decal thêm chi tiết | Môi trường lớn, kiến trúc, nhiều mesh cùng vật liệu | UV phải theo quy ước trim; lặp dễ lộ | tileable-trim |
-| Triplanar | Chiếu texture theo 3 trục, không cần UV | Đá, đất, khối địa hình; mesh chưa có UV | Mờ ở vùng giao; tốn shader hơn | tileable-trim |
-| Pixel texture | Texel to, palette giới hạn, filter Nearest | Game pixel/retro 3D | Texel density phải đồng nhất toàn game | pixel-texture |
-| Photo / scan | Từ ảnh chụp, đã khử sáng và cân màu | Realistic hoặc stylized dựa trên ảnh | Quyền ảnh; ánh sáng nướng sẵn; dễ lệch style | photo-scan |
-| Projection paint | Vẽ trên ảnh render rồi chiếu vào model | Hero asset góc nhìn cố định, paintover concept | Mặt khuất cần xử lý; cần owner bake | projection |
+| Hand-painted | Paint color, light/dark and grain into the albedo | The concept has hand-painted strokes and painted-in light, and the camera is stable | High painting effort; painted-in light is wrong when the light rotates | hand-painted, painting-practice |
+| Flat color / palette atlas | Each material area is a flat color cell; the engine gives the form | Low-poly, clear flat faces, color by volume, many assets share one palette | Little surface detail; depends on form and light | flat-color |
+| Gradient atlas | A color cell that blends inside the cell | Same as above but depth is needed (dark root, light tip) | Gradient direction is tied to UV | flat-color |
+| Vertex color | Color is assigned to vertices, no texture | Very light mobile; the mesh has enough vertices to hold the color boundaries | Color boundaries follow mesh edges; hard to add detail | flat-color |
+| Bake + material | Bake normal/AO/curvature from a high-poly, then apply a material | Hero asset, PBR, close-up | Needs a high-poly and a DCC tool (Substance...); heavier | pbr |
+| Tileable / trim sheet / decal | A repeating texture or a shared strip; a decal adds detail | Large environment, architecture, many meshes with the same material | UV must follow the trim convention; repeats show easily | tileable-trim |
+| Triplanar | Project the texture along 3 axes, no UV needed | Rock, soil, terrain volumes; mesh without UV yet | Blurry where projections meet; costs more shader work | tileable-trim |
+| Pixel texture | Large texels, limited palette, Nearest filter | Pixel/retro 3D games | Texel density must be the same across the whole game | pixel-texture |
+| Photo / scan | From photos, with light removed and color balanced | Realistic or stylized based on photos | Photo rights; baked-in light; style drifts easily | photo-scan |
+| Projection paint | Paint on a rendered image, then project it onto the model | Hero asset with a fixed view, paintover of a concept | Hidden parts need handling; needs a bake owner | projection |
 
 ## Shader
 
-| Shader | Khi nào | Lưu ý |
+| Shader | When | Note |
 |---|---|---|
-| Unlit | Ánh sáng vẽ sẵn, mobile rất nhẹ | Không phản ứng đèn/ngày đêm |
-| Lit / toon | Màu phẳng hoặc vẽ tay nhẹ, cần đèn động | Albedo không vẽ bóng cố định; toon dùng ramp |
-| PBR (metallic-roughness) | Vật liệu cần phản xạ thật | Albedo sạch ánh sáng; cần roughness/metallic/normal đúng convention |
+| Unlit | Painted-in light, very light mobile | Does not react to lights/day-night |
+| Lit / toon | Flat color or light hand-painting, dynamic light needed | Do not paint fixed shadow into albedo; toon uses a ramp |
+| PBR (metallic-roughness) | Material needs real reflection | Albedo has no light in it; roughness/metallic/normal need the correct convention |
 
-## Đọc input → gợi ý
+## Read the input → suggestion
 
-| Quan sát | Nghiêng về |
+| Observation | Lean toward |
 |---|---|
-| Concept có nét/vân vẽ tay, bóng vẽ sẵn | Hand-painted (unlit hoặc lit nhẹ) |
-| Màu theo khối, mặt phẳng rõ, gần như không vân | Flat/gradient atlas hoặc vertex color + lit/toon |
-| Nhiều mesh cùng vật liệu, cảnh lớn | Tileable/trim/decal, triplanar cho địa hình |
-| Cận cảnh, vật liệu phản xạ (kim loại, da bóng) | Bake + PBR |
-| Model không có UV | Vertex color, triplanar; hoặc xin UV |
-| UV chồng nhiều, mirror | Tránh chi tiết bất đối xứng; flat/tileable |
-| Pixel lớn, cạnh pixel rõ | Pixel texture, Nearest |
-| Nhiều skin/mùa | Palette atlas swap, hoặc material instance đổi màu |
+| The concept has hand-painted strokes/grain and painted-in shadow | Hand-painted (unlit or light lit) |
+| Color by volume, clear flat faces, almost no grain | Flat/gradient atlas or vertex color + lit/toon |
+| Many meshes with the same material, large scene | Tileable/trim/decal, triplanar for terrain |
+| Close-up, reflective material (metal, glossy leather) | Bake + PBR |
+| Model has no UV | Vertex color, triplanar; or ask for UV |
+| Much UV overlap, mirroring | Avoid asymmetric detail; flat/tileable |
+| Large pixels, clear pixel edges | Pixel texture, Nearest |
+| Many skins/seasons | Palette atlas swap, or a material instance that changes color |
 
-Gợi ý là giả thuyết: kiểm bằng bản thử trên vùng đại diện của model trước khi làm toàn bộ. Khi có yêu cầu cụ thể từ người gọi hoặc tài liệu Art Style, bảng này không thay yêu cầu đó.
+A suggestion is a hypothesis. Check it with a test sample on a representative area of the model before you do the whole model. If the caller or the Art Style document gives a specific requirement, this table does not replace that requirement.
 
-## Ràng buộc Godot mobile
+## Godot mobile constraints
 
-- Godot sắp xếp vật theo material/shader: ít material, chung atlas thì nhẹ hơn.
-- Instancing tự động chỉ có ở Forward+, **không có ở Mobile/Compatibility**: nhiều vật giống nhau trên mobile dùng MultiMesh (3D Artist/Developer quyết).
-- Vật alpha blend không sắp được, vẽ từ xa tới gần và không được instancing tự động: ưu tiên alpha scissor/hash; tách phần trong suốt thành surface riêng.
-- Vertex color: `StandardMaterial3D` mặc định bỏ qua; bật **Vertex Color → Use as Albedo** (thường kèm **Is sRGB**).
-- Decal: Mobile áp tối đa 8 decal mỗi mesh resource; Compatibility không hỗ trợ decal.
-- `ORMMaterial3D` dùng một texture ORM (occlusion, roughness, metallic).
-- Normal map Godot dùng quy ước OpenGL (Y+).
+- Godot sorts objects by material/shader. Fewer materials and a shared atlas are lighter.
+- Automatic instancing exists only in Forward+. It is **not available in Mobile/Compatibility**. For many identical objects on mobile, use MultiMesh (the 3D Artist/Developer decides).
+- Alpha-blended objects cannot be sorted, are drawn from far to near, and get no automatic instancing. Prefer alpha scissor/hash. Split the transparent part into its own surface.
+- Vertex color: `StandardMaterial3D` ignores it by default. Turn on **Vertex Color → Use as Albedo** (usually together with **Is sRGB**).
+- Decal: Mobile applies at most 8 decals per mesh resource. Compatibility does not support decals.
+- `ORMMaterial3D` uses one ORM texture (occlusion, roughness, metallic).
+- Godot normal maps use the OpenGL convention (Y+).
 
-Nguồn: tài liệu Godot (Standard Material 3D, Using decals, Optimizing 3D performance), repo `godotengine/godot-docs`. Kích thước texture, nén, mipmap: tech profile của project.
+Source: Godot documentation (Standard Material 3D, Using decals, Optimizing 3D performance), repo `godotengine/godot-docs`. For texture size, compression and mipmap, use the project's tech profile.
 
-## Năng lực thực của role
+## Real capability of the role
 
-Khi tự chọn, ưu tiên cách role tự làm tới chất lượng giao. LLM làm tốt: palette/gradient atlas, projection từ ảnh vẽ, texture lặp, chỉnh màu bằng script. LLM làm kém: vẽ tay texture riêng trực tiếp trên UV layout (ảnh gen hay vẽ sáng tối theo atlas thay vì theo khối), bake high-poly chất lượng cao, Substance.
+When you choose, prefer a method that the role can do itself to delivery quality.
 
-Tự làm: gen/edit ảnh theo [gen craft](../../.art-production-support/shared/gen-craft.md), palette/gradient atlas, chỉnh màu bằng script, render kiểm trên model (Blender headless), paint view. Cần người/DCC: sculpt high-poly, bake chất lượng cao, Substance, chỉnh UV, gán vertex color trên mesh (đề xuất cho 3D Artist). Ghi rõ trong đề xuất.
+- An LLM does these well: palette/gradient atlas, projection from a painted image, repeating textures, color adjustment by script.
+- An LLM does these badly: hand-painting a separate texture directly on a UV layout (a generated image tends to paint light/dark by the atlas, not by the volume), high-quality high-poly bake, Substance.
+
+The role can do these itself:
+- Generate/edit an image with [gen craft](../../.art-production-support/shared/gen-craft.md).
+- Palette/gradient atlas.
+- Color adjustment by script.
+- Check renders on the model (Blender headless).
+- Paint view.
+
+These need a person/DCC tool: sculpt a high-poly, high-quality bake, Substance, UV editing, vertex color assignment on the mesh (propose it to the 3D Artist). State this in the proposal.
