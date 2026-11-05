@@ -1,0 +1,31 @@
+Gốm hình đen — zps-black-figure-pottery v2
+Ngày kiểm tra: 2026-11-03
+Nhóm: Hội họa và đường nét
+Nguồn: https://game-library.zingplay.dev/styles/black-figure-pottery/
+
+TÓM TẮT NGUỒN (VIẾT LẠI)
+Dáng đặc tối, nền màu đất và hoa văn khắc gợi nghệ thuật gốm; chủ đề thần thoại là một trục riêng.
+
+QUAN SÁT ẢNH ĐẠI DIỆN
+Cửa lớn màu xanh nằm giữa nền cam đất, hai dáng tối đối xứng hai bên và dải hoa văn chạy ngang.
+Ảnh được quan sát: images/c71b0cb13cd2294d08355813-1280.webp
+
+GỢI Ý CỦA AD (SUY LUẬN)
+Có thể tổ chức gameplay theo silhouette và dải hoa văn; cần tránh phụ thuộc riêng màu cam/đen.
+
+TEST ĐỀ XUẤT
+Test pose chiến đấu và phân biệt phe khi dùng ít màu; kiểm tra trang trí không che va chạm.
+
+GIỚI HẠN
+Ảnh tĩnh không xác nhận animation, pipeline, hiệu năng hoặc license. Phân tích trực quan hiện chỉ cho ảnh đại diện; mở ảnh gốc khi cần chi tiết.
+Assistant viewed representative image in gallery at overview scale on 2026-11-03; secondary images decode/hash checked, not individually art-reviewed.
+Ảnh dùng làm reference nghiên cứu. Quyền thuộc chủ sở hữu gốc; chưa xác nhận giấy phép tái sử dụng trong sản phẩm.
+
+ẢNH THAM KHẢO
+1. Apotheon — Alientrap
+File: images/c71b0cb13cd2294d08355813-1280.webp | 1280 × 720 px
+Drive: https://drive.google.com/file/d/18uiujOb0l9pHPPyCozxeZ8G-sppa_LLt/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/apotheon/c71b0cb13cd2294d08355813-1280.webp
+Trang chính thức: https://store.steampowered.com/app/208750/
+SHA256: c594df63b7512ded6ba4c3292d600e37258a3ceecc03afce22610eefaea42c9b
+Review: Representative image visually inspected at overview scale, 2026-11-03

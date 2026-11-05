@@ -1,0 +1,47 @@
+Thế giới hội họa đậm màu — zps-lush-painted-worlds v2
+Ngày kiểm tra: 2026-11-03
+Nhóm: Hội họa và đường nét
+Nguồn: https://game-library.zingplay.dev/styles/lush-painted-worlds/
+
+TÓM TẮT NGUỒN (VIẾT LẠI)
+Mảng màu có độ đục và nét cọ chọn lọc tạo cảnh đậm, dày hơn vẻ trong loang của màu nước.
+
+QUAN SÁT ẢNH ĐẠI DIỆN
+Cảnh nhìn cao có cột xanh, bạt trắng và bậc thềm; nhiều mảng sáng hẹp nằm trong khung nền tối.
+Ảnh được quan sát: images/fdfa51d8df370a61ecd1af35-1280.webp
+
+GỢI Ý CỦA AD (SUY LUẬN)
+Phù hợp môi trường giàu màu và các điểm sáng chọn lọc; cần kỷ luật chi tiết theo vùng chú ý.
+
+TEST ĐỀ XUẤT
+So sánh cảnh đông props với focal point chính; kiểm tra grayscale và thời gian tìm mục tiêu.
+
+GIỚI HẠN
+Ảnh tĩnh không xác nhận animation, pipeline, hiệu năng hoặc license. Phân tích trực quan hiện chỉ cho ảnh đại diện; mở ảnh gốc khi cần chi tiết.
+Assistant viewed representative image in gallery at overview scale on 2026-11-03; secondary images decode/hash checked, not individually art-reviewed.
+Ảnh dùng làm reference nghiên cứu. Quyền thuộc chủ sở hữu gốc; chưa xác nhận giấy phép tái sử dụng trong sản phẩm.
+
+ẢNH THAM KHẢO
+1. Bastion — Supergiant Games
+File: images/fdfa51d8df370a61ecd1af35-1280.webp | 1280 × 720 px
+Drive: https://drive.google.com/file/d/151XX6AnNZTIyzXutM2SDyfwKB0twxi4w/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/bastion/fdfa51d8df370a61ecd1af35-1280.webp
+Trang chính thức: https://store.steampowered.com/app/107100/
+SHA256: 3b24385b838d492c19c205096b18637a761897142aa69606de83a8da92090f0b
+Review: Representative image visually inspected at overview scale, 2026-11-03
+
+2. Transistor — Supergiant Games
+File: images/93ede176c6d8bf8fa3136392-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/11nm49SXNmb-PrRFTyWxOKeUvc_ojIfbz/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/transistor/93ede176c6d8bf8fa3136392-480.webp
+Trang chính thức: https://store.steampowered.com/app/237930/
+SHA256: cb928588cf623d46648238f5bea33da755e561b130ecd852ca675117b42b731b
+Review: Not individually reviewed
+
+3. Dust: An Elysian Tail — Humble Hearts LLC
+File: images/2f6a867ac4c3a3a2cf4f8243-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/1qo2VV1EgFadJVrcGZ1fxUTjnwikA-Q0T/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/dust/2f6a867ac4c3a3a2cf4f8243-480.webp
+Trang chính thức: https://store.steampowered.com/app/236090/
+SHA256: 86247e0ce3f10699602c08c1179d952cbd5af7e15180304a3911763347d158a5
+Review: Not individually reviewed

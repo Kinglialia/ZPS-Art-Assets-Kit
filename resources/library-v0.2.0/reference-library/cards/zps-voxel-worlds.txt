@@ -1,0 +1,47 @@
+Thế giới voxel — zps-voxel-worlds v2
+Ngày kiểm tra: 2026-11-03
+Nhóm: 3D và kết xuất
+Nguồn: https://game-library.zingplay.dev/styles/voxel-worlds/
+
+TÓM TẮT NGUỒN (VIẾT LẠI)
+Nhân vật, cảnh và mặt vỡ biểu lộ cấu trúc khối 3D dạng voxel, khác pixel 2D.
+
+QUAN SÁT ẢNH ĐẠI DIỆN
+Nhân vật nhìn từ sau đứng giữa phố đang có khói và lửa; ảnh thu nhỏ chưa đủ để đánh giá cấu trúc voxel của từng bề mặt.
+Ảnh được quan sát: images/e3750f84b7bb190bf8fb551e-1280.webp
+
+GỢI Ý CỦA AD (SUY LUẬN)
+Phù hợp thế giới có cấu trúc khối hoặc phá hủy; khả năng phá hủy không thể kết luận từ style.
+
+TEST ĐỀ XUẤT
+Dựng góc cảnh và một tình huống phá hủy nếu có trong brief; đo memory và readability.
+
+GIỚI HẠN
+Ảnh tĩnh không xác nhận animation, pipeline, hiệu năng hoặc license. Phân tích trực quan hiện chỉ cho ảnh đại diện; mở ảnh gốc khi cần chi tiết.
+Assistant viewed representative image in gallery at overview scale on 2026-11-03; secondary images decode/hash checked, not individually art-reviewed.
+Ảnh dùng làm reference nghiên cứu. Quyền thuộc chủ sở hữu gốc; chưa xác nhận giấy phép tái sử dụng trong sản phẩm.
+
+ẢNH THAM KHẢO
+1. Teardown — Tuxedo Labs
+File: images/e3750f84b7bb190bf8fb551e-1280.webp | 1280 × 720 px
+Drive: https://drive.google.com/file/d/1Kw8B4_u2bHaN5ASWxxofwbIlYqdiwSjF/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/teardown/e3750f84b7bb190bf8fb551e-1280.webp
+Trang chính thức: https://store.steampowered.com/app/1167630/
+SHA256: ce2477aa3531e17f987916754153a59efb3a30277d3fec8eb3859fafe1156194
+Review: Representative image visually inspected at overview scale, 2026-11-03
+
+2. Riverbond — Cococucumber
+File: images/58c606d346b221fb721e80d7-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/1ytsn8shlwD5CV0_FhD6Y_5b8VRSNUufx/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/riverbond/58c606d346b221fb721e80d7-480.webp
+Trang chính thức: https://store.steampowered.com/app/459370/
+SHA256: 1dd22a824842f0e59432855c03465b4a70347c771433957bca445410dd29ec7c
+Review: Not individually reviewed
+
+3. Cloudpunk — ION LANDS
+File: images/2a558542b97a675be61bc028-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/17jCZIUoj-RHmTCcZX_3aRrZELbov1sDz/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/cloudpunk/2a558542b97a675be61bc028-480.webp
+Trang chính thức: https://store.steampowered.com/app/746850/
+SHA256: 2a77e3587b3072c838139ddeb6383c69adf2a8e44672d416f1ac4c0e04c2dc81
+Review: Not individually reviewed

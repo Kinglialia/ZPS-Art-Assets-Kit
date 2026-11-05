@@ -1,0 +1,47 @@
+Tiểu cảnh thu nhỏ — zps-miniature-diorama v2
+Ngày kiểm tra: 2026-11-03
+Nhóm: 3D và kết xuất
+Nguồn: https://game-library.zingplay.dev/styles/miniature-diorama/
+
+TÓM TẮT NGUỒN (VIẾT LẠI)
+Tỷ lệ thu nhỏ, góc cao và bóng mềm gợi mô hình trưng bày trên bàn.
+
+QUAN SÁT ẢNH ĐẠI DIỆN
+Phế tích và cây được nhìn từ góc cao, bóng mềm và cụm cây bao quanh công trình; hàng icon công cụ ở chân khung.
+Ảnh được quan sát: images/1fb611bd13792db1fdd5bfcc-1280.webp
+
+GỢI Ý CỦA AD (SUY LUẬN)
+Phù hợp xây dựng thư giãn và quan sát tổng thể; ảnh đẹp ở zoom gần có thể khó đọc khi zoom xa.
+
+TEST ĐỀ XUẤT
+Test nhiều mức zoom và công trình dày; kiểm tra silhouette từng loại nhà.
+
+GIỚI HẠN
+Ảnh tĩnh không xác nhận animation, pipeline, hiệu năng hoặc license. Phân tích trực quan hiện chỉ cho ảnh đại diện; mở ảnh gốc khi cần chi tiết.
+Assistant viewed representative image in gallery at overview scale on 2026-11-03; secondary images decode/hash checked, not individually art-reviewed.
+Ảnh dùng làm reference nghiên cứu. Quyền thuộc chủ sở hữu gốc; chưa xác nhận giấy phép tái sử dụng trong sản phẩm.
+
+ẢNH THAM KHẢO
+1. Tiny Glade — Pounce Light
+File: images/1fb611bd13792db1fdd5bfcc-1280.webp | 1280 × 720 px
+Drive: https://drive.google.com/file/d/1ViV-a25QnXDQCkUuz03j-p_Bn7hMxMEX/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/tiny-glade/1fb611bd13792db1fdd5bfcc-1280.webp
+Trang chính thức: https://store.steampowered.com/app/2198150/
+SHA256: ad95fb5cd3afd684c6b6124f8f7b77901977a82a9b2ead9ea4c36f45cdadecad
+Review: Representative image visually inspected at overview scale, 2026-11-03
+
+2. Dorfromantik — Toukana Interactive
+File: images/ca0790e1dcc782c72c6504ba-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/1Lj-D0bA7hXoS9r6qrJrL_HQKZl2ubkeQ/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/dorfromantik/ca0790e1dcc782c72c6504ba-480.webp
+Trang chính thức: https://store.steampowered.com/app/1455840/
+SHA256: 2df339c9e89d6bddb4eeb3896c75db5bdbeaf709fa947fa7cd49734370635a88
+Review: Not individually reviewed
+
+3. Townscaper — Oskar Stålberg
+File: images/1422721b2517dd62dd92ba2d-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/1BcaEb2Fr81BhSqjgTidYqp4oBBx07XAj/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/townscaper/1422721b2517dd62dd92ba2d-480.webp
+Trang chính thức: https://store.steampowered.com/app/1291340/
+SHA256: c628035050ade4082ecbe87a474a1ff95c75d94be734af129b12b11bcd5d5071
+Review: Not individually reviewed

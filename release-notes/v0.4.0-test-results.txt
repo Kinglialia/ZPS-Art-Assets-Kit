@@ -1,0 +1,158 @@
+PASS manifest .art-director-support/workflows/art-direction.md
+PASS link ../../zps-visual-intelligence-codex/SKILL.md
+PASS link ../../zps-creative-brainstorming-codex/SKILL.md
+PASS link ../../zps-visual-research-codex/SKILL.md
+PASS link ../../zps-art-style-development-codex/SKILL.md
+PASS link ../../zps-art-bible-artist-direction-codex/SKILL.md
+PASS link ../../zps-concept-artist-codex/SKILL.md
+PASS link ../../zps-artistic-critique-codex/SKILL.md
+PASS link ../../zps-art-director-library-manager-codex/SKILL.md
+PASS manifest zps-art-bible-artist-direction-codex/SKILL.md
+PASS link ../.art-director-support/workflows/art-direction.md
+PASS link ../zps-concept-artist-codex/SKILL.md
+PASS manifest zps-art-bible-artist-direction-codex/agents/openai.yaml
+PASS manifest zps-art-director-library-manager-codex/SKILL.md
+PASS link references/library-location.md
+PASS link references/maintenance.md
+PASS link ../.art-director-support/workflows/art-direction.md
+PASS manifest zps-art-director-library-manager-codex/agents/openai.yaml
+PASS manifest zps-art-director-library-manager-codex/references/library-location.md
+PASS manifest zps-art-director-library-manager-codex/references/maintenance.md
+PASS manifest zps-art-style-development-codex/SKILL.md
+PASS link ../.art-director-support/workflows/art-direction.md
+PASS link ../zps-concept-artist-codex/SKILL.md
+PASS manifest zps-art-style-development-codex/agents/openai.yaml
+PASS manifest zps-artistic-critique-codex/SKILL.md
+PASS link references/formal-review.md
+PASS link ../.art-director-support/workflows/art-direction.md
+PASS manifest zps-artistic-critique-codex/agents/openai.yaml
+PASS manifest zps-artistic-critique-codex/references/formal-review.md
+PASS manifest zps-concept-artist-codex/SKILL.md
+PASS link templates/CONCEPT-BRIEF.md
+PASS link ../.art-director-support/workflows/art-direction.md
+PASS manifest zps-concept-artist-codex/agents/openai.yaml
+PASS manifest zps-concept-artist-codex/templates/CONCEPT-BRIEF.md
+PASS manifest zps-creative-brainstorming-codex/SKILL.md
+PASS link ../.art-director-support/workflows/art-direction.md
+PASS link ../zps-concept-artist-codex/SKILL.md
+PASS manifest zps-creative-brainstorming-codex/agents/openai.yaml
+PASS manifest zps-visual-intelligence-codex/SKILL.md
+PASS link ../.art-director-support/workflows/art-direction.md
+PASS manifest zps-visual-intelligence-codex/agents/openai.yaml
+PASS manifest zps-visual-research-codex/SKILL.md
+PASS link ../.art-director-support/workflows/art-direction.md
+PASS manifest zps-visual-research-codex/agents/openai.yaml
+PASS frontmatter zps-art-bible-artist-direction-codex
+NOT RUN bundled YAML validator: PyYAML unavailable (zps-art-bible-artist-direction-codex)
+PASS identifier syntax zps-art-bible-artist-direction-codex
+PASS frontmatter zps-art-director-library-manager-codex
+NOT RUN bundled YAML validator: PyYAML unavailable (zps-art-director-library-manager-codex)
+PASS identifier syntax zps-art-director-library-manager-codex
+PASS frontmatter zps-art-style-development-codex
+NOT RUN bundled YAML validator: PyYAML unavailable (zps-art-style-development-codex)
+PASS identifier syntax zps-art-style-development-codex
+PASS frontmatter zps-artistic-critique-codex
+NOT RUN bundled YAML validator: PyYAML unavailable (zps-artistic-critique-codex)
+PASS identifier syntax zps-artistic-critique-codex
+PASS frontmatter zps-creative-brainstorming-codex
+NOT RUN bundled YAML validator: PyYAML unavailable (zps-creative-brainstorming-codex)
+PASS identifier syntax zps-creative-brainstorming-codex
+PASS frontmatter zps-visual-intelligence-codex
+NOT RUN bundled YAML validator: PyYAML unavailable (zps-visual-intelligence-codex)
+PASS identifier syntax zps-visual-intelligence-codex
+PASS frontmatter zps-visual-research-codex
+NOT RUN bundled YAML validator: PyYAML unavailable (zps-visual-research-codex)
+PASS identifier syntax zps-visual-research-codex
+PASS frontmatter zps-concept-artist-codex
+NOT RUN bundled YAML validator: PyYAML unavailable (zps-concept-artist-codex)
+PASS identifier syntax zps-concept-artist-codex
+PASS preview writes nothing
+PASS cancel writes nothing
+PASS isolated installation
+PASS isolated verify
+PASS idempotence
+PASS rollback refuses later edits
+PASS rollback preserves unrelated files
+PASS block alias skills/art-bible-artist-direction
+PASS block alias skills/zps-art-bible-artist-direction
+PASS block alias skills/art-director-library-manager
+PASS block alias skills/zps-art-director-library-manager
+PASS block alias skills/zps-art-library-manager
+PASS block alias skills/art-style-development
+PASS block alias skills/zps-art-style-development
+PASS block alias skills/artistic-critique
+PASS block alias skills/zps-artistic-critique
+PASS block alias skills/creative-brainstorming
+PASS block alias skills/zps-creative-brainstorming
+PASS block alias skills/visual-intelligence
+PASS block alias skills/zps-visual-intelligence
+PASS block alias skills/visual-research
+PASS block alias skills/zps-visual-research
+PASS block alias skills/art-concept-artist
+PASS block alias skills/zps-concept-artist
+PASS block alias skills/Claude - art-concept-artist
+PASS block alias home/.agents/skills/art-bible-artist-direction
+PASS block alias home/.agents/skills/zps-art-bible-artist-direction
+PASS block alias home/.agents/skills/art-director-library-manager
+PASS block alias home/.agents/skills/zps-art-director-library-manager
+PASS block alias home/.agents/skills/zps-art-library-manager
+PASS block alias home/.agents/skills/art-style-development
+PASS block alias home/.agents/skills/zps-art-style-development
+PASS block alias home/.agents/skills/artistic-critique
+PASS block alias home/.agents/skills/zps-artistic-critique
+PASS block alias home/.agents/skills/creative-brainstorming
+PASS block alias home/.agents/skills/zps-creative-brainstorming
+PASS block alias home/.agents/skills/visual-intelligence
+PASS block alias home/.agents/skills/zps-visual-intelligence
+PASS block alias home/.agents/skills/visual-research
+PASS block alias home/.agents/skills/zps-visual-research
+PASS block alias home/.agents/skills/art-concept-artist
+PASS block alias home/.agents/skills/zps-concept-artist
+PASS block alias home/.agents/skills/Claude - art-concept-artist
+PASS block new name in other root zps-art-bible-artist-direction-codex
+PASS block new name in other root zps-art-director-library-manager-codex
+PASS block new name in other root zps-art-style-development-codex
+PASS block new name in other root zps-artistic-critique-codex
+PASS block new name in other root zps-creative-brainstorming-codex
+PASS block new name in other root zps-visual-intelligence-codex
+PASS block new name in other root zps-visual-research-codex
+PASS block new name in other root zps-concept-artist-codex
+PASS block alias codex/skills/art-bible-artist-direction
+PASS block alias codex/skills/zps-art-bible-artist-direction
+PASS block alias codex/skills/art-director-library-manager
+PASS block alias codex/skills/zps-art-director-library-manager
+PASS block alias codex/skills/zps-art-library-manager
+PASS block alias codex/skills/art-style-development
+PASS block alias codex/skills/zps-art-style-development
+PASS block alias codex/skills/artistic-critique
+PASS block alias codex/skills/zps-artistic-critique
+PASS block alias codex/skills/creative-brainstorming
+PASS block alias codex/skills/zps-creative-brainstorming
+PASS block alias codex/skills/visual-intelligence
+PASS block alias codex/skills/zps-visual-intelligence
+PASS block alias codex/skills/visual-research
+PASS block alias codex/skills/zps-visual-research
+PASS block alias codex/skills/art-concept-artist
+PASS block alias codex/skills/zps-concept-artist
+PASS block alias codex/skills/Claude - art-concept-artist
+PASS block new name in other root zps-art-bible-artist-direction-codex
+PASS block new name in other root zps-art-director-library-manager-codex
+PASS block new name in other root zps-art-style-development-codex
+PASS block new name in other root zps-artistic-critique-codex
+PASS block new name in other root zps-creative-brainstorming-codex
+PASS block new name in other root zps-visual-intelligence-codex
+PASS block new name in other root zps-visual-research-codex
+PASS block new name in other root zps-concept-artist-codex
+PASS install after conflicts resolved
+PASS verify detects duplicate generations
+PASS verify after conflict removed
+
+Tests used temporary target directories only; user skills were not installed or modified.
+App discovery and artistic effectiveness were not tested.
+
+PASS upgrade backs up and rollback restores customized managed content
+PASS corrupt payload rejected before writes
+PASS unlisted payload rejected
+PASS symlink destination rejected
+PASS Ruby Psych safe_load validates all eight SKILL frontmatters and all eight UI metadata files.
+PASS install v0.3.1 -> upgrade v0.4.0 (8 skills) -> rollback -> verify original v0.3.1; Concept entrypoint removed.

@@ -1,0 +1,40 @@
+{
+  "_note": "Per-task spec. Fill from the brief and config.yaml defaults, show the user, get it confirmed. After that, never loosen a threshold to pass a check; ask instead. Paths are relative to the folder holding this file (task/).",
+  "asset": "chest_01",
+  "entry": "self_build | optimize | review",
+  "size_class": "medium",
+  "height_m": 0.8,
+  "height_source": "user | estimated",
+  "style": "hand_painted | pbr",
+  "engine": "glb_only | unity | godot | unreal",
+  "objects": [],
+  "floor_z": 0.0,
+  "pivot": "bottom_center",
+  "dimensions_m": {},
+  "dimensions_tolerance": 0.05,
+  "budget": {"max_tris_total": 1500, "max_materials_total": 1, "min_tris_ratio": 0.0, "max_vertices_exported": 65534, "mode": "budget | auto"},
+  "mesh": {"max_hidden_face_ratio": 0.02, "max_ngons": 0, "max_duplicate_verts": 0, "max_smooth_edges_over_90": 0, "_split_ratio": "max_split_vertex_ratio (exported/raw verts) only for smooth props, e.g. 2.0; flat-shaded hard-surface props are 3+ by nature"},
+  "screen_tris": {"min_px_area": 10, "max_small_ratio": 0.05, "max_thin": 0},
+  "validate": {"max_file_size_mb": 5},
+  "expect_closed": true,
+  "expected_parts": {},
+  "camera": {
+    "type": "persp",
+    "fov_v_deg": 40,
+    "azimuth_deg": 0,
+    "elevation_deg": 35,
+    "screen": [1920, 1080],
+    "target_object": "",
+    "target_px_height": 400,
+    "_fixed_camera": "First render_rig run solves distance_m/look_at (calibration mode, px checks are info). Copy them here: distance_m, look_at."
+  },
+  "concept": {
+    "views": {"front": "../input/concept_front.png"},
+    "min_iou": 0.85
+  },
+  "_iou_coverage": "Optional: add \"iou\" and \"coverage\" blocks only when the scene has a ConceptCam matching a perspective concept (see templates/spec.example.rock-moss.json). Orthographic concept IoU comes from assembly/gate1/measure.",
+  "uv": {"resolution": 1024, "min_padding_px": 8, "allow_overlap": false, "allow_out_of_bounds": false, "texel_density_px_per_m": 256, "density_tolerance": 0.2},
+  "contacts": [],
+  "render": {"inspect_px": 768, "modes": ["clay", "albedo", "lit", "checker"], "floor": true},
+  "export": {"path": "../evidence/qa/export_check.glb", "yup": true, "apply_modifiers": true, "expect_unlit": "true for hand_painted, false for pbr"}
+}

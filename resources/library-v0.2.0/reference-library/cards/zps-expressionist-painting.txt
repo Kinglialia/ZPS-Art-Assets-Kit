@@ -1,0 +1,31 @@
+Hội họa biểu hiện — zps-expressionist-painting v2
+Ngày kiểm tra: 2026-11-03
+Nhóm: Hội họa và đường nét
+Nguồn: https://game-library.zingplay.dev/styles/expressionist-painting/
+
+TÓM TẮT NGUỒN (VIẾT LẠI)
+Nét cọ và tổ chức màu thiên về biểu cảm, đặc biệt ở chân dung; không đồng nghĩa mọi tranh nền vẽ tay.
+
+QUAN SÁT ẢNH ĐẠI DIỆN
+Cảnh nhìn cao gồm sân, tường và nhiều vệt sáng màu xám nâu; chân dung UI ở góc nhỏ nên cần xem riêng để phân tích nét cọ khuôn mặt.
+Ảnh được quan sát: images/c6eb9127b87deda61c24366d-1280.webp
+
+GỢI Ý CỦA AD (SUY LUẬN)
+Có thể ưu tiên chân dung và không khí tâm lý; background biểu cảm vẫn phải hỗ trợ đọc lối đi.
+
+TEST ĐỀ XUẤT
+Dựng một chân dung và một cảnh thoại; test nhận diện cảm xúc và độ đọc UI riêng.
+
+GIỚI HẠN
+Ảnh tĩnh không xác nhận animation, pipeline, hiệu năng hoặc license. Phân tích trực quan hiện chỉ cho ảnh đại diện; mở ảnh gốc khi cần chi tiết.
+Assistant viewed representative image in gallery at overview scale on 2026-11-03; secondary images decode/hash checked, not individually art-reviewed.
+Ảnh dùng làm reference nghiên cứu. Quyền thuộc chủ sở hữu gốc; chưa xác nhận giấy phép tái sử dụng trong sản phẩm.
+
+ẢNH THAM KHẢO
+1. Disco Elysium - The Final Cut — ZA/UM
+File: images/c6eb9127b87deda61c24366d-1280.webp | 1280 × 720 px
+Drive: https://drive.google.com/file/d/111p3VsS7M8C9VarbVbhpKcYv2aU8jfTE/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/disco-elysium/c6eb9127b87deda61c24366d-1280.webp
+Trang chính thức: https://store.steampowered.com/app/632470/
+SHA256: ca1e194f0ce37a6f833d1fb08a746d8985cb39b084e479f1409c91bfdb48b9d2
+Review: Representative image visually inspected at overview scale, 2026-11-03

@@ -1,0 +1,15 @@
+> Vai trò trong skill này: "người giao việc", "người giữ chuẩn hình ảnh", "người duyệt" = người dùng. "Review độc lập" chỉ khi có reviewer tách biệt thực sự; không mặc định gọi subagent. Ngưỡng nằm trong `task/spec.json`; số đo lấy từ script trong `tools/`. Nguồn: skill art-3d-artist v0.1.0.
+
+## A. Nhận việc → blockout
+**Nhận:** mã việc (nếu có), vùng được phép ghi, phiên bản nguồn/brief/style, mục tiêu và yêu cầu đích có liên quan.
+1. Chỉ nhận asset/batch được giao; không tự quét mọi zip. Kiểm tra file tồn tại/đọc được, schema nếu có và dữ liệu cần cho task. Giải nén trong vùng được phép, chặn đường dẫn thoát ra ngoài và tránh ghi đè nguồn/lần chạy khác. Report tồn tại không đồng nghĩa task hoàn tất.
+2. Đọc gói concept: phần khóa, phần linh hoạt, nguồn số đo, trạng thái kiểm chứng, phần khuất và mốc chức năng. Chỉ yêu cầu góc/callout giải quyết phần thiếu; không mặc định cần 5 view hoặc material masks. Một concept rõ có thể đủ bắt đầu blockout; nhiều view mâu thuẫn không được coi là đủ chỉ vì đủ số lượng. Phân loại thiếu: chặn dựng phần liên quan / giải qua blockout / tự quyết trong quyền; báo kèm đề nghị. 
+3. Khóa chuẩn đơn vị, hướng, gốc và trạng thái; số then chốt có mốc đo. Phân biệt thân với phủ bì và các phần lồng/chồng. Ảnh phối cảnh không cung cấp số đo thật; hình orthographic cần chuẩn tỷ lệ và tính nhất quán. Dùng reference tương tác/kích thước gameplay khi có, không tự thêm giả định như đã duyệt.
+4. Dùng chuẩn hình ảnh và giải pháp nhóm asset còn phù hợp; đọc 00-style-method.md để chọn kỹ thuật hoặc xử lý rủi ro mới. Tự quyết giải pháp trong chuẩn/budget; trình người duyệt hình ảnh khi thay cách thể hiện đã duyệt. Mesh từ generator phải qua cùng kiểm tra như mesh tự dựng. Chọn công cụ thực có và trong quyền; giữ raw/provenance.
+5. Dựng khối chính và bộ phận tách/chuyển động cần thiết; xác định mặt tựa/mối nối quan trọng và phần cấu tạo còn suy luận; đo kích thước thực, so reference ở góc tương ứng. Xem blockout tại camera/kích thước đích và các góc sử dụng để xác nhận ưu tiên đọc trong brief. Camera game chưa có thì ghi chưa kiểm tra; không tự gọi chi tiết là quan trọng chỉ vì thấy trong concept. Mâu thuẫn ghi kèm phương án thay vì âm thầm hợp thức hóa.
+**Giao:** blockout có phiên bản, hình đối chiếu, số đo thực, câu hỏi/giả định và đề nghị bước sau. `Đủ bắt đầu blockout` khác `Đã kiểm tra thiết kế trong 3D`. 3D Artist báo bằng chứng; người duyệt hình ảnh nhận phần mỹ thuật, người sở hữu yêu cầu chức năng nhận phần tương ứng; ghi đúng kết quả vào báo cáo bàn giao.
+
+
+**Bằng chứng ảnh:** ghi rõ ảnh nào đã thực sự mở/xem bằng công cụ và ảnh nào chỉ được handoff mô tả. Chưa xem ảnh thì chỉ kết luận từ văn bản, không liệt kê ảnh như đã đọc hoặc nhận đã đối chiếu trực quan.
+
+**Preflight dựng bằng script:** đặt và kiểm scene units/unit scale rõ; light/camera hướng đúng target trước render chẩn đoán. Với phần khuất đi vòng xuống đáy, đo body–floor và phụ kiện–floor riêng (world bounds/mặt cắt/góc cận); tránh nâng toàn thân để giấu phần xuyên sàn. Số suy từ concept chỉ là giả định cần thử, không là geometry đã xác nhận.

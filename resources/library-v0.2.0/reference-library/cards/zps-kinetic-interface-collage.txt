@@ -1,0 +1,87 @@
+Cắt ghép giao diện đồ họa động — zps-kinetic-interface-collage v2
+Ngày kiểm tra: 2026-11-03
+Nhóm: Hình khối và chất liệu
+Nguồn: https://game-library.zingplay.dev/styles/kinetic-interface-collage/
+
+TÓM TẮT NGUỒN (VIẾT LẠI)
+Chữ lớn, chân dung và mảng tương phản được ghép thành bố cục UI có nhịp chéo, chồng lớp và chuyển động mạnh.
+
+QUAN SÁT ẢNH ĐẠI DIỆN
+Ảnh chiến đấu có nhân vật lớn, dải UI chéo và các nhãn tương phản ở mép; ảnh tĩnh này chưa thể hiện chuyển cảnh của menu.
+Ảnh được quan sát: images/38d09e40dd56df43a1bb083d-1280.webp
+
+GỢI Ý CỦA AD (SUY LUẬN)
+Phù hợp thử UI biểu đạt mạnh, nhưng chuyển cảnh và bố cục lệch dễ làm chậm tìm lệnh.
+
+TEST ĐỀ XUẤT
+Test thời gian tìm lệnh, độ đọc chữ nhỏ và giảm chuyển động; xem video trước khi chốt motion.
+
+GIỚI HẠN
+Ảnh tĩnh không xác nhận animation, pipeline, hiệu năng hoặc license. Phân tích trực quan hiện chỉ cho ảnh đại diện; mở ảnh gốc khi cần chi tiết.
+Assistant viewed representative image in gallery at overview scale on 2026-11-03; secondary images decode/hash checked, not individually art-reviewed.
+Ảnh dùng làm reference nghiên cứu. Quyền thuộc chủ sở hữu gốc; chưa xác nhận giấy phép tái sử dụng trong sản phẩm.
+
+ẢNH THAM KHẢO
+1. Persona 5 Royal — ATLUS
+File: images/38d09e40dd56df43a1bb083d-1280.webp | 1280 × 720 px
+Drive: https://drive.google.com/file/d/1rw7eYc1qHI9pfdAMJQG7f29hQZHb4Ttf/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/persona-5-royal/38d09e40dd56df43a1bb083d-1280.webp
+Trang chính thức: https://store.steampowered.com/app/1687950/
+SHA256: 2ccdbb1cd6da5c3a4e2c001a582f126f19c91b236f6f9b30b7df1f261cc7b4e8
+Review: Representative image visually inspected at overview scale, 2026-11-03
+
+2. NEO: The World Ends with You — Square Enix
+File: images/6a8b580e9de683156c431d50-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/1pyWx44Z6k2A0igjc0wUBtiB9SOKvJdyR/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/neo-twewy/6a8b580e9de683156c431d50-480.webp
+Trang chính thức: https://store.steampowered.com/app/1647550/
+SHA256: 5d5b4aab947462f5cf7e1bf9871d9c96e7177bfcde1ac449c22172a301b1fca7
+Review: Not individually reviewed
+
+3. Neon White — Angel Matrix
+File: images/d8c2c0eb97bc25344f24da92-480.webp | 480 × 267 px
+Drive: https://drive.google.com/file/d/1TUJvrXvaFblp2uqm-bxEHl3jZGo2xkni/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/neon-white/d8c2c0eb97bc25344f24da92-480.webp
+Trang chính thức: https://store.steampowered.com/app/1533420/
+SHA256: 835f3f9ba88d4de23fdaacf414a17b87916db0a5e48942d66a5819d663a1104f
+Review: Not individually reviewed
+
+4. Metaphor: ReFantazio — ATLUS
+File: images/dd1158073d02bf6afcbbac46-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/1qSJ-A_IOFUMPNT6wRyaHoOVRGqLMO3Ox/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/metaphor-refantazio/dd1158073d02bf6afcbbac46-480.webp
+Trang chính thức: https://store.steampowered.com/app/2679460/
+SHA256: fd14f8ec7ccab804a81fa8ad800e9da3563c59307783ea063cb82ecaaee32f5b
+Review: Not individually reviewed
+
+5. Persona 3 Reload — ATLUS
+File: images/f51fc26c627816bbd87011ca-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/1KOVtrPNhl6A5QNIM6sG2FxZO-nuQYB7i/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/persona-3-reload/f51fc26c627816bbd87011ca-480.webp
+Trang chính thức: https://store.steampowered.com/app/2161700/
+SHA256: d305dfdacdbb934a20baee86e0f52052839c4feb3ab4e618d46a211fcdc50e54
+Review: Not individually reviewed
+
+6. Persona 5 Royal — ATLUS
+File: images/63d2164bf39a43905e960238-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/1PDfELIQPOoGJefCdGQXRKMDGhF6p01m5/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/persona-5-royal/63d2164bf39a43905e960238-480.webp
+Trang chính thức: https://store.steampowered.com/app/1687950/
+SHA256: 4baaa74c98e6ae7cec4ef190b7553708e4df5b5a808b2eb043d9d729ea781df7
+Review: Not individually reviewed
+
+7. Persona 5 Royal — ATLUS
+File: images/663171dc3afce8fe987e57e8-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/1316Ky9SDcLnakpa6kKRxvVx86ptO3sRB/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/persona-5-royal/663171dc3afce8fe987e57e8-480.webp
+Trang chính thức: https://store.steampowered.com/app/1687950/
+SHA256: 0651ab56a8655832f6738d4b6006dae15807cddd498ce0c549ed7dc1bcadf9dd
+Review: Not individually reviewed
+
+8. Persona 5 Royal — ATLUS
+File: images/ddcc016b8e5c434ccbd1a89c-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/1Eru9c5iDrgZgtswpvll8UmoppqtbQqnT/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/persona-5-royal/ddcc016b8e5c434ccbd1a89c-480.webp
+Trang chính thức: https://store.steampowered.com/app/1687950/
+SHA256: b20a82ce9ea1779d035ec54e0372fc27b2e2084b04148ee82c09f3a8c90cbb0a
+Review: Not individually reviewed

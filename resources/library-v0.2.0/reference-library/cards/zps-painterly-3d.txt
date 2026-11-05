@@ -1,0 +1,47 @@
+3D mang chất hội họa — zps-painterly-3d v2
+Ngày kiểm tra: 2026-11-03
+Nhóm: 3D và kết xuất
+Nguồn: https://game-library.zingplay.dev/styles/painterly-3d/
+
+TÓM TẮT NGUỒN (VIẾT LẠI)
+Màu và bề mặt của khối 3D được giản lược theo cảm giác hội họa; ảnh không đủ xác định shader hay pipeline.
+
+QUAN SÁT ẢNH ĐẠI DIỆN
+Con phố có ánh vàng chiếu vào mặt nhà; chi tiết và sắc độ được đơn giản hóa, nhiều bề mặt có cảm giác mảng vẽ.
+Ảnh được quan sát: images/4006d839738c2be3ebb31e45-1280.webp
+
+GỢI Ý CỦA AD (SUY LUẬN)
+Có thể giảm cảm giác ảnh chụp bằng cách chọn lọc màu/bề mặt; cần quy tắc nhất quán trong asset set.
+
+TEST ĐỀ XUẤT
+Test bộ props cùng lighting; đánh giá độ hòa hợp vật liệu trước khi viết art bible.
+
+GIỚI HẠN
+Ảnh tĩnh không xác nhận animation, pipeline, hiệu năng hoặc license. Phân tích trực quan hiện chỉ cho ảnh đại diện; mở ảnh gốc khi cần chi tiết.
+Assistant viewed representative image in gallery at overview scale on 2026-11-03; secondary images decode/hash checked, not individually art-reviewed.
+Ảnh dùng làm reference nghiên cứu. Quyền thuộc chủ sở hữu gốc; chưa xác nhận giấy phép tái sử dụng trong sản phẩm.
+
+ẢNH THAM KHẢO
+1. Dishonored — Arkane Studios
+File: images/4006d839738c2be3ebb31e45-1280.webp | 1280 × 720 px
+Drive: https://drive.google.com/file/d/1WmfFbx93xNM0w2eqnkIKmam90EBd_lwZ/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/dishonored/4006d839738c2be3ebb31e45-1280.webp
+Trang chính thức: https://store.steampowered.com/app/205100/
+SHA256: f4dc0a3b04cd2694a043e5f44115025677938f397151442fe0d0ae85e87e2488
+Review: Representative image visually inspected at overview scale, 2026-11-03
+
+2. Dishonored 2 — Arkane Studios
+File: images/68d3f7a108a355cbc51331c4-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/1Z-DsvQfQUqexmZ6QvnuWKhhxwK_lX1Fh/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/dishonored2/68d3f7a108a355cbc51331c4-480.webp
+Trang chính thức: https://store.steampowered.com/app/403640/
+SHA256: bfbef1927bc75f2f5f6e907902e6c90f1c428a370a938a7f863421fe9364d601
+Review: Not individually reviewed
+
+3. Eastshade — Eastshade Studios
+File: images/ded18d986867a5909be11bef-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/1PIXi55y9dOYdE46JAv7b1M9IReDEfmrE/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/eastshade/ded18d986867a5909be11bef-480.webp
+Trang chính thức: https://store.steampowered.com/app/715560/
+SHA256: 43acf572c8d9b9465a015931efd757afa822413bd1554bf4381ad9981705bb06
+Review: Not individually reviewed

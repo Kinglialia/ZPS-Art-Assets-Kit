@@ -1,0 +1,47 @@
+Điểm ảnh thô tối giản — zps-coarse-pixel v2
+Ngày kiểm tra: 2026-11-03
+Nhóm: Điểm ảnh và hoài cổ
+Nguồn: https://game-library.zingplay.dev/styles/coarse-pixel/
+
+TÓM TẮT NGUỒN (VIẾT LẠI)
+Cụm pixel lớn rút gọn chi tiết; hình dáng và quan hệ màu phải truyền đủ thông tin còn thiếu.
+
+QUAN SÁT ẢNH ĐẠI DIỆN
+Nhân vật chỉ gồm ít cụm màu đứng trước ô cửa cam; cảnh phòng rất tối, chi tiết gương mặt hầu như bị lược bỏ.
+Ảnh được quan sát: images/22ba63dfb44ce55c8e2f4489-1280.webp
+
+GỢI Ý CỦA AD (SUY LUẬN)
+Có thể biểu đạt bằng ít cụm pixel và mood; hành động hoặc cảm xúc cần thêm tín hiệu ngoài mặt.
+
+TEST ĐỀ XUẤT
+Test pose và hành động ở native resolution; xác nhận người xem hiểu chủ thể mà không cần zoom.
+
+GIỚI HẠN
+Ảnh tĩnh không xác nhận animation, pipeline, hiệu năng hoặc license. Phân tích trực quan hiện chỉ cho ảnh đại diện; mở ảnh gốc khi cần chi tiết.
+Assistant viewed representative image in gallery at overview scale on 2026-11-03; secondary images decode/hash checked, not individually art-reviewed.
+Ảnh dùng làm reference nghiên cứu. Quyền thuộc chủ sở hữu gốc; chưa xác nhận giấy phép tái sử dụng trong sản phẩm.
+
+ẢNH THAM KHẢO
+1. The Last Door — Collector’s Edition — The Game Kitchen
+File: images/22ba63dfb44ce55c8e2f4489-1280.webp | 1280 × 720 px
+Drive: https://drive.google.com/file/d/1w7a05poijbvBDSxt5fO6-03_Cb9NjP_7/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/steam-284390/22ba63dfb44ce55c8e2f4489-1280.webp
+Trang chính thức: https://store.steampowered.com/app/284390/
+SHA256: b0540993022f3587c265a09f3200ad252e641ecf9a496dfebdd0fad23c991b55
+Review: Representative image visually inspected at overview scale, 2026-11-03
+
+2. Undertale — tobyfox
+File: images/5d9dcc85fe9091334da6f23b-480.webp | 480 × 360 px
+Drive: https://drive.google.com/file/d/1T7GjOjRmWurjph0m9q7lkJ8J756cWPYC/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/steam-391540/5d9dcc85fe9091334da6f23b-480.webp
+Trang chính thức: https://store.steampowered.com/app/391540/
+SHA256: 979e2cb0f83c962cdf45cd827a664e442b090253fb52295484b8fd027ab473c2
+Review: Not individually reviewed
+
+3. FAITH: The Unholy Trinity — Airdorf Games
+File: images/28b0e42d17257f22c3623661-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/1H7z-dwFZQeOw8xQPqJokmR-L7x-whzAF/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/steam-1179080/28b0e42d17257f22c3623661-480.webp
+Trang chính thức: https://store.steampowered.com/app/1179080/
+SHA256: f845b8b3697492b3795077bd55f6a78e42548fb6a9566dd324f4acfc0fce0a2b
+Review: Not individually reviewed

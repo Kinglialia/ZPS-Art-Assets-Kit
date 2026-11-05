@@ -1,0 +1,47 @@
+Màu hình học tối giản — zps-minimal-geometric v2
+Ngày kiểm tra: 2026-11-03
+Nhóm: Hình khối và chất liệu
+Nguồn: https://game-library.zingplay.dev/styles/minimal-geometric/
+
+TÓM TẮT NGUỒN (VIẾT LẠI)
+Hình cơ bản, khoảng trống và quan hệ màu đảm nhiệm thông tin thay cho chi tiết trang trí.
+
+QUAN SÁT ẢNH ĐẠI DIỆN
+Các hình chữ nhật nhỏ đứng giữa khối vuông đen và vùng nước sáng; bảng màu ít và khoảng trống lớn.
+Ảnh được quan sát: images/2f20c98bc91713f04338ee20-1280.webp
+
+GỢI Ý CỦA AD (SUY LUẬN)
+Có thể làm hệ hình cô đọng và tiết kiệm chi tiết; ý nghĩa của màu/hình cần học nhanh.
+
+TEST ĐỀ XUẤT
+Test người chơi nhận vai trò, trạng thái và mục tiêu khi không có texture.
+
+GIỚI HẠN
+Ảnh tĩnh không xác nhận animation, pipeline, hiệu năng hoặc license. Phân tích trực quan hiện chỉ cho ảnh đại diện; mở ảnh gốc khi cần chi tiết.
+Assistant viewed representative image in gallery at overview scale on 2026-11-03; secondary images decode/hash checked, not individually art-reviewed.
+Ảnh dùng làm reference nghiên cứu. Quyền thuộc chủ sở hữu gốc; chưa xác nhận giấy phép tái sử dụng trong sản phẩm.
+
+ẢNH THAM KHẢO
+1. Thomas Was Alone — Bithell Games
+File: images/2f20c98bc91713f04338ee20-1280.webp | 1280 × 720 px
+Drive: https://drive.google.com/file/d/1uBq4gvtX9EV6QCz-lRqw1WOKKaL6lcDs/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/thomas/2f20c98bc91713f04338ee20-1280.webp
+Trang chính thức: https://store.steampowered.com/app/220780/
+SHA256: 583a13fc6b51f5ee2e2f906d9207645b8d913eb0d460a3720f9d3c1fb8e4550e
+Review: Representative image visually inspected at overview scale, 2026-11-03
+
+2. Super Hexagon — Terry Cavanagh
+File: images/41a500a21a95e5c420c634bb-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/11TNxp24E2H7FlkPwCRol3AYgFGeXTDYE/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/super-hexagon/41a500a21a95e5c420c634bb-480.webp
+Trang chính thức: https://store.steampowered.com/app/221640/
+SHA256: 5f5d5a8e2a1fa8ec19115bedb2f185b906e9701c261306238c3265ada5bf43bd
+Review: Not individually reviewed
+
+3. 140 — Carlsen Games
+File: images/829134b22434c0b80f6bf63a-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/1MbXsUDgYGvFYTZ2nY8IwaBqz_HJwj07g/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/140/829134b22434c0b80f6bf63a-480.webp
+Trang chính thức: https://store.steampowered.com/app/242820/
+SHA256: f29535947744a354705344d862ffe96e94c7a133a6a1a9d34785ffc8c150ef54
+Review: Not individually reviewed

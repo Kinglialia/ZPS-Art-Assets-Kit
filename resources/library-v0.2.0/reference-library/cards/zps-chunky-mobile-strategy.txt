@@ -1,0 +1,47 @@
+3D hoạt hình chiến thuật mobile — zps-chunky-mobile-strategy v2
+Ngày kiểm tra: 2026-11-03
+Nhóm: 3D và kết xuất
+Nguồn: https://game-library.zingplay.dev/styles/chunky-mobile-strategy/
+
+TÓM TẮT NGUỒN (VIẾT LẠI)
+Khối bo, tỷ lệ phóng đại và màu rõ phục vụ cảnh chiến thuật nhìn cao; độ đọc ở mật độ thực tế vẫn cần test.
+
+QUAN SÁT ẢNH ĐẠI DIỆN
+Công trình chia ô chéo trên nền cỏ; nhiều đơn vị, hiệu ứng sáng và HUD cùng xuất hiện nên độ đọc cần kiểm tra theo mật độ.
+Ảnh được quan sát: images/6fe6deecc34a546de1f15b74-1280.webp
+
+GỢI Ý CỦA AD (SUY LUẬN)
+Tham khảo độ lớn khối và phân loại màu của căn cứ; không coi màu bão hòa là bảo đảm đọc tốt khi đông.
+
+TEST ĐỀ XUẤT
+Test cùng camera, mật độ quân và diện tích HUD của dự án; ghi tỷ lệ nhầm đơn vị/che khuất.
+
+GIỚI HẠN
+Ảnh tĩnh không xác nhận animation, pipeline, hiệu năng hoặc license. Phân tích trực quan hiện chỉ cho ảnh đại diện; mở ảnh gốc khi cần chi tiết.
+Assistant viewed representative image in gallery at overview scale on 2026-11-03; secondary images decode/hash checked, not individually art-reviewed.
+Ảnh dùng làm reference nghiên cứu. Quyền thuộc chủ sở hữu gốc; chưa xác nhận giấy phép tái sử dụng trong sản phẩm.
+
+ẢNH THAM KHẢO
+1. Clash of Clans — Supercell
+File: images/6fe6deecc34a546de1f15b74-1280.webp | 1280 × 720 px
+Drive: https://drive.google.com/file/d/10cE9cSsSIL5CzsEW9Qal6c2aibbVbMl8/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/clash-of-clans/6fe6deecc34a546de1f15b74-1280.webp
+Trang chính thức: https://apps.apple.com/us/app/id529479190
+SHA256: 8e9c602dfc30030a8fe4f0c628039e84d74b3310920e426fc349edd2184707eb
+Review: Representative image visually inspected at overview scale, 2026-11-03
+
+2. Kingshot — Century Games Pte. Ltd.
+File: images/c7442c7558efcabad78ef88c-480.webp | 480 × 1039 px
+Drive: https://drive.google.com/file/d/1-BzvSOCyfoGtzU49REvtkAzqVxVTCVgG/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/kingshot/c7442c7558efcabad78ef88c-480.webp
+Trang chính thức: https://apps.apple.com/us/app/id6739554056
+SHA256: bf35d28006d015946780217b5b470baa1b8ebc5cc73ac5ff96101e6262924673
+Review: Not individually reviewed
+
+3. Clash Royale — Supercell
+File: images/f8b9becdf7e61b45c4798fc8-480.webp | 480 × 1043 px
+Drive: https://drive.google.com/file/d/1vlCD5v2UqhdswB0kkuXnDsV8i3Da6nQQ/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/clash-royale/f8b9becdf7e61b45c4798fc8-480.webp
+Trang chính thức: https://apps.apple.com/us/app/id1053012308
+SHA256: 02799f2747c2b4f830cd554332ee47ef93316b21e33de245fc55814191e5d057
+Review: Not individually reviewed

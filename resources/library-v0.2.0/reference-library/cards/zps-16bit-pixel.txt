@@ -1,0 +1,47 @@
+Điểm ảnh lấy cảm hứng 16-bit — zps-16bit-pixel v2
+Ngày kiểm tra: 2026-11-03
+Nhóm: Điểm ảnh và hoài cổ
+Nguồn: https://game-library.zingplay.dev/styles/16bit-pixel/
+
+TÓM TẮT NGUỒN (VIẾT LẠI)
+Dải màu và lớp cảnh gợi game thời 16-bit; đó là tham chiếu thẩm mỹ, không phải chứng nhận giới hạn phần cứng.
+
+QUAN SÁT ẢNH ĐẠI DIỆN
+Cảnh sáng có nền vàng, cây xanh và trời xanh; sprite, viền sàn và vật trang trí đều thể hiện bước pixel.
+Ảnh được quan sát: images/54359f542903002a4e063a79-1280.webp
+
+GỢI Ý CỦA AD (SUY LUẬN)
+Phù hợp nhịp platformer và cảnh nhiều lớp; lớp nền chuyển động không nên làm loạn nhân vật.
+
+TEST ĐỀ XUẤT
+Test cuộn nhanh, parallax và pixel scaling; khóa cách xử lý độ phân giải.
+
+GIỚI HẠN
+Ảnh tĩnh không xác nhận animation, pipeline, hiệu năng hoặc license. Phân tích trực quan hiện chỉ cho ảnh đại diện; mở ảnh gốc khi cần chi tiết.
+Assistant viewed representative image in gallery at overview scale on 2026-11-03; secondary images decode/hash checked, not individually art-reviewed.
+Ảnh dùng làm reference nghiên cứu. Quyền thuộc chủ sở hữu gốc; chưa xác nhận giấy phép tái sử dụng trong sản phẩm.
+
+ẢNH THAM KHẢO
+1. Sonic Mania — Christian Whitehead, Headcannon, PagodaWest Games
+File: images/54359f542903002a4e063a79-1280.webp | 1280 × 720 px
+Drive: https://drive.google.com/file/d/1GFkqX57yI9FURkLhRd5n2ydIICxZYXEy/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/steam-584400/54359f542903002a4e063a79-1280.webp
+Trang chính thức: https://store.steampowered.com/app/584400/
+SHA256: b8b3df3e15fea7f93848ce9f0e203cbe3038a770bcf81f3e88397db85657259b
+Review: Representative image visually inspected at overview scale, 2026-11-03
+
+2. Freedom Planet — GalaxyTrail
+File: images/adcc4c045d03185cc69dd4e3-480.webp | 480 × 272 px
+Drive: https://drive.google.com/file/d/1n9XZDfiDsgalpN56Uz8E9ynXB94JwGC7/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/steam-248310/adcc4c045d03185cc69dd4e3-480.webp
+Trang chính thức: https://store.steampowered.com/app/248310/
+SHA256: ab40c27b2d7e1ecac99bf24e57596ff0dc7f80226c06986ef8bb9313ae9dce4b
+Review: Not individually reviewed
+
+3. Spark the Electric Jester — Feperd Games
+File: images/61cee4506ad89d61da7377b8-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/1XEvBMgSrtgOiqeHbnK2_pEoy_bQxKv6-/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/steam-601810/61cee4506ad89d61da7377b8-480.webp
+Trang chính thức: https://store.steampowered.com/app/601810/
+SHA256: 51062616212f778fbee380022a2412f13e9201ef0056236392460f0135bf5172
+Review: Not individually reviewed

@@ -1,0 +1,39 @@
+Minh họa bản thảo trang trí — zps-illuminated-manuscript v2
+Ngày kiểm tra: 2026-11-03
+Nhóm: Hội họa và đường nét
+Nguồn: https://game-library.zingplay.dev/styles/illuminated-manuscript/
+
+TÓM TẮT NGUỒN (VIẾT LẠI)
+Tạo hình phẳng, chữ và trang trí viền được tổ chức như trang bản thảo; đề tài trung cổ không đủ để xác định nhóm này.
+
+QUAN SÁT ẢNH ĐẠI DIỆN
+Nghĩa địa nhìn cao có các mặt phẳng màu trầm, đường viền mảnh và cách xếp nhân vật như minh họa trên trang giấy.
+Ảnh được quan sát: images/c13f45d239b535cd1006e379-1280.webp
+
+GỢI Ý CỦA AD (SUY LUẬN)
+Có thể liên kết minh họa, typography và bố cục trang; không nên lấy họa tiết sách làm UI trang trí quá tải.
+
+TEST ĐỀ XUẤT
+Test đoạn thoại dài, font hỗ trợ ngôn ngữ dự án và độ phân biệt phần tương tác.
+
+GIỚI HẠN
+Ảnh tĩnh không xác nhận animation, pipeline, hiệu năng hoặc license. Phân tích trực quan hiện chỉ cho ảnh đại diện; mở ảnh gốc khi cần chi tiết.
+Assistant viewed representative image in gallery at overview scale on 2026-11-03; secondary images decode/hash checked, not individually art-reviewed.
+Ảnh dùng làm reference nghiên cứu. Quyền thuộc chủ sở hữu gốc; chưa xác nhận giấy phép tái sử dụng trong sản phẩm.
+
+ẢNH THAM KHẢO
+1. Pentiment — Obsidian Entertainment
+File: images/c13f45d239b535cd1006e379-1280.webp | 1280 × 720 px
+Drive: https://drive.google.com/file/d/17n_vu0RlxxiFFsfjupOw8C4VWu2hpyWm/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/pentiment/c13f45d239b535cd1006e379-1280.webp
+Trang chính thức: https://store.steampowered.com/app/1205520/
+SHA256: 06066f2231f8cdcefae8d29b5409cb339eea68f6490ca225588bcc609e32462f
+Review: Representative image visually inspected at overview scale, 2026-11-03
+
+2. Inkulinati — Yaza Games
+File: images/f0b786e49b63b60de41ae60b-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/1eUXbqSni_FeO_b-TJi0EARNELQEJrZOo/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/inkulinati/f0b786e49b63b60de41ae60b-480.webp
+Trang chính thức: https://store.steampowered.com/app/957960/
+SHA256: 4ad327f8b1be74f19348da2f706e29ffdbdd492034b338b7d8af344495ac1d10
+Review: Not individually reviewed

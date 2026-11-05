@@ -1,0 +1,22 @@
+ART DIRECTOR REFERENCE LIBRARY — v0.2.0 — 2026-11-03
+
+BẢN HIỆN HÀNH
+44/44 style trong mục Art Style của Game Library ZPS, đối chiếu ngày 2026-11-03. 129 game ví dụ, 132 ảnh khác nhau; đã bỏ bản thumbnail trùng với ảnh đại diện lớn. Bao gồm gallery đính kèm. Phần Gameplay và các prompt chỉ thị trên website không thuộc gói này.
+Ảnh giữ nguyên bytes và độ phân giải nguồn: từ 480 đến 1280 px chiều ngang. Đây không phải bộ asset sản xuất hay bộ ảnh gốc độ phân giải tối đa của các game.
+
+CÁCH ĐỌC TRÊN MOBILE
+1. Mở 01-INDEX.txt để tìm style; link trong mỗi dòng dẫn đến card và ảnh trên Drive.
+2. Card có tóm tắt nguồn, quan sát ảnh đại diện, đề xuất của AD, test và toàn bộ ảnh liên quan với ghi công.
+3. Để làm việc với AI, cung cấp card/02-REFERENCE-KNOWLEDGE.txt và các ảnh cần xem. Text extraction hoặc link không có nghĩa AI đã thấy ảnh. Nếu connector không đọc ảnh được, đính kèm ảnh từ Drive.
+4. ZIP v0.2.0 chứa dữ liệu, hình, gallery HTML, công cụ kiểm tra và hướng dẫn. gallery.html dùng sau khi giải nén, không phải website cloud đã deploy.
+
+THÊM / CẬP NHẬT
+Gửi link/ảnh trong chat hoặc bỏ vào Inbox, kèm điều muốn học. Yêu cầu assistant nhập reference; Inbox không tự kích hoạt việc nhập.
+Inbox: https://drive.google.com/drive/folders/1F5-_JdHdVXA0t2hZVMvuoxLxTrabvHI-
+Mục mới có ID mới; mục cũ giữ ID và tăng version nếu nội dung thay đổi. Luôn giữ bản cũ, đối chiếu nguồn, cập nhật index và kiểm tra lại Drive.
+
+Skill art-director-library-manager được duyệt viết và kiểm thử, CHƯA DEPLOY. Gói skill và báo cáo kiểm thử được lưu cùng thư viện. Skill01/Skill02 không thay đổi trong đợt này.
+
+GIỚI HẠN
+Đã xem tổng quan 44 ảnh đại diện; ảnh phụ đã kiểm decode/hash, chưa phân tích nghệ thuật riêng từng ảnh. Nguồn không cung cấp tác giả/trang chính thức cho Difugo: giữ rõ trạng thái chưa biết. Quyền ảnh thuộc chủ sở hữu gốc; chưa xác nhận license dùng trong sản phẩm.
+Thư viện không tự đồng bộ website, không chạy agent nền; dùng bản Drive không cần bật Mac, nhưng tác vụ bảo trì cần môi trường agent đang chạy.

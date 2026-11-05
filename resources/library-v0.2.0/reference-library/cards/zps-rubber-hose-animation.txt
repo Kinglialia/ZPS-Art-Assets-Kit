@@ -1,0 +1,39 @@
+Hoạt họa tay chân cao su — zps-rubber-hose-animation v2
+Ngày kiểm tra: 2026-11-03
+Nhóm: Hội họa và đường nét
+Nguồn: https://game-library.zingplay.dev/styles/rubber-hose-animation/
+
+TÓM TẮT NGUỒN (VIẾT LẠI)
+Dáng tròn và tay chân uốn mềm gợi hoạt hình thời kỳ đầu; chuyển động là phần phải xem bằng video.
+
+QUAN SÁT ẢNH ĐẠI DIỆN
+Nhân vật tròn lớn và tay uốn chiếm giữa khung, phía sau là cảnh hội chợ; chưa thể đánh giá nhịp animation bằng ảnh tĩnh.
+Ảnh được quan sát: images/5d739310cd17861d666ce448-1280.webp
+
+GỢI Ý CỦA AD (SUY LUẬN)
+Phù hợp nhân vật biến dạng và chuyển động cường điệu; ảnh tĩnh chỉ xác nhận một phần diện mạo.
+
+TEST ĐỀ XUẤT
+Tạo walk/idle/attack ngắn và kiểm tra nhịp, pose, hitbox với gameplay.
+
+GIỚI HẠN
+Ảnh tĩnh không xác nhận animation, pipeline, hiệu năng hoặc license. Phân tích trực quan hiện chỉ cho ảnh đại diện; mở ảnh gốc khi cần chi tiết.
+Assistant viewed representative image in gallery at overview scale on 2026-11-03; secondary images decode/hash checked, not individually art-reviewed.
+Ảnh dùng làm reference nghiên cứu. Quyền thuộc chủ sở hữu gốc; chưa xác nhận giấy phép tái sử dụng trong sản phẩm.
+
+ẢNH THAM KHẢO
+1. Cuphead — Studio MDHR Entertainment Inc.
+File: images/5d739310cd17861d666ce448-1280.webp | 1280 × 720 px
+Drive: https://drive.google.com/file/d/1MpV7VwOcHQWWiKuiFoFF36oMQbAPzVMq/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/cuphead/5d739310cd17861d666ce448-1280.webp
+Trang chính thức: https://store.steampowered.com/app/268910/
+SHA256: e828a997c63c179de54bf7b57d69462fb4b1f66398877a09cc279154c8819063
+Review: Representative image visually inspected at overview scale, 2026-11-03
+
+2. MOUSE: P.I. For Hire — Fumi Games
+File: images/089d7a9df10329e064b8aa5e-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/1IMVaT9htq9ySxuN3oiQmNHFTtr9Cs9r1/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/mouse-pi/089d7a9df10329e064b8aa5e-480.webp
+Trang chính thức: https://store.steampowered.com/app/2416450/
+SHA256: 4d8fc001537058a6139fb1acf48fbbb7d0b6e0d0119e900859a0528f46ac3fb0
+Review: Not individually reviewed

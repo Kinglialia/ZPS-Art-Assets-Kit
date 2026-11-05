@@ -1,0 +1,47 @@
+Đa giác thấp lộ mặt — zps-faceted-low-poly v2
+Ngày kiểm tra: 2026-11-03
+Nhóm: 3D và kết xuất
+Nguồn: https://game-library.zingplay.dev/styles/faceted-low-poly/
+
+TÓM TẮT NGUỒN (VIẾT LẠI)
+Mặt khối lộ rõ và mảng màu lớn tạo diện mạo faceted; số polygon thấp tự nó chưa đủ xác định style.
+
+QUAN SÁT ẢNH ĐẠI DIỆN
+Các mảng núi và đảo bay có mặt đa giác lớn; khung cửa cắt góc nhìn ra trời hồng nhạt.
+Ảnh được quan sát: images/9f10de951e6e72ade7f3118d-1280.webp
+
+GỢI Ý CỦA AD (SUY LUẬN)
+Có thể giảm nhu cầu texture và nhấn khối; lợi ích hiệu năng phải đo thực tế, không suy từ tên low-poly.
+
+TEST ĐỀ XUẤT
+Test silhouette và màu từng mặt ở camera đích; đo render với material và ánh sáng dự kiến.
+
+GIỚI HẠN
+Ảnh tĩnh không xác nhận animation, pipeline, hiệu năng hoặc license. Phân tích trực quan hiện chỉ cho ảnh đại diện; mở ảnh gốc khi cần chi tiết.
+Assistant viewed representative image in gallery at overview scale on 2026-11-03; secondary images decode/hash checked, not individually art-reviewed.
+Ảnh dùng làm reference nghiên cứu. Quyền thuộc chủ sở hữu gốc; chưa xác nhận giấy phép tái sử dụng trong sản phẩm.
+
+ẢNH THAM KHẢO
+1. AER Memories of Old — Forgotten Key
+File: images/9f10de951e6e72ade7f3118d-1280.webp | 1280 × 720 px
+Drive: https://drive.google.com/file/d/1xTwA6u2XMWmcaemkoMgvGIhj1wLtB4kr/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/aer/9f10de951e6e72ade7f3118d-1280.webp
+Trang chính thức: https://store.steampowered.com/app/331870/
+SHA256: d6d6918dfe92386ce934404ab2f0a7cb4a1df7f318f1313726e005a214e2300e
+Review: Representative image visually inspected at overview scale, 2026-11-03
+
+2. Grow Home — Reflections, a Ubisoft Studio
+File: images/6866cb09f3d7a2a98d5175ca-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/1s_7l01WPEPfYEpBe7sOvALYuv3KO1EJV/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/grow-home/6866cb09f3d7a2a98d5175ca-480.webp
+Trang chính thức: https://store.steampowered.com/app/323320/
+SHA256: 5f7c3ac7df6c7c5ce4ac9373948c297f8f09d8bf5e0180440d062e250ea5d363
+Review: Not individually reviewed
+
+3. The First Tree — David Wehle
+File: images/d906420549eca08c20af0e1f-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/1scukZF9VM_HkVFrmqOFxdUvzAsGdVNWb/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/first-tree/d906420549eca08c20af0e1f-480.webp
+Trang chính thức: https://store.steampowered.com/app/555150/
+SHA256: 30767a725fb857227562bf2ac7d06c98662dbb0a94c571453c1fe671b4faa312
+Review: Not individually reviewed

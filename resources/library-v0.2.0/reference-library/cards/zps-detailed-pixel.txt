@@ -1,0 +1,47 @@
+Điểm ảnh dày chi tiết — zps-detailed-pixel v2
+Ngày kiểm tra: 2026-11-03
+Nhóm: Điểm ảnh và hoài cổ
+Nguồn: https://game-library.zingplay.dev/styles/detailed-pixel/
+
+TÓM TẮT NGUỒN (VIẾT LẠI)
+Mật độ cụm pixel và chuyển sắc cao, nhưng đường biên pixel vẫn là một phần của diện mạo.
+
+QUAN SÁT ẢNH ĐẠI DIỆN
+Nhân vật nhỏ ở mép đảo đá trên nền trời sáng; mây và cây có nhiều cụm màu nhỏ, phong cảnh dày chi tiết.
+Ảnh được quan sát: images/c3aef10389a2b9f9a6d4c049-1280.webp
+
+GỢI Ý CỦA AD (SUY LUẬN)
+Có thể dùng pixel chi tiết cho cảnh giàu thông tin; asset cost và animation cost có thể cao.
+
+TEST ĐỀ XUẤT
+Đo giờ làm một nhân vật đủ animation và một tile set; kiểm tra nhân vật giữa nền nhiều chi tiết.
+
+GIỚI HẠN
+Ảnh tĩnh không xác nhận animation, pipeline, hiệu năng hoặc license. Phân tích trực quan hiện chỉ cho ảnh đại diện; mở ảnh gốc khi cần chi tiết.
+Assistant viewed representative image in gallery at overview scale on 2026-11-03; secondary images decode/hash checked, not individually art-reviewed.
+Ảnh dùng làm reference nghiên cứu. Quyền thuộc chủ sở hữu gốc; chưa xác nhận giấy phép tái sử dụng trong sản phẩm.
+
+ẢNH THAM KHẢO
+1. Owlboy — D-Pad Studio
+File: images/c3aef10389a2b9f9a6d4c049-1280.webp | 1280 × 720 px
+Drive: https://drive.google.com/file/d/1GfBBOxYB72SWZ9ssWtZOsF2u76K6YjpC/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/steam-115800/c3aef10389a2b9f9a6d4c049-1280.webp
+Trang chính thức: https://store.steampowered.com/app/115800/
+SHA256: bde9128155983e61259e0d1d800c121badd3896344e74cb768ffec2814838d16
+Review: Representative image visually inspected at overview scale, 2026-11-03
+
+2. Blasphemous — The Game Kitchen
+File: images/5a2793308a621c91e5652e59-480.webp | 480 × 260 px
+Drive: https://drive.google.com/file/d/1KFDU-pCvF_xxRRubjMRv9JttKoO966cx/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/steam-774361/5a2793308a621c91e5652e59-480.webp
+Trang chính thức: https://store.steampowered.com/app/774361/
+SHA256: f552316ca963f96ff1444f2684f50e040e497315c694f9c2fd7f42a495429c3f
+Review: Not individually reviewed
+
+3. Children of Morta — Dead Mage
+File: images/6832a95fd867e0aa66ee7ce9-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/1m3qoY723n36Ge4kEQ5Vd7wgTRQ6TVoxA/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/steam-330020/6832a95fd867e0aa66ee7ce9-480.webp
+Trang chính thức: https://store.steampowered.com/app/330020/
+SHA256: 799b6e619d8caf45a423c628a0305703c3cf6929220962cb03b3b189367dfc45
+Review: Not individually reviewed

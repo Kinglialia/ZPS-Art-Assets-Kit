@@ -1,0 +1,6 @@
+# Shared art scripts (.art-production-support/shared/scripts): 2D, UI, texture and review previews.
+# Install with the same python3 that runs the scripts:
+#   python3 -m pip install --user -r requirements.txt
+Pillow>=10
+numpy>=1.24
+resvg-py==0.5.0

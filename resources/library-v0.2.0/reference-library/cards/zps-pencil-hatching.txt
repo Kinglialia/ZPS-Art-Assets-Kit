@@ -1,0 +1,47 @@
+Bút chì và gạch nét — zps-pencil-hatching v2
+Ngày kiểm tra: 2026-11-03
+Nhóm: Hội họa và đường nét
+Nguồn: https://game-library.zingplay.dev/styles/pencil-hatching/
+
+TÓM TẮT NGUỒN (VIẾT LẠI)
+Nét bút và mật độ gạch tạo sắc độ trên hình 2D hoặc trên bề mặt khối 3D.
+
+QUAN SÁT ẢNH ĐẠI DIỆN
+Cảnh đồi và ghế có sắc xám nâu, bề mặt dày nét nhỏ; tương phản giữa các vùng khá nhẹ.
+Ảnh được quan sát: images/2ce55ff990cd3145b80e1ad8-1280.webp
+
+GỢI Ý CỦA AD (SUY LUẬN)
+Có thể dùng hướng nét để phân khối và mood; gạch nhỏ dễ gây nhiễu khi camera chuyển động.
+
+TEST ĐỀ XUẤT
+Test pan camera, resize và nén ảnh để phát hiện moiré hoặc mất nét.
+
+GIỚI HẠN
+Ảnh tĩnh không xác nhận animation, pipeline, hiệu năng hoặc license. Phân tích trực quan hiện chỉ cho ảnh đại diện; mở ảnh gốc khi cần chi tiết.
+Assistant viewed representative image in gallery at overview scale on 2026-11-03; secondary images decode/hash checked, not individually art-reviewed.
+Ảnh dùng làm reference nghiên cứu. Quyền thuộc chủ sở hữu gốc; chưa xác nhận giấy phép tái sử dụng trong sản phẩm.
+
+ẢNH THAM KHẢO
+1. Mundaun — Hidden Fields
+File: images/2ce55ff990cd3145b80e1ad8-1280.webp | 1280 × 720 px
+Drive: https://drive.google.com/file/d/1tioa4iQnZo5aXe2wJXYswe_z3WOIgbsy/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/mundaun/2ce55ff990cd3145b80e1ad8-1280.webp
+Trang chính thức: https://store.steampowered.com/app/720350/
+SHA256: f07ea784c4df3b9b0ad926fe70b028577c50af2fef091eb2ea40e1bc91a30c15
+Review: Representative image visually inspected at overview scale, 2026-11-03
+
+2. The Bridge — Ty Taylor, Vega Castañeda
+File: images/f1648b9c59391688ad928a51-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/1HAXP4Wl-HBuS5bs_NNeBHx9ZrJAZmaZe/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/the-bridge/f1648b9c59391688ad928a51-480.webp
+Trang chính thức: https://store.steampowered.com/app/204240/
+SHA256: 08991ef1b12303633b8ee6325f6a74f032b67be7c8093436ae303adb3bbac69e
+Review: Not individually reviewed
+
+3. Neverending Nightmares — Infinitap Games
+File: images/abdc00c6fe015e52e757a7d0-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/1dvYLHbhZcZEyJXydL7x85FM5U29N98GX/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/neverending-nightmares/abdc00c6fe015e52e757a7d0-480.webp
+Trang chính thức: https://store.steampowered.com/app/253330/
+SHA256: c74b0759d0b666c081007fcbbc201b0ce1a7993706dc6246844d1bd8f36c758d
+Review: Not individually reviewed

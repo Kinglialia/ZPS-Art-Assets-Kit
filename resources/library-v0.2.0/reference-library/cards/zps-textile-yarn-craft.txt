@@ -1,0 +1,47 @@
+Vải, len và thú nhồi bông — zps-textile-yarn-craft v2
+Ngày kiểm tra: 2026-11-03
+Nhóm: 3D và kết xuất
+Nguồn: https://game-library.zingplay.dev/styles/textile-yarn-craft/
+
+TÓM TẮT NGUỒN (VIẾT LẠI)
+Vật liệu sợi và đường may tạo cảm giác đồ thủ công mềm; ánh sáng và lấy nét góp phần làm rõ chất liệu.
+
+QUAN SÁT ẢNH ĐẠI DIỆN
+Nhân vật đỏ đứng trên dây giữa cành tuyết; cây phía sau mờ, nền trời xanh tách khỏi dây và nhân vật.
+Ảnh được quan sát: images/222b64545eaedb17f47dae98-1280.webp
+
+GỢI Ý CỦA AD (SUY LUẬN)
+Dùng vật liệu để gắn cơ chế dây hoặc đồ chơi vào hình ảnh; chi tiết sợi không nên gánh nhận diện từ xa.
+
+TEST ĐỀ XUẤT
+Test dây ở nền sáng/tối và camera gameplay; đo chi phí shader, không suy ra từ ảnh quảng bá.
+
+GIỚI HẠN
+Ảnh tĩnh không xác nhận animation, pipeline, hiệu năng hoặc license. Phân tích trực quan hiện chỉ cho ảnh đại diện; mở ảnh gốc khi cần chi tiết.
+Assistant viewed representative image in gallery at overview scale on 2026-11-03; secondary images decode/hash checked, not individually art-reviewed.
+Ảnh dùng làm reference nghiên cứu. Quyền thuộc chủ sở hữu gốc; chưa xác nhận giấy phép tái sử dụng trong sản phẩm.
+
+ẢNH THAM KHẢO
+1. Unravel — Coldwood Interactive
+File: images/222b64545eaedb17f47dae98-1280.webp | 1280 × 720 px
+Drive: https://drive.google.com/file/d/16NNNRJaFFjumCaKU5JZNkj7l-QYaf98d/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/unravel/222b64545eaedb17f47dae98-1280.webp
+Trang chính thức: https://store.steampowered.com/app/1225560/
+SHA256: b81ee7650bcf62e105d9fa2d8189419111bef07bb2c1aae26239955a1dd87a90
+Review: Representative image visually inspected at overview scale, 2026-11-03
+
+2. Unravel Two — Coldwood Interactive
+File: images/1b80ad222f28236cac60f9b0-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/118nxbLbJdWYXdMLwvNTM_NO4COr1K2Qb/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/unravel-two/1b80ad222f28236cac60f9b0-480.webp
+Trang chính thức: https://store.steampowered.com/app/1225570/
+SHA256: 6bb148838a61d4ec14867193a000390203121b03845d6c1000e5b75bccaa2465
+Review: Not individually reviewed
+
+3. Sackboy: A Big Adventure — Sumo Digital
+File: images/41185d31926c4348e396f626-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/1ZjdhEcr7cbhlA_htrc9iQDo2c5XzPWt-/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/sackboy-a-big-adventure/41185d31926c4348e396f626-480.webp
+Trang chính thức: https://store.steampowered.com/app/1599660/
+SHA256: cbc5e7c22b19dbe0de0c78dddb43d1b77d99c145b44cfa993c0a24f5eba57f21
+Review: Not individually reviewed

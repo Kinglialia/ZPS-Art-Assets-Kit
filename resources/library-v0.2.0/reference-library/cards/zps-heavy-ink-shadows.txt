@@ -1,0 +1,47 @@
+Mực và bóng đậm — zps-heavy-ink-shadows v2
+Ngày kiểm tra: 2026-11-03
+Nhóm: Hội họa và đường nét
+Nguồn: https://game-library.zingplay.dev/styles/heavy-ink-shadows/
+
+TÓM TẮT NGUỒN (VIẾT LẠI)
+Mảng mực lớn và gạch nét tạo cảm giác nặng, tối; cần giữ sự tách biệt giữa bóng trang trí và vật thể gameplay.
+
+QUAN SÁT ẢNH ĐẠI DIỆN
+Nhóm nhân vật nhỏ đứng trong hầm rất tối; HUD và chân dung chia nhiều ô phía dưới, phần bóng đen chiếm diện tích lớn.
+Ảnh được quan sát: images/18dde006b5335f6f6f666912-1280.webp
+
+GỢI Ý CỦA AD (SUY LUẬN)
+Phù hợp không khí nặng hoặc căng thẳng; dùng quá nhiều mảng đen dễ mất tín hiệu quan trọng.
+
+TEST ĐỀ XUẤT
+Test cảnh tối ở màn hình độ sáng thấp; giữ tương phản cho nhân vật, đòn đánh và UI.
+
+GIỚI HẠN
+Ảnh tĩnh không xác nhận animation, pipeline, hiệu năng hoặc license. Phân tích trực quan hiện chỉ cho ảnh đại diện; mở ảnh gốc khi cần chi tiết.
+Assistant viewed representative image in gallery at overview scale on 2026-11-03; secondary images decode/hash checked, not individually art-reviewed.
+Ảnh dùng làm reference nghiên cứu. Quyền thuộc chủ sở hữu gốc; chưa xác nhận giấy phép tái sử dụng trong sản phẩm.
+
+ẢNH THAM KHẢO
+1. Darkest Dungeon — Red Hook Studios
+File: images/18dde006b5335f6f6f666912-1280.webp | 1280 × 720 px
+Drive: https://drive.google.com/file/d/1h9sjeg2vDEmuefFoOLBI1s1ukBTasasL/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/darkest-dungeon/18dde006b5335f6f6f666912-1280.webp
+Trang chính thức: https://store.steampowered.com/app/262060/
+SHA256: 8ce0809ecaa639d3a3cd0c0e7b94dc3391ab82fe4261ac9b4f11d55dc2bdb35d
+Review: Representative image visually inspected at overview scale, 2026-11-03
+
+2. Darkest Dungeon II — Red Hook Studios
+File: images/8c3bb4c49cae9c643df2784c-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/1GlM26ZxC4pNmU1HJoOwXsgqoKwG8xu0E/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/darkest-dungeon-ii/8c3bb4c49cae9c643df2784c-480.webp
+Trang chính thức: https://store.steampowered.com/app/1940340/
+SHA256: d45c2f65fb14a4d0cf0d2ef9182aca25a57f9a10686b4b02cd8a2b535d52bf31
+Review: Not individually reviewed
+
+3. Don't Starve — Klei Entertainment
+File: images/b629a277ef4db4b0e0c444c7-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/1fKC6vgq45sZBUOCdTbKnP307CdkZHFc1/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/dont-starve/b629a277ef4db4b0e0c444c7-480.webp
+Trang chính thức: https://store.steampowered.com/app/219740/
+SHA256: 7223a5e8009b6946a50ef67180eebaf313c892a4f55f6b12c33018c1a9d6230d
+Review: Not individually reviewed

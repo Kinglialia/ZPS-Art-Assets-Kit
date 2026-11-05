@@ -1,0 +1,47 @@
+Bóng dáng nhiều lớp — zps-layered-silhouette v2
+Ngày kiểm tra: 2026-11-03
+Nhóm: Hình khối và chất liệu
+Nguồn: https://game-library.zingplay.dev/styles/layered-silhouette/
+
+TÓM TẮT NGUỒN (VIẾT LẠI)
+Dáng đặc ở tiền cảnh tương phản với các lớp nền có độ sáng hoặc sương khác nhau để tạo chiều sâu.
+
+QUAN SÁT ẢNH ĐẠI DIỆN
+Dáng đen ở tiền cảnh đứng trước vùng sương xám sáng; chi tiết nội bộ của các khối gần gần như bị lược bỏ.
+Ảnh được quan sát: images/a7c212ec7122bdb21b5a2602-1280.webp
+
+GỢI Ý CỦA AD (SUY LUẬN)
+Có thể ưu tiên silhouette và chiều sâu lớp; vật gần chỉ có dáng nên animation phải truyền thông tin rõ.
+
+TEST ĐỀ XUẤT
+Test pose, tương tác và che khuất; giữ khác biệt độ sáng giữa các lớp.
+
+GIỚI HẠN
+Ảnh tĩnh không xác nhận animation, pipeline, hiệu năng hoặc license. Phân tích trực quan hiện chỉ cho ảnh đại diện; mở ảnh gốc khi cần chi tiết.
+Assistant viewed representative image in gallery at overview scale on 2026-11-03; secondary images decode/hash checked, not individually art-reviewed.
+Ảnh dùng làm reference nghiên cứu. Quyền thuộc chủ sở hữu gốc; chưa xác nhận giấy phép tái sử dụng trong sản phẩm.
+
+ẢNH THAM KHẢO
+1. LIMBO — Playdead
+File: images/a7c212ec7122bdb21b5a2602-1280.webp | 1280 × 720 px
+Drive: https://drive.google.com/file/d/1orR7bNyKev94iE7_mC1yJ5gtbGVCariS/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/limbo/a7c212ec7122bdb21b5a2602-1280.webp
+Trang chính thức: https://store.steampowered.com/app/48000/
+SHA256: ca6d91397acd0dd9ef3ae4b3f4e1dedcd56ad65853bca3077794518ca02715e5
+Review: Representative image visually inspected at overview scale, 2026-11-03
+
+2. NightSky — Nicalis, Inc.
+File: images/4ce12e620aa4dab0902e5f37-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/13SW7SConPD_lNWZCv35YxnkZuTHI01Km/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/nightsky/4ce12e620aa4dab0902e5f37-480.webp
+Trang chính thức: https://store.steampowered.com/app/99700/
+SHA256: 2d48a6c7efe3abde145b279c0ed18107878c1dd7cea3118d432b4258630073f9
+Review: Not individually reviewed
+
+3. BADLAND: Game of the Year Edition — Frogmind
+File: images/a86c5747520455c4aaafd8d3-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/1iq0hz9W9Anpl4G0iopa7lryy8Sn4jm2L/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/badland/a86c5747520455c4aaafd8d3-480.webp
+Trang chính thức: https://store.steampowered.com/app/269670/
+SHA256: 5a24df402574001f693fe8056951ca5fabbb302358a54126e49f7b18270efc61
+Review: Not individually reviewed

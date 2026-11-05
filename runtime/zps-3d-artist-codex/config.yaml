@@ -1,0 +1,112 @@
+# 3D Artist — defaults. task/spec.json overrides any key per task.
+# Every threshold is a starting point. Run tools/optimize/sweep.py --calibrate on 10–20 real assets, then tune.
+# Keys marked [guess] have no published source; keys marked [src] cite references/research_notes.md.
+# Secondary knobs (audit.*, measure.*, sweep.*, bake.*, gate1.tie_tolerance, concept.bg_std_max) have defaults in
+# tools/optimize/optlib.py EXTRA_DEFAULTS. Order: EXTRA_DEFAULTS < this file < spec "config" block.
+
+paths:
+  blender: /Applications/Blender.app/Contents/MacOS/Blender   # macOS default; preflight records the real one
+  gltfpack: gltfpack
+  gltf_validator: gltf_validator   # native CLI; else export_check uses node tools/asset_checks/gltf_validate.mjs (npm i -g gltf-validator)
+  output_root: ./output
+
+budgets:                      # triangles after triangulation, per size class [guess, anchored on Arm mobile guidance]
+  small: 500                  # hand-held, <0.5 m, many instances
+  medium: 1500                # 0.5–2 m: crate, barrel, chair
+  hero: 5000                  # close-up, few on screen
+  environment: 3000           # building chunk, large rock
+  max_vertices_exported: 65534   # [src] 16-bit index buffers
+  max_materials: 1            # default for spec budget.max_materials_total
+  min_tris_ratio: 0.0         # budget is a cap. Set >0 (e.g. 0.3) only when the brief wants the budget used (hero props) [guess]
+
+concept:
+  view_labels: [front, left, back, right, "34", top]
+  proportion_tol: 0.03        # cross-view height/width mismatch allowed
+  min_resolution: 512
+  complexity_warn: 0.6        # above: warn before self-build [guess]
+
+gate1:
+  silhouette_iou_min: 0.85    # existing model vs concept, per orthographic view [guess]
+  speck_bbox_ratio: 0.02      # shells smaller than this share of the bbox diagonal are ignored for gate1 silhouettes
+
+cleanup:
+  merge_distance_ratio: 0.0001      # weld distance as fraction of bbox diagonal
+  loose_part_min_ratio: 0.002       # shells with fewer faces than this fraction are deleted
+  interior_face_max_ratio: 0.05     # above: dirty path (remesh) [guess]
+  max_hole_edges: 32
+  voxel_remesh:
+    mode: auto                # auto | always | never
+    resolution: 256           # voxels along the longest bbox edge
+    solidify_thin: true       # solidify open sheets before remesh
+
+optimize:
+  engine: gltfpack            # gltfpack | blender
+  fallback: blender
+  sweep_ratios: [1.0, 0.7, 0.5, 0.35, 0.25, 0.15, 0.1, 0.07, 0.05, 0.03]
+  gltfpack_error: 0.01        # -se, fraction of mesh extent
+  permissive_when_rebake: true   # -sp only when UVs will be rebuilt anyway
+  lock_border: false
+  cameras: 12                 # silhouette views incl. above and below
+  raster_size: 512
+  screen_px_height: 400       # prop's largest on-screen height, px, for projected-error floor [guess]
+  floor:
+    silhouette_iou_min: 0.99        # worst view [guess]
+    hausdorff_max_px: 1.0           # two-way Hausdorff projected to screen_px_height [src, 1-px rule from LOD literature]
+    normal_dev_p95_deg: 15          # [guess]
+  knee_sensitivity: 1.0
+
+texture:
+  mode: albedo                # albedo | albedo_normal | keep_uv
+  texel_density_px_per_m: 256 # mobile range 256–512 [src]
+  min_res: 256
+  max_res: 1024
+  bake_margin_px: 8
+  padding_px_by_res: {512: 4, 1024: 8, 2048: 16}   # [src, polycount]
+  ssim_min: 0.90              # low vs high textured renders, masked [guess]
+  max_ray_distance_ratio: 0.02   # of bbox diagonal, for selected-to-active bake
+
+self_build:
+  rollouts: 3
+  part_max_attempts: 3
+  critic_cycles: 3
+  revert_tolerance: 0.005     # worst-view IoU drop that triggers revert
+  render_size: 1024
+  critic_max_long_edge: 1568  # inherited image-size default; verify current tool/viewing limits
+  gates:
+    contact_min_ratio: 0.05
+    penetration_max_ratio: 0.02
+    floater_span_ratio: 0.01
+    bbox_tolerance: 0.10      # planned vs built extents
+    contact_dist_m: 0.001     # sample counts as touching within this distance
+    inset_depth_tolerance: 0.2
+    contact_samples: 4000
+  param_fit:
+    enabled: true
+    time_limit_s: 300
+    max_evals: 300
+    max_param_change: 0.3
+    min_gain: 0.005
+    raster_size: 256
+    worst_penalty: 0.5        # objective = mean IoU − worst_penalty × (mean − worst)
+    regularization: 0.001     # pulls params silhouettes cannot see back toward their start
+
+generation:                   # paid generators: stubs until configured
+  credit_cap_per_asset: 120
+  max_retry: 2
+  adapters:
+    meshy: {enabled: false, api_key_env: MESHY_API_KEY}
+    tripo: {enabled: false, api_key_env: TRIPO_API_KEY}
+
+validate:
+  max_file_size_mb: 5
+  allow_uv_overlap: false
+  sliver_min_px_area: 10      # [src, Arm: keep triangles above 10 px]
+  # Fail-by-default limits. Copy into spec "mesh" / "screen_tris" blocks to enforce; absent there = info.
+  max_hidden_face_ratio: 0.02 # [guess]
+  max_ngons: 0                # export triangulates; n-gons triangulate unpredictably [guess]
+  max_duplicate_verts: 0
+  max_small_tri_ratio: 0.05   # share of on-screen triangles under sliver_min_px_area [guess]
+  max_split_vertex_ratio: 2.0 # exported / raw vertices, smooth props only; hard-surface boxes are 3+ [guess]
+
+report:
+  language: vi

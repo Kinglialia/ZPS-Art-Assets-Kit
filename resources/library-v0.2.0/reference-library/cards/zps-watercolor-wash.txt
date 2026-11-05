@@ -1,0 +1,47 @@
+Loang màu nước — zps-watercolor-wash v2
+Ngày kiểm tra: 2026-11-03
+Nhóm: Hội họa và đường nét
+Nguồn: https://game-library.zingplay.dev/styles/watercolor-wash/
+
+TÓM TẮT NGUỒN (VIẾT LẠI)
+Hiệu ứng sắc tố, lớp màu trong và vùng nền thoáng tạo chất màu nước; có thể xuất hiện trong cả cảnh phẳng lẫn cảnh có khối.
+
+QUAN SÁT ẢNH ĐẠI DIỆN
+Nền hồng đỏ hòa vào xanh nhạt, dây leo và bàn tay đá bao quanh một nhân vật nhỏ màu đỏ sẫm.
+Ảnh được quan sát: images/21729282553ec078abcf1db2-1280.webp
+
+GỢI Ý CỦA AD (SUY LUẬN)
+Có thể dùng loang màu cho cảm xúc và chuyển vùng; độ mềm của nền không được làm nhòe tín hiệu gameplay.
+
+TEST ĐỀ XUẤT
+Test nhân vật qua vùng sáng/tối và resize nhỏ; xác nhận nét mảnh còn đọc được.
+
+GIỚI HẠN
+Ảnh tĩnh không xác nhận animation, pipeline, hiệu năng hoặc license. Phân tích trực quan hiện chỉ cho ảnh đại diện; mở ảnh gốc khi cần chi tiết.
+Assistant viewed representative image in gallery at overview scale on 2026-11-03; secondary images decode/hash checked, not individually art-reviewed.
+Ảnh dùng làm reference nghiên cứu. Quyền thuộc chủ sở hữu gốc; chưa xác nhận giấy phép tái sử dụng trong sản phẩm.
+
+ẢNH THAM KHẢO
+1. GRIS — Nomada Studio
+File: images/21729282553ec078abcf1db2-1280.webp | 1280 × 720 px
+Drive: https://drive.google.com/file/d/1zLvLNVCnKdySIHXtYqfW91yx_we4MIS3/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/gris/21729282553ec078abcf1db2-1280.webp
+Trang chính thức: https://store.steampowered.com/app/683320/
+SHA256: d9a78e44c811816f1361bb67f0d6f3a99a48ab56827971995b7bb7ae59f4f7cf
+Review: Representative image visually inspected at overview scale, 2026-11-03
+
+2. Dordogne — UN JE NE SAIS QUOI, UMANIMATION
+File: images/3bbbb84208230d936c74701f-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/1w1LPQQHADkBieI-TKQep-lGhwwRamJbs/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/dordogne/3bbbb84208230d936c74701f-480.webp
+Trang chính thức: https://store.steampowered.com/app/1272840/
+SHA256: db8b1a04eb040b671a7b1d66cc56c5b2947a4478ea533ac4e12d386a6b675aae
+Review: Not individually reviewed
+
+3. Child of Light — Ubisoft Montréal
+File: images/877a06548dc1f8a841f2f499-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/1tskCUEMcix5maxf7pJfkD-nm_AF-2p6Y/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/child-of-light/877a06548dc1f8a841f2f499-480.webp
+Trang chính thức: https://store.steampowered.com/app/256290/
+SHA256: 64f3262b2aecf10c5cc66cf484fc485681207aeb090cac08e240ba1821a7c2b8
+Review: Not individually reviewed

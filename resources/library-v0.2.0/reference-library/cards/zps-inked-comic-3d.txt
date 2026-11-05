@@ -1,0 +1,47 @@
+3D truyện tranh nét mực — zps-inked-comic-3d v2
+Ngày kiểm tra: 2026-11-03
+Nhóm: 3D và kết xuất
+Nguồn: https://game-library.zingplay.dev/styles/inked-comic-3d/
+
+TÓM TẮT NGUỒN (VIẾT LẠI)
+Bề mặt 3D có đường bao và dấu nét mực; chất vẽ trên khối là dấu hiệu khác với cel sạch.
+
+QUAN SÁT ẢNH ĐẠI DIỆN
+Ảnh là cảnh quảng bá hành động giữa tuyết, nhiều nhân vật và đường nét mực; không phải bằng chứng trực tiếp về độ đọc HUD gameplay.
+Ảnh được quan sát: images/f4bde6972431fb8e5fc3638b-1280.webp
+
+GỢI Ý CỦA AD (SUY LUẬN)
+Có thể giữ nét mực trên khối lớn và props; ảnh quảng bá không chứng minh độ đọc khi chơi.
+
+TEST ĐỀ XUẤT
+Dựng cảnh gameplay với HUD, chuyển động camera và VFX rồi đánh giá đường viền.
+
+GIỚI HẠN
+Ảnh tĩnh không xác nhận animation, pipeline, hiệu năng hoặc license. Phân tích trực quan hiện chỉ cho ảnh đại diện; mở ảnh gốc khi cần chi tiết.
+Assistant viewed representative image in gallery at overview scale on 2026-11-03; secondary images decode/hash checked, not individually art-reviewed.
+Ảnh dùng làm reference nghiên cứu. Quyền thuộc chủ sở hữu gốc; chưa xác nhận giấy phép tái sử dụng trong sản phẩm.
+
+ẢNH THAM KHẢO
+1. Borderlands 2 — Gearbox Software, Aspyr (Mac), Aspyr (Linux)
+File: images/f4bde6972431fb8e5fc3638b-1280.webp | 1280 × 720 px
+Drive: https://drive.google.com/file/d/1R6qr9iB42y0JRA4OcCBpt_fonxUnnh0-/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/borderlands2/f4bde6972431fb8e5fc3638b-1280.webp
+Trang chính thức: https://store.steampowered.com/app/49520/
+SHA256: 38d663cdd08282f357c0f01c79f885b829c65b0693198d887b4c71a859373d4e
+Review: Representative image visually inspected at overview scale, 2026-11-03
+
+2. Borderlands 3 — Gearbox Software
+File: images/ddc5bec7bae1fc9d70501ade-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/18HPOZL5a58CfyeHq7yWSq1BFW6siUyPo/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/borderlands3/ddc5bec7bae1fc9d70501ade-480.webp
+Trang chính thức: https://store.steampowered.com/app/397540/
+SHA256: f9c0da38a9b839e576a7e89ad5ef1a7d7f2b29787ce8977543c3be0559bbb31b
+Review: Not individually reviewed
+
+3. Roboquest — RyseUp Studios
+File: images/2f255f0583539731bce158b1-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/1I89AYo0iWdkk7d7iv6HcbAtxpXohaN_a/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/roboquest/2f255f0583539731bce158b1-480.webp
+Trang chính thức: https://store.steampowered.com/app/692890/
+SHA256: 922440dcd57f9cbb6e35593b4c0089dd5d3a255479fdd4a3ed5c227ca7a486fa
+Review: Not individually reviewed

@@ -1,0 +1,510 @@
+PASS manifest .art-director-support/workflows/art-direction.md
+PASS link ../../zps-visual-intelligence-codex/SKILL.md
+PASS link ../../zps-creative-brainstorming-codex/SKILL.md
+PASS link ../../zps-visual-research-codex/SKILL.md
+PASS link ../../zps-art-style-development-codex/SKILL.md
+PASS link ../../zps-art-bible-artist-direction-codex/SKILL.md
+PASS link ../../zps-concept-artist-codex/SKILL.md
+PASS link ../../zps-artistic-critique-codex/SKILL.md
+PASS link ../../zps-art-director-library-manager-codex/SKILL.md
+PASS link ../../zps-2d-artist-codex/SKILL.md
+PASS link ../../zps-asset-2d-codex/SKILL.md
+PASS link ../../zps-ui-codex/SKILL.md
+PASS link ../../zps-2d-review-codex/SKILL.md
+PASS link ../../zps-3d-artist-codex/SKILL.md
+PASS link ../../zps-texture-artist-codex/SKILL.md
+PASS link ../../zps-texture-planning-codex/SKILL.md
+PASS link ../../zps-surface-codex/SKILL.md
+PASS link ../../zps-texture-review-codex/SKILL.md
+PASS link ../../zps-art-learning-codex/SKILL.md
+PASS manifest .art-production-support/adapters/runtime.md
+PASS link ../shared/scripts/README.md
+PASS manifest .art-production-support/rules/art-operation.md
+PASS link ../adapters/runtime.md
+PASS link ../../zps-art-learning-codex/SKILL.md
+PASS manifest .art-production-support/rules/art-quality.md
+PASS link ../shared/gen-craft.md
+PASS link ../shared/fix-playbook.md
+PASS manifest .art-production-support/shared/fix-playbook.md
+PASS link ../rules/art-quality.md
+PASS manifest .art-production-support/shared/gen-craft.md
+PASS manifest .art-production-support/shared/revision.md
+PASS manifest .art-production-support/shared/scripts/README.md
+PASS link ../../rules/art-quality.md
+PASS manifest .art-production-support/shared/scripts/check_gate.py
+PASS manifest .art-production-support/shared/scripts/examples/camera-box.json
+PASS manifest .art-production-support/shared/scripts/generate_image.py
+PASS manifest .art-production-support/shared/scripts/inspect_image.py
+PASS manifest .art-production-support/shared/scripts/inspect_model.py
+PASS manifest .art-production-support/shared/scripts/palette_report.py
+PASS manifest .art-production-support/shared/scripts/preview.py
+PASS manifest .art-production-support/shared/scripts/projection_guide.py
+PASS manifest .art-production-support/shared/scripts/render_model.py
+PASS manifest .art-production-support/shared/scripts/score_variants.py
+PASS manifest .art-production-support/shared/scripts/sprite_check.py
+PASS manifest .art-production-support/shared/scripts/structure_diff.py
+PASS manifest .art-production-support/shared/scripts/tone_match.py
+PASS manifest .art-production-support/shared/style-read.md
+PASS link ../rules/art-quality.md
+PASS manifest zps-2d-artist-codex/SKILL.md
+PASS link ../.art-production-support/rules/art-operation.md
+PASS link ../.art-production-support/rules/art-quality.md
+PASS link templates/artist-brief.md
+PASS link templates/tech-profile-godot.md
+PASS link ../zps-asset-2d-codex/SKILL.md
+PASS link ../zps-ui-codex/SKILL.md
+PASS link ../zps-2d-review-codex/SKILL.md
+PASS link ../.art-director-support/workflows/art-direction.md
+PASS link ../.art-production-support/shared/style-read.md
+PASS link ../.art-production-support/shared/scripts/README.md
+PASS link ../.art-production-support/adapters/runtime.md
+PASS link ../.art-production-support/shared/fix-playbook.md
+PASS link templates/task-record.md
+PASS manifest zps-2d-artist-codex/agents/openai.yaml
+PASS manifest zps-2d-artist-codex/skill.yaml
+PASS manifest zps-2d-artist-codex/templates/artist-brief.md
+PASS manifest zps-2d-artist-codex/templates/review-request.md
+PASS manifest zps-2d-artist-codex/templates/task-record.md
+PASS manifest zps-2d-artist-codex/templates/tech-profile-godot.md
+PASS manifest zps-2d-review-codex/SKILL.md
+PASS link ../.art-production-support/rules/art-operation.md
+PASS link ../.art-production-support/shared/gen-craft.md
+PASS link templates/review-request.md
+PASS link templates/review.md
+PASS link references/visual-review.md
+PASS link ../.art-production-support/shared/scripts/README.md#evidence-gate
+PASS manifest zps-2d-review-codex/agents/openai.yaml
+PASS manifest zps-2d-review-codex/references/visual-review.md
+PASS link ../../.art-production-support/shared/scripts/README.md#evidence-gate
+PASS manifest zps-2d-review-codex/skill.yaml
+PASS manifest zps-2d-review-codex/templates/issue-fields.json
+PASS manifest zps-2d-review-codex/templates/review-request.md
+PASS manifest zps-2d-review-codex/templates/review.md
+PASS link issue-fields.json
+PASS manifest zps-3d-artist-codex/SKILL.md
+PASS link references/self_build.md
+PASS link references/pipeline.md
+PASS link references/optimize.md
+PASS link tools/asset_checks/README.md
+PASS link templates/REVIEW-RUBRIC.md
+PASS link references/pipeline.md
+PASS link agents/3d-builder.md
+PASS link agents/3d-critic.md
+PASS link references/technique.md
+PASS link references/blockout.md
+PASS link references/mesh_uv_bake.md
+PASS link references/export_engine.md
+PASS link ../zps-texture-artist-codex/SKILL.md
+PASS link ../zps-art-learning-codex/SKILL.md
+PASS link ../.art-director-support/workflows/art-direction.md
+PASS manifest zps-3d-artist-codex/agents/3d-builder.md
+PASS manifest zps-3d-artist-codex/agents/3d-critic.md
+PASS manifest zps-3d-artist-codex/agents/openai.yaml
+PASS manifest zps-3d-artist-codex/config.yaml
+PASS manifest zps-3d-artist-codex/references/blockout.md
+PASS manifest zps-3d-artist-codex/references/bpy_cookbook.md
+PASS manifest zps-3d-artist-codex/references/export_engine.md
+PASS manifest zps-3d-artist-codex/references/mesh_uv_bake.md
+PASS manifest zps-3d-artist-codex/references/optimize.md
+PASS manifest zps-3d-artist-codex/references/pipeline.md
+PASS manifest zps-3d-artist-codex/references/research_notes.md
+PASS manifest zps-3d-artist-codex/references/self_build.md
+PASS manifest zps-3d-artist-codex/references/technique.md
+PASS manifest zps-3d-artist-codex/templates/REVIEW-RUBRIC.md
+PASS manifest zps-3d-artist-codex/templates/spec.example.rock-moss.json
+PASS manifest zps-3d-artist-codex/templates/spec.template.json
+PASS manifest zps-3d-artist-codex/tools/asset_checks/README.md
+PASS manifest zps-3d-artist-codex/tools/asset_checks/ac_common.py
+PASS manifest zps-3d-artist-codex/tools/asset_checks/concept_coverage.py
+PASS manifest zps-3d-artist-codex/tools/asset_checks/contact_check.py
+PASS manifest zps-3d-artist-codex/tools/asset_checks/export_check.py
+PASS manifest zps-3d-artist-codex/tools/asset_checks/gltf_validate.mjs
+PASS manifest zps-3d-artist-codex/tools/asset_checks/iou_check.py
+PASS manifest zps-3d-artist-codex/tools/asset_checks/mesh_check.py
+PASS manifest zps-3d-artist-codex/tools/asset_checks/render_rig.py
+PASS manifest zps-3d-artist-codex/tools/asset_checks/screen_tris_check.py
+PASS manifest zps-3d-artist-codex/tools/asset_checks/uv_check.py
+PASS manifest zps-3d-artist-codex/tools/finalize.py
+PASS manifest zps-3d-artist-codex/tools/install_global.sh
+PASS manifest zps-3d-artist-codex/tools/lib/bootstrap.py
+PASS manifest zps-3d-artist-codex/tools/lib/common.py
+PASS manifest zps-3d-artist-codex/tools/lib/raster.py
+PASS manifest zps-3d-artist-codex/tools/optimize/audit.py
+PASS manifest zps-3d-artist-codex/tools/optimize/bake.py
+PASS manifest zps-3d-artist-codex/tools/optimize/cleanup.py
+PASS manifest zps-3d-artist-codex/tools/optimize/decimate.py
+PASS manifest zps-3d-artist-codex/tools/optimize/gate1.py
+PASS manifest zps-3d-artist-codex/tools/optimize/measure.py
+PASS manifest zps-3d-artist-codex/tools/optimize/optbpy.py
+PASS manifest zps-3d-artist-codex/tools/optimize/optlib.py
+PASS manifest zps-3d-artist-codex/tools/optimize/sweep.py
+PASS manifest zps-3d-artist-codex/tools/optimize/validate_concept.py
+PASS manifest zps-3d-artist-codex/tools/preflight.py
+PASS manifest zps-3d-artist-codex/tools/report.py
+PASS manifest zps-3d-artist-codex/tools/self_build/apply_edit.py
+PASS manifest zps-3d-artist-codex/tools/self_build/assembly.py
+PASS manifest zps-3d-artist-codex/tools/self_build/fit_camera.py
+PASS manifest zps-3d-artist-codex/tools/self_build/gates.py
+PASS manifest zps-3d-artist-codex/tools/self_build/graph.py
+PASS manifest zps-3d-artist-codex/tools/self_build/param_fit.py
+PASS manifest zps-3d-artist-codex/tools/self_build/render_views.py
+PASS manifest zps-3d-artist-codex/tools/setup_deps.sh
+PASS manifest zps-3d-artist-codex/tools/texture/project_concept.py
+PASS manifest zps-art-bible-artist-direction-codex/SKILL.md
+PASS link ../.art-director-support/workflows/art-direction.md
+PASS link ../zps-concept-artist-codex/SKILL.md
+PASS manifest zps-art-bible-artist-direction-codex/agents/openai.yaml
+PASS manifest zps-art-director-library-manager-codex/SKILL.md
+PASS link references/library-location.md
+PASS link references/maintenance.md
+PASS link ../.art-director-support/workflows/art-direction.md
+PASS manifest zps-art-director-library-manager-codex/agents/openai.yaml
+PASS manifest zps-art-director-library-manager-codex/references/library-location.md
+PASS manifest zps-art-director-library-manager-codex/references/maintenance.md
+PASS manifest zps-art-learning-codex/SKILL.md
+PASS link references/ledger.md
+PASS manifest zps-art-learning-codex/agents/openai.yaml
+PASS manifest zps-art-learning-codex/references/ledger.md
+PASS manifest zps-art-learning-codex/scripts/art_learn.py
+PASS manifest zps-art-style-development-codex/SKILL.md
+PASS link ../.art-director-support/workflows/art-direction.md
+PASS link ../zps-concept-artist-codex/SKILL.md
+PASS manifest zps-art-style-development-codex/agents/openai.yaml
+PASS manifest zps-artistic-critique-codex/SKILL.md
+PASS link references/formal-review.md
+PASS link ../.art-director-support/workflows/art-direction.md
+PASS manifest zps-artistic-critique-codex/agents/openai.yaml
+PASS manifest zps-artistic-critique-codex/references/formal-review.md
+PASS manifest zps-asset-2d-codex/SKILL.md
+PASS link ../.art-production-support/rules/art-operation.md
+PASS link ../.art-production-support/rules/art-quality.md
+PASS link templates/tech-profile-godot.md
+PASS link references/production.md
+PASS link ../.art-production-support/shared/revision.md
+PASS link ../.art-production-support/shared/gen-craft.md
+PASS manifest zps-asset-2d-codex/agents/openai.yaml
+PASS manifest zps-asset-2d-codex/references/production.md
+PASS manifest zps-asset-2d-codex/skill.yaml
+PASS manifest zps-asset-2d-codex/templates/review-request.md
+PASS manifest zps-asset-2d-codex/templates/tech-profile-godot.md
+PASS manifest zps-concept-artist-codex/SKILL.md
+PASS link templates/CONCEPT-BRIEF.md
+PASS link ../.art-director-support/workflows/art-direction.md
+PASS manifest zps-concept-artist-codex/agents/openai.yaml
+PASS manifest zps-concept-artist-codex/templates/CONCEPT-BRIEF.md
+PASS manifest zps-creative-brainstorming-codex/SKILL.md
+PASS link ../.art-director-support/workflows/art-direction.md
+PASS link ../zps-concept-artist-codex/SKILL.md
+PASS manifest zps-creative-brainstorming-codex/agents/openai.yaml
+PASS manifest zps-surface-codex/SKILL.md
+PASS link ../.art-production-support/rules/art-operation.md
+PASS link ../.art-production-support/rules/art-quality.md
+PASS link templates/tech-profile-godot.md
+PASS link references/hand-painted.md
+PASS link references/painting-practice.md
+PASS link references/flat-color.md
+PASS link references/pbr.md
+PASS link references/tileable-trim.md
+PASS link references/pixel-texture.md
+PASS link references/photo-scan.md
+PASS link references/projection.md
+PASS link references/surface-craft.md
+PASS link references/mapping-validation.md
+PASS link ../.art-production-support/shared/gen-craft.md
+PASS manifest zps-surface-codex/agents/openai.yaml
+PASS manifest zps-surface-codex/references/flat-color.md
+PASS manifest zps-surface-codex/references/hand-painted.md
+PASS link painting-practice.md
+PASS manifest zps-surface-codex/references/mapping-validation.md
+PASS manifest zps-surface-codex/references/painting-practice.md
+PASS manifest zps-surface-codex/references/pbr.md
+PASS manifest zps-surface-codex/references/photo-scan.md
+PASS manifest zps-surface-codex/references/pixel-texture.md
+PASS manifest zps-surface-codex/references/projection.md
+PASS manifest zps-surface-codex/references/surface-craft.md
+PASS manifest zps-surface-codex/references/tileable-trim.md
+PASS manifest zps-surface-codex/skill.yaml
+PASS manifest zps-surface-codex/templates/review-request.md
+PASS manifest zps-surface-codex/templates/tech-profile-godot.md
+PASS manifest zps-texture-artist-codex/SKILL.md
+PASS link ../.art-production-support/rules/art-operation.md
+PASS link ../.art-production-support/rules/art-quality.md
+PASS link templates/artist-brief.md
+PASS link templates/tech-profile-godot.md
+PASS link ../zps-texture-planning-codex/SKILL.md
+PASS link ../zps-surface-codex/SKILL.md
+PASS link ../zps-texture-review-codex/SKILL.md
+PASS link ../.art-director-support/workflows/art-direction.md
+PASS link ../.art-production-support/shared/style-read.md
+PASS link ../.art-production-support/shared/scripts/README.md
+PASS link ../.art-production-support/adapters/runtime.md
+PASS link ../.art-production-support/shared/fix-playbook.md
+PASS link templates/task-record.md
+PASS manifest zps-texture-artist-codex/agents/openai.yaml
+PASS manifest zps-texture-artist-codex/skill.yaml
+PASS manifest zps-texture-artist-codex/templates/artist-brief.md
+PASS manifest zps-texture-artist-codex/templates/review-request.md
+PASS manifest zps-texture-artist-codex/templates/task-record.md
+PASS manifest zps-texture-artist-codex/templates/tech-profile-godot.md
+PASS manifest zps-texture-planning-codex/SKILL.md
+PASS link ../.art-production-support/rules/art-operation.md
+PASS link templates/tech-profile-godot.md
+PASS link ../.art-production-support/shared/scripts/README.md#model
+PASS link ../.art-production-support/shared/style-read.md
+PASS link references/texture-methods.md
+PASS link ../zps-surface-codex/SKILL.md
+PASS manifest zps-texture-planning-codex/agents/openai.yaml
+PASS manifest zps-texture-planning-codex/references/texture-methods.md
+PASS link ../../.art-production-support/shared/gen-craft.md
+PASS manifest zps-texture-planning-codex/skill.yaml
+PASS manifest zps-texture-planning-codex/templates/review-request.md
+PASS manifest zps-texture-planning-codex/templates/tech-profile-godot.md
+PASS manifest zps-texture-review-codex/SKILL.md
+PASS link ../.art-production-support/rules/art-operation.md
+PASS link ../.art-production-support/shared/gen-craft.md
+PASS link templates/review-request.md
+PASS link templates/review.md
+PASS link references/visual-review.md
+PASS link ../.art-production-support/shared/scripts/README.md#evidence-gate
+PASS manifest zps-texture-review-codex/agents/openai.yaml
+PASS manifest zps-texture-review-codex/references/visual-review.md
+PASS link ../../.art-production-support/shared/scripts/README.md#evidence-gate
+PASS manifest zps-texture-review-codex/skill.yaml
+PASS manifest zps-texture-review-codex/templates/issue-fields.json
+PASS manifest zps-texture-review-codex/templates/review-request.md
+PASS manifest zps-texture-review-codex/templates/review.md
+PASS link issue-fields.json
+PASS manifest zps-ui-codex/SKILL.md
+PASS link ../.art-production-support/rules/art-operation.md
+PASS link ../.art-production-support/rules/art-quality.md
+PASS link templates/tech-profile-godot.md
+PASS link references/ui-system.md
+PASS link ../.art-production-support/shared/gen-craft.md
+PASS link references/ui-godot-handoff.md
+PASS link templates/ui-handoff.md
+PASS link references/ui-qa.md
+PASS link references/ui-accessibility.md
+PASS manifest zps-ui-codex/agents/openai.yaml
+PASS manifest zps-ui-codex/references/ui-accessibility.md
+PASS manifest zps-ui-codex/references/ui-godot-handoff.md
+PASS manifest zps-ui-codex/references/ui-qa.md
+PASS link ../templates/review.md
+PASS manifest zps-ui-codex/references/ui-system.md
+PASS manifest zps-ui-codex/skill.yaml
+PASS manifest zps-ui-codex/templates/issue-fields.json
+PASS manifest zps-ui-codex/templates/review-request.md
+PASS manifest zps-ui-codex/templates/review.md
+PASS link issue-fields.json
+PASS manifest zps-ui-codex/templates/task-record.md
+PASS manifest zps-ui-codex/templates/tech-profile-godot.md
+PASS manifest zps-ui-codex/templates/ui-handoff.md
+PASS link task-record.md
+PASS manifest zps-visual-intelligence-codex/SKILL.md
+PASS link ../.art-director-support/workflows/art-direction.md
+PASS manifest zps-visual-intelligence-codex/agents/openai.yaml
+PASS manifest zps-visual-research-codex/SKILL.md
+PASS link ../.art-director-support/workflows/art-direction.md
+PASS manifest zps-visual-research-codex/agents/openai.yaml
+PASS frontmatter zps-art-bible-artist-direction-codex
+NOT RUN bundled YAML validator: PyYAML unavailable (zps-art-bible-artist-direction-codex)
+PASS identifier syntax zps-art-bible-artist-direction-codex
+PASS frontmatter zps-art-director-library-manager-codex
+NOT RUN bundled YAML validator: PyYAML unavailable (zps-art-director-library-manager-codex)
+PASS identifier syntax zps-art-director-library-manager-codex
+PASS frontmatter zps-art-style-development-codex
+NOT RUN bundled YAML validator: PyYAML unavailable (zps-art-style-development-codex)
+PASS identifier syntax zps-art-style-development-codex
+PASS frontmatter zps-artistic-critique-codex
+NOT RUN bundled YAML validator: PyYAML unavailable (zps-artistic-critique-codex)
+PASS identifier syntax zps-artistic-critique-codex
+PASS frontmatter zps-creative-brainstorming-codex
+NOT RUN bundled YAML validator: PyYAML unavailable (zps-creative-brainstorming-codex)
+PASS identifier syntax zps-creative-brainstorming-codex
+PASS frontmatter zps-visual-intelligence-codex
+NOT RUN bundled YAML validator: PyYAML unavailable (zps-visual-intelligence-codex)
+PASS identifier syntax zps-visual-intelligence-codex
+PASS frontmatter zps-visual-research-codex
+NOT RUN bundled YAML validator: PyYAML unavailable (zps-visual-research-codex)
+PASS identifier syntax zps-visual-research-codex
+PASS frontmatter zps-concept-artist-codex
+NOT RUN bundled YAML validator: PyYAML unavailable (zps-concept-artist-codex)
+PASS identifier syntax zps-concept-artist-codex
+PASS frontmatter zps-2d-review-codex
+NOT RUN bundled YAML validator: PyYAML unavailable (zps-2d-review-codex)
+PASS identifier syntax zps-2d-review-codex
+PASS frontmatter zps-asset-2d-codex
+NOT RUN bundled YAML validator: PyYAML unavailable (zps-asset-2d-codex)
+PASS identifier syntax zps-asset-2d-codex
+PASS frontmatter zps-ui-codex
+NOT RUN bundled YAML validator: PyYAML unavailable (zps-ui-codex)
+PASS identifier syntax zps-ui-codex
+PASS frontmatter zps-2d-artist-codex
+NOT RUN bundled YAML validator: PyYAML unavailable (zps-2d-artist-codex)
+PASS identifier syntax zps-2d-artist-codex
+PASS frontmatter zps-surface-codex
+NOT RUN bundled YAML validator: PyYAML unavailable (zps-surface-codex)
+PASS identifier syntax zps-surface-codex
+PASS frontmatter zps-texture-planning-codex
+NOT RUN bundled YAML validator: PyYAML unavailable (zps-texture-planning-codex)
+PASS identifier syntax zps-texture-planning-codex
+PASS frontmatter zps-texture-review-codex
+NOT RUN bundled YAML validator: PyYAML unavailable (zps-texture-review-codex)
+PASS identifier syntax zps-texture-review-codex
+PASS frontmatter zps-texture-artist-codex
+NOT RUN bundled YAML validator: PyYAML unavailable (zps-texture-artist-codex)
+PASS identifier syntax zps-texture-artist-codex
+PASS frontmatter zps-3d-artist-codex
+NOT RUN bundled YAML validator: PyYAML unavailable (zps-3d-artist-codex)
+PASS identifier syntax zps-3d-artist-codex
+PASS frontmatter zps-art-learning-codex
+NOT RUN bundled YAML validator: PyYAML unavailable (zps-art-learning-codex)
+PASS identifier syntax zps-art-learning-codex
+PASS preview writes nothing
+PASS cancel writes nothing
+PASS isolated installation
+PASS isolated verify
+PASS idempotence
+PASS rollback refuses later edits
+PASS rollback preserves unrelated files
+PASS block alias skills/art-bible-artist-direction
+PASS block alias skills/zps-art-bible-artist-direction
+PASS block alias skills/art-director-library-manager
+PASS block alias skills/zps-art-director-library-manager
+PASS block alias skills/zps-art-library-manager
+PASS block alias skills/art-style-development
+PASS block alias skills/zps-art-style-development
+PASS block alias skills/artistic-critique
+PASS block alias skills/zps-artistic-critique
+PASS block alias skills/creative-brainstorming
+PASS block alias skills/zps-creative-brainstorming
+PASS block alias skills/visual-intelligence
+PASS block alias skills/zps-visual-intelligence
+PASS block alias skills/visual-research
+PASS block alias skills/zps-visual-research
+PASS block alias skills/art-concept-artist
+PASS block alias skills/zps-concept-artist
+PASS block alias skills/Claude - art-concept-artist
+PASS block alias skills/art-2d-review
+PASS block alias skills/art-asset-2d
+PASS block alias skills/art-ui
+PASS block alias skills/zps-2d-artist
+PASS block alias skills/art-surface
+PASS block alias skills/art-texture-planning
+PASS block alias skills/art-texture-review
+PASS block alias skills/zps-texture-artist
+PASS block alias skills/3d-artist
+PASS block alias skills/art-3d-artist
+PASS block alias skills/zps-3d-artist
+PASS block alias skills/art-learn
+PASS block alias skills/art-learning
+PASS block alias home/.agents/skills/art-bible-artist-direction
+PASS block alias home/.agents/skills/zps-art-bible-artist-direction
+PASS block alias home/.agents/skills/art-director-library-manager
+PASS block alias home/.agents/skills/zps-art-director-library-manager
+PASS block alias home/.agents/skills/zps-art-library-manager
+PASS block alias home/.agents/skills/art-style-development
+PASS block alias home/.agents/skills/zps-art-style-development
+PASS block alias home/.agents/skills/artistic-critique
+PASS block alias home/.agents/skills/zps-artistic-critique
+PASS block alias home/.agents/skills/creative-brainstorming
+PASS block alias home/.agents/skills/zps-creative-brainstorming
+PASS block alias home/.agents/skills/visual-intelligence
+PASS block alias home/.agents/skills/zps-visual-intelligence
+PASS block alias home/.agents/skills/visual-research
+PASS block alias home/.agents/skills/zps-visual-research
+PASS block alias home/.agents/skills/art-concept-artist
+PASS block alias home/.agents/skills/zps-concept-artist
+PASS block alias home/.agents/skills/Claude - art-concept-artist
+PASS block alias home/.agents/skills/art-2d-review
+PASS block alias home/.agents/skills/art-asset-2d
+PASS block alias home/.agents/skills/art-ui
+PASS block alias home/.agents/skills/zps-2d-artist
+PASS block alias home/.agents/skills/art-surface
+PASS block alias home/.agents/skills/art-texture-planning
+PASS block alias home/.agents/skills/art-texture-review
+PASS block alias home/.agents/skills/zps-texture-artist
+PASS block alias home/.agents/skills/3d-artist
+PASS block alias home/.agents/skills/art-3d-artist
+PASS block alias home/.agents/skills/zps-3d-artist
+PASS block alias home/.agents/skills/art-learn
+PASS block alias home/.agents/skills/art-learning
+PASS block new name in other root zps-art-bible-artist-direction-codex
+PASS block new name in other root zps-art-director-library-manager-codex
+PASS block new name in other root zps-art-style-development-codex
+PASS block new name in other root zps-artistic-critique-codex
+PASS block new name in other root zps-creative-brainstorming-codex
+PASS block new name in other root zps-visual-intelligence-codex
+PASS block new name in other root zps-visual-research-codex
+PASS block new name in other root zps-concept-artist-codex
+PASS block new name in other root zps-2d-review-codex
+PASS block new name in other root zps-asset-2d-codex
+PASS block new name in other root zps-ui-codex
+PASS block new name in other root zps-2d-artist-codex
+PASS block new name in other root zps-surface-codex
+PASS block new name in other root zps-texture-planning-codex
+PASS block new name in other root zps-texture-review-codex
+PASS block new name in other root zps-texture-artist-codex
+PASS block new name in other root zps-3d-artist-codex
+PASS block new name in other root zps-art-learning-codex
+PASS block alias codex/skills/art-bible-artist-direction
+PASS block alias codex/skills/zps-art-bible-artist-direction
+PASS block alias codex/skills/art-director-library-manager
+PASS block alias codex/skills/zps-art-director-library-manager
+PASS block alias codex/skills/zps-art-library-manager
+PASS block alias codex/skills/art-style-development
+PASS block alias codex/skills/zps-art-style-development
+PASS block alias codex/skills/artistic-critique
+PASS block alias codex/skills/zps-artistic-critique
+PASS block alias codex/skills/creative-brainstorming
+PASS block alias codex/skills/zps-creative-brainstorming
+PASS block alias codex/skills/visual-intelligence
+PASS block alias codex/skills/zps-visual-intelligence
+PASS block alias codex/skills/visual-research
+PASS block alias codex/skills/zps-visual-research
+PASS block alias codex/skills/art-concept-artist
+PASS block alias codex/skills/zps-concept-artist
+PASS block alias codex/skills/Claude - art-concept-artist
+PASS block alias codex/skills/art-2d-review
+PASS block alias codex/skills/art-asset-2d
+PASS block alias codex/skills/art-ui
+PASS block alias codex/skills/zps-2d-artist
+PASS block alias codex/skills/art-surface
+PASS block alias codex/skills/art-texture-planning
+PASS block alias codex/skills/art-texture-review
+PASS block alias codex/skills/zps-texture-artist
+PASS block alias codex/skills/3d-artist
+PASS block alias codex/skills/art-3d-artist
+PASS block alias codex/skills/zps-3d-artist
+PASS block alias codex/skills/art-learn
+PASS block alias codex/skills/art-learning
+PASS block new name in other root zps-art-bible-artist-direction-codex
+PASS block new name in other root zps-art-director-library-manager-codex
+PASS block new name in other root zps-art-style-development-codex
+PASS block new name in other root zps-artistic-critique-codex
+PASS block new name in other root zps-creative-brainstorming-codex
+PASS block new name in other root zps-visual-intelligence-codex
+PASS block new name in other root zps-visual-research-codex
+PASS block new name in other root zps-concept-artist-codex
+PASS block new name in other root zps-2d-review-codex
+PASS block new name in other root zps-asset-2d-codex
+PASS block new name in other root zps-ui-codex
+PASS block new name in other root zps-2d-artist-codex
+PASS block new name in other root zps-surface-codex
+PASS block new name in other root zps-texture-planning-codex
+PASS block new name in other root zps-texture-review-codex
+PASS block new name in other root zps-texture-artist-codex
+PASS block new name in other root zps-3d-artist-codex
+PASS block new name in other root zps-art-learning-codex
+PASS install after conflicts resolved
+PASS verify detects duplicate generations
+PASS verify after conflict removed
+
+Tests used temporary target directories only; user skills were not installed or modified.
+App discovery and artistic effectiveness were not tested.
+
+PASS upgrade backs up and rollback restores customized managed content
+PASS corrupt payload rejected before writes
+PASS unlisted payload rejected
+PASS symlink destination rejected
+PASS Ruby Psych safe_load validates all eighteen SKILL frontmatters and all eighteen UI metadata files.
+PASS v0.4.0 (8) -> v0.5.0 (18) upgrade -> rollback -> verify original 8 skills. Library resources remain outside skills install.

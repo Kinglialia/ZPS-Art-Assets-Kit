@@ -1,0 +1,55 @@
+Môi trường phát sáng nhiều lớp — zps-luminous-layered-painting v2
+Ngày kiểm tra: 2026-11-03
+Nhóm: 3D và kết xuất
+Nguồn: https://game-library.zingplay.dev/styles/luminous-layered-painting/
+
+TÓM TẮT NGUỒN (VIẾT LẠI)
+Các lớp cảnh và vùng sáng mạnh tạo chiều sâu ở bố cục nhìn ngang; sản phẩm có thể phối hợp kỹ thuật 2D và 3D.
+
+QUAN SÁT ẢNH ĐẠI DIỆN
+Cảnh nhìn ngang đỏ cam có nền lửa và nhiều lớp đá tối; nhân vật nhỏ sáng, vùng phát sáng tập trung quanh hành động.
+Ảnh được quan sát: images/5fa16ec3b23a012ea92b9dce-1280.webp
+
+GỢI Ý CỦA AD (SUY LUẬN)
+Có thể dẫn mắt bằng nhiều lớp và vùng sáng; nên dành khoảng yên cho vật thể gameplay.
+
+TEST ĐỀ XUẤT
+Test parallax, VFX và độ sáng nhân vật trong cảnh đông; kiểm tra trên màn hình nhỏ.
+
+GIỚI HẠN
+Ảnh tĩnh không xác nhận animation, pipeline, hiệu năng hoặc license. Phân tích trực quan hiện chỉ cho ảnh đại diện; mở ảnh gốc khi cần chi tiết.
+Assistant viewed representative image in gallery at overview scale on 2026-11-03; secondary images decode/hash checked, not individually art-reviewed.
+Ảnh dùng làm reference nghiên cứu. Quyền thuộc chủ sở hữu gốc; chưa xác nhận giấy phép tái sử dụng trong sản phẩm.
+
+ẢNH THAM KHẢO
+1. Ori and the Blind Forest: Definitive Edition — Moon Studios GmbH
+File: images/5fa16ec3b23a012ea92b9dce-1280.webp | 1280 × 720 px
+Drive: https://drive.google.com/file/d/1WT8S_6aOmEWL4f8YqDFYlwFwCIkX9oHg/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/ori-blind-forest/5fa16ec3b23a012ea92b9dce-1280.webp
+Trang chính thức: https://store.steampowered.com/app/387290/
+SHA256: 143e7f8393b73a8f29e1db7132e7ffdf6887ba744d89ec23a5ccfc661430958d
+Review: Representative image visually inspected at overview scale, 2026-11-03
+
+2. Ori and the Will of the Wisps — Moon Studios GmbH
+File: images/f36110a6ccee86d3acf96b04-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/1V-2q99z6FLTYQOr2cKWaJA__Q-lBxeWy/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/ori-wisps/f36110a6ccee86d3acf96b04-480.webp
+Trang chính thức: https://store.steampowered.com/app/1057090/
+SHA256: 435dadb958ceed4476a9a119278a421f136ebd692859d48d8cf29370657700f9
+Review: Not individually reviewed
+
+3. Trine 4: The Nightmare Prince — Frozenbyte
+File: images/075f54af5021d41f7e4d2a42-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/18VOIGgDLlaIPgiChmvKZVhffbRso_CT2/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/trine4/075f54af5021d41f7e4d2a42-480.webp
+Trang chính thức: https://store.steampowered.com/app/690640/
+SHA256: 3346f4355e72253b092c8ed95c45cc5b13deb30cddfb63ba9c6801b29cdb02c2
+Review: Not individually reviewed
+
+4. Trine 5: A Clockwork Conspiracy — Frozenbyte
+File: images/9d99c0fdfa285068b641a88a-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/1mepCiHZk1A4riO26kAm9zGdNf_dr9BDf/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/trine5/9d99c0fdfa285068b641a88a-480.webp
+Trang chính thức: https://store.steampowered.com/app/1436700/
+SHA256: 333cc4ae37a0913a46014c6e1cbf8243f6357475bd84a631dfeabf7a2136a5ed
+Review: Not individually reviewed

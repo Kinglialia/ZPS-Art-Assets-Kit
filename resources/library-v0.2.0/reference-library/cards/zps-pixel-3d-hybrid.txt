@@ -1,0 +1,47 @@
+Sprite điểm ảnh trong thế giới 3D — zps-pixel-3d-hybrid v2
+Ngày kiểm tra: 2026-11-03
+Nhóm: Điểm ảnh và hoài cổ
+Nguồn: https://game-library.zingplay.dev/styles/pixel-3d-hybrid/
+
+TÓM TẮT NGUỒN (VIẾT LẠI)
+Sprite 2D xuất hiện trong cảnh có chiều sâu và ánh sáng 3D. HD-2D là tên riêng dùng cho các ví dụ, không phải nhãn mọi phong cách lai.
+
+QUAN SÁT ẢNH ĐẠI DIỆN
+Sprite nhỏ nằm trong sân và cầu có chiều sâu; vùng sáng giữa khung nổi lên trên cảnh tối, tiền cảnh có độ mờ.
+Ảnh được quan sát: images/33b91ca102e6367ec9db6d8f-1280.webp
+
+GỢI Ý CỦA AD (SUY LUẬN)
+Phù hợp thử sprite với chiều sâu cảnh; dễ phát sinh bất nhất tỷ lệ pixel, ánh sáng và camera.
+
+TEST ĐỀ XUẤT
+Test sprite ở khoảng cách gần/xa, bóng đổ và góc máy; khóa quy tắc pixel scale trước sản xuất hàng loạt.
+
+GIỚI HẠN
+Ảnh tĩnh không xác nhận animation, pipeline, hiệu năng hoặc license. Phân tích trực quan hiện chỉ cho ảnh đại diện; mở ảnh gốc khi cần chi tiết.
+Assistant viewed representative image in gallery at overview scale on 2026-11-03; secondary images decode/hash checked, not individually art-reviewed.
+Ảnh dùng làm reference nghiên cứu. Quyền thuộc chủ sở hữu gốc; chưa xác nhận giấy phép tái sử dụng trong sản phẩm.
+
+ẢNH THAM KHẢO
+1. OCTOPATH TRAVELER II — Square Enix, ACQUIRE Corp.
+File: images/33b91ca102e6367ec9db6d8f-1280.webp | 1280 × 720 px
+Drive: https://drive.google.com/file/d/1_aOR7QiKwELHXel5Bd-KBMFtIP5In--9/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/steam-1971650/33b91ca102e6367ec9db6d8f-1280.webp
+Trang chính thức: https://store.steampowered.com/app/1971650/
+SHA256: ef6e461cefe27006f822530ea640881ee8daeff6ac6a0393c0ee87de93bb7715
+Review: Representative image visually inspected at overview scale, 2026-11-03
+
+2. TRIANGLE STRATEGY — Square Enix, ARTDINK
+File: images/8375af245468c4f63ea4e095-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/1Qui_tLEZ8uwFzffohS7RepxyGyH8OV5E/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/steam-1850510/8375af245468c4f63ea4e095-480.webp
+Trang chính thức: https://store.steampowered.com/app/1850510/
+SHA256: 04d8717fde06223a0499b5bd90964e6969e00bf19a374fff8975467eee61962b
+Review: Not individually reviewed
+
+3. LIVE A LIVE — Square Enix, historia Inc.
+File: images/8aaf8f82a1ccc6be69d5153b-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/1YolukGtoHM0NaT4JeZE7neSmwujYPiFE/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/steam-2014380/8aaf8f82a1ccc6be69d5153b-480.webp
+Trang chính thức: https://store.steampowered.com/app/2014380/
+SHA256: 90495925c9ed8b0283cb0d295cb8b5ea589fa061f4ef1afc5f026632525a4afa
+Review: Not individually reviewed

@@ -1,0 +1,9 @@
+{
+  "source": "AD artistic-critique v0.1.0, section 'Make findings actionable'",
+  "source_sha256": "0beb290ef24ffe04baa85e4c4c443671da4a62aed5c9eb6deb10e57f3dcd9ff6",
+  "note": "Artist review and AD critique share these issue fields. Change only together with the AD skill; tests check review.md and the review skills use every field.",
+  "fields": ["id", "priority", "region", "viewing_condition", "evidence", "consequence", "confidence", "repair", "preserve", "acceptance", "status"],
+  "priorities": ["blocker", "major", "minor", "preference"],
+  "verdicts": ["meets_checked_criteria", "needs_revision", "insufficient_evidence"],
+  "self_check_dimensions": ["composition", "shape_silhouette", "color_value", "lighting", "material_texture", "visual_appeal"]
+}

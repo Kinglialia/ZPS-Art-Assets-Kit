@@ -1,0 +1,47 @@
+Ligne claire và Moebius — zps-ligne-claire v2
+Ngày kiểm tra: 2026-11-03
+Nhóm: Hình khối và chất liệu
+Nguồn: https://game-library.zingplay.dev/styles/ligne-claire/
+
+TÓM TẮT NGUỒN (VIẾT LẠI)
+Viền đều, mảng màu nhẹ và kiến trúc rõ tạo cảm giác truyện tranh; không phụ thuộc riêng bối cảnh sa mạc.
+
+QUAN SÁT ẢNH ĐẠI DIỆN
+Tháp đá có mái vàng đứng trước dãy núi nhạt; nét viền mảnh chạy theo các lớp kiến trúc và địa hình.
+Ảnh được quan sát: images/f7cf5d40340dfcfc534daff6-1280.webp
+
+GỢI Ý CỦA AD (SUY LUẬN)
+Phù hợp cảnh khám phá có kiến trúc và khoảng thở; đường nét quá mảnh có thể mất trên mobile.
+
+TEST ĐỀ XUẤT
+So sánh viền ở vài mức zoom và độ phân giải đích; kiểm tra vật thể xa không hòa vào nền.
+
+GIỚI HẠN
+Ảnh tĩnh không xác nhận animation, pipeline, hiệu năng hoặc license. Phân tích trực quan hiện chỉ cho ảnh đại diện; mở ảnh gốc khi cần chi tiết.
+Assistant viewed representative image in gallery at overview scale on 2026-11-03; secondary images decode/hash checked, not individually art-reviewed.
+Ảnh dùng làm reference nghiên cứu. Quyền thuộc chủ sở hữu gốc; chưa xác nhận giấy phép tái sử dụng trong sản phẩm.
+
+ẢNH THAM KHẢO
+1. Sable — Shedworks
+File: images/f7cf5d40340dfcfc534daff6-1280.webp | 1280 × 720 px
+Drive: https://drive.google.com/file/d/1gr3T8YqDXpgIzHYZbeQM1MivHfGTRfwJ/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/sable/f7cf5d40340dfcfc534daff6-1280.webp
+Trang chính thức: https://store.steampowered.com/app/757310/
+SHA256: d0614f12875c032b84b5ff6b5a60c72353042e68beb985e24c4f6e56627d6628
+Review: Representative image visually inspected at overview scale, 2026-11-03
+
+2. Heaven's Vault — inkle Ltd
+File: images/bd5119e5b6274a62bd79692d-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/1LXETd4G_L71uyu6aDbSWJGRMGZOqyF3t/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/heavens-vault/bd5119e5b6274a62bd79692d-480.webp
+Trang chính thức: https://store.steampowered.com/app/774201/
+SHA256: 47c644030352bfa9223a67324cad3a60b0cd5a0c9fc698555d1b51e2e1c15fc9
+Review: Not individually reviewed
+
+3. Chants of Sennaar — Rundisc
+File: images/0c7b55a542bab74ccb3bbab1-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/1zWjjE69ip9W46s_puNJDBVskLi_K4smv/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/chants-of-sennaar/0c7b55a542bab74ccb3bbab1-480.webp
+Trang chính thức: https://store.steampowered.com/app/1931770/
+SHA256: 5b1f625fc79b97050d758f706a559104fd011f59ebfba7e875552e23b22e7d75
+Review: Not individually reviewed

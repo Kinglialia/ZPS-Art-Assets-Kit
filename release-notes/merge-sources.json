@@ -1,0 +1,27 @@
+[
+  {
+    "file": "Codex-ZPS-2D-Artist-v0.4.0.zip",
+    "bytes": 209445,
+    "sha256": "2e1ba978172f450a778531dd00c37cec8dd44fe8c122f334183eb18cdab8d90b"
+  },
+  {
+    "file": "Codex-ZPS-Texture-Artist-v0.4.0.zip",
+    "bytes": 219112,
+    "sha256": "599159269aea7df7189072593e6068610d2c101aba0da29f8ed047f8ae23d0cc"
+  },
+  {
+    "file": "learning-layer-research.md",
+    "bytes": 19164,
+    "sha256": "070f5e873adf6048313eaaf27719814f889b3c0d828f79dfc1eb9816781d2265"
+  },
+  {
+    "file": "3d-artist-skill.zip",
+    "bytes": 232661,
+    "sha256": "9d55afc5f0125c134a054fff6090c2042aea01686c63d88112c1b1b2c532acf4"
+  },
+  {
+    "file": "Art-Director-Library-and-Manager-v0.2.0.zip",
+    "bytes": 6035200,
+    "sha256": "f84afa1e31f4d9ccde0cfa506942f7b2cc583de0a73086166399748cd8a91ec6"
+  }
+]

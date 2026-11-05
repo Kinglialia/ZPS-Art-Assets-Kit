@@ -1,0 +1,486 @@
+[
+  {
+    "id": "zps-kinetic-interface-collage",
+    "source_url": "https://game-library.zingplay.dev/styles/kinetic-interface-collage/",
+    "unique_images": 8,
+    "observed_asset_variants": 9,
+    "image_sources": [
+      "https://game-library.zingplay.dev/img/persona-5-royal/38d09e40dd56df43a1bb083d-1280.webp",
+      "https://game-library.zingplay.dev/img/neo-twewy/6a8b580e9de683156c431d50-480.webp",
+      "https://game-library.zingplay.dev/img/neon-white/d8c2c0eb97bc25344f24da92-480.webp",
+      "https://game-library.zingplay.dev/img/metaphor-refantazio/dd1158073d02bf6afcbbac46-480.webp",
+      "https://game-library.zingplay.dev/img/persona-3-reload/f51fc26c627816bbd87011ca-480.webp",
+      "https://game-library.zingplay.dev/img/persona-5-royal/63d2164bf39a43905e960238-480.webp",
+      "https://game-library.zingplay.dev/img/persona-5-royal/663171dc3afce8fe987e57e8-480.webp",
+      "https://game-library.zingplay.dev/img/persona-5-royal/ddcc016b8e5c434ccbd1a89c-480.webp"
+    ]
+  },
+  {
+    "id": "zps-wafu-storybook-watercolor",
+    "source_url": "https://game-library.zingplay.dev/styles/wafu-storybook-watercolor/",
+    "unique_images": 2,
+    "observed_asset_variants": 3,
+    "image_sources": [
+      "https://game-library.zingplay.dev/img/difugo/2796139cfac70b79468d4c0e-1280.webp",
+      "https://game-library.zingplay.dev/img/village-in-the-shade/1a5f29793308d8eba1d69b44-480.webp"
+    ]
+  },
+  {
+    "id": "zps-chunky-mobile-strategy",
+    "source_url": "https://game-library.zingplay.dev/styles/chunky-mobile-strategy/",
+    "unique_images": 3,
+    "observed_asset_variants": 4,
+    "image_sources": [
+      "https://game-library.zingplay.dev/img/clash-of-clans/6fe6deecc34a546de1f15b74-1280.webp",
+      "https://game-library.zingplay.dev/img/kingshot/c7442c7558efcabad78ef88c-480.webp",
+      "https://game-library.zingplay.dev/img/clash-royale/f8b9becdf7e61b45c4798fc8-480.webp"
+    ]
+  },
+  {
+    "id": "zps-graffiti-street-cel",
+    "source_url": "https://game-library.zingplay.dev/styles/graffiti-street-cel/",
+    "unique_images": 3,
+    "observed_asset_variants": 4,
+    "image_sources": [
+      "https://game-library.zingplay.dev/img/bomb-rush-cyberfunk/88eb0d62109e0994e6b7efc2-1280.webp",
+      "https://game-library.zingplay.dev/img/jet-set-radio/65a7815b8c6344e16d8a3668-480.webp",
+      "https://game-library.zingplay.dev/img/lethal-league-blaze/639cc598b8e5f95b8ac40345-480.webp"
+    ]
+  },
+  {
+    "id": "zps-ligne-claire",
+    "source_url": "https://game-library.zingplay.dev/styles/ligne-claire/",
+    "unique_images": 3,
+    "observed_asset_variants": 4,
+    "image_sources": [
+      "https://game-library.zingplay.dev/img/sable/f7cf5d40340dfcfc534daff6-1280.webp",
+      "https://game-library.zingplay.dev/img/heavens-vault/bd5119e5b6274a62bd79692d-480.webp",
+      "https://game-library.zingplay.dev/img/chants-of-sennaar/0c7b55a542bab74ccb3bbab1-480.webp"
+    ]
+  },
+  {
+    "id": "zps-textile-yarn-craft",
+    "source_url": "https://game-library.zingplay.dev/styles/textile-yarn-craft/",
+    "unique_images": 3,
+    "observed_asset_variants": 4,
+    "image_sources": [
+      "https://game-library.zingplay.dev/img/unravel/222b64545eaedb17f47dae98-1280.webp",
+      "https://game-library.zingplay.dev/img/unravel-two/1b80ad222f28236cac60f9b0-480.webp",
+      "https://game-library.zingplay.dev/img/sackboy-a-big-adventure/41185d31926c4348e396f626-480.webp"
+    ]
+  },
+  {
+    "id": "zps-sumi-e-ink-wash",
+    "source_url": "https://game-library.zingplay.dev/styles/sumi-e-ink-wash/",
+    "unique_images": 3,
+    "observed_asset_variants": 4,
+    "image_sources": [
+      "https://game-library.zingplay.dev/img/okami-hd/cd53a4f4e19997789b43d4ff-1280.webp",
+      "https://game-library.zingplay.dev/img/bladed-fury/09240a6c2fa1871e41fab745-480.webp",
+      "https://game-library.zingplay.dev/img/realm-of-ink/f669d7a9886544f6cd64e9f8-480.webp"
+    ]
+  },
+  {
+    "id": "zps-expressionist-painting",
+    "source_url": "https://game-library.zingplay.dev/styles/expressionist-painting/",
+    "unique_images": 1,
+    "observed_asset_variants": 2,
+    "image_sources": [
+      "https://game-library.zingplay.dev/img/disco-elysium/c6eb9127b87deda61c24366d-1280.webp"
+    ]
+  },
+  {
+    "id": "zps-bold-comic-illustration",
+    "source_url": "https://game-library.zingplay.dev/styles/bold-comic-illustration/",
+    "unique_images": 3,
+    "observed_asset_variants": 4,
+    "image_sources": [
+      "https://game-library.zingplay.dev/img/hades/e52c7a48405b5a280603ebeb-1280.webp",
+      "https://game-library.zingplay.dev/img/pyre/8758b3dee12e97b95c8ca399-480.webp",
+      "https://game-library.zingplay.dev/img/battle-chasers/b090a271030d0332f4f51215-480.webp"
+    ]
+  },
+  {
+    "id": "zps-watercolor-wash",
+    "source_url": "https://game-library.zingplay.dev/styles/watercolor-wash/",
+    "unique_images": 3,
+    "observed_asset_variants": 4,
+    "image_sources": [
+      "https://game-library.zingplay.dev/img/gris/21729282553ec078abcf1db2-1280.webp",
+      "https://game-library.zingplay.dev/img/dordogne/3bbbb84208230d936c74701f-480.webp",
+      "https://game-library.zingplay.dev/img/child-of-light/877a06548dc1f8a841f2f499-480.webp"
+    ]
+  },
+  {
+    "id": "zps-pixel-3d-hybrid",
+    "source_url": "https://game-library.zingplay.dev/styles/pixel-3d-hybrid/",
+    "unique_images": 3,
+    "observed_asset_variants": 4,
+    "image_sources": [
+      "https://game-library.zingplay.dev/img/steam-1971650/33b91ca102e6367ec9db6d8f-1280.webp",
+      "https://game-library.zingplay.dev/img/steam-1850510/8375af245468c4f63ea4e095-480.webp",
+      "https://game-library.zingplay.dev/img/steam-2014380/8aaf8f82a1ccc6be69d5153b-480.webp"
+    ]
+  },
+  {
+    "id": "zps-faceted-low-poly",
+    "source_url": "https://game-library.zingplay.dev/styles/faceted-low-poly/",
+    "unique_images": 3,
+    "observed_asset_variants": 4,
+    "image_sources": [
+      "https://game-library.zingplay.dev/img/aer/9f10de951e6e72ade7f3118d-1280.webp",
+      "https://game-library.zingplay.dev/img/grow-home/6866cb09f3d7a2a98d5175ca-480.webp",
+      "https://game-library.zingplay.dev/img/first-tree/d906420549eca08c20af0e1f-480.webp"
+    ]
+  },
+  {
+    "id": "zps-sculpted-clay",
+    "source_url": "https://game-library.zingplay.dev/styles/sculpted-clay/",
+    "unique_images": 5,
+    "observed_asset_variants": 6,
+    "image_sources": [
+      "https://game-library.zingplay.dev/img/hylics2/7d5051fb70268379a89484bd-1280.webp",
+      "https://game-library.zingplay.dev/img/dream-machine/3711a2a4dd92c1306f25864d-480.webp",
+      "https://game-library.zingplay.dev/img/armikrog/3b75bba27b2a008e8aabe306-480.webp",
+      "https://game-library.zingplay.dev/img/claybook/44a62ecbe6ccf3092120a917-480.webp",
+      "https://game-library.zingplay.dev/img/plastiland/30c9cc836da788e5115e4e78-480.webp"
+    ]
+  },
+  {
+    "id": "zps-8bit-pixel",
+    "source_url": "https://game-library.zingplay.dev/styles/8bit-pixel/",
+    "unique_images": 4,
+    "observed_asset_variants": 5,
+    "image_sources": [
+      "https://game-library.zingplay.dev/img/steam-250760/3c536bdb2ec0ad577e7a3380-1280.webp",
+      "https://game-library.zingplay.dev/img/steam-70300/3343f7887b7cdc814fda8a4b-480.webp",
+      "https://game-library.zingplay.dev/img/steam-332200/d736ec1836a17c24f0bcab59-480.webp",
+      "https://game-library.zingplay.dev/img/steam-764790/45e6d4fc4f10009691c2c2a9-480.webp"
+    ]
+  },
+  {
+    "id": "zps-voxel-worlds",
+    "source_url": "https://game-library.zingplay.dev/styles/voxel-worlds/",
+    "unique_images": 3,
+    "observed_asset_variants": 4,
+    "image_sources": [
+      "https://game-library.zingplay.dev/img/teardown/e3750f84b7bb190bf8fb551e-1280.webp",
+      "https://game-library.zingplay.dev/img/riverbond/58c606d346b221fb721e80d7-480.webp",
+      "https://game-library.zingplay.dev/img/cloudpunk/2a558542b97a675be61bc028-480.webp"
+    ]
+  },
+  {
+    "id": "zps-illuminated-manuscript",
+    "source_url": "https://game-library.zingplay.dev/styles/illuminated-manuscript/",
+    "unique_images": 2,
+    "observed_asset_variants": 3,
+    "image_sources": [
+      "https://game-library.zingplay.dev/img/pentiment/c13f45d239b535cd1006e379-1280.webp",
+      "https://game-library.zingplay.dev/img/inkulinati/f0b786e49b63b60de41ae60b-480.webp"
+    ]
+  },
+  {
+    "id": "zps-rubber-hose-animation",
+    "source_url": "https://game-library.zingplay.dev/styles/rubber-hose-animation/",
+    "unique_images": 2,
+    "observed_asset_variants": 3,
+    "image_sources": [
+      "https://game-library.zingplay.dev/img/cuphead/5d739310cd17861d666ce448-1280.webp",
+      "https://game-library.zingplay.dev/img/mouse-pi/089d7a9df10329e064b8aa5e-480.webp"
+    ]
+  },
+  {
+    "id": "zps-pencil-hatching",
+    "source_url": "https://game-library.zingplay.dev/styles/pencil-hatching/",
+    "unique_images": 3,
+    "observed_asset_variants": 4,
+    "image_sources": [
+      "https://game-library.zingplay.dev/img/mundaun/2ce55ff990cd3145b80e1ad8-1280.webp",
+      "https://game-library.zingplay.dev/img/the-bridge/f1648b9c59391688ad928a51-480.webp",
+      "https://game-library.zingplay.dev/img/neverending-nightmares/abdc00c6fe015e52e757a7d0-480.webp"
+    ]
+  },
+  {
+    "id": "zps-gothic-contour",
+    "source_url": "https://game-library.zingplay.dev/styles/gothic-contour/",
+    "unique_images": 2,
+    "observed_asset_variants": 3,
+    "image_sources": [
+      "https://game-library.zingplay.dev/img/hollow-knight/b9a45f1cd6f100ff1c31c3d5-1280.webp",
+      "https://game-library.zingplay.dev/img/silksong/477b5903d6fa9990cf113ee4-480.webp"
+    ]
+  },
+  {
+    "id": "zps-lush-painted-worlds",
+    "source_url": "https://game-library.zingplay.dev/styles/lush-painted-worlds/",
+    "unique_images": 3,
+    "observed_asset_variants": 4,
+    "image_sources": [
+      "https://game-library.zingplay.dev/img/bastion/fdfa51d8df370a61ecd1af35-1280.webp",
+      "https://game-library.zingplay.dev/img/transistor/93ede176c6d8bf8fa3136392-480.webp",
+      "https://game-library.zingplay.dev/img/dust/2f6a867ac4c3a3a2cf4f8243-480.webp"
+    ]
+  },
+  {
+    "id": "zps-decorative-storybook",
+    "source_url": "https://game-library.zingplay.dev/styles/decorative-storybook/",
+    "unique_images": 3,
+    "observed_asset_variants": 4,
+    "image_sources": [
+      "https://game-library.zingplay.dev/img/wytchwood/41b62fe7bb9a95da3dad726c-1280.webp",
+      "https://game-library.zingplay.dev/img/cozy-grove/93ac8907f8b703f0d164f861-480.webp",
+      "https://game-library.zingplay.dev/img/spiritfarer/24464047395103fb1812febd-480.webp"
+    ]
+  },
+  {
+    "id": "zps-classical-painting-collage",
+    "source_url": "https://game-library.zingplay.dev/styles/classical-painting-collage/",
+    "unique_images": 3,
+    "observed_asset_variants": 4,
+    "image_sources": [
+      "https://game-library.zingplay.dev/img/four-last-things/dac4ef58147ca3986f79558b-1280.webp",
+      "https://game-library.zingplay.dev/img/procession-calvary/b394b9fc4532f06242f02ca9-480.webp",
+      "https://game-library.zingplay.dev/img/death-reprobate/bde0ceadc06539e532248961-480.webp"
+    ]
+  },
+  {
+    "id": "zps-detailed-doodle",
+    "source_url": "https://game-library.zingplay.dev/styles/detailed-doodle/",
+    "unique_images": 2,
+    "observed_asset_variants": 3,
+    "image_sources": [
+      "https://game-library.zingplay.dev/img/hidden-folks/0b368139db638ee4006b9bd8-1280.webp",
+      "https://game-library.zingplay.dev/img/hidden-through-time/01458e43bacad6c98612624d-480.webp"
+    ]
+  },
+  {
+    "id": "zps-black-figure-pottery",
+    "source_url": "https://game-library.zingplay.dev/styles/black-figure-pottery/",
+    "unique_images": 1,
+    "observed_asset_variants": 2,
+    "image_sources": [
+      "https://game-library.zingplay.dev/img/apotheon/c71b0cb13cd2294d08355813-1280.webp"
+    ]
+  },
+  {
+    "id": "zps-heavy-ink-shadows",
+    "source_url": "https://game-library.zingplay.dev/styles/heavy-ink-shadows/",
+    "unique_images": 3,
+    "observed_asset_variants": 4,
+    "image_sources": [
+      "https://game-library.zingplay.dev/img/darkest-dungeon/18dde006b5335f6f6f666912-1280.webp",
+      "https://game-library.zingplay.dev/img/darkest-dungeon-ii/8c3bb4c49cae9c643df2784c-480.webp",
+      "https://game-library.zingplay.dev/img/dont-starve/b629a277ef4db4b0e0c444c7-480.webp"
+    ]
+  },
+  {
+    "id": "zps-monochrome-pixel",
+    "source_url": "https://game-library.zingplay.dev/styles/monochrome-pixel/",
+    "unique_images": 3,
+    "observed_asset_variants": 4,
+    "image_sources": [
+      "https://game-library.zingplay.dev/img/steam-916730/2d05621a39eb2a6c6e14104e-1280.webp",
+      "https://game-library.zingplay.dev/img/steam-609490/2f07311b3ca7865d2f861424-480.webp",
+      "https://game-library.zingplay.dev/img/steam-360740/5913cd3123b1c733761c8580-480.webp"
+    ]
+  },
+  {
+    "id": "zps-16bit-pixel",
+    "source_url": "https://game-library.zingplay.dev/styles/16bit-pixel/",
+    "unique_images": 3,
+    "observed_asset_variants": 4,
+    "image_sources": [
+      "https://game-library.zingplay.dev/img/steam-584400/54359f542903002a4e063a79-1280.webp",
+      "https://game-library.zingplay.dev/img/steam-248310/adcc4c045d03185cc69dd4e3-480.webp",
+      "https://game-library.zingplay.dev/img/steam-601810/61cee4506ad89d61da7377b8-480.webp"
+    ]
+  },
+  {
+    "id": "zps-detailed-pixel",
+    "source_url": "https://game-library.zingplay.dev/styles/detailed-pixel/",
+    "unique_images": 3,
+    "observed_asset_variants": 4,
+    "image_sources": [
+      "https://game-library.zingplay.dev/img/steam-115800/c3aef10389a2b9f9a6d4c049-1280.webp",
+      "https://game-library.zingplay.dev/img/steam-774361/5a2793308a621c91e5652e59-480.webp",
+      "https://game-library.zingplay.dev/img/steam-330020/6832a95fd867e0aa66ee7ce9-480.webp"
+    ]
+  },
+  {
+    "id": "zps-luminous-pixel",
+    "source_url": "https://game-library.zingplay.dev/styles/luminous-pixel/",
+    "unique_images": 3,
+    "observed_asset_variants": 4,
+    "image_sources": [
+      "https://game-library.zingplay.dev/img/steam-257850/5ab97512ceb9a4e5b443ff41-1280.webp",
+      "https://game-library.zingplay.dev/img/steam-460950/cb6ed6b978f28532833a23eb-480.webp",
+      "https://game-library.zingplay.dev/img/steam-1069530/6e29df1511707d17e4445d53-480.webp"
+    ]
+  },
+  {
+    "id": "zps-topdown-tile-pixel",
+    "source_url": "https://game-library.zingplay.dev/styles/topdown-tile-pixel/",
+    "unique_images": 3,
+    "observed_asset_variants": 4,
+    "image_sources": [
+      "https://game-library.zingplay.dev/img/steam-368340/659b206ffbc754c5dfdad025-1280.webp",
+      "https://game-library.zingplay.dev/img/steam-977880/821fcc0482614f701d01f4bc-480.webp",
+      "https://game-library.zingplay.dev/img/steam-413150/65643f247f7e32380fa20be0-480.webp"
+    ]
+  },
+  {
+    "id": "zps-low-resolution-3d",
+    "source_url": "https://game-library.zingplay.dev/styles/low-resolution-3d/",
+    "unique_images": 3,
+    "observed_asset_variants": 4,
+    "image_sources": [
+      "https://game-library.zingplay.dev/img/steam-1262350/3afad8bd0857f7d4e282535a-1280.webp",
+      "https://game-library.zingplay.dev/img/steam-1996010/5f39f54ce5759ae910b69fe3-480.webp",
+      "https://game-library.zingplay.dev/img/steam-1574240/84a00b6e0aef0ae399cc9eb1-480.webp"
+    ]
+  },
+  {
+    "id": "zps-coarse-pixel",
+    "source_url": "https://game-library.zingplay.dev/styles/coarse-pixel/",
+    "unique_images": 3,
+    "observed_asset_variants": 4,
+    "image_sources": [
+      "https://game-library.zingplay.dev/img/steam-284390/22ba63dfb44ce55c8e2f4489-1280.webp",
+      "https://game-library.zingplay.dev/img/steam-391540/5d9dcc85fe9091334da6f23b-480.webp",
+      "https://game-library.zingplay.dev/img/steam-1179080/28b0e42d17257f22c3623661-480.webp"
+    ]
+  },
+  {
+    "id": "zps-anime-cel-3d",
+    "source_url": "https://game-library.zingplay.dev/styles/anime-cel-3d/",
+    "unique_images": 3,
+    "observed_asset_variants": 4,
+    "image_sources": [
+      "https://game-library.zingplay.dev/img/guilty-gear/3d62fc7b7ab0acfdef5d5c05-1280.webp",
+      "https://game-library.zingplay.dev/img/fighterz/b523beec7db460e463ab8f55-480.webp",
+      "https://game-library.zingplay.dev/img/hi-fi-rush/52dac6603aa1163bcf46ac35-480.webp"
+    ]
+  },
+  {
+    "id": "zps-inked-comic-3d",
+    "source_url": "https://game-library.zingplay.dev/styles/inked-comic-3d/",
+    "unique_images": 3,
+    "observed_asset_variants": 4,
+    "image_sources": [
+      "https://game-library.zingplay.dev/img/borderlands2/f4bde6972431fb8e5fc3638b-1280.webp",
+      "https://game-library.zingplay.dev/img/borderlands3/ddc5bec7bae1fc9d70501ade-480.webp",
+      "https://game-library.zingplay.dev/img/roboquest/2f255f0583539731bce158b1-480.webp"
+    ]
+  },
+  {
+    "id": "zps-paper-craft",
+    "source_url": "https://game-library.zingplay.dev/styles/paper-craft/",
+    "unique_images": 3,
+    "observed_asset_variants": 4,
+    "image_sources": [
+      "https://game-library.zingplay.dev/img/tengami/73dbe5879136d3f6feae669f-1280.webp",
+      "https://game-library.zingplay.dev/img/paper-trail/8f48d6e85963e2b01c2688dc-480.webp",
+      "https://game-library.zingplay.dev/img/lumino-city/bbd9d248d167ba3d6b3ced79-480.webp"
+    ]
+  },
+  {
+    "id": "zps-miniature-diorama",
+    "source_url": "https://game-library.zingplay.dev/styles/miniature-diorama/",
+    "unique_images": 3,
+    "observed_asset_variants": 4,
+    "image_sources": [
+      "https://game-library.zingplay.dev/img/tiny-glade/1fb611bd13792db1fdd5bfcc-1280.webp",
+      "https://game-library.zingplay.dev/img/dorfromantik/ca0790e1dcc782c72c6504ba-480.webp",
+      "https://game-library.zingplay.dev/img/townscaper/1422721b2517dd62dd92ba2d-480.webp"
+    ]
+  },
+  {
+    "id": "zps-painterly-3d",
+    "source_url": "https://game-library.zingplay.dev/styles/painterly-3d/",
+    "unique_images": 3,
+    "observed_asset_variants": 4,
+    "image_sources": [
+      "https://game-library.zingplay.dev/img/dishonored/4006d839738c2be3ebb31e45-1280.webp",
+      "https://game-library.zingplay.dev/img/dishonored2/68d3f7a108a355cbc51331c4-480.webp",
+      "https://game-library.zingplay.dev/img/eastshade/ded18d986867a5909be11bef-480.webp"
+    ]
+  },
+  {
+    "id": "zps-cinematic-realism",
+    "source_url": "https://game-library.zingplay.dev/styles/cinematic-realism/",
+    "unique_images": 4,
+    "observed_asset_variants": 5,
+    "image_sources": [
+      "https://game-library.zingplay.dev/img/red-dead2/cf4bdfee3a9c961af4d943e5-1280.webp",
+      "https://game-library.zingplay.dev/img/cyberpunk/ec7f40415a114235c549a8ec-480.webp",
+      "https://game-library.zingplay.dev/img/hellblade2/8bdf127c9d52de726f9e4626-480.webp",
+      "https://game-library.zingplay.dev/img/modern-warfare-2019/d3e17c6edbcdae6649766161-480.webp"
+    ]
+  },
+  {
+    "id": "zps-muted-cinematic-3d",
+    "source_url": "https://game-library.zingplay.dev/styles/muted-cinematic-3d/",
+    "unique_images": 3,
+    "observed_asset_variants": 4,
+    "image_sources": [
+      "https://game-library.zingplay.dev/img/inside/ab90d81cacf83c6f93958263-1280.webp",
+      "https://game-library.zingplay.dev/img/somerville/e8f05769abaf31c883c3ac50-480.webp",
+      "https://game-library.zingplay.dev/img/little-nightmares/48a7a0d8e0605e03a07d8b0b-480.webp"
+    ]
+  },
+  {
+    "id": "zps-layered-silhouette",
+    "source_url": "https://game-library.zingplay.dev/styles/layered-silhouette/",
+    "unique_images": 3,
+    "observed_asset_variants": 4,
+    "image_sources": [
+      "https://game-library.zingplay.dev/img/limbo/a7c212ec7122bdb21b5a2602-1280.webp",
+      "https://game-library.zingplay.dev/img/nightsky/4ce12e620aa4dab0902e5f37-480.webp",
+      "https://game-library.zingplay.dev/img/badland/a86c5747520455c4aaafd8d3-480.webp"
+    ]
+  },
+  {
+    "id": "zps-minimal-geometric",
+    "source_url": "https://game-library.zingplay.dev/styles/minimal-geometric/",
+    "unique_images": 3,
+    "observed_asset_variants": 4,
+    "image_sources": [
+      "https://game-library.zingplay.dev/img/thomas/2f20c98bc91713f04338ee20-1280.webp",
+      "https://game-library.zingplay.dev/img/super-hexagon/41a500a21a95e5c420c634bb-480.webp",
+      "https://game-library.zingplay.dev/img/140/829134b22434c0b80f6bf63a-480.webp"
+    ]
+  },
+  {
+    "id": "zps-neon-vector",
+    "source_url": "https://game-library.zingplay.dev/styles/neon-vector/",
+    "unique_images": 3,
+    "observed_asset_variants": 4,
+    "image_sources": [
+      "https://game-library.zingplay.dev/img/geometry-wars3/15eb514abcf412e09aef170a-1280.webp",
+      "https://game-library.zingplay.dev/img/geometry-wars/4fe0648585b3ec8cadec9ff6-480.webp",
+      "https://game-library.zingplay.dev/img/waves/c20e33200c041061e59b9baf-480.webp"
+    ]
+  },
+  {
+    "id": "zps-monochrome-dither-3d",
+    "source_url": "https://game-library.zingplay.dev/styles/monochrome-dither-3d/",
+    "unique_images": 2,
+    "observed_asset_variants": 3,
+    "image_sources": [
+      "https://game-library.zingplay.dev/img/obra-dinn/2feb6481b29104a375b6147d-1280.webp",
+      "https://game-library.zingplay.dev/img/whos-lila/d55529d9febe5f366fa255ab-480.webp"
+    ]
+  },
+  {
+    "id": "zps-luminous-layered-painting",
+    "source_url": "https://game-library.zingplay.dev/styles/luminous-layered-painting/",
+    "unique_images": 4,
+    "observed_asset_variants": 5,
+    "image_sources": [
+      "https://game-library.zingplay.dev/img/ori-blind-forest/5fa16ec3b23a012ea92b9dce-1280.webp",
+      "https://game-library.zingplay.dev/img/ori-wisps/f36110a6ccee86d3acf96b04-480.webp",
+      "https://game-library.zingplay.dev/img/trine4/075f54af5021d41f7e4d2a42-480.webp",
+      "https://game-library.zingplay.dev/img/trine5/9d99c0fdfa285068b641a88a-480.webp"
+    ]
+  }
+]

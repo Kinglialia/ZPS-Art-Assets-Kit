@@ -1,0 +1,47 @@
+Giấy gấp và thủ công giấy — zps-paper-craft v2
+Ngày kiểm tra: 2026-11-03
+Nhóm: Hình khối và chất liệu
+Nguồn: https://game-library.zingplay.dev/styles/paper-craft/
+
+TÓM TẮT NGUỒN (VIẾT LẠI)
+Mép, nếp và độ dày giấy cùng các lớp chồng tạo không gian thủ công, có thể làm bằng kỹ thuật số hoặc vật thật.
+
+QUAN SÁT ẢNH ĐẠI DIỆN
+Cảnh xanh lam gồm các mặt giấy chồng có bóng mép; sói sáng trên bệ cao, nhân vật nhỏ nằm phía dưới.
+Ảnh được quan sát: images/73dbe5879136d3f6feae669f-1280.webp
+
+GỢI Ý CỦA AD (SUY LUẬN)
+Có thể dùng lớp giấy để phân cấp không gian hoặc cơ chế gấp; palette đồng sắc dễ làm nhân vật chìm.
+
+TEST ĐỀ XUẤT
+Test grayscale, lớp trước/sau và bóng mép ở kích thước điện thoại.
+
+GIỚI HẠN
+Ảnh tĩnh không xác nhận animation, pipeline, hiệu năng hoặc license. Phân tích trực quan hiện chỉ cho ảnh đại diện; mở ảnh gốc khi cần chi tiết.
+Assistant viewed representative image in gallery at overview scale on 2026-11-03; secondary images decode/hash checked, not individually art-reviewed.
+Ảnh dùng làm reference nghiên cứu. Quyền thuộc chủ sở hữu gốc; chưa xác nhận giấy phép tái sử dụng trong sản phẩm.
+
+ẢNH THAM KHẢO
+1. Tengami — Nyamyam
+File: images/73dbe5879136d3f6feae669f-1280.webp | 1280 × 720 px
+Drive: https://drive.google.com/file/d/1mO97mMJA5crAc2t0-C4QzMpNN_UebTjW/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/tengami/73dbe5879136d3f6feae669f-1280.webp
+Trang chính thức: https://store.steampowered.com/app/299680/
+SHA256: 74bde0e710af1f2056ddddd26e2b39a32281abae69f3bd19f47d498b316e486f
+Review: Representative image visually inspected at overview scale, 2026-11-03
+
+2. Paper Trail — Newfangled Games
+File: images/8f48d6e85963e2b01c2688dc-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/19JqbjDMexJoO7qfmAK5YJ7GH4iIugxZh/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/paper-trail/8f48d6e85963e2b01c2688dc-480.webp
+Trang chính thức: https://store.steampowered.com/app/1889740/
+SHA256: 0b81bcd4ae38722875e0b6b32500fffe99c824c6700a92c922e677b0fe0894a2
+Review: Not individually reviewed
+
+3. Lumino City — State of Play
+File: images/bbd9d248d167ba3d6b3ced79-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/1XX3Ef-51Rf6ZlAygsJNx-HTygnoL-xN2/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/lumino-city/bbd9d248d167ba3d6b3ced79-480.webp
+Trang chính thức: https://store.steampowered.com/app/205020/
+SHA256: b28613f9f089cf178769d2e1f0b6f85cb43c828e7940bbf6268655219ab72428
+Review: Not individually reviewed

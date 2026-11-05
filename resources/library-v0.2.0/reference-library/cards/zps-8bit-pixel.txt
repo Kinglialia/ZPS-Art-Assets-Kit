@@ -1,0 +1,55 @@
+Điểm ảnh lấy cảm hứng 8-bit — zps-8bit-pixel v2
+Ngày kiểm tra: 2026-11-03
+Nhóm: Điểm ảnh và hoài cổ
+Nguồn: https://game-library.zingplay.dev/styles/8bit-pixel/
+
+TÓM TẮT NGUỒN (VIẾT LẠI)
+Sprite gọn và ít sắc độ gợi thẩm mỹ 8-bit, không chứng minh tuân thủ đúng giới hạn máy đời cũ.
+
+QUAN SÁT ẢNH ĐẠI DIỆN
+Sprite nhỏ trong phòng có viền pixel rõ; hộp thoại lớn chiếm dải trên, nền tối giúp tách nhân vật.
+Ảnh được quan sát: images/3c536bdb2ec0ad577e7a3380-1280.webp
+
+GỢI Ý CỦA AD (SUY LUẬN)
+Có thể xây bảng màu tiết chế và sprite rõ; không tự áp giới hạn NES nếu brief không yêu cầu.
+
+TEST ĐỀ XUẤT
+Test sprite sheet ở native scale và cách phóng to; kiểm tra nhấp nháy/smoothing.
+
+GIỚI HẠN
+Ảnh tĩnh không xác nhận animation, pipeline, hiệu năng hoặc license. Phân tích trực quan hiện chỉ cho ảnh đại diện; mở ảnh gốc khi cần chi tiết.
+Assistant viewed representative image in gallery at overview scale on 2026-11-03; secondary images decode/hash checked, not individually art-reviewed.
+Ảnh dùng làm reference nghiên cứu. Quyền thuộc chủ sở hữu gốc; chưa xác nhận giấy phép tái sử dụng trong sản phẩm.
+
+ẢNH THAM KHẢO
+1. Shovel Knight: Treasure Trove — Yacht Club Games
+File: images/3c536bdb2ec0ad577e7a3380-1280.webp | 1280 × 720 px
+Drive: https://drive.google.com/file/d/1nb1Ro32mu2VU5LcDIci4xKVpkT79-td9/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/steam-250760/3c536bdb2ec0ad577e7a3380-1280.webp
+Trang chính thức: https://store.steampowered.com/app/250760/
+SHA256: 310e54e9c9464fae4cb5059f45d322dfc4e0d1e35559964b6ea6f5d52da1e43f
+Review: Representative image visually inspected at overview scale, 2026-11-03
+
+2. VVVVVV — Terry Cavanagh
+File: images/3343f7887b7cdc814fda8a4b-480.webp | 480 × 360 px
+Drive: https://drive.google.com/file/d/17Gi4pf05-a5ewQPzxpTTZug4hss3_0Cb/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/steam-70300/3343f7887b7cdc814fda8a4b-480.webp
+Trang chính thức: https://store.steampowered.com/app/70300/
+SHA256: eec32aa7ddbac6dbd28715e1c4d869503a74df1a892a617b17f935676e7aedc1
+Review: Not individually reviewed
+
+3. Axiom Verge — Thomas Happ Games LLC
+File: images/d736ec1836a17c24f0bcab59-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/1OSTxWL79fPNI4fZFX8FHp_yaqaVsJDfI/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/steam-332200/d736ec1836a17c24f0bcab59-480.webp
+Trang chính thức: https://store.steampowered.com/app/332200/
+SHA256: c62bde62ad9ae85edc5feea2ed454daa2249a03e92770ff886cf802f76abac86
+Review: Not individually reviewed
+
+4. The Messenger — Sabotage
+File: images/45e6d4fc4f10009691c2c2a9-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/1b41tBEGDlAHM_dIkm1YAUcj4svWRb78u/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/steam-764790/45e6d4fc4f10009691c2c2a9-480.webp
+Trang chính thức: https://store.steampowered.com/app/764790/
+SHA256: d3479cbab58b2c1800c3129fb8c018db338eb94eac79b7960840f09dcf614c74
+Review: Not individually reviewed

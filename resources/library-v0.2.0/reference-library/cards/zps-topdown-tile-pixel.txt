@@ -1,0 +1,47 @@
+Điểm ảnh ô lát nhìn từ trên — zps-topdown-tile-pixel v2
+Ngày kiểm tra: 2026-11-03
+Nhóm: Điểm ảnh và hoài cổ
+Nguồn: https://game-library.zingplay.dev/styles/topdown-tile-pixel/
+
+TÓM TẮT NGUỒN (VIẾT LẠI)
+Tile nhìn từ trên cùng mặt đứng và sprite nhân vật biểu đạt lối đi, tầng cao và quan hệ không gian.
+
+QUAN SÁT ẢNH ĐẠI DIỆN
+Phố nhìn cao có mặt đứng tòa nhà, biển hiệu sáng và đường lát; nhân vật nhỏ phân bố trên cùng mặt nền.
+Ảnh được quan sát: images/659b206ffbc754c5dfdad025-1280.webp
+
+GỢI Ý CỦA AD (SUY LUẬN)
+Phù hợp RPG/exploration theo tile; cần quy tắc mặt đứng và tầng cao nhất quán.
+
+TEST ĐỀ XUẤT
+Test đi sau props, lên/xuống tầng và điểm chạm; kiểm tra occlusion.
+
+GIỚI HẠN
+Ảnh tĩnh không xác nhận animation, pipeline, hiệu năng hoặc license. Phân tích trực quan hiện chỉ cho ảnh đại diện; mở ảnh gốc khi cần chi tiết.
+Assistant viewed representative image in gallery at overview scale on 2026-11-03; secondary images decode/hash checked, not individually art-reviewed.
+Ảnh dùng làm reference nghiên cứu. Quyền thuộc chủ sở hữu gốc; chưa xác nhận giấy phép tái sử dụng trong sản phẩm.
+
+ẢNH THAM KHẢO
+1. CrossCode — Radical Fish Games
+File: images/659b206ffbc754c5dfdad025-1280.webp | 1136 × 640 px
+Drive: https://drive.google.com/file/d/1MLLJk07g1U-iqQV4CX8-41Wt1VIpqbll/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/steam-368340/659b206ffbc754c5dfdad025-1280.webp
+Trang chính thức: https://store.steampowered.com/app/368340/
+SHA256: f2fbc39090e3325fe8dc690099a9a6e349221ff8b417169218a83a6995c59f89
+Review: Representative image visually inspected at overview scale, 2026-11-03
+
+2. Eastward — Pixpil
+File: images/821fcc0482614f701d01f4bc-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/1BBI_W_Po7uiAgqc1HBTpwsufaHY_lPyz/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/steam-977880/821fcc0482614f701d01f4bc-480.webp
+Trang chính thức: https://store.steampowered.com/app/977880/
+SHA256: c16724f4682e67be602f356ab14430a85536182917050bb1888803fdf966f8cc
+Review: Not individually reviewed
+
+3. Stardew Valley — ConcernedApe
+File: images/65643f247f7e32380fa20be0-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/1OOXvCr6-D3M8Wrz551iXco1GgEz3p_jk/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/steam-413150/65643f247f7e32380fa20be0-480.webp
+Trang chính thức: https://store.steampowered.com/app/413150/
+SHA256: d50a7b85f938892bbd67e6edfe189a065ba0968eebeba1cb5d1f8cb131865371
+Review: Not individually reviewed

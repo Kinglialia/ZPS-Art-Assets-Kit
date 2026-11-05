@@ -1,0 +1,14 @@
+Tên reference:
+Link nguồn hoặc ảnh đính kèm:
+Tên game / tác giả (nếu biết):
+Muốn học: hình khối / màu / vật liệu / camera / UI / animation / khác
+Mục đích dự án (nếu có):
+Thêm mới hay cập nhật ID cũ:
+
+Phần assistant điền khi nhập:
+ID ổn định và version; ngày đọc nguồn; source_url; trạng thái DRAFT.
+Credit; nguồn ảnh; quyền sử dụng nếu biết; tên file ảnh và SHA256.
+Tóm tắt nguồn (viết lại ngắn); quan sát ảnh thực tế; suy luận AD riêng; giới hạn; test đề xuất.
+Chỉ chuyển READY khi đọc nguồn, mở ảnh lưu và kiểm tra hash thành công. READY không có nghĩa chủ dự án đã duyệt art direction.
+
+Schema 2 khi lưu: media là danh sách ảnh; mỗi ảnh có file, source_url, game, credit, official_url (có thể null), sha256, width, height, visual_review. Sau upload ghi drive_id/drive_url. image/image_sha256/image_source_url trỏ media[0]. Đọc 04-MAINTENANCE.txt trước khi cập nhật canonical library.json.

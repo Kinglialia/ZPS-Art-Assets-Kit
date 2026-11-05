@@ -1,0 +1,55 @@
+Hiện thực điện ảnh — zps-cinematic-realism v2
+Ngày kiểm tra: 2026-11-03
+Nhóm: 3D và kết xuất
+Nguồn: https://game-library.zingplay.dev/styles/cinematic-realism/
+
+TÓM TẮT NGUỒN (VIẾT LẠI)
+Vật liệu và tỷ lệ thuyết phục kết hợp ánh sáng, bố cục và xử lý màu theo ngôn ngữ điện ảnh.
+
+QUAN SÁT ẢNH ĐẠI DIỆN
+Hai người cưỡi ngựa ở vùng nước tối, đèn ấm nằm sâu trong sương xanh; ánh phản chiếu tạo đường dẫn giữa khung.
+Ảnh được quan sát: images/cf4bdfee3a9c961af4d943e5-1280.webp
+
+GỢI Ý CỦA AD (SUY LUẬN)
+Có thể dùng ánh sáng và khí quyển để định hướng cảm xúc; chi phí asset/render phải được dự toán riêng.
+
+TEST ĐỀ XUẤT
+Test scene budget, exposure và khả năng đọc gameplay trong sương/tối trên thiết bị mục tiêu.
+
+GIỚI HẠN
+Ảnh tĩnh không xác nhận animation, pipeline, hiệu năng hoặc license. Phân tích trực quan hiện chỉ cho ảnh đại diện; mở ảnh gốc khi cần chi tiết.
+Assistant viewed representative image in gallery at overview scale on 2026-11-03; secondary images decode/hash checked, not individually art-reviewed.
+Ảnh dùng làm reference nghiên cứu. Quyền thuộc chủ sở hữu gốc; chưa xác nhận giấy phép tái sử dụng trong sản phẩm.
+
+ẢNH THAM KHẢO
+1. Red Dead Redemption 2 — Rockstar Games
+File: images/cf4bdfee3a9c961af4d943e5-1280.webp | 1280 × 720 px
+Drive: https://drive.google.com/file/d/1X_LEjZMd6wMmuX8EGkZLdx8uQR9MhAx0/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/red-dead2/cf4bdfee3a9c961af4d943e5-1280.webp
+Trang chính thức: https://store.steampowered.com/app/1174180/
+SHA256: 7724c77b3cc5096d54960829fbc936b6b164374597b3ddc7ed7c41ac6c36a43f
+Review: Representative image visually inspected at overview scale, 2026-11-03
+
+2. Cyberpunk 2077 — CD PROJEKT RED
+File: images/ec7f40415a114235c549a8ec-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/1yR5UzEdH3xCZHBzzjsvSRArT1KVDF_ZE/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/cyberpunk/ec7f40415a114235c549a8ec-480.webp
+Trang chính thức: https://store.steampowered.com/app/1091500/
+SHA256: 904ed975661d43deafc44793861b02169c1fa37665db1536e2dbdc154d042869
+Review: Not individually reviewed
+
+3. Hellblade II: Senua’s Saga — Ninja Theory
+File: images/8bdf127c9d52de726f9e4626-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/1qyR41ZFKLcWaVw6M2Pp6q9GuFyLvPFef/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/hellblade2/8bdf127c9d52de726f9e4626-480.webp
+Trang chính thức: https://store.steampowered.com/app/2461850/
+SHA256: 3327c9ade890c527e88c61e425f39f41937cd4165a649eaf4b6cf6a2a6c1f4e5
+Review: Not individually reviewed
+
+4. Call of Duty: Modern Warfare (2019) — Infinity Ward, Beenox, High Moon Studios, Raven Software
+File: images/d3e17c6edbcdae6649766161-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/1BZ9eU0_ri3AacsYNhDmMsvK_FmWRLeIs/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/modern-warfare-2019/d3e17c6edbcdae6649766161-480.webp
+Trang chính thức: https://store.steampowered.com/app/2000950/
+SHA256: 06317cca4429cff0a1021a2337dfdc69a9dfc456baf82a7bb3fb92253dba6f23
+Review: Not individually reviewed

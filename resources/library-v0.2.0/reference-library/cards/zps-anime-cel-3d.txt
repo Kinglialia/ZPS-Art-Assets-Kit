@@ -1,0 +1,47 @@
+3D đổ bóng cel kiểu anime — zps-anime-cel-3d v2
+Ngày kiểm tra: 2026-11-03
+Nhóm: 3D và kết xuất
+Nguồn: https://game-library.zingplay.dev/styles/anime-cel-3d/
+
+TÓM TẮT NGUỒN (VIẾT LẠI)
+Khối 3D được trình bày bằng bóng phân bậc và viền kiểu anime; animation và VFX góp phần quan trọng.
+
+QUAN SÁT ẢNH ĐẠI DIỆN
+Hai nhân vật giao đấu với đường chém sáng rộng; thanh trạng thái trên cùng và biên khối có cảm giác nét hoạt hình.
+Ảnh được quan sát: images/3d62fc7b7ab0acfdef5d5c05-1280.webp
+
+GỢI Ý CỦA AD (SUY LUẬN)
+Phù hợp nhân vật hoạt hình 3D; giữ phong cách cần kiểm soát pose, ánh sáng và góc camera cùng nhau.
+
+TEST ĐỀ XUẤT
+Test model dưới nhiều góc/sáng và một đoạn animation; kiểm tra mặt không vỡ phong cách.
+
+GIỚI HẠN
+Ảnh tĩnh không xác nhận animation, pipeline, hiệu năng hoặc license. Phân tích trực quan hiện chỉ cho ảnh đại diện; mở ảnh gốc khi cần chi tiết.
+Assistant viewed representative image in gallery at overview scale on 2026-11-03; secondary images decode/hash checked, not individually art-reviewed.
+Ảnh dùng làm reference nghiên cứu. Quyền thuộc chủ sở hữu gốc; chưa xác nhận giấy phép tái sử dụng trong sản phẩm.
+
+ẢNH THAM KHẢO
+1. GUILTY GEAR -STRIVE- — Arc System Works
+File: images/3d62fc7b7ab0acfdef5d5c05-1280.webp | 1280 × 720 px
+Drive: https://drive.google.com/file/d/1KqPvO6ZeD3ZpRlxbToZV0w6vMXyYylHg/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/guilty-gear/3d62fc7b7ab0acfdef5d5c05-1280.webp
+Trang chính thức: https://store.steampowered.com/app/1384160/
+SHA256: bf2f43372fc6375f5f3070fcf5b893757cde79970dac6a470c3b4504de4dae92
+Review: Representative image visually inspected at overview scale, 2026-11-03
+
+2. DRAGON BALL FighterZ — Arc System Works
+File: images/b523beec7db460e463ab8f55-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/1eBFX47AgtoP-nBsWn2fStjMIuTN6ptL_/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/fighterz/b523beec7db460e463ab8f55-480.webp
+Trang chính thức: https://store.steampowered.com/app/678950/
+SHA256: cbcf9cceeb6653c5d9d0b00b99b3a6f2ea959c68dd9626d2ed3be2d346b0259a
+Review: Not individually reviewed
+
+3. Hi-Fi RUSH — Tango Gameworks
+File: images/52dac6603aa1163bcf46ac35-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/1MY0AUbFA7dBcsMgeHI9O-mn-qxDwIJ60/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/hi-fi-rush/52dac6603aa1163bcf46ac35-480.webp
+Trang chính thức: https://store.steampowered.com/app/1817230/
+SHA256: 4217900dbc51694ddfa5715194207e9fdd7a3856d40cbd4908c71e5a4ffefc23
+Review: Not individually reviewed

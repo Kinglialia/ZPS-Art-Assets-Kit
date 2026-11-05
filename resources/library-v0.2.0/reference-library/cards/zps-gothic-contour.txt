@@ -1,0 +1,39 @@
+Đường nét Gothic trang trí — zps-gothic-contour v2
+Ngày kiểm tra: 2026-11-03
+Nhóm: Hội họa và đường nét
+Nguồn: https://game-library.zingplay.dev/styles/gothic-contour/
+
+TÓM TẮT NGUỒN (VIẾT LẠI)
+Đường bao nhân vật đơn giản tương phản với chi tiết kiến trúc và đường cong trang trí của môi trường.
+
+QUAN SÁT ẢNH ĐẠI DIỆN
+Nhân vật trắng nhỏ đối diện khối địch lớn trong không gian xanh tím; đường bao sáng rõ và cột nền tối nhiều chi tiết.
+Ảnh được quan sát: images/b9a45f1cd6f100ff1c31c3d5-1280.webp
+
+GỢI Ý CỦA AD (SUY LUẬN)
+Có thể giữ nhân vật đơn giản trên nền trang trí dày; hình trang trí không được trùng đường gameplay.
+
+TEST ĐỀ XUẤT
+Test biên nhân vật qua cột, vòm và sương ở các vùng sáng/tối.
+
+GIỚI HẠN
+Ảnh tĩnh không xác nhận animation, pipeline, hiệu năng hoặc license. Phân tích trực quan hiện chỉ cho ảnh đại diện; mở ảnh gốc khi cần chi tiết.
+Assistant viewed representative image in gallery at overview scale on 2026-11-03; secondary images decode/hash checked, not individually art-reviewed.
+Ảnh dùng làm reference nghiên cứu. Quyền thuộc chủ sở hữu gốc; chưa xác nhận giấy phép tái sử dụng trong sản phẩm.
+
+ẢNH THAM KHẢO
+1. Hollow Knight — Team Cherry
+File: images/b9a45f1cd6f100ff1c31c3d5-1280.webp | 1280 × 720 px
+Drive: https://drive.google.com/file/d/1XqcahGfuRDTqzzeWrQREp7Hzl_YvPZRl/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/hollow-knight/b9a45f1cd6f100ff1c31c3d5-1280.webp
+Trang chính thức: https://store.steampowered.com/app/367520/
+SHA256: e3522cf56a96727164410791b828e18d11b6093c752f914cb0671c21db30d945
+Review: Representative image visually inspected at overview scale, 2026-11-03
+
+2. Hollow Knight: Silksong — Team Cherry
+File: images/477b5903d6fa9990cf113ee4-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/1SnMVdcvvXu_n6pUCh1NSvMYevoq_33qL/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/silksong/477b5903d6fa9990cf113ee4-480.webp
+Trang chính thức: https://store.steampowered.com/app/1030300/
+SHA256: bd3b4f831126045c2e6c3ca581e247e2951b6c27618cd9e0b0e1d9380caee8ad
+Review: Not individually reviewed

@@ -1,0 +1,47 @@
+Thủy mặc sumi-e và ukiyo-e — zps-sumi-e-ink-wash v2
+Ngày kiểm tra: 2026-11-03
+Nhóm: Hội họa và đường nét
+Nguồn: https://game-library.zingplay.dev/styles/sumi-e-ink-wash/
+
+TÓM TẮT NGUỒN (VIẾT LẠI)
+Nhịp cọ, sắc mực và giấy gợi thủy mặc, kết hợp mảng phẳng và đường viền kiểu tranh khắc gỗ.
+
+QUAN SÁT ẢNH ĐẠI DIỆN
+Sói trắng nhỏ ở phía dưới cảnh nhà gỗ; đường bao đậm, đám mây cuộn và mảng trời xanh khá phẳng.
+Ảnh được quan sát: images/cd53a4f4e19997789b43d4ff-1280.webp
+
+GỢI Ý CỦA AD (SUY LUẬN)
+Có thể dùng nhịp cọ để tổ chức chuyển động và điểm nhấn; không giới hạn vào cách kể chuyện Nhật.
+
+TEST ĐỀ XUẤT
+Test viền cọ trên nhân vật đang chạy và camera xa; kiểm tra vùng mực không nuốt tín hiệu tương tác.
+
+GIỚI HẠN
+Ảnh tĩnh không xác nhận animation, pipeline, hiệu năng hoặc license. Phân tích trực quan hiện chỉ cho ảnh đại diện; mở ảnh gốc khi cần chi tiết.
+Assistant viewed representative image in gallery at overview scale on 2026-11-03; secondary images decode/hash checked, not individually art-reviewed.
+Ảnh dùng làm reference nghiên cứu. Quyền thuộc chủ sở hữu gốc; chưa xác nhận giấy phép tái sử dụng trong sản phẩm.
+
+ẢNH THAM KHẢO
+1. Okami HD — CAPCOM
+File: images/cd53a4f4e19997789b43d4ff-1280.webp | 1280 × 720 px
+Drive: https://drive.google.com/file/d/1WDzBy6uzBnv0hTppwF-rjIAGG7S-LtWX/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/okami-hd/cd53a4f4e19997789b43d4ff-1280.webp
+Trang chính thức: https://store.steampowered.com/app/587620/
+SHA256: dd8d71e0f62e33f03c1716d67a209f62b2be578346f5e695e2350bfd6394e052
+Review: Representative image visually inspected at overview scale, 2026-11-03
+
+2. Bladed Fury — NEXT Studios
+File: images/09240a6c2fa1871e41fab745-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/1RUSRJjF63tsSwCrpepNncvKvE8Ae_z4Y/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/bladed-fury/09240a6c2fa1871e41fab745-480.webp
+Trang chính thức: https://store.steampowered.com/app/927250/
+SHA256: c67a022613319dea13957a9040fddafa00b5a7c66eb6c1884ba57da781812bf7
+Review: Not individually reviewed
+
+3. Realm of Ink — Leap Studio
+File: images/f669d7a9886544f6cd64e9f8-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/1MVKPa1itMPwj7cgA6eJ34WMIF8STSWyQ/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/realm-of-ink/f669d7a9886544f6cd64e9f8-480.webp
+Trang chính thức: https://store.steampowered.com/app/2597080/
+SHA256: 7a9c92286e2004fb1193d107a3a4ed7f965c898bc8530476100607bf297bab57
+Review: Not individually reviewed

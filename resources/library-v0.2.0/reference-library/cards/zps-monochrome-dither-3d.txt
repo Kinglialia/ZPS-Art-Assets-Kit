@@ -1,0 +1,39 @@
+3D đơn sắc giả sắc bằng chấm — zps-monochrome-dither-3d v2
+Ngày kiểm tra: 2026-11-03
+Nhóm: 3D và kết xuất
+Nguồn: https://game-library.zingplay.dev/styles/monochrome-dither-3d/
+
+TÓM TẮT NGUỒN (VIẾT LẠI)
+Các mẫu chấm ít màu biểu đạt sắc độ trên cảnh có phối cảnh 3D.
+
+QUAN SÁT ẢNH ĐẠI DIỆN
+Ảnh nhìn từ mắt người có đồng hồ tiền cảnh và mặt boong; chỉ vài sắc độ được mô tả bằng nét và chấm.
+Ảnh được quan sát: images/2feb6481b29104a375b6147d-1280.webp
+
+GỢI Ý CỦA AD (SUY LUẬN)
+Có thể dùng sắc độ rời rạc để tạo bản sắc; pattern dither dễ gây nhiễu khi di chuyển camera.
+
+TEST ĐỀ XUẤT
+Test camera pan, các khoảng cách và resize; kiểm tra chi tiết tương tác không hòa với dither.
+
+GIỚI HẠN
+Ảnh tĩnh không xác nhận animation, pipeline, hiệu năng hoặc license. Phân tích trực quan hiện chỉ cho ảnh đại diện; mở ảnh gốc khi cần chi tiết.
+Assistant viewed representative image in gallery at overview scale on 2026-11-03; secondary images decode/hash checked, not individually art-reviewed.
+Ảnh dùng làm reference nghiên cứu. Quyền thuộc chủ sở hữu gốc; chưa xác nhận giấy phép tái sử dụng trong sản phẩm.
+
+ẢNH THAM KHẢO
+1. Return of the Obra Dinn — Lucas Pope
+File: images/2feb6481b29104a375b6147d-1280.webp | 1280 × 720 px
+Drive: https://drive.google.com/file/d/1C9Z26L-CzTV4-7Nelq5F8BAdIAPIkCQd/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/obra-dinn/2feb6481b29104a375b6147d-1280.webp
+Trang chính thức: https://store.steampowered.com/app/653530/
+SHA256: e2ed97f17f3b3719fff514cf635d2ead58a7a44f3c6ac3dbeb36d78324dd9a9d
+Review: Representative image visually inspected at overview scale, 2026-11-03
+
+2. Who's Lila? — Garage Heathen
+File: images/d55529d9febe5f366fa255ab-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/1Qb7HfnAOjsURCFR2x0pZpt0GJvCKUfaI/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/whos-lila/d55529d9febe5f366fa255ab-480.webp
+Trang chính thức: https://store.steampowered.com/app/1697700/
+SHA256: 09a5dc54a5eab7f3401a44b3b01514b68592893e6edcc911f4141e96caf5a7a8
+Review: Not individually reviewed

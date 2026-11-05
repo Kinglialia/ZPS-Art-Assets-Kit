@@ -1,0 +1,24 @@
+ART DIRECTOR — REFERENCE LIBRARY + LIBRARY MANAGER
+Bản Library v0.2.0, snapshot 03/11/2026; Skill Library Manager v0.1.0, chưa deploy.
+
+Gói này gồm:
+- reference-library/: 44 hồ sơ style, 132 ảnh khác nhau, 129 game ví dụ; JSON nguồn chuẩn, INDEX, KNOWLEDGE và gallery HTML.
+- skills/art-director-library-manager/: SKILL.md và references/library-location.md, references/maintenance.md. Giữ nguyên cả thư mục khi dùng skill.
+- maintain.py, build_gallery.py, requirements.txt, coverage snapshot và regression tests là công cụ bảo trì; không tự chạy khi mở ZIP.
+
+CÁCH DÙNG
+Giải nén toàn bộ gói. Mở reference-library/gallery.html để xem gallery với ảnh nằm trong gói; hoặc đọc 01-INDEX.txt, cards và images. Trên mobile, hỗ trợ mở HTML/file cục bộ tùy ứng dụng; các link Drive trong INDEX/cards vẫn dùng được khi có quyền.
+Để AI quản lý thư viện, cung cấp SKILL.md cùng hai file references và quyền đọc/ghi Drive phù hợp. Đây không phải gói cài tự động và không tạo agent nền. Text extraction không thay thế việc mở ảnh.
+
+BẢO TRÌ
+Python 3.11+ và Pillow theo reference-library/requirements.txt.
+Trong reference-library chạy: python3 maintain.py --coverage --cloud
+Lệnh trên validate rồi dựng lại card/index/knowledge từ library.json. Chạy trên bản làm việc đã sao lưu. Sau khi thay đổi dữ liệu, có thể chạy python3 build_gallery.py để dựng lại gallery.
+Đọc 04-MAINTENANCE.txt và skill references trước khi cập nhật Drive; giữ ID, version, credit và nguồn, kiểm chứng trước/sau ghi. Inbox không tự kích hoạt cập nhật.
+
+LIBRARY DRIVE
+https://drive.google.com/drive/folders/1gzKPKRbMts1zol22ly4eOu9vWa4Qw8-I
+
+GIỚI HẠN
+Bao phủ mục Art Style trong snapshot đã lưu, không phải refresh website hôm nay hoặc phần Gameplay. 44 ảnh đại diện đã được xem tổng quan; 88 ảnh phụ kiểm dữ liệu/hash nhưng chưa review nghệ thuật riêng. Quyền dùng ảnh trong sản phẩm chưa xác nhận. Giữ nguyên độ phân giải nguồn 480–1280 px.
+Không kèm ZIP cũ, cache, bản nháp, thông tin đăng nhập hay ảnh benchmark Visual Intelligence. Bộ 6 skill AD đã được gửi trong ZIP riêng.

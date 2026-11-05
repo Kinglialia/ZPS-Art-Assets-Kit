@@ -1,0 +1,47 @@
+Ánh sáng sân khấu trầm — zps-muted-cinematic-3d v2
+Ngày kiểm tra: 2026-11-03
+Nhóm: 3D và kết xuất
+Nguồn: https://game-library.zingplay.dev/styles/muted-cinematic-3d/
+
+TÓM TẮT NGUỒN (VIẾT LẠI)
+Màu hạn chế và vùng chiếu sáng chọn lọc tổ chức cảnh như sân khấu; hình khối vẫn hiện rõ ở vùng sáng.
+
+QUAN SÁT ẢNH ĐẠI DIỆN
+Nhân vật nhỏ đẩy vật ở vùng sáng hẹp giữa kiến trúc xám tối; ánh sáng chéo tạo hình rõ cho sàn và mép khối.
+Ảnh được quan sát: images/ab90d81cacf83c6f93958263-1280.webp
+
+GỢI Ý CỦA AD (SUY LUẬN)
+Có thể tổ chức đường đi bằng vùng sáng; không nên biến mọi vùng tối thành cùng một giá trị.
+
+TEST ĐỀ XUẤT
+Test hướng dẫn bằng ánh sáng mà không có marker; kiểm tra ở độ sáng màn hình thấp.
+
+GIỚI HẠN
+Ảnh tĩnh không xác nhận animation, pipeline, hiệu năng hoặc license. Phân tích trực quan hiện chỉ cho ảnh đại diện; mở ảnh gốc khi cần chi tiết.
+Assistant viewed representative image in gallery at overview scale on 2026-11-03; secondary images decode/hash checked, not individually art-reviewed.
+Ảnh dùng làm reference nghiên cứu. Quyền thuộc chủ sở hữu gốc; chưa xác nhận giấy phép tái sử dụng trong sản phẩm.
+
+ẢNH THAM KHẢO
+1. INSIDE — Playdead
+File: images/ab90d81cacf83c6f93958263-1280.webp | 1280 × 720 px
+Drive: https://drive.google.com/file/d/1ihrFDqSJP13ZdgiUyU3MEghNSXNYxgAx/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/inside/ab90d81cacf83c6f93958263-1280.webp
+Trang chính thức: https://store.steampowered.com/app/304430/
+SHA256: afe4d6fd46bf74488797a9893cb0214aaa33c9d3604bddb2f16a7bcea1bda172
+Review: Representative image visually inspected at overview scale, 2026-11-03
+
+2. Somerville — Jumpship
+File: images/e8f05769abaf31c883c3ac50-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/12AUV7QTdqar2-H_iHEeukq-ph09BQPH-/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/somerville/e8f05769abaf31c883c3ac50-480.webp
+Trang chính thức: https://store.steampowered.com/app/1671410/
+SHA256: ebd69e704192d6b8def8537d0bf60dc6e2dc5be3086323a16d811ec2bac8480b
+Review: Not individually reviewed
+
+3. Little Nightmares — Tarsier Studios
+File: images/48a7a0d8e0605e03a07d8b0b-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/12KC-4eI-g8h0kqvX4FuMzwCXNYMoLBIZ/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/little-nightmares/48a7a0d8e0605e03a07d8b0b-480.webp
+Trang chính thức: https://store.steampowered.com/app/424840/
+SHA256: 35a30e87d0498edc48b2e85d1e26b9a57f24058f0d6d45c0a78b5ac3d98a3d49
+Review: Not individually reviewed

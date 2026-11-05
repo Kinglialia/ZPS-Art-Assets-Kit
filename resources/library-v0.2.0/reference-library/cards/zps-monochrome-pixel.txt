@@ -1,0 +1,47 @@
+Điểm ảnh thiên đơn sắc — zps-monochrome-pixel v2
+Ngày kiểm tra: 2026-11-03
+Nhóm: Điểm ảnh và hoài cổ
+Nguồn: https://game-library.zingplay.dev/styles/monochrome-pixel/
+
+TÓM TẮT NGUỒN (VIẾT LẠI)
+Độ tương phản và vùng trống gánh phần lớn tạo hình pixel. Có thể có màu nhấn nên không nên gọi tất cả là 1-bit.
+
+QUAN SÁT ẢNH ĐẠI DIỆN
+Màn hình trắng đen gồm đường hầm, khối máy và nhân vật nhỏ; vùng đặc đen xen vùng texture pixel trắng.
+Ảnh được quan sát: images/2d05621a39eb2a6c6e14104e-1280.webp
+
+GỢI Ý CỦA AD (SUY LUẬN)
+Có thể làm bộ hình cô đọng với ít màu; tín hiệu không nên chỉ phụ thuộc một sắc nhấn.
+
+TEST ĐỀ XUẤT
+Test phân nhóm bằng hình/pattern, màn hình nhỏ và nhiều đối tượng chồng nhau.
+
+GIỚI HẠN
+Ảnh tĩnh không xác nhận animation, pipeline, hiệu năng hoặc license. Phân tích trực quan hiện chỉ cho ảnh đại diện; mở ảnh gốc khi cần chi tiết.
+Assistant viewed representative image in gallery at overview scale on 2026-11-03; secondary images decode/hash checked, not individually art-reviewed.
+Ảnh dùng làm reference nghiên cứu. Quyền thuộc chủ sở hữu gốc; chưa xác nhận giấy phép tái sử dụng trong sản phẩm.
+
+ẢNH THAM KHẢO
+1. Gato Roboto — doinksoft
+File: images/2d05621a39eb2a6c6e14104e-1280.webp | 1278 × 720 px
+Drive: https://drive.google.com/file/d/1xKkskjveZTVsh56DmNiNTrjydA8sP4cd/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/steam-916730/2d05621a39eb2a6c6e14104e-1280.webp
+Trang chính thức: https://store.steampowered.com/app/916730/
+SHA256: c77e4348e561c667c0f43f059f2e58c7c7f8d66bbd1ecebb9017699622a25836
+Review: Representative image visually inspected at overview scale, 2026-11-03
+
+2. Minit — JW, Kitty, Jukio, Dom
+File: images/2f07311b3ca7865d2f861424-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/1fMZ0IyJHvT6pt3kTuJuUNUm4ywllToYZ/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/steam-609490/2f07311b3ca7865d2f861424-480.webp
+Trang chính thức: https://store.steampowered.com/app/609490/
+SHA256: 4a691461978536871e5c0fce4d83f15afffa5b40110a000fd7c2b17d7d07cd2d
+Review: Not individually reviewed
+
+3. Downwell — Moppin
+File: images/5913cd3123b1c733761c8580-480.webp | 480 × 359 px
+Drive: https://drive.google.com/file/d/1h9rWEYA0qgEJG74qy_wfG1XHfpOWqNvI/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/steam-360740/5913cd3123b1c733761c8580-480.webp
+Trang chính thức: https://store.steampowered.com/app/360740/
+SHA256: 7d887c8189ba5fbbc3248617061c52241a9a441394ca4e5d06b200a412a41cec
+Review: Not individually reviewed

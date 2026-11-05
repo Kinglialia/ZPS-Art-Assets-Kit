@@ -1,0 +1,7 @@
+PASS Python syntax for all runtime scripts
+PASS image inspector -> saved measurement -> evidence gate on synthetic RGBA fixture
+PASS evidence gate detects changed artifact
+PASS relocated projection-guide script with supplied fixture
+PASS API request dry-run without credentials or network call
+PASS 3D finalizer CLI loads without DCC dependencies
+NOT RUN full geometry/render/bake workflows: bpy/numpy/PyYAML are absent from this Python environment; no dependencies installed

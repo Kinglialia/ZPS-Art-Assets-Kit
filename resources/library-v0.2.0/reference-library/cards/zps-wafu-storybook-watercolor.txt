@@ -1,0 +1,39 @@
+Minh hoạ màu nước sách tranh wafu — zps-wafu-storybook-watercolor v2
+Ngày kiểm tra: 2026-11-03
+Nhóm: Hội họa và đường nét
+Nguồn: https://game-library.zingplay.dev/styles/wafu-storybook-watercolor/
+
+TÓM TẮT NGUỒN (VIẾT LẠI)
+Nét mảnh, mép màu loang và nền giấy kết hợp mô-típ Nhật; cần phân biệt ngôn ngữ tạo hình với tập hợp đồ vật theo chủ đề.
+
+QUAN SÁT ẢNH ĐẠI DIỆN
+Bàn bài nền xanh xám, lá bài màu kem, chân dung tròn và đồ trang trí nhỏ; nút bên phải có màu đỏ đất.
+Ảnh được quan sát: images/2796139cfac70b79468d4c0e-1280.webp
+
+GỢI Ý CỦA AD (SUY LUẬN)
+Có thể tạo bàn bài thân thiện với chất giấy; hoa văn nền phải nhường cho suit, số và trạng thái.
+
+TEST ĐỀ XUẤT
+Kiểm tra phân biệt chất bài và nút đang chọn ở kích thước điện thoại, không chỉ xem moodboard.
+
+GIỚI HẠN
+Ảnh tĩnh không xác nhận animation, pipeline, hiệu năng hoặc license. Phân tích trực quan hiện chỉ cho ảnh đại diện; mở ảnh gốc khi cần chi tiết.
+Assistant viewed representative image in gallery at overview scale on 2026-11-03; secondary images decode/hash checked, not individually art-reviewed.
+Ảnh dùng làm reference nghiên cứu. Quyền thuộc chủ sở hữu gốc; chưa xác nhận giấy phép tái sử dụng trong sản phẩm.
+
+ẢNH THAM KHẢO
+1. Difugo — Không ghi trên nguồn
+File: images/2796139cfac70b79468d4c0e-1280.webp | 1280 × 599 px
+Drive: https://drive.google.com/file/d/10bVAf_Wp48YVbgDv7Hrq9g_B5BhhGVEL/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/difugo/2796139cfac70b79468d4c0e-1280.webp
+Trang chính thức: Nguồn không cung cấp
+SHA256: c02340fed87062a044c59d18212b73378993c266eedd1db17e4fec5365565c14
+Review: Representative image visually inspected at overview scale, 2026-11-03
+
+2. Village in the Shade — Nippon Ichi Software, Inc.
+File: images/1a5f29793308d8eba1d69b44-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/1Yp8xMArF2JGdwm9NiInoBfJ-uH_bM4wD/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/village-in-the-shade/1a5f29793308d8eba1d69b44-480.webp
+Trang chính thức: https://store.steampowered.com/app/3934250/
+SHA256: 58133bfb949a6d81a3ecaee4f03b5a5773e99b1fd124e0db7540d623cbc316ba
+Review: Not individually reviewed

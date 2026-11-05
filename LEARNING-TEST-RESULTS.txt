@@ -1,0 +1,8 @@
+PASS read-only learning commands do not create a ledger
+PASS ingestion does not infer human approval
+PASS explicit verdict required; flag captures fixture and prevents duplicate lessons
+PASS skip/not_checked excluded from acceptance statistics
+PASS explicit supersession preserves history and retires stale lesson from current proposals
+PASS doctor detects modified golden fixture
+PASS ingestion refuses mismatched declared artifact hash
+All reviewer labels in these tests are synthetic fixtures, not real human judgments.

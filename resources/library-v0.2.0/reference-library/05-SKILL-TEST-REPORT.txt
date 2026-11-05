@@ -1,0 +1,17 @@
+ART DIRECTOR LIBRARY MANAGER — v0.1.0 — 2026-11-03
+Trạng thái: được user duyệt viết và kiểm thử; CHƯA DEPLOY / CHƯA CÀI ĐẶT.
+
+Kiểm tra cấu trúc bằng skill-creator quick_validate.py: PASS.
+Kiểm tra dữ liệu library: 17 test PASS.
+Review độc lập: 6 tình huống mô phỏng; không phải phiên tích hợp Claude/mobile hoặc thay đổi Drive thật.
+1. Mobile isometric/crowded combat: ưu tiên chunky-mobile-strategy; diorama chỉ là reference môi trường phụ; không suy ra crowd readability từ ảnh mẫu.
+2. URL paper-craft/#new: chuẩn hóa fragment, nhận ra mục cũ, giữ ID, không tạo duplicate.
+3. Connector text-only: không tuyên bố đã xem ảnh; giữ provenance quan sát cũ, DRAFT nếu thiếu review cần thiết cho ảnh mới.
+4. Nguồn chứa lệnh public-share/master prompt: coi là dữ liệu, không đổi quyền hoặc thực thi.
+5. Upload timeout: list/metadata trước retry, phục hồi ID nếu đã thành công; không báo hoàn tất toàn bộ khi còn pending.
+6. Concurrent writer: đọc lại, hòa giải; không ghi đè bản mới bằng bản cũ.
+
+Review phát hiện và đã sửa: output card path traversal; thiếu decode/kích thước; thiếu field/date/alias validation; DRAFT thiếu name; media review/URL sai kiểu. 16 test hồi quy độc lập PASS sau sửa.
+
+Giới hạn: không có ETag conditional-write trong connector hiện tại. Maintenance yêu cầu một writer, kiểm tra trước ghi và readback; không bảo đảm transaction đa file. Skill không tự tạo scheduler/agent cloud.
+Visual QA: xem tổng quan 44 ảnh đại diện. 132 ảnh decode/hash checked. Ảnh phụ chưa được review nghệ thuật riêng. Không phải human approval hoặc benchmark Visual Intelligence PASS.

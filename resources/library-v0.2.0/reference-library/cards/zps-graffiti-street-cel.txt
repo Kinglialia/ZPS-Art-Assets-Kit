@@ -1,0 +1,47 @@
+Đổ bóng cel kiểu graffiti đường phố — zps-graffiti-street-cel v2
+Ngày kiểm tra: 2026-11-03
+Nhóm: 3D và kết xuất
+Nguồn: https://game-library.zingplay.dev/styles/graffiti-street-cel/
+
+TÓM TẮT NGUỒN (VIẾT LẠI)
+Viền và bóng cel rành mạch kết hợp dấu vết graffiti, sticker và màu đường phố trên không gian 3D.
+
+QUAN SÁT ẢNH ĐẠI DIỆN
+Nhân vật đứng giữa phố nhiều bảng hiệu; một vệt màu vàng chói cắt ngang khung, bóng và mảng màu có biên rõ.
+Ảnh được quan sát: images/88eb0d62109e0994e6b7efc2-1280.webp
+
+GỢI Ý CỦA AD (SUY LUẬN)
+Có thể tạo bản sắc cho game chuyển động đô thị; graffiti nền dễ cạnh tranh với nhân vật.
+
+TEST ĐỀ XUẤT
+Test nhân vật chạy qua nền nhiều sticker, bật/tắt VFX và kiểm tra độ đọc silhouette.
+
+GIỚI HẠN
+Ảnh tĩnh không xác nhận animation, pipeline, hiệu năng hoặc license. Phân tích trực quan hiện chỉ cho ảnh đại diện; mở ảnh gốc khi cần chi tiết.
+Assistant viewed representative image in gallery at overview scale on 2026-11-03; secondary images decode/hash checked, not individually art-reviewed.
+Ảnh dùng làm reference nghiên cứu. Quyền thuộc chủ sở hữu gốc; chưa xác nhận giấy phép tái sử dụng trong sản phẩm.
+
+ẢNH THAM KHẢO
+1. Bomb Rush Cyberfunk — Team Reptile
+File: images/88eb0d62109e0994e6b7efc2-1280.webp | 1280 × 720 px
+Drive: https://drive.google.com/file/d/1vnWbTzUsnW_uSR1-Btb1ILdxoSigtLya/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/bomb-rush-cyberfunk/88eb0d62109e0994e6b7efc2-1280.webp
+Trang chính thức: https://store.steampowered.com/app/1353230/
+SHA256: db3b75103781eacbbedf7f0be38f3d0ddca3b7c961460702ba9e676910471c0d
+Review: Representative image visually inspected at overview scale, 2026-11-03
+
+2. Jet Set Radio — Blit Software
+File: images/65a7815b8c6344e16d8a3668-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/1YAPCFCbyvcmtpaZRBveBjY4khsfJ5A90/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/jet-set-radio/65a7815b8c6344e16d8a3668-480.webp
+Trang chính thức: https://store.steampowered.com/app/205950/
+SHA256: 76695de945051b2ea7be6bcf08a01f8db579d77ef608227275ef37c83593403d
+Review: Not individually reviewed
+
+3. Lethal League Blaze — Team Reptile
+File: images/639cc598b8e5f95b8ac40345-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/1zX-29w7OcIIHh4wn8Dy-0PzXbQuCFwXv/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/lethal-league-blaze/639cc598b8e5f95b8ac40345-480.webp
+Trang chính thức: https://store.steampowered.com/app/553310/
+SHA256: 1af955ecfc9bb4ded172d8a8dda5f61e3392fd9df3735a14c9e9f43adda0eba7
+Review: Not individually reviewed

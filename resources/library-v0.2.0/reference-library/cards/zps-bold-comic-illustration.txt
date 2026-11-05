@@ -1,0 +1,47 @@
+Minh họa truyện tranh mạnh nét — zps-bold-comic-illustration v2
+Ngày kiểm tra: 2026-11-03
+Nhóm: Hội họa và đường nét
+Nguồn: https://game-library.zingplay.dev/styles/bold-comic-illustration/
+
+TÓM TẮT NGUỒN (VIẾT LẠI)
+Nhân vật và môi trường dùng đường bao rõ cùng mảng sáng tối mạnh, gần cách phân hình trong truyện tranh.
+
+QUAN SÁT ẢNH ĐẠI DIỆN
+Cảnh chiến đấu nhìn cao có các trụ xanh và tím; đường chém sáng hình cung nổi giữa mặt sàn tối.
+Ảnh được quan sát: images/e52c7a48405b5a280603ebeb-1280.webp
+
+GỢI Ý CỦA AD (SUY LUẬN)
+Phù hợp hành động cần phân tầng nhân vật mạnh; viền và bóng lớn có thể làm cảnh nặng nếu dùng đồng loạt.
+
+TEST ĐỀ XUẤT
+Test silhouette trong crowd và VFX, so sánh grayscale để tách nhân vật khỏi props.
+
+GIỚI HẠN
+Ảnh tĩnh không xác nhận animation, pipeline, hiệu năng hoặc license. Phân tích trực quan hiện chỉ cho ảnh đại diện; mở ảnh gốc khi cần chi tiết.
+Assistant viewed representative image in gallery at overview scale on 2026-11-03; secondary images decode/hash checked, not individually art-reviewed.
+Ảnh dùng làm reference nghiên cứu. Quyền thuộc chủ sở hữu gốc; chưa xác nhận giấy phép tái sử dụng trong sản phẩm.
+
+ẢNH THAM KHẢO
+1. Hades — Supergiant Games
+File: images/e52c7a48405b5a280603ebeb-1280.webp | 1280 × 720 px
+Drive: https://drive.google.com/file/d/1pbWmXG_gS89KBdLJ_75biuMwHzL2zxkh/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/hades/e52c7a48405b5a280603ebeb-1280.webp
+Trang chính thức: https://store.steampowered.com/app/1145360/
+SHA256: 50729a9701dbe64c44388e863733de282d486bd8d538a620342de749bbdd0a30
+Review: Representative image visually inspected at overview scale, 2026-11-03
+
+2. Pyre — Supergiant Games
+File: images/8758b3dee12e97b95c8ca399-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/1wBustYoKHL77QRGasBG20UiAzGCUKw7s/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/pyre/8758b3dee12e97b95c8ca399-480.webp
+Trang chính thức: https://store.steampowered.com/app/462770/
+SHA256: c67db0d967debc16b7577c8e763fc290440d5d928daa890417cd736a4be1e3ae
+Review: Not individually reviewed
+
+3. Battle Chasers: Nightwar — Airship Syndicate
+File: images/b090a271030d0332f4f51215-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/12oWjpAbHbnnFHK8qdwYjEbEJQNh9qSXN/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/battle-chasers/b090a271030d0332f4f51215-480.webp
+Trang chính thức: https://store.steampowered.com/app/451020/
+SHA256: 2ad4a34c4ac2fe39ec3d0dfc7bb08d3a13c646d2bc63e57042966f56dfc255fc
+Review: Not individually reviewed

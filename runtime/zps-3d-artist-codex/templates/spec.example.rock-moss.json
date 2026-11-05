@@ -1,0 +1,44 @@
+{
+  "_note": "Spec mau v0.2 (cum da reu). Viet tu brief da duyet; nguoi giao viec chot nguong va giu sha256. Sau khi chot, artist khong tu sua nguong. Duong dan tinh tu thu muc chua spec (task/).",
+  "objects": ["RockL", "RockS"],
+  "floor_z": 0.0,
+  "pivot": "bottom_center",
+  "dimensions_m": {"RockL": [null, null, 1.6], "RockS": [null, null, 1.0]},
+  "dimensions_tolerance": 0.1,
+  "budget": {"max_tris_total": 1500, "max_materials_total": 1, "min_tris_ratio": 0.3},
+  "expect_closed": true,
+  "expected_parts": {"RockL": 1, "RockS": 1},
+  "camera": {
+    "_note": "E1: camera game = camera concept (phuong vi 0, nhin xuong 35 do, gia dinh). Chua co so tu engine: lan dau render_rig chay o che do hieu chuan; chep distance_m va look_at tu data.camera vao day. fov_v_deg 40 la gia dinh, thay bang so FOV doc cua camera Godot.",
+    "type": "persp",
+    "fov_v_deg": 40,
+    "azimuth_deg": 0,
+    "elevation_deg": 35,
+    "screen": [1920, 1080],
+    "target_object": "RockL",
+    "target_px_height": 250
+  },
+  "iou": {
+    "concept": "../concept/rock-moss-v1.png",
+    "camera_object": "ConceptCam",
+    "polygons_from": "m1.json",
+    "min_iou": 0.90
+  },
+  "coverage": {"camera_object": "ConceptCam", "facing_max": 0.45, "min_visible": 0.85},
+  "uv": {
+    "resolution": 1024,
+    "min_padding_px": 4,
+    "allow_overlap": false,
+    "allow_out_of_bounds": false,
+    "density_ratio_min": {"top": 1.0, "front": 0.9}
+  },
+  "contacts": [
+    {"a": "RockL", "b": "floor", "expect": "touch", "tolerance_m": 0.01, "min_support": 0.5},
+    {"a": "RockS", "b": "floor", "expect": "touch", "tolerance_m": 0.01, "min_support": 0.5},
+    {"a": "RockS", "b": "RockL", "expect": "no_penetration", "tolerance_m": 0.01,
+     "max_penetration_m": 0.15,
+     "_reason": "M1: hai tang long nhau o phan khuat sau RockS; cho phep toi da 0.15 m, khong lo o goc trong pham vi brief."}
+  ],
+  "render": {"inspect_px": 768, "modes": ["clay", "albedo", "lit", "checker"], "floor": true},
+  "export": {"path": "../export/rock_moss.glb", "yup": true, "apply_modifiers": true, "expect_unlit": true}
+}

@@ -1,0 +1,47 @@
+Đồ họa neon giống vector — zps-neon-vector v2
+Ngày kiểm tra: 2026-11-03
+Nhóm: Hình khối và chất liệu
+Nguồn: https://game-library.zingplay.dev/styles/neon-vector/
+
+TÓM TẮT NGUỒN (VIẾT LẠI)
+Nét phát sáng, hạt và lưới trên nền tối gợi vector; đây là mô tả hình ảnh, không xác nhận cách render.
+
+QUAN SÁT ẢNH ĐẠI DIỆN
+Lưới xanh và vòng sáng màu bao quanh vùng chói ở tâm; mật độ glow cao khiến một số chi tiết giữa khung bị lấn.
+Ảnh được quan sát: images/15eb514abcf412e09aef170a-1280.webp
+
+GỢI Ý CỦA AD (SUY LUẬN)
+Có thể dùng nhịp sáng cho arcade; mật độ hạt và vùng chói có thể che đạn hoặc mục tiêu.
+
+TEST ĐỀ XUẤT
+Test màn hình đông hiệu ứng, độ chói và khả năng phân biệt đạn; xem chuyển động thực.
+
+GIỚI HẠN
+Ảnh tĩnh không xác nhận animation, pipeline, hiệu năng hoặc license. Phân tích trực quan hiện chỉ cho ảnh đại diện; mở ảnh gốc khi cần chi tiết.
+Assistant viewed representative image in gallery at overview scale on 2026-11-03; secondary images decode/hash checked, not individually art-reviewed.
+Ảnh dùng làm reference nghiên cứu. Quyền thuộc chủ sở hữu gốc; chưa xác nhận giấy phép tái sử dụng trong sản phẩm.
+
+ẢNH THAM KHẢO
+1. Geometry Wars 3: Dimensions Evolved — Lucid Games, Aspyr (Linux)
+File: images/15eb514abcf412e09aef170a-1280.webp | 1280 × 720 px
+Drive: https://drive.google.com/file/d/1huSW4NVKJcR50YdZCUTdPo1o0NMAgoNZ/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/geometry-wars3/15eb514abcf412e09aef170a-1280.webp
+Trang chính thức: https://store.steampowered.com/app/310790/
+SHA256: f57e8e12854830f89ebb3da62e9090b0a3726d06aa6a1e8d74b5bb8e94b9a801
+Review: Representative image visually inspected at overview scale, 2026-11-03
+
+2. Geometry Wars: Retro Evolved — Bizarre Creations
+File: images/4fe0648585b3ec8cadec9ff6-480.webp | 480 × 384 px
+Drive: https://drive.google.com/file/d/1U9OzdGH00TUfgEQAb7lvx7a9YIEN0uRs/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/geometry-wars/4fe0648585b3ec8cadec9ff6-480.webp
+Trang chính thức: https://store.steampowered.com/app/8400/
+SHA256: a7f203574b6f3228f7c6771142702f6e686f37f2482604a23714469ca3fbcf8b
+Review: Not individually reviewed
+
+3. Waves — Squid In A Box Ltd
+File: images/c20e33200c041061e59b9baf-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/1s-WyY_H6G8CmZzrg6QVRr6o4RutnO7pF/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/waves/c20e33200c041061e59b9baf-480.webp
+Trang chính thức: https://store.steampowered.com/app/107600/
+SHA256: 247635cd9e42dfdf7e99739fbc3dbc2cc3ed16ae9222887b7802594fd4a947d3
+Review: Not individually reviewed

@@ -1,0 +1,47 @@
+Cắt ghép tranh cổ điển — zps-classical-painting-collage v2
+Ngày kiểm tra: 2026-11-03
+Nhóm: Hội họa và đường nét
+Nguồn: https://game-library.zingplay.dev/styles/classical-painting-collage/
+
+TÓM TẮT NGUỒN (VIẾT LẠI)
+Những mảnh nhân vật và phong cảnh từ tranh được tái sắp xếp thành bố cục mới; cách ghép quan trọng hơn thời đại được kể.
+
+QUAN SÁT ẢNH ĐẠI DIỆN
+Các nhân vật có tỷ lệ và hướng khác nhau được đặt trong quán; dải biểu tượng menu nằm trên cùng.
+Ảnh được quan sát: images/dac4ef58147ca3986f79558b-1280.webp
+
+GỢI Ý CỦA AD (SUY LUẬN)
+Có thể khai thác chênh lệch tỷ lệ và chất tranh để tạo tình huống; quyền ảnh thành phần cần kiểm tra riêng.
+
+TEST ĐỀ XUẤT
+Làm thử một cảnh ghép và chuyển động; kiểm tra nguồn/license từng mảnh trước sản xuất.
+
+GIỚI HẠN
+Ảnh tĩnh không xác nhận animation, pipeline, hiệu năng hoặc license. Phân tích trực quan hiện chỉ cho ảnh đại diện; mở ảnh gốc khi cần chi tiết.
+Assistant viewed representative image in gallery at overview scale on 2026-11-03; secondary images decode/hash checked, not individually art-reviewed.
+Ảnh dùng làm reference nghiên cứu. Quyền thuộc chủ sở hữu gốc; chưa xác nhận giấy phép tái sử dụng trong sản phẩm.
+
+ẢNH THAM KHẢO
+1. Four Last Things — Joe Richardson
+File: images/dac4ef58147ca3986f79558b-1280.webp | 1280 × 720 px
+Drive: https://drive.google.com/file/d/1dk_JcgAfykRJZ690Qn_gGMHYU1gCFXZZ/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/four-last-things/dac4ef58147ca3986f79558b-1280.webp
+Trang chính thức: https://store.steampowered.com/app/503400/
+SHA256: bc0140fe9e4baf7490a167556f145451d130ab3be01f2dfa951cb240f07678b7
+Review: Representative image visually inspected at overview scale, 2026-11-03
+
+2. The Procession to Calvary — Joe Richardson
+File: images/b394b9fc4532f06242f02ca9-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/1o7aiXc0_ZEFYF45Tu7P82sld0vXNB_8G/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/procession-calvary/b394b9fc4532f06242f02ca9-480.webp
+Trang chính thức: https://store.steampowered.com/app/1071130/
+SHA256: 0b97b77a9844d881c11c9e30a11094a35c7685723b25da4141758c19db883a60
+Review: Not individually reviewed
+
+3. Death of the Reprobate — Joe Richardson
+File: images/bde0ceadc06539e532248961-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/1_oaAK8Ytdu2etbVRhkvMfoiEzCb7jhKK/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/death-reprobate/bde0ceadc06539e532248961-480.webp
+Trang chính thức: https://store.steampowered.com/app/1739900/
+SHA256: f30b3197290837336a228c2814deb0dc5dbd60d2a3a4726329b329582d9e6e2c
+Review: Not individually reviewed

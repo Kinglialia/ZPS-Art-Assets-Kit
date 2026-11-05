@@ -1,0 +1,47 @@
+Minh họa sách truyện trang trí — zps-decorative-storybook v2
+Ngày kiểm tra: 2026-11-03
+Nhóm: Hội họa và đường nét
+Nguồn: https://game-library.zingplay.dev/styles/decorative-storybook/
+
+TÓM TẮT NGUỒN (VIẾT LẠI)
+Các lớp cảnh, hoa văn thực vật và nét viền nhỏ tạo cảm giác minh họa sách truyện.
+
+QUAN SÁT ẢNH ĐẠI DIỆN
+Cảnh xanh trầm có cây, hoa nhỏ và đầu sinh vật lớn ở bên phải; lớp gần đậm hơn lớp nền.
+Ảnh được quan sát: images/41b62fe7bb9a95da3dad726c-1280.webp
+
+GỢI Ý CỦA AD (SUY LUẬN)
+Có thể dùng hoa văn và lớp cảnh cho thế giới truyện; quy tắc motif cần nhất quán giữa props.
+
+TEST ĐỀ XUẤT
+Test một bộ 5 props cùng cảnh; kiểm tra icon nhỏ và vật tương tác vẫn khác nền trang trí.
+
+GIỚI HẠN
+Ảnh tĩnh không xác nhận animation, pipeline, hiệu năng hoặc license. Phân tích trực quan hiện chỉ cho ảnh đại diện; mở ảnh gốc khi cần chi tiết.
+Assistant viewed representative image in gallery at overview scale on 2026-11-03; secondary images decode/hash checked, not individually art-reviewed.
+Ảnh dùng làm reference nghiên cứu. Quyền thuộc chủ sở hữu gốc; chưa xác nhận giấy phép tái sử dụng trong sản phẩm.
+
+ẢNH THAM KHẢO
+1. Wytchwood — Alientrap
+File: images/41b62fe7bb9a95da3dad726c-1280.webp | 1280 × 720 px
+Drive: https://drive.google.com/file/d/1FeSxIJgbZtwoXyXWW8tu10Yq-nfnEi42/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/wytchwood/41b62fe7bb9a95da3dad726c-1280.webp
+Trang chính thức: https://store.steampowered.com/app/729000/
+SHA256: c033c72da64cbc50683bddc2caa10d998e92b2fa0dd5536f96fcfc53272cd412
+Review: Representative image visually inspected at overview scale, 2026-11-03
+
+2. Cozy Grove — Spry Fox
+File: images/93ac8907f8b703f0d164f861-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/14R4YSbHhh1Qk65jN8qte7Wz8vGwzbJ5R/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/cozy-grove/93ac8907f8b703f0d164f861-480.webp
+Trang chính thức: https://store.steampowered.com/app/1458100/
+SHA256: bb6d1f290b539f23db6a7ae14bc711d5a44027db5227493424bcf008ea270fbd
+Review: Not individually reviewed
+
+3. Spiritfarer — Thunder Lotus
+File: images/24464047395103fb1812febd-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/1DUQi0y5YeelX6M9ESwPFLdPJbhXqXMp-/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/spiritfarer/24464047395103fb1812febd-480.webp
+Trang chính thức: https://store.steampowered.com/app/972660/
+SHA256: 0e9577ba63d6bc1f293e476fcd5c29449eb6ed65cd5649c4b75e6803fd2be8f3
+Review: Not individually reviewed

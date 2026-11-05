@@ -1,0 +1,39 @@
+Thế giới nét nguệch ngoạc mảnh — zps-detailed-doodle v2
+Ngày kiểm tra: 2026-11-03
+Nhóm: Hội họa và đường nét
+Nguồn: https://game-library.zingplay.dev/styles/detailed-doodle/
+
+TÓM TẮT NGUỒN (VIẾT LẠI)
+Nhiều chi tiết nhỏ cùng đường nét tay tự do tạo cảnh như bản đồ minh họa để khám phá hoặc tìm đồ.
+
+QUAN SÁT ẢNH ĐẠI DIỆN
+Cảnh rừng trắng đen dày đặc cây và nhân vật nhỏ; nét mảnh và khoảng trắng là cấu trúc chủ đạo.
+Ảnh được quan sát: images/0b368139db638ee4006b9bd8-1280.webp
+
+GỢI Ý CỦA AD (SUY LUẬN)
+Phù hợp cảnh tìm vật và khám phá chi tiết; với hành động nhanh, mật độ nét có thể gây quá tải.
+
+TEST ĐỀ XUẤT
+Test tìm vật theo độ khó, kích thước màn hình và khả năng zoom; đo thời gian tìm.
+
+GIỚI HẠN
+Ảnh tĩnh không xác nhận animation, pipeline, hiệu năng hoặc license. Phân tích trực quan hiện chỉ cho ảnh đại diện; mở ảnh gốc khi cần chi tiết.
+Assistant viewed representative image in gallery at overview scale on 2026-11-03; secondary images decode/hash checked, not individually art-reviewed.
+Ảnh dùng làm reference nghiên cứu. Quyền thuộc chủ sở hữu gốc; chưa xác nhận giấy phép tái sử dụng trong sản phẩm.
+
+ẢNH THAM KHẢO
+1. Hidden Folks — Hidden Folks
+File: images/0b368139db638ee4006b9bd8-1280.webp | 1280 × 720 px
+Drive: https://drive.google.com/file/d/1cx07O1ZPB2mxDYImD0LpsYbjDYafx_ne/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/hidden-folks/0b368139db638ee4006b9bd8-1280.webp
+Trang chính thức: https://store.steampowered.com/app/435400/
+SHA256: 28d0c4821f4ed9d94be241bdcfcb14591c763a50c46ede233a7d9932970bac91
+Review: Representative image visually inspected at overview scale, 2026-11-03
+
+2. Hidden Through Time — Rogueside
+File: images/01458e43bacad6c98612624d-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/177MCP2_fWaJLobJ-qfDkiaAF4GkJpf5Q/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/hidden-through-time/01458e43bacad6c98612624d-480.webp
+Trang chính thức: https://store.steampowered.com/app/524910/
+SHA256: e88d45faa87d6720130fe1b47f046a3f0408bf11e4ca04ac8ab7236ec7c373ae
+Review: Not individually reviewed

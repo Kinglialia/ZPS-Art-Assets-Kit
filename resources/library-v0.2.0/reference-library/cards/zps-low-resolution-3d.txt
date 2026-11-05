@@ -1,0 +1,47 @@
+3D hoài cổ độ phân giải thấp — zps-low-resolution-3d v2
+Ngày kiểm tra: 2026-11-03
+Nhóm: 3D và kết xuất
+Nguồn: https://game-library.zingplay.dev/styles/low-resolution-3d/
+
+TÓM TẮT NGUỒN (VIẾT LẠI)
+Mô hình và texture có vẻ thô, độ phân giải thấp gợi 3D đời đầu; không nên gộp với pixel 2D.
+
+QUAN SÁT ẢNH ĐẠI DIỆN
+Phòng nhìn cao có vùng chiếu sáng vàng giữa sàn tối; nhân vật và đồ vật thể hiện độ phân giải thô.
+Ảnh được quan sát: images/3afad8bd0857f7d4e282535a-1280.webp
+
+GỢI Ý CỦA AD (SUY LUẬN)
+Có thể khai thác không khí retro3D với hình và texture thô; không mặc định hiệu năng thấp chi phí.
+
+TEST ĐỀ XUẤT
+Test texture filtering, rung cạnh và camera chuyển động; chọn rõ độ phân giải render.
+
+GIỚI HẠN
+Ảnh tĩnh không xác nhận animation, pipeline, hiệu năng hoặc license. Phân tích trực quan hiện chỉ cho ảnh đại diện; mở ảnh gốc khi cần chi tiết.
+Assistant viewed representative image in gallery at overview scale on 2026-11-03; secondary images decode/hash checked, not individually art-reviewed.
+Ảnh dùng làm reference nghiên cứu. Quyền thuộc chủ sở hữu gốc; chưa xác nhận giấy phép tái sử dụng trong sản phẩm.
+
+ẢNH THAM KHẢO
+1. SIGNALIS — rose-engine
+File: images/3afad8bd0857f7d4e282535a-1280.webp | 1280 × 720 px
+Drive: https://drive.google.com/file/d/1J82RH3C4ybM5znJJCwpnpuIpOtq7VByD/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/steam-1262350/3afad8bd0857f7d4e282535a-1280.webp
+Trang chính thức: https://store.steampowered.com/app/1262350/
+SHA256: 0b3c3d009a42bd5fbd1b829e204270613e858490bc77ebff865750a88f00f0bb
+Review: Representative image visually inspected at overview scale, 2026-11-03
+
+2. Crow Country — SFB Games
+File: images/5f39f54ce5759ae910b69fe3-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/1onEFpIqhPIVJrCsnuYU7x3V4K47csE8T/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/steam-1996010/5f39f54ce5759ae910b69fe3-480.webp
+Trang chính thức: https://store.steampowered.com/app/1996010/
+SHA256: c8757b7c68a260863bfbfb7e09d987441b7bd676fa6f5729c1531a75b2987ce5
+Review: Not individually reviewed
+
+3. Dread Delusion — Lovely Hellplace
+File: images/84a00b6e0aef0ae399cc9eb1-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/1b4vf1WN3LKrrneYjJuAV36cSgy-K1i5f/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/steam-1574240/84a00b6e0aef0ae399cc9eb1-480.webp
+Trang chính thức: https://store.steampowered.com/app/1574240/
+SHA256: 300bc02a33f6f8eb9c66c33f0fcd79d3437fe392dc846595753cc31c5fd72271
+Review: Not individually reviewed

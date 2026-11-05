@@ -1,0 +1,8 @@
+QA — REFERENCE LIBRARY v0.2.0 — 2026-11-03
+PASS cho độ bao phủ snapshot Art Style đã quan sát: 44/44 style, 44 READY, 129 game ví dụ, 132 ảnh khác nhau; 176 biến thể hiển thị được thu thập rồi bỏ thumbnail trùng.
+132 ảnh decode thành công; hash SHA256 và kích thước khớp. Chiều ngang: {1280: 42, 480: 88, 1278: 1, 1136: 1}. Tổng bytes ảnh: 5780194.
+44 ảnh đại diện đã được assistant xem ở gallery tổng quan. 88 ảnh phụ kiểm decode/hash, chưa review nghệ thuật riêng.
+17 test dữ liệu PASS. 16 test hồi quy độc lập PASS. Skill quick_validate PASS; 6 tình huống hành vi được review mô phỏng. Không có live integration test trên Claude mobile và không phải human approval.
+Drive readback đã xác nhận 132 ID ảnh + kích thước bytes và 44 ID hồ sơ + kích thước bytes. Validator --coverage --cloud PASS. Bản ghi root metadata được đối chiếu khi phát hành; không có checksum server cho ảnh trong kết quả list_folder nên không tuyên bố đã đối chiếu SHA256 phía server.
+Nguồn Difugo thiếu tên tác giả/link chính thức; đã giữ nhãn chưa biết. Ảnh không được cấp license sản xuất qua thư viện này.
+Không bao gồm Gameplay hoặc prompt nhúng từ website. Snapshot không tự cập nhật. Skill chỉ được viết và kiểm thử, chưa deploy. Skill01/Skill02 và benchmark không thay đổi.

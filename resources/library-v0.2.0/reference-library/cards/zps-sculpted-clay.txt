@@ -1,0 +1,63 @@
+Đất sét điêu khắc và stop motion — zps-sculpted-clay v2
+Ngày kiểm tra: 2026-11-03
+Nhóm: 3D và kết xuất
+Nguồn: https://game-library.zingplay.dev/styles/sculpted-clay/
+
+TÓM TẮT NGUỒN (VIẾT LẠI)
+Bề mặt và hình khối gợi nặn thủ công; ví dụ có thể dùng vật thật hoặc giải pháp số khác nhau.
+
+QUAN SÁT ẢNH ĐẠI DIỆN
+Dàn sinh vật kỳ lạ đứng trên nền cam và xanh tím; khối nhân vật không đều, bảng lệnh nằm bên dưới.
+Ảnh được quan sát: images/7d5051fb70268379a89484bd-1280.webp
+
+GỢI Ý CỦA AD (SUY LUẬN)
+Phù hợp tạo cảm giác nặn và quái dị; cần chọn rõ kỹ thuật số hay chụp vật lý trước dự toán.
+
+TEST ĐỀ XUẤT
+Làm một asset và một đoạn chuyển động ngắn; đánh giá tốc độ sản xuất và tính liên tục bề mặt.
+
+GIỚI HẠN
+Ảnh tĩnh không xác nhận animation, pipeline, hiệu năng hoặc license. Phân tích trực quan hiện chỉ cho ảnh đại diện; mở ảnh gốc khi cần chi tiết.
+Assistant viewed representative image in gallery at overview scale on 2026-11-03; secondary images decode/hash checked, not individually art-reviewed.
+Ảnh dùng làm reference nghiên cứu. Quyền thuộc chủ sở hữu gốc; chưa xác nhận giấy phép tái sử dụng trong sản phẩm.
+
+ẢNH THAM KHẢO
+1. Hylics 2 — Mason Lindroth
+File: images/7d5051fb70268379a89484bd-1280.webp | 1280 × 719 px
+Drive: https://drive.google.com/file/d/1T3-kU3Xz9P3gLbYTjckw-zRrxuKOVRqi/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/hylics2/7d5051fb70268379a89484bd-1280.webp
+Trang chính thức: https://store.steampowered.com/app/1286710/
+SHA256: d962718b48ea301d7dd4403b86d0d9b5056431d071e6b034b0f9f606e9e9c4c0
+Review: Representative image visually inspected at overview scale, 2026-11-03
+
+2. The Dream Machine: Chapter 1 & 2 — Cockroach Inc.
+File: images/3711a2a4dd92c1306f25864d-480.webp | 480 × 320 px
+Drive: https://drive.google.com/file/d/1-l--y4b8TfsJLhDk_gmXj6XdMh7f6d5Q/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/dream-machine/3711a2a4dd92c1306f25864d-480.webp
+Trang chính thức: https://store.steampowered.com/app/94300/
+SHA256: 3ff5200660e73e4d6ff429fcc761fd0f5ef00f2d1dc23670a17c8ee6f3bc95d8
+Review: Not individually reviewed
+
+3. Armikrog — Pencil Test Studios
+File: images/3b75bba27b2a008e8aabe306-480.webp | 480 × 320 px
+Drive: https://drive.google.com/file/d/1XbDdL8cxq6QntRUbXUBfeKbnKM1gJ-me/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/armikrog/3b75bba27b2a008e8aabe306-480.webp
+Trang chính thức: https://store.steampowered.com/app/334120/
+SHA256: fd767d3fe4264ce5bd2dc4ec9147d1cb1c6329bcee81ed08b94b93734ea7ecb1
+Review: Not individually reviewed
+
+4. Claybook — Second Order
+File: images/44a62ecbe6ccf3092120a917-480.webp | 480 × 270 px
+Drive: https://drive.google.com/file/d/10X7PPTXqH-ow-jTxOnX_WcucIt3lp-cl/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/claybook/44a62ecbe6ccf3092120a917-480.webp
+Trang chính thức: https://store.steampowered.com/app/661920/
+SHA256: 955bf79eaa6fb9856a5bc870419ba137fcc2f95308cc84a98c2d1e58733a3636
+Review: Not individually reviewed
+
+5. Plastiland — FreshGem
+File: images/30c9cc836da788e5115e4e78-480.webp | 480 × 269 px
+Drive: https://drive.google.com/file/d/1LnFk1jY2WknV2fuGbfYvz2wjG9PjKmpm/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/plastiland/30c9cc836da788e5115e4e78-480.webp
+Trang chính thức: https://store.steampowered.com/app/421880/
+SHA256: faaba3e0e04b0844399bbb1950c45470f74dad860035a512bf63af01834b38f7
+Review: Not individually reviewed

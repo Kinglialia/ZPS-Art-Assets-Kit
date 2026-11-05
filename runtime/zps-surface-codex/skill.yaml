@@ -1,0 +1,10 @@
+{
+  "id": "zps-surface-codex",
+  "version": "0.5.6",
+  "status": "draft",
+  "entry": "SKILL.md",
+  "validation": {
+    "technical": "see package REVISION-TEST-RESULTS.txt; image/model workflows require their dependencies",
+    "art": "pending"
+  }
+}

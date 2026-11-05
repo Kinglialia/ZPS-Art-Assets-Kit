@@ -1,0 +1,47 @@
+Điểm ảnh phát sáng tương phản mạnh — zps-luminous-pixel v2
+Ngày kiểm tra: 2026-11-03
+Nhóm: Điểm ảnh và hoài cổ
+Nguồn: https://game-library.zingplay.dev/styles/luminous-pixel/
+
+TÓM TẮT NGUỒN (VIẾT LẠI)
+Điểm sáng bão hòa nổi trên nền tối tạo tương phản và định hướng; style này không buộc vào cyberpunk.
+
+QUAN SÁT ẢNH ĐẠI DIỆN
+Cổng có dấu hồng sáng ở giữa, nhân vật đỏ trước lối đen; nền hai bên tối hơn sàn xanh phía trước.
+Ảnh được quan sát: images/5ab97512ceb9a4e5b443ff41-1280.webp
+
+GỢI Ý CỦA AD (SUY LUẬN)
+Có thể dùng vùng sáng để dẫn hành động và tương tác; glow dày sẽ cạnh tranh với mục tiêu.
+
+TEST ĐỀ XUẤT
+Test không bloom, grayscale và crowd VFX; kiểm tra điểm nhấn còn rõ.
+
+GIỚI HẠN
+Ảnh tĩnh không xác nhận animation, pipeline, hiệu năng hoặc license. Phân tích trực quan hiện chỉ cho ảnh đại diện; mở ảnh gốc khi cần chi tiết.
+Assistant viewed representative image in gallery at overview scale on 2026-11-03; secondary images decode/hash checked, not individually art-reviewed.
+Ảnh dùng làm reference nghiên cứu. Quyền thuộc chủ sở hữu gốc; chưa xác nhận giấy phép tái sử dụng trong sản phẩm.
+
+ẢNH THAM KHẢO
+1. Hyper Light Drifter — Heart Machine
+File: images/5ab97512ceb9a4e5b443ff41-1280.webp | 1280 × 720 px
+Drive: https://drive.google.com/file/d/1K3bB2Wxr-WVBZxgLTl_Fp0utgAeLk_fG/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/steam-257850/5ab97512ceb9a4e5b443ff41-1280.webp
+Trang chính thức: https://store.steampowered.com/app/257850/
+SHA256: ca01f9c4c32fe9178f02edcb37ad30e44bb549d392fca6bd3ef29754e967e7ca
+Review: Representative image visually inspected at overview scale, 2026-11-03
+
+2. Katana ZERO — Askiisoft
+File: images/cb6ed6b978f28532833a23eb-480.webp | 480 × 266 px
+Drive: https://drive.google.com/file/d/13BbSgfNfZOOt9F--_VW0i5sngwb-39Cm/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/steam-460950/cb6ed6b978f28532833a23eb-480.webp
+Trang chính thức: https://store.steampowered.com/app/460950/
+SHA256: 09cc37a89628d7520360e4a7c34b761e7bc38b604082ac9e9db337ca4f6f7931
+Review: Not individually reviewed
+
+3. Narita Boy — Studio Koba
+File: images/6e29df1511707d17e4445d53-480.webp | 480 × 268 px
+Drive: https://drive.google.com/file/d/1eZxZDMZ_LSnK-oMVONCQySdtZtC8BRDi/view?usp=drivesdk
+Nguồn ảnh: https://game-library.zingplay.dev/img/steam-1069530/6e29df1511707d17e4445d53-480.webp
+Trang chính thức: https://store.steampowered.com/app/1069530/
+SHA256: 226a82140dd114e3926a11c6badde346320e06a00ef417012c45cce21b2f54cf
+Review: Not individually reviewed
