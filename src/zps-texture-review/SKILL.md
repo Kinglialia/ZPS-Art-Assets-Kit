@@ -1,12 +1,15 @@
 ---
 name: zps-texture-review
-description: "Reviews textures and materials as they appear on a 3D model: seams, texel density, map channels/color space/normal convention, baked lighting in albedo, mip/compression and style fit, diagnosing whether a problem comes from the map, UV or lighting, and verifies revisions with the shared AD issue fields. Use for standalone texture/material review (\"review texture\", \"kiểm texture\", \"texture bị seam\", \"material nhìn sai\", \"soát map\"). Not for 2D sprites/UI (zps-2d-review), mesh/topology checks (zps-3d-artist), cross-domain or concept critique (zps-artistic-critique); routine self-checks stay inside zps-surface."
+description: "Review textures on a 3D model: seams, texel density, channels and color space, normal convention, baked light, mip and compression, style fit; find if a fault comes from map, UV or lighting. Use for texture review (\"kiểm texture\", \"texture bị seam\")."
 metadata:
   version: 0.5.6
   validation: pending
 ---
 
 # ZPS - Texture Review
+
+**Not for:** 2D sprites and UI (zps-2d-review); mesh and topology checks (zps-3d-artist); concept or cross-domain critique (zps-artistic-critique). Self-checks stay in zps-surface.
+
 Theo [quy tắc chung](../.art-production-support/rules/art-operation.md). Review không cần tool tạo ảnh, nhưng phải mở được ảnh/render thật. Texture được đánh giá **trên model**: một atlas phẳng đẹp chưa chứng minh texture đạt.
 
 ## Intake

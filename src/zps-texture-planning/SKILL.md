@@ -1,12 +1,15 @@
 ---
 name: zps-texture-planning
-description: "Recommends how to texture a given 3D model for a project's style: reads the model (UVs, materials, polygon count, vertex colors, screen size) and the concept or style sheet, then proposes one or two texturing methods with trade-offs and a small test. Use before texturing when the method is not chosen (\"nên texture kiểu gì\", \"chọn cách texture\", \"hand-painted hay PBR\", \"lên phương án texture\"); once the method is chosen, use zps-surface."
+description: "Choose how to texture a 3D model: read its UVs, materials, screen size and the style, then propose one or two methods with trade-offs and a small test. Use before texturing (\"nên texture kiểu gì\", \"hand-painted hay PBR\")."
 metadata:
   version: 0.5.6
   validation: pending
 ---
 
 # ZPS - Texture Planning
+
+**Not for:** texturing after the method is chosen (zps-surface).
+
 Theo [quy tắc chung](../.art-production-support/rules/art-operation.md). Đầu ra là đề xuất phương pháp, không phải texture đã vẽ.
 
 **Ai quyết cách làm:** người gọi (AD, user) nêu cách làm cụ thể, hoặc yêu cầu theo tài liệu Art Style → làm theo. Không ai nêu → skill tự chọn. Giới hạn kỹ thuật của model (ví dụ không có UV) vẫn phải theo. Hai yêu cầu cụ thể mâu thuẫn nhau → hỏi người gọi, không tự chọn bên nào. Khi tự chọn: ghi cách đã chọn và lý do một dòng trong bàn giao; ưu tiên cách skill tự làm được tới chất lượng giao (mục "Năng lực thực của role" trong [texture methods](references/texture-methods.md)); cách cần người hoặc DCC thì báo trước, không chọn ngầm.

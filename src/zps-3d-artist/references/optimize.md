@@ -36,7 +36,7 @@ At the chosen level, also run the other engine and keep the better (worst-view I
 ## 5. Measure — `tools/optimize/measure.py`
 
 ```
-python tools/optimize/measure.py --ref ref_high.glb --cand level_0.1.glb --out <w>/measure/level_0.1.json [--views 12] [--raster 512] [--screen-px 400]
+tools/.deps/venv/bin/python tools/optimize/measure.py --ref ref_high.glb --cand level_0.1.glb --out <w>/measure/level_0.1.json [--views 12] [--raster 512] [--screen-px 400]
 ```
 Pure Python (trimesh + numpy). Silhouettes by orthographic triangle rasterisation from `cameras` directions on a sphere (including above and below), same framing for ref and candidate; IoU per view, worst view. Two-way Hausdorff and mean (surface samples → closest point) as fraction of bbox diagonal and projected to px (`× screen_px / bbox_height`). Normal deviation p95 between candidate samples and nearest ref face. Masked SSIM is added by `bake.py` when texture exists.
 

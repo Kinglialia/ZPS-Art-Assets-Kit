@@ -1,12 +1,15 @@
 ---
 name: zps-visual-intelligence
-description: "Analyze and compare game-art images: explain how they work visually (composition, shape, color/value, lighting, material, appeal and expression) and give grounded judgments and improvement directions, even with no brief. Use for open-ended analysis or quick aesthetic opinions (\"phân tích ảnh này\", \"ảnh này đẹp không\", \"so sánh hai ảnh\", \"vì sao ảnh này hút mắt\", \"nhận xét nhanh\"). Not for acceptance reviews or tracking fixes across revisions (zps-artistic-critique), or technical review of in-game 2D assets/UI (zps-2d-review) or textures on models (zps-texture-review)."
+description: "Analyze or compare game-art images and say why they work and what to improve, with or without a brief. Use for quick opinions and image analysis (\"phân tích ảnh\", \"ảnh này đẹp không\", \"so sánh hai ảnh\")."
 metadata:
   version: 0.5.6
   validation: pending
 ---
 
 # ZPS - Visual Intelligence
+
+**Not for:** acceptance reviews or issue tracking (zps-artistic-critique); in-game 2D or UI review (zps-2d-review); textures on models (zps-texture-review).
+
 Understand how an image works, what gives it character, and which changes would meaningfully help. Preserve successful choices. Artistic judgment goes beyond technical correctness or a checklist of isolated features.
 
 ## Establish the evidence

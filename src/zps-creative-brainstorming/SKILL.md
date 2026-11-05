@@ -1,12 +1,15 @@
 ---
 name: zps-creative-brainstorming
-description: "Develop, compare, challenge and refine game-art concepts with the project owner, from a rough idea to a chosen visual direction. Use when the direction is still open (\"brainstorm art\", \"lên ý tưởng\", \"tìm hướng art\", \"chọn hướng\", \"định hình style\", \"style mới cho game\"). Not for collecting references (zps-visual-research), turning a chosen direction into rules (zps-art-style-development), or drawing the asset concept itself (zps-concept-artist)."
+description: "Explore and compare visual directions for a game with the owner, and recommend one. Use when the art direction is still open (\"brainstorm art\", \"tìm hướng art\", \"chọn style\")."
 metadata:
   version: 0.5.6
   validation: pending
 ---
 
 # ZPS - Creative Brainstorming
+
+**Not for:** finding references (zps-visual-research); writing style rules (zps-art-style-development); drawing the concept (zps-concept-artist).
+
 Help the owner choose a visual idea worth developing. Own concept exploration and selection; reference research and production rules are separate tasks when needed.
 
 ## Frame the decision

@@ -1,12 +1,15 @@
 ---
 name: zps-ui
-description: "Creates or revises game UI art: buttons, panels, frames, HUD elements, bars, status icons and their states, 9-slice assets and developer handoff specs, working from an approved wireframe or layout, for the project's engine (Godot handoff guide included). Use for UI visuals and asset handoff (\"làm UI\", \"vẽ nút\", \"panel\", \"HUD\", \"UI kit\", \"9-slice\", \"bàn giao UI\"). Screen flow and UX design belong to UX or game design; item icons and sprites use zps-asset-2d; standalone UI review uses zps-2d-review."
+description: "Create or revise game UI art: buttons, panels, HUD, bars, status icons, states, 9-slice assets and the developer handoff, from an approved wireframe. Use for UI art (\"làm UI\", \"vẽ nút\", \"HUD\", \"9-slice\")."
 metadata:
   version: 0.5.6
   validation: pending
 ---
 
 # ZPS - UI Art
+
+**Not for:** screen flow and UX design (UX or game design); item icons and sprites (zps-asset-2d); standalone UI review (zps-2d-review).
+
 Theo [quy tắc chung](../.art-production-support/rules/art-operation.md) và [chuẩn chất lượng](../.art-production-support/rules/art-quality.md).
 
 ## Phạm vi

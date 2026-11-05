@@ -1,12 +1,15 @@
 ---
 name: zps-surface
-description: "Creates, edits or diagnoses textures and materials on existing 3D models once the texturing method is chosen (hand-painted, flat color or vertex color, PBR, tileable or trim, pixel, photo-based, projection paint), or paints rendered views for a 3D Artist to project; follows the project's engine map conventions (Godot profile included). Use for producing or fixing texture (\"vẽ texture\", \"sửa texture\", \"làm material\", \"trim sheet\", \"paint view\", \"sửa seam\"). If the method is not chosen, use zps-texture-planning first; standalone review uses zps-texture-review."
+description: "Create, edit or fix textures and materials on a 3D model with a chosen method: hand-painted, flat or vertex color, PBR, tileable or trim, pixel, photo, projection. Use for texture work (\"vẽ texture\", \"sửa texture\", \"sửa seam\")."
 metadata:
   version: 0.5.6
   validation: pending
 ---
 
 # ZPS - Surface
+
+**Not for:** choosing the method (zps-texture-planning); standalone review (zps-texture-review).
+
 Theo [quy tắc chung](../.art-production-support/rules/art-operation.md) và [chuẩn chất lượng](../.art-production-support/rules/art-quality.md).
 
 ## Intake

@@ -1,6 +1,6 @@
 ---
 name: zps-2d-artist
-description: "ZPS - 2D Artist role entry for in-game 2D assets and UI art, for the project's engine and platform (a Godot mobile profile is included). Use when a 2D/UI request arrives from an AD brief, approved concept, UX wireframe or direct description and the deliverable type is unclear (\"làm asset 2D\", \"vẽ icon\", \"làm UI\", \"việc 2D\"). Routes to zps-asset-2d, zps-ui and zps-2d-review; when the task is already clear, use that skill directly."
+description: "Router for 2D game art: picks Asset 2D, UI or 2D Review when the type of 2D work is unclear. Use for a general 2D or UI request (\"làm asset 2D\", \"việc 2D\")."
 metadata:
   version: 0.5.6
   validation: pending

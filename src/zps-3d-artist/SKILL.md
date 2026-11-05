@@ -1,12 +1,15 @@
 ---
 name: zps-3d-artist
-description: "Build, optimize or technically review static 3D game props and environment pieces from concepts or existing models; covers mesh, topology, UV, bake and GLB export for the project's engine. Use for modeling, polygon reduction or mesh QA (\"dựng model\", \"model từ concept\", \"giảm mặt\", \"giảm poly\", \"optimize poly\", \"low poly\", \"budget mặt\", \"kiểm model\", \"review model 3D\"). Not for 2D drawing, concept art or standalone texture painting (zps-texture-artist)."
+description: "Build, optimize or check static 3D game props from concepts or existing models: mesh, UV, bake, GLB export and QA. Use for modeling and polygon reduction (\"dựng model\", \"giảm mặt\", \"low poly\", \"kiểm model\")."
 metadata:
   version: 0.5.6
   validation: pending
 ---
 
 # ZPS - 3D Artist
+
+**Not for:** 2D drawing, concept art or texture painting (zps-texture-artist).
+
 Work within the AD brief, chosen direction, camera and supplied technical limits. Static triangle-mesh props are supported. Rigging, animated characters, cloth and quad retopology are outside this toolset; identify the unsupported part and continue independent supported work.
 
 ## Start with the requested output

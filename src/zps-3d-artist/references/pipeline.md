@@ -10,7 +10,7 @@ Two runners, decided by the script:
 - **Blender-side** (they `import bpy`: `optimize/audit.py`, `cleanup.py`, `bake.py`, `decimate.py`, `self_build/render_views.py`, every `asset_checks/*.py`): `$BLENDER -b --python tools/<dir>/<script>.py -- <args>` (`$BLENDER` = `paths.blender` in `config.yaml`).
 - **Pure Python** (everything else: `validate_concept`, `gate1`, `sweep`, `measure`, `self_build/assembly`, `gates`, `param_fit`, `apply_edit`, `preflight`, `report`, `finalize`): `tools/.deps/venv/bin/python tools/<dir>/<script>.py <args>`.
 
-Alternative without the Blender app: `pip install bpy` (Python 3.13 → bpy 5.2.x) in the venv; then every script runs as `python <script>.py <args>`. Tested on Linux and macOS (Blender 5.x app, 2026-11-03).
+Alternative without the Blender app: `pip install bpy` (Python 3.13 → bpy 5.2.x) in the venv; then every script runs as `python3 <script>.py <args>`. Tested on Linux and macOS (Blender 5.x app, 2026-11-03).
 
 Work dir per asset: `output/<asset>/` with `input/` (originals, read-only), `task/spec.json`, `evidence/<step>/*.json|png`, `work/`, `final*.glb`, `report.md`, `contact_sheet.png`.
 
@@ -51,13 +51,13 @@ Multi-object assets: the optimize path joins every mesh into one object named af
 
 Then the visual review: `render_rig` produced `sheet.png`, clay crops at the game camera, and `concept_compare.png` (only with a ConceptCam; otherwise use `render_views.py --input <final> --mode critic` overlays). Review the image set listed in `templates/REVIEW-RUBRIC.md`. Label self-review versus independent review; neither grants owner approval. `chưa đạt` → one fix cycle (rule 6), then re-run the gate.
 
-When required QA checks pass and the configured visual review milestone is satisfied: `python tools/finalize.py --work output/<asset> --from <baked GLB> [--min-pass <baked GLB>]`. It refuses while any QA result is `fail` or `error` and names them; otherwise it writes `final.glb` (and `final_budget.glb` / `final_min_pass.glb`).
+When required QA checks pass and the configured visual review milestone is satisfied: `tools/.deps/venv/bin/python tools/finalize.py --work output/<asset> --from <baked GLB> [--min-pass <baked GLB>]`. It refuses while any QA result is `fail` or `error` and names them; otherwise it writes `final.glb` (and `final_budget.glb` / `final_min_pass.glb`).
 
 Scope of `finalize.py`: it requires only a `mesh_check` result for the exact file, and it refuses any `fail` or `error` among the results present. A check that did not run is listed in `data.not_run`; finalize does not block on it. Before you call finalize, confirm yourself that every check the spec requires has a result for that file. Do not report a check in `not_run` as passed.
 
 ## Report
 
-Run `python tools/report.py --work output/<asset> --spec output/<asset>/task/spec.json`. It collects every result JSON, writes `report.json`, `contact_sheet.png` and a `report.md` skeleton; you then edit the prose. `report.md` in Vietnamese, short: entry, generator/path, faces (source → chosen, budget, min_pass), metrics (IoU min, Hausdorff, SSIM), texture (mode, source, resolution), validation errors, critic verdict with the images it cited, warnings, what was **not** checked (no engine, no device, estimated height), file paths. `report.json` mirrors it. `contact_sheet.png`: concept | clay | final, plus the error-vs-faces curve with knee and chosen marked.
+Run `tools/.deps/venv/bin/python tools/report.py --work output/<asset> --spec output/<asset>/task/spec.json`. It collects every result JSON, writes `report.json`, `contact_sheet.png` and a `report.md` skeleton; you then edit the prose. `report.md` in Vietnamese, short: entry, generator/path, faces (source → chosen, budget, min_pass), metrics (IoU min, Hausdorff, SSIM), texture (mode, source, resolution), validation errors, critic verdict with the images it cited, warnings, what was **not** checked (no engine, no device, estimated height), file paths. `report.json` mirrors it. `contact_sheet.png`: concept | clay | final, plus the error-vs-faces curve with knee and chosen marked.
 
 Never call the result "game-ready" when engine or device checks were skipped. Say which milestone it reached.
 

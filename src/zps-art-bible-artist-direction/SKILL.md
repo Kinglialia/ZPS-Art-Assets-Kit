@@ -1,12 +1,15 @@
 ---
 name: zps-art-bible-artist-direction
-description: "Turn established game-art rules into a versioned Art Bible or a scoped Artist Brief with references, deliverables and acceptance checks for an artist who was not in the discussion. Use for production handoff (\"viết art bible\", \"viết brief cho artist\", \"giao việc artist\", \"cập nhật bible\"). Not for initial style exploration (zps-creative-brainstorming, zps-art-style-development)."
+description: "Write a versioned Art Bible or an Artist Brief with references, deliverables and acceptance checks, from approved style rules. Use for production handoff (\"viết art bible\", \"viết brief\", \"giao việc artist\")."
 metadata:
   version: 0.5.6
   validation: pending
 ---
 
 # ZPS - Art Bible & Artist Direction
+
+**Not for:** first style exploration (zps-creative-brainstorming, zps-art-style-development).
+
 Make approved visual decisions usable by an artist who was not in the discussion. Produce the requested artifact: a shared Art Bible, an Artist Brief for a specific task, or a scoped update. Do not force both when one suffices.
 
 ## Ground the handoff

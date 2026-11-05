@@ -25,3 +25,4 @@ zps-ui-codex/templates/review-request.md
 zps-ui-codex/templates/review.md
 zps-ui-codex/templates/task-record.md
 zps-ui-codex/templates/tech-profile-godot.md
+zps-3d-artist-codex/tools/install_global.sh

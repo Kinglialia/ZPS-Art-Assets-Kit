@@ -1,12 +1,15 @@
 ---
 name: zps-asset-2d
-description: "Creates or revises in-game 2D images: icons, item sets, sprites, frame sequences, tiles, decals and backgrounds, including small design choices within the brief, for the project's engine and display sizes (Godot mobile profile available). Use when the deliverable is placed directly in the game (\"vẽ icon\", \"làm bộ item\", \"làm sprite\", \"tile\", \"background\", \"sửa icon\"). UI elements use zps-ui; 3D asset concepts use zps-concept-artist; textures on models use zps-surface."
+description: "Create or revise in-game 2D images: icons, item sets, sprites, frame animations, tiles, decals and backgrounds, at their display size. Use for 2D game assets (\"vẽ icon\", \"làm sprite\", \"làm bộ item\")."
 metadata:
   version: 0.5.6
   validation: pending
 ---
 
 # ZPS - Asset 2D
+
+**Not for:** UI elements (zps-ui); 3D asset concepts (zps-concept-artist); textures on models (zps-surface).
+
 Theo [quy tắc chung](../.art-production-support/rules/art-operation.md) và [chuẩn chất lượng](../.art-production-support/rules/art-quality.md).
 
 ## Intake

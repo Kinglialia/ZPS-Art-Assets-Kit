@@ -1,12 +1,15 @@
 ---
 name: zps-artistic-critique
-description: "Review game art against its brief, style rules and viewing context; prioritize evidence-based fixes, track issues across revisions and support acceptance decisions. Use for concept, scene, key-art or cross-domain visual-system critique and formal acceptance (\"review concept\", \"góp ý bản vẽ\", \"nghiệm thu\", \"bản sửa đã đạt chưa\", \"review cả bộ style\"). Not for open-ended image appreciation (zps-visual-intelligence); in-game 2D assets/UI use zps-2d-review and textures on 3D models use zps-texture-review. Does not invent a new direction."
+description: "Review concept art, scenes or a visual system against the brief and style rules, track issues across revisions and support acceptance. Use for formal critique (\"review concept\", \"góp ý bản vẽ\", \"nghiệm thu\")."
 metadata:
   version: 0.5.6
   validation: pending
 ---
 
 # ZPS - Artistic Critique
+
+**Not for:** quick image opinions (zps-visual-intelligence); in-game 2D or UI (zps-2d-review); textures on models (zps-texture-review). This skill does not invent a new direction.
+
 Review work against its purpose and applicable rules, prioritize repairs and track revisions. Include visual reasoning in this review; a separate Visual Intelligence report is not a prerequisite. Quick open-ended image appreciation belongs to Visual Intelligence.
 
 ## Establish the review scope

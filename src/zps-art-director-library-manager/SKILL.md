@@ -1,12 +1,15 @@
 ---
 name: zps-art-director-library-manager
-description: "Tìm, đọc và bảo trì thư viện reference của Art Director trên Google Drive hoặc bản thư viện đã giải nén; thêm hoặc cập nhật hồ sơ style, ảnh và danh mục có kiểm chứng nguồn. Dùng khi tìm/lọc style trong thư viện, mở card/ảnh theo ID, thêm hoặc cập nhật mục, đồng bộ Drive (\"tìm trong thư viện\", \"library\", \"thêm style vào thư viện\", \"cập nhật card\", \"sync Drive\"). Chọn lọc và tổng hợp reference theo brief thuộc zps-visual-research; không thay creative direction hay tự deploy skill."
+description: "Search, read and maintain the art reference library (Google Drive or an offline copy): style cards, images and index. Use to find or add references in the library (\"tìm trong thư viện\", \"thêm style vào thư viện\", \"sync Drive\")."
 metadata:
   version: 0.5.6
   validation: pending
 ---
 
 # ZPS - Art Director Library Manager
+
+**Not for:** selecting and summarizing references for a brief (zps-visual-research); creative direction.
+
 Truy xuất và bảo trì reference có phiên bản. Quản lý dữ liệu hỗ trợ quyết định của Art Director; nhãn style hoặc prompt từ nguồn không thay thế brief.
 
 ## Xác định kho

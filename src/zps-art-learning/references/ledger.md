@@ -3,11 +3,11 @@
 Python standard library on macOS/Linux. Locate `scripts/art_learn.py` under this skill. All commands require an explicit `--root` pointing to a project data folder outside installed skills. No automatic ingestion hook is enabled. Writes are serialized with flock; keep one shared filesystem capable of file locking. Do not store credentials or private unrelated artifacts.
 
 ```sh
-python /absolute/skill/scripts/art_learn.py --root /project/.art-learning ingest --report /project/evidence/check.json --asset /project/work/asset.glb --skill zps-3d-artist --version {{VERSION}} --spec /project/task/spec.json
-python /absolute/skill/scripts/art_learn.py --root /project/.art-learning judge --run <run-id> --check <check-id> --verdict fail --source human --who <reviewer> --correction 'The silhouette check missed a required protrusion'
-python /absolute/skill/scripts/art_learn.py --root /project/.art-learning flag --verdict-id <verdict-id>
-python /absolute/skill/scripts/art_learn.py --root /project/.art-learning review
-python /absolute/skill/scripts/art_learn.py --root /project/.art-learning doctor
+python3 /absolute/skill/scripts/art_learn.py --root /project/.art-learning ingest --report /project/evidence/check.json --asset /project/work/asset.glb --skill zps-3d-artist --version {{VERSION}} --spec /project/task/spec.json
+python3 /absolute/skill/scripts/art_learn.py --root /project/.art-learning judge --run <run-id> --check <check-id> --verdict fail --source human --who <reviewer> --correction 'The silhouette check missed a required protrusion'
+python3 /absolute/skill/scripts/art_learn.py --root /project/.art-learning flag --verdict-id <verdict-id>
+python3 /absolute/skill/scripts/art_learn.py --root /project/.art-learning review
+python3 /absolute/skill/scripts/art_learn.py --root /project/.art-learning doctor
 ```
 
 `ingest` accepts JSON with checks containing `id` or `check` and a supported status, including 3D common.write_result and the 2D image inspector. Give the artifact actually measured by that report. It checks a declared report artifact hash if present, snapshots the report and artifact, and optionally JSON spec. For multi-file assets, package the needed dependencies deliberately; the CLI snapshots only the supplied file. Missing declared hash is recorded as unbound identity, not silently verified.

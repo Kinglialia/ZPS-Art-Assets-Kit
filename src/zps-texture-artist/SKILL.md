@@ -1,6 +1,6 @@
 ---
 name: zps-texture-artist
-description: "ZPS - Texture Artist role entry for textures and materials on 3D models, for the project's engine (a Godot profile is included). Use when a texture/material request arrives from a 3D Artist, AD brief, approved concept or direct description and it is unclear whether to plan, paint or review (\"texture cho model\", \"làm material\", \"vẽ texture\", \"việc texture\"). Routes to zps-texture-planning, zps-surface and zps-texture-review; when the task is already clear, use that skill directly."
+description: "Router for textures on 3D models: picks Texture Planning, Surface or Texture Review when the texture task is unclear. Use for a general texture request (\"texture cho model\", \"việc texture\")."
 metadata:
   version: 0.5.6
   validation: pending

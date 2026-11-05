@@ -1,12 +1,15 @@
 ---
 name: zps-concept-artist
-description: "Vẽ hoặc sửa concept asset 3D cho game theo direction đã chọn: paint-over grey-box từ camera game, làm rõ silhouette, hình khối, phần khuất, multi-view và thông tin bàn giao cho người dựng. Dùng khi cần ảnh concept thật (\"vẽ concept\", \"paint over grey-box\", \"concept prop\", \"concept nhà\", \"sửa concept\", \"vẽ thêm view\"). Brainstorm ý tưởng dùng zps-creative-brainstorming; viết brief dùng zps-art-bible-artist-direction; asset 2D đặt thẳng vào game dùng zps-asset-2d."
+description: "Draw or revise concept art for 3D game assets: grey-box paint-over from the game camera, clear forms, hidden parts and extra views for the modeler. Use for concept images (\"vẽ concept\", \"paint over grey-box\", \"vẽ thêm view\")."
 metadata:
   version: 0.5.6
   validation: pending
 ---
 
 # ZPS - Concept Artist
+
+**Not for:** brainstorming ideas (zps-creative-brainstorming); writing a brief (zps-art-bible-artist-direction); 2D images placed in the game (zps-asset-2d).
+
 Chuyển direction thành concept nhìn thấy được và đủ rõ cho người dựng. AD có thể vừa định hướng vừa vẽ concept trong cùng task.
 
 ## Chốt phạm vi từ thông tin đã có

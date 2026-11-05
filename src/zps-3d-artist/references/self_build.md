@@ -57,7 +57,7 @@ Rules:
 
 **2. Plan.** Builder writes `part_graph.json` and `parts_lib.py`. It reviews the plan once against the concept and may only **add** (a missing part, a clearer shape); never merge or drop parts.
 
-**2b. Concept camera (painted 3/4 views).** A painted concept is rarely drawn from exactly azimuth 45° / elevation 30°. After the first coarse build, run `python tools/self_build/fit_camera.py --work <w> --rollout <k> --spec task/spec.json --write-spec`: it grid-searches azimuth/elevation for every non-orthographic view and stores them in `spec.concept.cameras` (a measurement, not a threshold; say so when you show the spec). Fit it once, then keep it fixed while `param_fit` tunes sizes. Example: rock-moss 34 view fitted at 49°/22°, IoU 0.848 → 0.874 before any shape change.
+**2b. Concept camera (painted 3/4 views).** A painted concept is rarely drawn from exactly azimuth 45° / elevation 30°. After the first coarse build, run `tools/.deps/venv/bin/python tools/self_build/fit_camera.py --work <w> --rollout <k> --spec task/spec.json --write-spec`: it grid-searches azimuth/elevation for every non-orthographic view and stores them in `spec.concept.cameras` (a measurement, not a threshold; say so when you show the spec). Fit it once, then keep it fixed while `param_fit` tunes sizes. Example: rock-moss 34 view fitted at 49°/22°, IoU 0.848 → 0.874 before any shape change.
 
 **3. Rollouts.** Use one builder by default. Only with authorized delegation and budget, use `self_build.rollouts` independent builders (none sees the others), each writing `rollouts/<k>/part_graph.json` + `parts_lib.py`. Build each coarse and keep the best:
 ```
@@ -68,7 +68,7 @@ $BLENDER -b --python tools/self_build/assembly.py -- --work <w> --rollout <k> --
 **4. Part by part.** For each part n in order:
 ```
 $BLENDER -b --python tools/self_build/assembly.py -- --work <w> --upto <n>
-python tools/self_build/gates.py --work <w> --part <name>
+tools/.deps/venv/bin/python tools/self_build/gates.py --work <w> --part <name>
 ```
 Gates: (1) runs, non-empty mesh, traceback on error; (2) contact: share of sample points on the child's attaching face within 1 mm of the parent ≥ `contact_min_ratio` (`through_axis`: both ends stick out); (3) penetration: intersection volume / child volume ≤ `penetration_max_ratio` (`inset_into`: matches `depth` ±20%); (4) floaters: connected components besides the main one with a bbox edge ≥ `floater_span_ratio` × object size, error only when the count grows; (5) health: non-manifold, zero-area, loose verts on the union; (6) part bbox within `bbox_tolerance` of what its dims declare. On failure the builder fixes that part only, using the numbers in the gate JSON. After `part_max_attempts`, commit with a warning.
 
@@ -87,7 +87,7 @@ Nelder–Mead over all params (or one part's), clamped to ±`max_param_change`, 
    - `prev_34.png` if a previous snapshot exists (for A/B).
 2. If independent review is authorized and available, use a fresh reviewer (no builder context); otherwise perform a clearly labeled self-review. Give it: concept images, the image set with labels, `part_graph.json`, `assembly.json` (IoU per view, gate warnings), the previous diagnosis if any, and the single change the builder claims. Save its JSON to `diagnoses/<n>.json`.
 3. Stop if `approved` is true.
-4. Apply only `top_fix`: `python tools/self_build/apply_edit.py --work <w> --diagnosis <n>`. For `structure`, the builder edits that one part (or adds one); for `param`, the script reruns `param_fit --part`. The script refuses a second edit on the same diagnosis, refuses if renders are older than the code (hash of `part_graph.json` + `parts_lib.py`), rebuilds, re-gates, re-measures, and reverts: for a `param` fix when the worst-view IoU drops by more than `revert_tolerance` below the best seen; for a `structure` fix only when any view falls below `spec.concept.min_iou`, because fixing block language can trade a little silhouette precision for the right planes (rock-moss: 0.911 loaf → 0.880 faceted, critic A/B "better"). The critic's A/B check then decides; `--revert` undoes it.
+4. Apply only `top_fix`: `tools/.deps/venv/bin/python tools/self_build/apply_edit.py --work <w> --diagnosis <n>`. For `structure`, the builder edits that one part (or adds one); for `param`, the script reruns `param_fit --part`. The script refuses a second edit on the same diagnosis, refuses if renders are older than the code (hash of `part_graph.json` + `parts_lib.py`), rebuilds, re-gates, re-measures, and reverts: for a `param` fix when the worst-view IoU drops by more than `revert_tolerance` below the best seen; for a `structure` fix only when any view falls below `spec.concept.min_iou`, because fixing block language can trade a little silhouette precision for the right planes (rock-moss: 0.911 loaf → 0.880 faceted, critic A/B "better"). The critic's A/B check then decides; `--revert` undoes it.
 5. A/B check: the next critic call answers "better / same / worse than previous on the targeted criterion" twice with image order swapped. Inconsistent or `worse` → `apply_edit.py --work <w> --revert` and mark the fix as tried.
 
 IoU here is computed on bbox-normalised silhouettes, so it measures proportions, not absolute size. The concept has no scale; `height_m` sets it later.

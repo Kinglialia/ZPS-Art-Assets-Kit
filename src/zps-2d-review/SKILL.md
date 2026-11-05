@@ -1,12 +1,15 @@
 ---
 name: zps-2d-review
-description: "Reviews in-game 2D assets and UI art at their real display size and background: readability, set consistency, alpha edges, canvas/pivot/frame stability, tile seams, 9-slice, states and long/Vietnamese text, plus style fit, and verifies revisions with the shared AD issue fields. Use for standalone 2D/UI review, and when zps-asset-2d or zps-ui deliver a full set, a final or a UI screen (\"review icon\", \"kiểm sprite\", \"soát bộ icon\", \"review UI\", \"màn hình này ổn chưa\", \"tile bị lộ nối\"). Not for textures on 3D models (zps-texture-review), concept art or cross-domain style decisions (zps-artistic-critique), or open-ended image appreciation (zps-visual-intelligence); routine self-checks on single assets and small edits stay inside those skills."
+description: "Review in-game 2D assets and UI at real display size: readability, set consistency, alpha, pivot, tiles, 9-slice, states, long text and import notes. Use for 2D or UI review (\"review icon\", \"kiểm sprite\", \"review UI\")."
 metadata:
   version: 0.5.6
   validation: pending
 ---
 
 # ZPS - 2D Review
+
+**Not for:** textures on 3D models (zps-texture-review); concept art or cross-domain style decisions (zps-artistic-critique); open image opinions (zps-visual-intelligence). Self-checks on single assets and small edits stay in zps-asset-2d and zps-ui.
+
 Theo [quy tắc chung](../.art-production-support/rules/art-operation.md). Review không cần tool tạo ảnh, nhưng phải mở được ảnh thật. Asset 2D được đánh giá **ở kích thước hiển thị và trên nền thật** của game, không chỉ ở bản phóng to.
 
 ## Intake

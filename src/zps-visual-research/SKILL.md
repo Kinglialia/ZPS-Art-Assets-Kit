@@ -1,12 +1,15 @@
 ---
 name: zps-visual-research
-description: "Research and curate visual references for a game-art question or chosen direction, using the project library first and external sources to fill gaps, with annotated roles and transfer limits. Use for reference selection, visual research and annotated moodboards (\"tìm reference\", \"tìm ref\", \"moodboard\", \"nghiên cứu hình ảnh\", \"game nào làm kiểu này\"). For plain library lookups or library maintenance use zps-art-director-library-manager; for choosing a direction use zps-creative-brainstorming."
+description: "Find and curate visual references for an art question, library first and then the web, with notes on what to learn and what not to copy. Use for references and moodboards (\"tìm reference\", \"moodboard\", \"game nào làm kiểu này\")."
 metadata:
   version: 0.5.6
   validation: pending
 ---
 
 # ZPS - Visual Research
+
+**Not for:** plain library lookups or library upkeep (zps-art-director-library-manager); choosing a direction (zps-creative-brainstorming).
+
 Select and synthesize references to answer a scoped art question. Research can precede direction selection or resolve questions within a chosen direction; preserve locked choices when they exist. It does not approve a finished style system.
 
 ## Frame the decision

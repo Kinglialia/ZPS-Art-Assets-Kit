@@ -1,12 +1,15 @@
 ---
 name: zps-art-style-development
-description: "Develop a chosen game-art direction into explicit, testable visual rules across representative assets and gameplay contexts, or refine an existing style. Use for style rules, style sheets and style tests before a production Bible (\"phát triển style\", \"chốt rule style\", \"style guide\", \"test style trên asset mới\", \"chỉnh style\"). Not for exploring new directions (zps-creative-brainstorming) or writing the production Bible/brief (zps-art-bible-artist-direction)."
+description: "Turn a chosen art direction into clear, testable style rules and test them on new assets. Use for style rules, style sheets and style tests (\"phát triển style\", \"chốt rule style\", \"style guide\")."
 metadata:
   version: 0.5.6
   validation: pending
 ---
 
 # ZPS - Art Style Development
+
+**Not for:** exploring new directions (zps-creative-brainstorming); writing the Bible or a brief (zps-art-bible-artist-direction).
+
 Develop visual rules from the supplied direction and relevant evidence. If the direction is provisional, keep the resulting rules provisional; missing formal research is not an automatic prerequisite to drafting. Preserve locked identity choices. Reopen them only when the owner requests it or evidence reveals a material conflict; explain that conflict before proposing a change.
 
 ## Establish the working contract

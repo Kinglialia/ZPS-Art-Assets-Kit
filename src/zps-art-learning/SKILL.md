@@ -1,12 +1,15 @@
 ---
 name: zps-art-learning
-description: "Record art-tool runs, explicit reviewer corrections and evidence-backed candidate lessons in a project ledger; review recurring issues and propose scoped improvements. Use only when asked to capture lessons or improve the art workflow (\"ghi bài học\", \"lưu feedback\", \"tổng hợp lỗi hay gặp\", \"cải thiện quy trình art\"); not for automatic self-training or routine asset approval."
+description: "Record tool results and real reviewer feedback in a project ledger, and propose improvements from repeated issues. Use only when asked to capture lessons (\"ghi bài học\", \"lưu feedback\")."
 metadata:
   version: 0.5.6
   validation: pending
 ---
 
 # ZPS - Art Learning
+
+**Not for:** automatic self-training or routine asset approval.
+
 Keep learning as project data first. Use the [ledger CLI](references/ledger.md) when the user requests learning capture or the project explicitly enables it. No background tasks, global memory, automatic skill edits or implicit approval are installed.
 
 Record measured results separately from reviewer verdicts. A saved report and hash establish identity/integrity, not that its claims are correct. Human feedback must come from an actual human response; deterministic verdicts must come from a known executed check. Never relabel agent self-review as human or deterministic. Silence, an empty reply and missing checks are not pass.
