@@ -1,0 +1,13 @@
+{
+  "rule": "Trigger when the user asks for 2D game art or UI work and the type of 2D work is not yet clear. Do not trigger when a more specific skill is clearly named or clearly fits, or when the work is not 2D game art.",
+  "cases": [
+    {"query": "làm asset 2D cho màn chơi mới", "should_trigger": true, "kind": "positive", "why": "General 2D request; the type of asset is open"},
+    {"query": "I need some 2D art for the shop screen", "should_trigger": true, "kind": "positive", "why": "Could be UI or icons: the router picks"},
+    {"query": "việc 2D tuần này: vài icon và một cái panel", "should_trigger": true, "kind": "positive", "why": "Mixed Asset 2D and UI work"},
+    {"query": "vẽ icon thanh kiếm 128px nền trong suốt", "should_trigger": false, "kind": "negative", "why": "Clearly Asset 2D: go straight to it"},
+    {"query": "review cái sprite đi bộ này giúp anh", "should_trigger": false, "kind": "negative", "why": "Clearly 2D Review"},
+    {"query": "texture cho cái thùng gỗ 3D", "should_trigger": false, "kind": "negative", "why": "Texture on a model belongs to Texture Artist"},
+    {"query": "brainstorm hướng art cho game mới", "should_trigger": false, "kind": "negative", "why": "Direction is open: Creative Brainstorming"},
+    {"query": "làm cái HUD máu và mana", "should_trigger": false, "kind": "edge", "why": "Argued: HUD is clearly UI, so UI is called directly. The router is only for unclear 2D work"}
+  ]
+}

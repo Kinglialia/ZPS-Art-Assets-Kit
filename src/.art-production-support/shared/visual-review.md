@@ -27,3 +27,9 @@ Lock the artifact, the brief, and the comparison conditions. When the AD changes
 ## Honest verdict
 
 A self-review is not AD approval. An independent review needs a real separate context/reviewer. Do not claim independence by changing persona. The conclusion is meets_checked_criteria, needs_revision, or insufficient_evidence, limited to the stage. Use the [technical gate](scripts/README.md#evidence-gate) only when the caller asks for machine-readable acceptance. The required IDs are an agreed configuration. Do not drop them to get a pass. Do not mix missing or stale evidence with not_applicable. If you give a score, it must have a rubric and must not hide a blocker. Do not look for defects to fill a quota.
+
+## Yes/no checks, not scales
+
+- Write acceptance as 3–6 yes/no checks that someone can observe ("Is the silhouette readable at 64 px on the dark background?"), not as a 1–10 score. Two reviews of the same image then give the same answer.
+- Each check names its evidence (image, size, background, tool output).
+- If every check passes but the result is clearly not better than the previous version, the checks are wrong. Fix the checks before the next round. Do not pass the image.

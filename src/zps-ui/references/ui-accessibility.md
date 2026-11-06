@@ -10,4 +10,6 @@ Set the goal and the check method for the task. Do not claim a general standard 
 - Non-essential motion has a reduce/off option when it is in the requirements. Avoid flashing that causes discomfort.
 - A button with only an icon needs a clear meaning. Record the label, focus order and semantics when assistive technology is required.
 
+Two adjacent fills (tabs, a bar and its track) do not need 3:1 against each other: give them a shared border or gap with 3:1 against each fill. See [color](../../.art-production-support/shared/color.md).
+
 Use W3C to understand the problem ([color](https://github.com/w3c/wcag/blob/main/understanding/20/use-of-color.html), [contrast](https://github.com/w3c/wcag/blob/main/understanding/20/contrast-minimum.html), [touch area](https://github.com/w3c/wcag/blob/main/understanding/22/target-size-minimum.html), [motion](https://github.com/w3c/wcag/blob/main/understanding/21/animation-from-interactions.html)). These are web criteria. Do not assign a CSS pixel directly to a Godot unit. They do not certify a native game. Record the unit and the source of the project target. Check screen reader/focus against the actual Godot version, operating system and device.

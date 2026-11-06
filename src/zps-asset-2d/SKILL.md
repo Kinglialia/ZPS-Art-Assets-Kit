@@ -35,13 +35,13 @@ If there is no complete Bible/style sheet and only reference images, read the st
 1. Read [production](references/production.md) when you create a new asset or change canvas/alpha/pivot/frame/import. For a revision that keeps the design, use [revision](../.art-production-support/shared/revision.md).
 2. Set the detail budget by **display size**. At a small size (for example a 64px icon), give priority to the silhouette and a few main identifying points. Check with `preview.py sheet` at target size. Do not count details.
 3. Generate with [gen craft](../.art-production-support/shared/gen-craft.md). Use the set anchor of the set as the input reference.
-4. Post-process: remove the background, crop to a fixed canvas, set pivot/baseline, scale to the file size. Do not auto-crop each frame.
+4. Post-process: remove the background, crop to a fixed canvas, set pivot/baseline, scale to the file size. Do not auto-crop each frame. Scale and blend in linear light, and pull an out-of-gamut color back by chroma, not by clipping ([color](../.art-production-support/shared/color.md)).
 5. Run these tools:
    - `preview.py sheet` (target size; light, dark and game backgrounds).
    - `tile` for a tile.
    - `sprite_check.py` and `anim_preview.py` (filmstrip, onion skin, GIF) for frames.
    - `palette_report.py` when a palette exists.
-   - `inspect_image.py` for the file contract.
+   - `inspect_image.py` for the file contract; add `--require-alpha` for a transparent asset (it also catches a painted checkerboard).
 6. Open the preview. Check for added elements against the [quality standard](../.art-production-support/rules/art-quality.md), the generated-image fault table and the self-check. Fix until the asset passes or the budget ends. If an image does not pass, choose the fix with the [fix playbook](../.art-production-support/shared/fix-playbook.md). For a multi-turn task or a task that needs handoff, write a [task record](../.art-production-support/templates/task-record.md).
 
 ## Self-check

@@ -29,7 +29,7 @@ Use only relevant dimensions:
 
 - **Composition and hierarchy:** focal relationships, grouping, figure–ground separation, balance, rhythm, negative space and competing emphasis.
 - **Shape, form and space:** silhouette, proportion, gesture, volume, overlap, perspective and spatial relationships, judged within the visual language.
-- **Color and value:** hue, saturation, light–dark organization, harmony, contrast and relationships with surrounding colors.
+- **Color and value:** hue, saturation, light–dark organization, harmony, contrast and relationships with surrounding colors. Before you state a color finding that matters (a color is off, too saturated, too dark), measure it: see [color](../.art-production-support/shared/color.md).
 - **Lighting:** form description, emphasis, depth and mood.
 - **Material, texture and edges:** perceived material qualities, detail distribution, and sharp, soft or lost edges in relation to the whole.
 - **Visual appeal and expression:** personality, vitality, emotional reading, coherence, unity and variety, restraint or exaggeration. Explain the visible choices supporting the reading; allow valid competing interpretations.

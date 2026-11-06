@@ -60,10 +60,13 @@ The tool moves the color cast (a*/b* in Lab) of the dark/mid/light bands toward 
 ## Palette
 
 ```sh
-python3 "$ART_TOOLS/palette_report.py" icon_v2.png --palette bible_palette.json --max-delta 10
+python3 "$ART_TOOLS/palette_report.py" icon_v2.png --palette bible_palette.json --max-delta 8
+python3 "$ART_TOOLS/palette_report.py" --ramp "#1d2b53" "#3b4f8a" "#6a85c4" "#a9c1ea"
 ```
 
-The tool reports the dominant colors, the nearest color in the palette, and ΔE (CIE76). `off_palette` is a sign that needs a look. It is not a defect by itself: antialiasing and lighting create valid intermediate colors.
+The tool measures in OKLab/OKLCH. For each dominant color it gives `mean` (what the eye blends) and `vivid` (the color that the artist painted, from the most chromatic quarter of the cluster). `accents` lists small, strongly colored areas that the clustering merged away. With `--palette`, it gives the nearest palette color and ΔE OK (×100; about 2 is just visible, 8 is clearly different). `off_palette` is a sign that needs a look. It is not a defect by itself: antialiasing and lighting create valid intermediate colors.
+
+`--ramp` measures a color ramp: ΔE OK and the lightness step between neighbouring stops. A step far from the others (`uneven`) makes one transition jump. Use it for UI color scales, gradients and texture value ramps. See [color rules](../color.md).
 
 <a id="sprites"></a>
 ## Frame sequence

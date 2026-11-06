@@ -28,7 +28,7 @@ Organize by the asset families the team actually produces. Keep shared rules in 
 - Annotated anchors and diagnostic do/don't examples, explaining the consequence of each choice.
 - Known delivery requirements, acceptance checks, version/status and unresolved decisions.
 
-Do not fill absent domains with generic prose. A palette swatch needs a usage rule; a value needs units and context. Distinguish normative rules from examples and artist discretion. Retain bounded exceptions with their rationale. Prefer images that demonstrate a rule; if an image cannot be accessed, mark the gap rather than claim it was reviewed.
+Do not fill absent domains with generic prose. A palette swatch needs a usage rule (role, share, what it is attached to in the world); a value needs units and context. Write palette values as hex plus OKLCH, measured with `palette_report.py` ([color](../.art-production-support/shared/color.md)). Distinguish normative rules from examples and artist discretion. Retain bounded exceptions with their rationale. Prefer images that demonstrate a rule; if an image cannot be accessed, mark the gap rather than claim it was reviewed.
 
 For important anchors, name the authoritative aspects and exclusions: proportion approval does not approve palette or lighting. Resolve image/caption/rule conflicts using current owner decisions, mark superseded guidance and record remaining conflicts. Stable portions can proceed independently.
 

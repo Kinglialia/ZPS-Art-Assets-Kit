@@ -34,7 +34,7 @@ If the on-model render is missing and you cannot render it yourself, you can onl
 ## Workflow
 
 1. Open the render. Look at the whole image, then inspect the area that explains your judgment, then look at the whole image again. Prefer the angle and camera distance of the game. When Blender/Pillow is available, the reviewer may run `render_model.py` (checker/clay/textured), `inspect_model.py` and `preview.py` itself, to get evidence without asking again. Do not edit the model or the texture.
-2. Check art quality and style fit. Use the relevant dimensions of the 6 (composition, shape/silhouette, color/value, lighting, material/texture, visual appeal). Keep this separate from the technical check in step 3.
+2. Check art quality and style fit. Use the relevant dimensions of the 6 (composition, shape/silhouette, color/value, lighting, material/texture, visual appeal). Keep this separate from the technical check in step 3. Measure a color finding before you state it ([color](../.art-production-support/shared/color.md)).
 3. Run the texture specialist checks below by method and risk. Details are in [texture checks](references/texture-checks.md).
 4. Diagnose before you propose a fix. The same symptom can come from the map, UV, normal/tangent, shader or lighting. If you have no evidence that tells the causes apart, record the cause as a hypothesis and propose one cheap check that tells them apart.
 5. When part of the texture is AI-made, check the generated-image fault table in [gen craft](../.art-production-support/shared/gen-craft.md). A detail that you cannot trace to the brief is an issue. If another person or agent does the review, send the request with the [review request](../.art-production-support/templates/review-request.md) template.
@@ -42,7 +42,7 @@ If the on-model render is missing and you cannot render it yourself, you can onl
 7. Prioritize the 1-3 items with the largest impact. Keep the full list when the review is tracked.
 8. For a revised texture, keep the id. Set `resolved` only when a new render under the same conditions proves the acceptance criterion. Look for regressions and for strengths that were lost. If the mesh/UV changed between the two versions, record that the old evidence is no longer valid for the affected areas.
 
-Read the [deep method](../.art-production-support/shared/visual-review.md) when there are many criteria, many rounds or an unclear cause.
+Read the [deep method](../.art-production-support/shared/visual-review.md) when there are many criteria, many rounds or an unclear cause. Write acceptance as yes/no checks, not as a 1–10 score.
 
 ## Texture specialist checks (choose by method and risk)
 

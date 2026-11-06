@@ -42,7 +42,7 @@ If there is no complete Bible/style sheet and only reference images, read the st
    - The directions must differ in form, not only in palette. Show them on the hardest sample screen.
    - If nobody asks you to stop and choose a direction, choose one direction yourself and record the reason. Make the whole set and present it once. Name the other directions briefly, so the AD/user can switch if they want.
    - Read [UI system](references/ui-system.md).
-2. **Just-enough system:** colors by role, type levels, spacing, components with IDs, the necessary states. Prefer existing tokens/components.
+2. **Just-enough system:** colors by role, type levels, spacing, components with IDs, the necessary states. Prefer existing tokens/components. Check color scales with `palette_report.py --ramp`. For two adjacent fills, use the border trick in [color](../.art-production-support/shared/color.md).
 3. **Production:**
    - Text, layout and components are edited independently.
    - Record source → export method → runtime file.

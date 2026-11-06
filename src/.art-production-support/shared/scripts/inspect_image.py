@@ -7,6 +7,30 @@ from pathlib import Path
 import sys
 
 
+def painted_checkerboard(image, corner=48):
+    """True when the corners of an opaque image show a light two-tone grid: the 'transparent'
+    background that an image generator painted. A real transparent file has alpha instead."""
+    if image.getchannel('A').getextrema()[0] < 255 or min(image.size) < corner * 2:
+        return False
+    w, h = image.size
+    hits = 0
+    for box in ((0, 0), (w - corner, 0), (0, h - corner), (w - corner, h - corner)):
+        tile = image.crop((*box, box[0] + corner, box[1] + corner)).convert('RGB')
+        colors = tile.getcolors(corner * corner) or []
+        top = sorted(colors, reverse=True)[:2]
+        if len(top) < 2 or (top[0][0] + top[1][0]) < 0.9 * corner * corner:
+            continue  # not two flat colors
+        (_, a), (_, b) = top
+        grey = all(max(c) - min(c) <= 12 and min(c) >= 150 for c in (a, b))
+        step = abs(sum(a) - sum(b)) / 3
+        row = [tile.getpixel((x, corner // 2)) for x in range(corner)]
+        col = [tile.getpixel((corner // 2, y)) for y in range(corner)]
+        flips = [sum(1 for i in range(1, corner) if line[i] != line[i - 1]) for line in (row, col)]
+        if grey and 10 <= step <= 80 and min(flips) >= 2:  # squares repeat in both directions
+            hits += 1
+    return hits >= 3
+
+
 def inspect(path, size=None, require_alpha=False, reference=None, lock_mask=None):
     from PIL import Image, ImageChops
     raw = path.read_bytes()
@@ -26,6 +50,9 @@ def inspect(path, size=None, require_alpha=False, reference=None, lock_mask=None
                        'expected': list(size), 'actual': list(image.size)})
     if require_alpha:
         checks.append({'id': 'alpha_channel', 'status': 'pass' if has_alpha else 'fail'})
+        fake = painted_checkerboard(image)
+        checks.append({'id': 'painted_checkerboard', 'status': 'fail' if fake else 'pass',
+                       'definition': 'Opaque corners show a light two-tone grid: a painted transparency pattern'})
     if bool(reference) != bool(lock_mask):
         raise ValueError('reference and lock-mask must be supplied together')
     inputs = []

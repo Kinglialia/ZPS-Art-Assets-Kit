@@ -1,6 +1,7 @@
 """Build inspection images an agent or artist must open: size/background sheet, tile repeat,
 value study and side-by-side comparison with references. Produces evidence to look at; it does
-not score art. Requires Pillow. Refuses to overwrite --out."""
+not score art. Requires Pillow and numpy. Downscales in linear light with premultiplied alpha.
+Refuses to overwrite --out."""
 import argparse
 import json
 from pathlib import Path
@@ -32,13 +33,32 @@ def load(path):
         return im.convert('RGBA')
 
 
+def resize_linear(im, size):
+    """Resize in linear light with premultiplied alpha, the way a GPU filters a texture.
+    A resize of gamma-encoded values darkens thin bright strokes; straight alpha lets the color
+    of transparent pixels bleed into the edges (dark halo). Both make a small preview wrong."""
+    import numpy as np
+    Image, _, _ = _image()
+    src = np.asarray(im.convert('RGBA'), dtype=np.float32) / 255
+    rgb, a = src[..., :3], src[..., 3:]
+    lin = np.where(rgb <= 0.04045, rgb / 12.92, ((rgb + 0.055) / 1.055) ** 2.4) * a
+    chans = [Image.fromarray(c, 'F').resize(size, Image.LANCZOS)
+             for c in (lin[..., 0], lin[..., 1], lin[..., 2], a[..., 0])]
+    lin2 = np.stack([np.asarray(c) for c in chans[:3]], -1)
+    a2 = np.clip(np.asarray(chans[3]), 0, 1)[..., None]
+    lin2 = np.clip(np.divide(lin2, a2, out=np.zeros_like(lin2), where=a2 > 1e-6), 0, 1)
+    enc = np.where(lin2 <= 0.0031308, lin2 * 12.92, 1.055 * lin2 ** (1 / 2.4) - 0.055)
+    out = np.concatenate([enc, a2], -1)
+    return Image.fromarray(np.round(out * 255).astype(np.uint8), 'RGBA')
+
+
 def fit(im, box, nearest=False):
     """Scale so the longer side equals box (the on-screen display size), keeping aspect."""
     Image, _, _ = _image()
     w, h = im.size
     s = box / max(w, h)
     size = (max(1, round(w * s)), max(1, round(h * s)))
-    return im.resize(size, Image.NEAREST if nearest else Image.LANCZOS)
+    return im.resize(size, Image.NEAREST) if nearest else resize_linear(im, size)
 
 
 def label(canvas, xy, text):
@@ -100,7 +120,7 @@ def compare(candidate, references, height=256, small=None, background='mid'):
     color = parse_color(background)
     scaled_rows = []
     for h in rows:
-        scaled_rows.append([(name, im.resize((max(1, round(im.width * h / im.height)), h), Image.LANCZOS)) for name, im in items])
+        scaled_rows.append([(name, resize_linear(im, (max(1, round(im.width * h / im.height)), h))) for name, im in items])
     width = max(sum(im.width + GAP for _, im in row) + GAP for row in scaled_rows)
     total_h = sum(h + LABEL_H + GAP for h in rows) + GAP
     canvas = Image.new('RGB', (width, total_h), color)

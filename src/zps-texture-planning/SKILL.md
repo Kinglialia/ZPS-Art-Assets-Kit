@@ -38,7 +38,8 @@ If something is missing, record an assumption. If the concept lacks material are
 1. **Measure the model.** Run `inspect_model.py` (UV, material, vertex color, texel density). Run `render_model.py --mode clay` and `--mode checker` from a few angles. Open the images. See [scripts](../.art-production-support/shared/scripts/README.md#model). If there is no Blender, ask the 3D Artist for the UV image and the specifications. Record the parts not measured. Ask only what you cannot measure, in a single question.
 2. **Read the concept/style.** Check for hand-painted strokes, painted-in light or engine light, surface grain, and the level of realism. If there is no style sheet, use [style read](../.art-production-support/shared/style-read.md).
 3. **Choose 1–2 methods** (author × shader) from [texture methods](references/texture-methods.md). Give the reason, the trade-offs (quality, memory, draw calls, effort, variants) and the parts that need a DCC tool/person.
-4. **Small test sample:** a representative area, camera angle, acceptance criteria.
+4. **Small test sample:** a representative area, camera angle, acceptance criteria. For value or color ramps of a material, check even steps with `palette_report.py --ramp` ([color](../.art-production-support/shared/color.md)).
+   For a procedural or seeded method, record the seed and every parameter of each variant, so the chosen variant can be rebuilt exactly. Group parameters by kind (counts, scales, probabilities, ratios, angles, thresholds).
 5. Deliver with the [proposal template](references/proposal-template.md). When the method is already chosen, or is within the existing authority to choose, hand off to [Surface](../zps-surface/SKILL.md).
 
 ## Gotchas

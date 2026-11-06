@@ -1,0 +1,13 @@
+{
+  "rule": "Trigger when the user asks for texture work on a 3D model and it is not clear whether the job is planning, painting or review. Do not trigger for 2D art, for modeling, or when one texture skill clearly fits.",
+  "cases": [
+    {"query": "texture cho model cái rương này", "should_trigger": true, "kind": "positive", "why": "General texture request on a model"},
+    {"query": "việc texture cho bộ đá môi trường", "should_trigger": true, "kind": "positive", "why": "Method and stage not yet known"},
+    {"query": "can you handle the textures for this barrel GLB?", "should_trigger": true, "kind": "positive", "why": "General texture request"},
+    {"query": "chọn cách làm texture cho prop low poly mobile", "should_trigger": false, "kind": "negative", "why": "Clearly Texture Planning"},
+    {"query": "kiểm texture bị seam ở tay cầm", "should_trigger": false, "kind": "negative", "why": "Clearly Texture Review"},
+    {"query": "dựng model cái đèn từ concept", "should_trigger": false, "kind": "negative", "why": "Modeling belongs to 3D Artist"},
+    {"query": "vẽ tile cỏ 2D cho map top-down", "should_trigger": false, "kind": "negative", "why": "A 2D tile is Asset 2D, not a model texture"},
+    {"query": "giảm mặt model nhưng giữ texture", "should_trigger": false, "kind": "edge", "why": "Argued: retopo with transfer bake is 3D Artist work; it calls Texture Artist only if the bake fails"}
+  ]
+}

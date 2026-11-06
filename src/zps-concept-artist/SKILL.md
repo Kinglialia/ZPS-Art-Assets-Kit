@@ -29,7 +29,7 @@ If there is no direction yet and the user wants to explore, Creative Brainstormi
 - If the scope includes rotation, or the modeling request needs hidden parts, add views/details when useful. Keep the views consistent with each other. Record what is inferred and what is unresolved. Do not invent dimensions. A measurement must have a unit, a reference point, and a source or an estimate label.
 - For a revision, record **Source / Keep / Change** and create a new version. Keep the approved version. A new user request can change the old scope, but a revision does not automatically become a shared standard.
 
-Use the available image generate/edit tools and the instructions of that tool. If you cannot create images, deliver the brief/prompt and report that the image part is not done. Do not call a prompt a finished concept. Do not expand into model building or texture production on your own.
+Use the available image generate/edit tools and the instructions of that tool. Write the request with the template in [gen craft](../.art-production-support/shared/gen-craft.md#request-template), and give each input image its role. If you cannot create images, deliver the brief/prompt and report that the image part is not done. Do not call a prompt a finished concept. Do not expand into model building or texture production on your own.
 
 ## Check and handoff
 

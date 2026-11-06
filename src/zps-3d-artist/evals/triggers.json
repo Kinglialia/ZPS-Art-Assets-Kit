@@ -1,0 +1,14 @@
+{
+  "rule": "Trigger when the user asks to make, reduce, clean or check a static 3D prop, by any method (Blender self-model, Meshy, Tripo, ZPS 3D Gen). Do not trigger for texture-only work, 2D art, rigging or animation.",
+  "cases": [
+    {"query": "dựng model từ concept cái rương này", "should_trigger": true, "kind": "positive", "why": "Make a model from a concept"},
+    {"query": "gen model cái cây này bằng Meshy", "should_trigger": true, "kind": "positive", "why": "Method named; the router skips the method question"},
+    {"query": "giảm mặt model này xuống 1500 tris", "should_trigger": true, "kind": "positive", "why": "Optimize an existing model"},
+    {"query": "kiểm model GLB này có lỗi mesh không", "should_trigger": true, "kind": "positive", "why": "Review only"},
+    {"query": "make a low poly crate for mobile", "should_trigger": true, "kind": "positive", "why": "Make a model"},
+    {"query": "vẽ lại texture cái thùng, model giữ nguyên", "should_trigger": false, "kind": "negative", "why": "Texture only: Texture Artist"},
+    {"query": "rig nhân vật này để chạy animation", "should_trigger": false, "kind": "negative", "why": "Rigging is outside the toolset"},
+    {"query": "vẽ concept 3 view cho cái đèn", "should_trigger": false, "kind": "negative", "why": "Concept art: Concept Artist"},
+    {"query": "dùng ZPS 3D Gen làm cái cây", "should_trigger": true, "kind": "edge", "why": "Argued: ZPS 3D Gen is a modeling method of this skill, not a separate skill"}
+  ]
+}

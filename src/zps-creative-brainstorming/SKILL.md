@@ -31,7 +31,7 @@ For each proposed direction, convey:
 - What the viewer would actually see in a representative asset or scene.
 - How it supports the brief, and the main compromise it introduces.
 
-Connect feeling to a visual organizing principle and concrete form, value/color, lighting or material choices. The idea should remain distinguishable without its title or adjectives; elaborate lore is optional. Give alternatives comparable attention, without a deliberately weak option. Do not assert originality, audience preference, trends or commercial success without evidence.
+Connect feeling to a visual organizing principle and concrete form, value/color, lighting or material choices. For color, compare directions by their lightness and chroma structure, not only by hue; see [color](../.art-production-support/shared/color.md). The idea should remain distinguishable without its title or adjectives; elaborate lore is optional. Give alternatives comparable attention, without a deliberately weak option. Do not assert originality, audience preference, trends or commercial success without evidence.
 
 When comparing directions, use the same representative asset, scene or situation where useful, with comparable development and presentation. Do not let polish, length or persuasive language substitute for a stronger visual idea. A brief written comparison can suffice; rendered examples are not mandatory for every brainstorming task.
 

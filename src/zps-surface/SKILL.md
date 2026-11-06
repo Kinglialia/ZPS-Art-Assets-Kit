@@ -52,7 +52,7 @@ If there is no complete Bible or style sheet and only reference images exist, re
 
    For a small color fix on an unchanged mesh/UV, reuse the old evidence. If Blender is not available, ask the 3D Artist for a render image.
 3. Set the material intent and the detail budget from the style sheet.
-4. Make the texture with the chosen method. For parts you generate or edit, follow [gen craft](../.art-production-support/shared/gen-craft.md).
+4. Make the texture with the chosen method. For parts you generate or edit, follow [gen craft](../.art-production-support/shared/gen-craft.md). For a procedural or seeded texture, record the seed and all parameters of each variant; the same seed must give the same result. For color and value ramps, see [color](../.art-production-support/shared/color.md).
 5. Apply the texture to the model. Render from several angles. Use the game lighting if you know it.
 6. Check for added elements against the quality standard, the generated-image fault table and the self-check. Fix the cause (UV, scale, shading) before you redo the work. If the image does not pass, choose the fix with the [fix playbook](../.art-production-support/shared/fix-playbook.md). If the task has many rounds or needs a handoff, write a [task record](../.art-production-support/templates/task-record.md).
 

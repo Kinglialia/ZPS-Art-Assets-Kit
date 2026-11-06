@@ -30,6 +30,6 @@ Use relevant target-size views and composites. Distinguish local defects, repeat
 
 For a quick review, give the overall assessment, strengths to preserve and a few specific repairs tied to visible regions and the brief. Do not require issue IDs, scores or a formal checklist.
 
-For acceptance decisions, multi-round revision tracking or an explicit audit, read [formal review](references/formal-review.md). Keep issue IDs stable, distinguish changed requirements from defects and close findings only against inspected revisions. Scores need a declared rubric; a recommendation does not approve shipment.
+For acceptance decisions, multi-round revision tracking or an explicit audit, read [formal review](references/formal-review.md). Keep issue IDs stable, distinguish changed requirements from defects and close findings only against inspected revisions. Scores need a declared rubric; a recommendation does not approve shipment. Prefer 3–6 observable yes/no checks to a 1–10 scale ([yes/no checks](../.art-production-support/shared/visual-review.md#yesno-checks-not-scales)).
 
 For combined tasks see the [Art Direction workflow](../.art-director-support/workflows/art-direction.md). 

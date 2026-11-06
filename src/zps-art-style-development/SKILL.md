@@ -30,6 +30,8 @@ Distinguish a rule's origin (observed or proposed), owner approval and validatio
 
 Define shared parent rules and justified adaptations by domain or display size. An icon and a large character need not use identical line widths. Explain which identity features survive simplification. Do not impose a universal palette count, rendering technique, prohibition on black/white, or association between genre and contrast.
 
+For palette rules, describe color by character: lightness and chroma set the mood more than hue angles. State the share plan (for example 60/30/10) and which color the player must see first. Give palette values in OKLCH, measured from the anchors. See [color](../.art-production-support/shared/color.md).
+
 When rules conflict, resolve by the brief's priorities and show the trade-off. Mark unresolved conflicts instead of hiding them under adjectives. Do not fabricate polycounts, staffing costs, rendering performance or production budgets; use supplied constraints and label estimates.
 
 ## Test the system, not only a hero image

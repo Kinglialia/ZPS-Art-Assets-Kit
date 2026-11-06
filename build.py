@@ -173,6 +173,16 @@ def check(stage, manifest, names, suffix):
         for f in rt.rglob('*'):
             if f.is_file() and f.suffix in TEXT and other.search(f.read_text()):
                 errors.append(f'{f.relative_to(stage)}: Codex skill name in the Claude edition')
+    for f in stage.rglob('evals/triggers.json'):
+        try:
+            ev = json.loads(f.read_text())
+            bad = [c for c in ev['cases'] if set(c) != {'query', 'should_trigger', 'kind', 'why'}
+                   or c['kind'] not in ('positive', 'negative', 'edge')]
+            if not ev.get('rule') or bad or not any(c['should_trigger'] for c in ev['cases']) \
+                    or all(c['should_trigger'] for c in ev['cases']):
+                errors.append(f'{f.relative_to(stage)}: needs a rule and both trigger and no-trigger cases; bad: {bad[:2]}')
+        except (ValueError, KeyError) as e:
+            errors.append(f'{f.relative_to(stage)}: invalid trigger evals ({e})')
     print(f'[{manifest["edition"]}] {len(manifest["skills"])} skills, descriptions {total} characters')
     return errors
 
@@ -180,7 +190,9 @@ def check(stage, manifest, names, suffix):
 def tests(rt):
     scripts = rt / '.art-production-support/shared/scripts'
     errors = []
-    for t, target in (('test_svg_render.py', 'svg_render.py'), ('test_anim_preview.py', 'anim_preview.py')):
+    for t, target in (('test_svg_render.py', 'svg_render.py'), ('test_anim_preview.py', 'anim_preview.py'),
+                      ('test_preview.py', 'preview.py'), ('test_palette_report.py', 'palette_report.py'),
+                      ('test_inspect_image.py', 'inspect_image.py')):
         r = subprocess.run([sys.executable, str(ROOT / 'tests' / t), str(scripts / target)], capture_output=True, text=True)
         if r.returncode != 0:
             errors.append(f'{t} failed: {(r.stdout + r.stderr).strip()[-400:]}')

@@ -37,7 +37,7 @@ If there is no Bible, review against the brief. Record the project-fit level as 
 7. Prioritize the 1-3 items with the largest impact. Keep the full list when the review is tracked.
 8. For a revised asset, keep the id. Set `resolved` only when the new image proves the acceptance criterion. Look for regressions and for strengths that were lost.
 
-Read the [deep method](../.art-production-support/shared/visual-review.md) when there are many criteria, many rounds or an unclear cause.
+Read the [deep method](../.art-production-support/shared/visual-review.md) when there are many criteria, many rounds or an unclear cause. Write acceptance as yes/no checks, not as a 1–10 score.
 
 ## 2D specialist checks (choose by asset type)
 
@@ -45,11 +45,12 @@ Read the [deep method](../.art-production-support/shared/visual-review.md) when 
 |---|---|---|
 | Every asset | Readable at display size on the game background; distinguishable from other assets in the same set; no element outside the brief | `preview.py sheet` |
 | Asset set | Same viewing angle, stroke weight, detail level, light direction, object scale and spacing as the set anchor | `preview.py compare` |
-| Alpha | No halo/fringe on light and dark backgrounds; no fake transparent background; no part lost by cropping | `inspect_image.py`, `sheet` on dark background |
+| Alpha | No halo/fringe on light and dark backgrounds; no fake transparent background (a painted checkerboard is not transparency); no part lost by cropping | `inspect_image.py --require-alpha` (alpha channel, `painted_checkerboard`), `sheet` on dark background |
 | Canvas/pivot | File size is correct; pivot/baseline follow the contract | `inspect_image.py` |
 | Frame sequence | Pivot does not jitter between frames; volume, accessories and color are consistent; no per-frame auto-crop; path and pose spacing are reasonable, not jerky | `sprite_check.py`; `anim_preview.py` (filmstrip + onion skin to view; GIF for the approver) |
 | Tile | All four edges join; no prominent mark shows the repeat rhythm when tiled over many cells | `preview.py tile` |
 | Pixel art | Grid, clean clusters, correct palette; no bilinear resampling | `palette_report.py` when a palette exists |
+| Color | Palette, accents and ramps match the style sheet by measurement, not by eye | `palette_report.py` (`vivid`, `accents`, `--ramp`); see [color](../.art-production-support/shared/color.md) |
 | Decal | Alpha and blend are correct on the target material; edge shows no outline; scale matches surrounding objects | View on the real background image/material |
 | Background | Enough area for parallax/occlusion for the scope; camera and scale match gameplay; does not compete for attention with characters and UI | `preview.py compare` with a gameplay image |
 | UI | Matches the wireframe; all states present; 9-slice correct at min/max; long text and Vietnamese text with diacritics do not overflow or clip; touch area after scaling | [UI QA](../zps-ui/references/ui-qa.md) |
