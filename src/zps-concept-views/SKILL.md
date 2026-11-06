@@ -45,7 +45,7 @@ Use literal absolute paths: `<BLENDER>` (absolute Blender path), `<SKILL>` (this
    <BLENDER> -b --python <SKILL>/scripts/render_blockout_views.py -- --parts <w>/parts --graph <w>/part_graph.json --out <abs>/views_blockout --res 1024
    ```
    For an existing model, use `--input <abs>/blockout.glb` instead of `--parts` and `--graph`.
-3. **Generate the images.** Use the image tool of this app, as the [runtime adapter](../.art-production-support/adapters/runtime.md) describes. Get approval before each call that costs credits. Write requests per [gen craft](../.art-production-support/shared/gen-craft.md). Generate front first, get approval, then the other views. Save to `<abs>/views_gen/`.
+3. **Generate the images.** Use the image tool of this app, as the [runtime adapter](../.art-production-support/adapters/runtime.md) describes. Get approval before each call that costs credits. Write requests per [gen craft](../.art-production-support/shared/gen-craft.md). Generate front first, get approval, then the other views. Ask for even, neutral light with no shadows on the object, the same in every view (exception for painted-in light: [process](references/process.md#rules-for-every-generation)). Save to `<abs>/views_gen/`.
 4. **Measure:**
    ```bash
    python3 <SKILL>/scripts/measure_views.py --blockout <abs>/views_blockout --gen <abs>/views_gen --out <abs>/report --views front,back,left,right,top [--concept-colors <abs>/concept_colors.json]
