@@ -5,7 +5,7 @@ There is no umbrella skill. Call the skill you need by name, or describe the tas
 | Group | Skills | Use for |
 | --- | --- | --- |
 | Art direction | zps-visual-intelligence, zps-creative-brainstorming, zps-visual-research, zps-art-style-development, zps-art-bible-artist-direction, zps-artistic-critique, zps-art-director-library-manager | Image analysis, direction, references, style rules, Bible and briefs, formal critique, library work |
-| Concept | zps-concept-artist | Concept images and grey-box paint-overs for 3D |
+| Concept | zps-concept-artist, zps-concept-views | Concept images and grey-box paint-overs for 3D; the other orthographic views of an approved concept, measured against one blockout |
 | 2D and UI | zps-2d-artist, zps-asset-2d, zps-ui, zps-2d-review | In-game images, UI art, 2D and UI review |
 | Texture | zps-texture-artist, zps-texture-planning, zps-surface, zps-texture-review | Texture method, maps and materials, texture review |
 | 3D | zps-3d-artist | Static props: build, optimize, QA, export |

@@ -10,6 +10,7 @@ Choose the skill by the requested result. This is routing guidance for combined 
 | Develop or refine visual rules | [Art Style Development](../../zps-art-style-development/SKILL.md) |
 | Prepare a Bible or artist brief | [Art Bible & Artist Direction](../../zps-art-bible-artist-direction/SKILL.md) |
 | Draw/edit a buildable 3D-asset concept or paint over a grey-box | [Concept Artist](../../zps-concept-artist/SKILL.md) |
+| Make the other orthographic views (front/back/left/right/top) of an approved concept, measured against one blockout | [Concept Views](../../zps-concept-views/SKILL.md) |
 | Review concepts, scenes or the visual system against requirements; track repairs/revisions; acceptance | [Artistic Critique](../../zps-artistic-critique/SKILL.md) |
 | Retrieve or maintain library records | [Library Manager](../../zps-art-director-library-manager/SKILL.md) |
 | Produce in-game icons, sprites, tiles or backgrounds | [2D Artist](../../zps-2d-artist/SKILL.md), or direct [Asset 2D](../../zps-asset-2d/SKILL.md) |

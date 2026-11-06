@@ -52,6 +52,8 @@ Then read the path file:
 
 Before the work starts, check the tools of the chosen method: `python3 <SKILL>/tools/gen/gen_api.py keys` for Meshy and Tripo keys, for ZPS 3D Gen that `zps-ai` is installed and `~/.config/zps-ai/credentials.json` exists (no network; `zps-ai whoami` needs network), Blender for every method. If a Meshy or Tripo key is missing, show the user the path of the key file and ask the user to paste the key into that file, not into the chat. If the user has no key, use Self-model. Tell the user the time estimate of the chosen method before you start.
 
+If the concept has only one view and the chosen method needs more (multi-view input for Meshy, Tripo or ZPS 3D Gen, or the hidden sides for Self-model), offer [Concept Views](../zps-concept-views/SKILL.md) first. One round of image generation costs less than a second paid 3D generation. If its hand-off package already exists, use it.
+
 ## 3. Budget
 
 Use the budget from the brief or the project if it has one. If not, choose it yourself and do not ask: run the sweep in auto mode (the fewest triangles that pass the floor, see [optimize](references/optimize.md) §4–6), capped by the size-class budget in `config.yaml`. Ask only when the camera or the platform is unknown and the project does not record it. Record the chosen budget and its reason in `task/spec.json`.
@@ -67,7 +69,7 @@ After each model, append one record: `python3 <SKILL>/tools/estimate.py log --pr
 - In the reference files, "task giver", "visual standard keeper" and "approver" mean the user. Thresholds are in `task/spec.json`; measurements come from the scripts in `tools/`.
 - One build path and one writer per asset. Builder and critic briefs ([builder](agents/3d-builder.md), [critic](agents/3d-critic.md)) are task prompts. Without authorized delegation, do a self-review and label it.
 - A paid call (Meshy, Tripo) needs a dry run (`--dry-run`), the cost, and the user's approval first. Create one budget file per asset: `{"max_credits": <approved>, "used_credits": 0}`. Never run paid calls in parallel on one budget file. Never print a key.
-- Number of generations: propose it from the concept and show the cost. Clear concept with enough views: 1. No back view, or a hard shape: 2 (one image, and multi-view), then keep the better one. If a generation fails, ask before you generate again.
+- Number of generations: propose it from the concept and show the cost. Clear concept with enough views: 1. No back view: make the views with Concept Views, then generate once with multi-view. If the user declines that, 2 generations (one image, and multi-view) and keep the better one. If a generation fails, ask before you generate again.
 - A failed mandatory geometry check blocks the final export. Label a diagnostic preview as a preview. If no mesh meets the budget, report the gap and the smallest valid alternative. A required check that did not run is pending, not passed.
 - `finalize.py` checks recorded technical results only, not art approval. `report.py` makes a draft report. State source and final triangles, budget, measurements, texture source, inferred hidden surfaces, missing checks and file paths. Claim engine or device validation only if you did it.
 - For learning capture that the user requests, use [Art Learning](../zps-art-learning/SKILL.md). Do not change skill thresholds or code automatically.

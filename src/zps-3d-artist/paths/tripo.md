@@ -21,9 +21,9 @@ Paid-call rules (number of generations, dry run, budget file): SKILL.md, Rules f
 1. **Intake.** [pipeline](../references/pipeline.md) §Intake, with `validate_concept.py`. Prepare each view: one object, plain or removed background, even light, PNG or JPEG.
 2. **Generate.**
    ```
-   python3 <SKILL>/tools/gen/gen_api.py generate --provider tripo --view front=<abs png> [--view back=<abs png>] --out <abs work>/gen/v1 --budget-file <abs work>/budget.json
+   python3 <SKILL>/tools/gen/gen_api.py generate --provider tripo --view front=<abs png> [--view back=<abs png> --view left=<abs png> --view right=<abs png>] --out <abs work>/gen/v1 --budget-file <abs work>/budget.json
    ```
-   Multi-view needs `front` and at least one more view. The docs do not say whether `left` is the object's own left or the camera's left. For an asymmetric prop, send only `front` and `back`. The script uploads the images, waits, and writes `model.glb` and `task.json`. Download happens at once, because Tripo does not document how long result links stay valid.
+   Multi-view needs `front` and at least one more view. The docs do not say whether `left` is the object's own left or the camera's left. For an asymmetric prop, send only `front` and `back` until one test confirms Tripo's convention. Use the views from Concept Views when they exist. The script uploads the images, waits, and writes `model.glb` and `task.json`. Download happens at once, because Tripo does not document how long result links stay valid.
 3. **Reduce.** Use the GLB as `input/model.glb` and follow [optimize](../references/optimize.md): Audit, Gate 1, Cleanup, Sweep (`--auto`, or `--budget`). Tripo can soften hard edges: check the normal renders of hard-surface props, and say so in the report.
 4. **UVs.** Run Bake in `rebake` mode on the chosen level. The untextured source gives a flat albedo; the bake is only for the UV unwrap. Run `uv_check`.
 5. **Texture.**

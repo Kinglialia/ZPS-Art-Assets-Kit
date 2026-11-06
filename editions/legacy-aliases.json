@@ -65,5 +65,8 @@
   "zps-art-learning": [
     "art-learn",
     "art-learning"
+  ],
+  "zps-concept-views": [
+    "zps-5-view-concept"
   ]
 }

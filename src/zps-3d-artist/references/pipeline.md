@@ -22,6 +22,8 @@ Work dir per asset: `output/<asset>/` with `input/` (originals, read-only), `tas
 
 ## Intake
 
+If a [Concept Views](../../zps-concept-views/SKILL.md) hand-off package exists, use it: the view files keep their names (`front`, `back`, `left`, `right`, `top`), `views.json` gives the real size (`height_source: measured`, not estimated) and the left/right convention (the same as below), and the views are orthographic, so `fit_camera` is not needed for them.
+
 Start `task/spec.json` from [spec.template.json](../templates/spec.template.json) (filled example: [spec.example.rock-moss.json](../templates/spec.example.rock-moss.json)). Ask only what the brief does not already answer, in this order:
 
 1. Asset name (default: file name).

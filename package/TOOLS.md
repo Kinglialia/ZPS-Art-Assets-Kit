@@ -24,7 +24,7 @@ The skill installer itself does not use the network and does not install tools. 
 |---|---|---|---|
 | Python 3.11 or newer | Required | All scripts | Python installer from python.org. macOS system Python 3.9 is too old for resvg-py and the library tools |
 | Pillow, numpy, resvg-py 0.5.0 | Required | 2D, UI, texture and review scripts (`preview`, `sprite_check`, `anim_preview`, `palette_report`, `score_variants`, `tone_match`, `structure_diff`, `svg_render`) | `python3 -m pip install --user -r {{INSTALL_ROOT}}/.art-production-support/requirements.txt` |
-| Blender | Required for model work | `inspect_model`, `render_model` (texture skills) and all 3D tools | `brew install --cask blender` or blender.org (about 1 GB). If Blender is in another place, set `BLENDER=/path/to/blender` |
+| Blender | Required for model work | `inspect_model`, `render_model` (texture skills), all 3D tools, Concept Views blockout renders | `brew install --cask blender` or blender.org (about 1 GB). If Blender is in another place, set `BLENDER=/path/to/blender` |
 | 3D tools venv and Blender-side packages | Required for 3D | 3D self-build, optimize, QA | `bash {{INSTALL_ROOT}}/zps-3d-artist/tools/setup_deps.sh` after Blender is installed. It installs numpy, trimesh, scipy, opencv, scikit-image, kneed, xatlas, manifold3d, Pillow and PyYAML into `tools/.deps/` of the 3D skill |
 | gltfpack | Recommended | 3D optimize sweep (else Blender Decimate) | `brew install gltfpack` or `npm i -g gltfpack` |
 | Node.js + gltf-validator | Optional | 3D `export_check` | `brew install node`, then `npm i -g gltf-validator` |

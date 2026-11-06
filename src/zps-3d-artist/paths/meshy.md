@@ -19,9 +19,9 @@ Paid-call rules (number of generations, dry run, budget file): SKILL.md, Rules f
 1. **Intake.** [pipeline](../references/pipeline.md) §Intake, with `validate_concept.py`. Prepare each view: one object, plain or removed background, even light, more than 1040 px, near-orthographic.
 2. **Generate.**
    ```
-   python3 <SKILL>/tools/gen/gen_api.py generate --provider meshy --view front=<abs png> [--view back=<abs png>] --out <abs work>/gen/v1 --budget-file <abs work>/budget.json
+   python3 <SKILL>/tools/gen/gen_api.py generate --provider meshy --view front=<abs png> [--view back=<abs png> --view left=<abs png> --view right=<abs png>] --out <abs work>/gen/v1 --budget-file <abs work>/budget.json
    ```
-   With more than one view, Meshy reads the first image as the front; the order of the others does not matter. It writes `glb.glb` (and `pre_remeshed_glb.glb` when present) and `task.json` with the task id. Meshy deletes results after 3 days.
+   With more than one view, Meshy reads the first image as the front; the order of the others does not matter. Use the views from Concept Views when they exist. Meshy does not define left and right: until one test confirms how it reads them, send only `front` and `back` for an asymmetric prop. It writes `glb.glb` (and `pre_remeshed_glb.glb` when present) and `task.json` with the task id. Meshy deletes results after 3 days.
 3. **Find the triangle count for free.** Use the dense GLB as `input/model.glb` and follow [optimize](../references/optimize.md): Audit, Gate 1, Cleanup, Sweep (`--auto`, or `--budget`). The sweep result is the chosen count.
 4. **Remesh once at that count.**
    ```

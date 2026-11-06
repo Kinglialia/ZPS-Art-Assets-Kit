@@ -1,6 +1,6 @@
 ---
 name: zps-concept-artist
-description: "Draw or revise concept art for 3D game assets: grey-box paint-over from the game camera, clear forms, hidden parts and extra views for the modeler. Use for concept images (\"vẽ concept\", \"paint over grey-box\", \"vẽ thêm view\")."
+description: "Draw or revise concept art for 3D game assets: grey-box paint-over from the game camera, clear forms, hidden-part notes and detail callouts for the modeler. Use for concept images (\"vẽ concept\", \"paint over grey-box\", \"sửa concept\")."
 metadata:
   version: 0.5.6
   validation: pending
@@ -8,7 +8,7 @@ metadata:
 
 # ZPS - Concept Artist
 
-**Not for:** brainstorming ideas (zps-creative-brainstorming); writing a brief (zps-art-bible-artist-direction); 2D images placed in the game (zps-asset-2d).
+**Not for:** brainstorming ideas (zps-creative-brainstorming); writing a brief (zps-art-bible-artist-direction); 2D images placed in the game (zps-asset-2d); the other orthographic views or a turnaround of an approved concept (zps-concept-views).
 
 Turn direction into a visible concept that is clear enough for the modeler. The AD can set direction and draw the concept in the same task.
 
@@ -26,7 +26,8 @@ If there is no direction yet and the user wants to explore, Creative Brainstormi
 - Form before detail. The silhouette, the large planes, and the secondary forms must be readable at game size, when the size is known. Do not let surface detail hide the structure.
 - Separate the presentation form from the output used for modeling. For an image used for projection/texture, avoid a background shadow close to the feet, because it can be mistaken for bottom color. Use a plain background or alpha, according to the output. A presentation image can have a contact shadow, but do not use that same version as a projection texture. Objects in a group need enough outline to separate them.
 - Shading by pipeline. For unshaded, bake lighting only by the agreed convention. For lit, separate the lighting of the presentation image from the base color/albedo used in production. Do not put highlights and cast shadows into the albedo by default. A shaded concept that expresses form is still valid. If the pipeline is not clear, keep this as an assumption. Do not force one general formula.
-- If the scope includes rotation, or the modeling request needs hidden parts, add views/details when useful. Keep the views consistent with each other. Record what is inferred and what is unresolved. Do not invent dimensions. A measurement must have a unit, a reference point, and a source or an estimate label.
+- If the scope includes rotation, or the modeling request needs hidden parts, do not generate the other views one by one: each AI view guesses the hidden shape in its own way. When the main concept is approved, use [Concept Views](../zps-concept-views/SKILL.md): it builds one blockout and paints every view on it. You still draw **detail callouts** (a close-up of a lock, a pattern, a sign) by hand or with the image tool, because the view checks do not measure small detail inside one material area.
+- Record what the hidden sides look like (or that they are unknown) and the real size in the concept brief. Concept Views reads these notes and asks only what is missing. Do not invent dimensions. A measurement must have a unit, a reference point, and a source or an estimate label.
 - For a revision, record **Source / Keep / Change** and create a new version. Keep the approved version. A new user request can change the old scope, but a revision does not automatically become a shared standard.
 
 Use the available image generate/edit tools and the instructions of that tool. Write the request with the template in [gen craft](../.art-production-support/shared/gen-craft.md#request-template), and give each input image its role. If you cannot create images, deliver the brief/prompt and report that the image part is not done. Do not call a prompt a finished concept. Do not expand into model building or texture production on your own.
@@ -35,7 +36,7 @@ Use the available image generate/edit tools and the instructions of that tool. W
 
 Open the actual result. Check the silhouette, the forms, the locked details, the framing, and the readability at the size provided. Do not claim a numeric match to the camera from a generated image alone. Record the deviation and the need for verification when you cannot compare. For a multi-view sheet, check whether identity and construction are consistent.
 
-**For 3D modeling,** also deliver: one file per view, named with the view (`front`, `back`, `left`, `right`, `top`, `34`); `left` and `right` are the object's own sides, not the viewer's; near-orthographic views for front, back and sides; a plain or transparent background; more than 1040 px on the long edge.
+**For 3D modeling,** deliver the main concept and, when Concept Views ran, its hand-off package: the passed views (`front`, `back`, `left`, `right`, `top`; `left` and `right` are the object's own sides), `views.json` (sizes and convention), the self-build work dir with `part_graph.json`, and the view report. Views made another way follow the same names and convention, near-orthographic, on a plain or transparent background, more than 1040 px on the long edge.
 
 Deliver the concept image/PNG used for modeling, the version, the source camera/grey-box, the hidden parts/assumptions, and the questions that affect modeling. Deliver a layered file or an alpha background only when you really created it and can check it. If the tool exports only a flat image, say so. If a layered source is a mandatory requirement, state what is missing.
 

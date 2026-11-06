@@ -10,7 +10,7 @@ A finished model ships with a texture. Skip the texture step only in these cases
 - The caller says that the model needs no texture.
 - After retopo or optimize, the existing texture still works: the UVs were kept, or the transfer bake reaches `texture.ssim_min` and shows no visible seam or blur at the game camera.
 
-In all other cases, call the Texture Artist skill of the runtime that you run in. Send part A of the [3D ↔ Texture handoff](../../.art-production-support/templates/3d-texture-handoff.md). If the caller named a texture method, pass it on. If nobody named one, Texture Artist selects it.
+In all other cases, call the Texture Artist skill of the runtime that you run in. If Concept Views made views of this asset, list them in part A as the reference for the hidden sides; `project_concept.py` also takes several views (`--concept front=… --concept back=…`). Send part A of the [3D ↔ Texture handoff](../../.art-production-support/templates/3d-texture-handoff.md). If the caller named a texture method, pass it on. If nobody named one, Texture Artist selects it.
 
 ## UV and materials before the handoff
 

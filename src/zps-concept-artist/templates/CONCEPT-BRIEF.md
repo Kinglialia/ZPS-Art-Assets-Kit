@@ -14,7 +14,8 @@ Optional template: reuse an existing brief and drop the fields that are not rele
 - Camera: engine source or assumption; perspective/ortho; vertical FOV or ortho size (engine unit/convention):
 - Downward angle / azimuth; framing:
 - Asset display size (px) and screen resolution if known:
-- Rotation scope / extra views needed:
+- Rotation scope / extra views needed (front, back, left, right, top → Concept Views):
+- Hidden sides: what each unseen side shows (door, windows, roof slopes…) or "unknown"; symmetric? real height (m):
 - Shading pipeline; presentation image or projection; alpha/plain background:
 - Grey-box/source image/version; locked forms and editable parts:
 

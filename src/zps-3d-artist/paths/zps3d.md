@@ -11,7 +11,7 @@ Tools: the `zps-ai` CLI (`~/.local/bin/zps-ai`), signed in: `~/.config/zps-ai/cr
 - The service deletes results after 24 hours. Download at once (`--wait -o <dir>` does it).
 - **Texture: always UltraTex** (`commercial:=false`). The project owner chose this. UltraTex uses a model with a non-commercial license. Write "texture: UltraTex (non-commercial license)" in the report and in `task/spec.json`, so that the next person knows.
 - Set `metal:=true` when the object has visible metal (weapon, armour, tools, vehicle, coins). Otherwise `metal:=false`.
-- View names: the guide defines `left` as the camera on the left of the object. The kit defines `left` as the object's own left (camera at +X). For an asymmetric prop, confirm which side each concept image shows before you send it. If you are not sure, send only `front` and `back`.
+- View names: the guide defines `left` as the camera on the left of the object. The kit defines `left` as the object's own left (camera at +X). For an asymmetric prop, confirm which side each concept image shows before you send it. If you are not sure, send only `front` and `back`. Views from Concept Views use the kit convention (the object's own sides). The guide's wording does not settle which side the service means: confirm it once on an asymmetric test prop before you send side views.
 
 ## Steps
 

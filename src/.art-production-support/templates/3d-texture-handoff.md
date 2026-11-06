@@ -17,7 +17,7 @@ A shared template for the 3D Artist and the Texture Artist. The 3D Artist fills 
 - Camera and on-screen size: <from the spec>
 - Baked maps (normal/AO…) and convention: <yes/no, path>
 - Temporary texture from the 3D pipeline (concept projection/bake): <yes/no, path> — temporary; Texture decides to keep/fix/redo
-- Concept/view used; hidden parts are inferred: <area>
+- Concept/view used; hidden parts are inferred: <area>; Concept Views package (front/back/left/right/top, views.json): <path> | none
 - Engine: <Godot/…>
 ```
 
