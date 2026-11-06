@@ -16,7 +16,10 @@ Optional template: reuse an existing brief and drop the fields that are not rele
 - Asset display size (px) and screen resolution if known:
 - Rotation scope / extra views needed (front, back, left, right, top → Concept Views):
 - Hidden sides: what each unseen side shows (door, windows, roof slopes…) or "unknown"; symmetric? real height (m):
-- Shading pipeline; presentation image or projection; alpha/plain background:
+- Goes to 3D? (default yes; presentation only when stated):
+- Flat-lit version: path; approved by/when; areas inferred under former shadow:
+- Presentation version (optional, made from the flat-lit version): path | none
+- Painted-in light of the style (hand-painted convention) | none; alpha/plain background:
 - Grey-box/source image/version; locked forms and editable parts:
 
 ## C. Execution and handoff
