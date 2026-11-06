@@ -60,4 +60,4 @@ If evidence is missing, leave the affected conclusion open rather than declaring
 
 Specific improvement advice is within scope; a quick assessment needs no issue IDs. For acceptance checks or revision tracking, Artistic Critique owns the review and includes visual reasoning in that same pass; do not create a separate preliminary report by default. Keep any material decision tied to its artifact/version. 
 
-For combined tasks, use the [Art Direction workflow](../.art-director-support/workflows/art-direction.md) to route work and carry decisions forward. Individual tasks do not require every skill.
+Combined tasks: [Art Direction workflow](../.art-director-support/workflows/art-direction.md). A single task needs only this skill.

@@ -29,7 +29,7 @@ If the request already names the method, use it and skip the question. Otherwise
 1. **Self-model**: the agent builds the model as code in Blender (the kit's self-build).
 2. **Meshy**: Meshy makes the mesh and the texture.
 3. **Tripo**: Tripo makes the mesh and the texture.
-4. **ZPS 3D Gen**: the team's image-to-3D service (`zps-ai`), free, with an UltraTex texture.
+4. **ZPS 3D Gen**: the team's image-to-3D service (`zps-ai`), free, with an UltraTex texture (non-commercial license).
 5. **Not sure**: the agent reads the concept and recommends one.
 
 If the answer is "Not sure", measure the concept first (type, part count, symmetry, thin parts, text or logos, available views). Then show one table for the four methods: time, cost, who paints the texture, the risk for this concept, and your recommendation with its reason. Get the times and costs from `tools/estimate.py show` (section 4). Use this first rule set:
@@ -38,7 +38,7 @@ If the answer is "Not sure", measure the concept first (type, part count, symmet
 |---|---|---|
 | Architecture, modular parts, hard-surface low poly | Self-model | Exact sizes, clean topology, edits by parameter |
 | Organic shape, sculpted detail | Meshy or Tripo | AI generators make organic forms better than code |
-| Organic shape, fast and free | ZPS 3D Gen | Internal service, about 1 minute, no cost |
+| Organic shape, fast and free | ZPS 3D Gen | Internal service, about 1 minute, no cost. UltraTex texture is for non-commercial use: say so |
 | Text, logos, thin or sharp parts | Self-model, or AI with manual fixes | Generators often break text and thin parts |
 
 Then read the path file:
@@ -58,14 +58,16 @@ Use the budget from the brief or the project if it has one. If not, choose it yo
 
 ## 4. Learn from each job
 
-After each model, append one record: `python3 <SKILL>/tools/estimate.py log --project <project root> --method <method> --minutes <total> --credits <spent> --tris <final> --complexity <0-1>`. The record goes to `<project root>/.zps-art/estimates.jsonl`, never into the skills folder. `estimate.py show --project <project root>` prints the defaults from `estimates.json`, replaced by the median of the project records when a method has 3 or more.
+After each model, append one record: `python3 <SKILL>/tools/estimate.py log --project <project root> --method self|meshy|tripo|zps3d --minutes <total> --credits <spent> --tris <final> --complexity <0-1>`. The record goes to `<project root>/.zps-art/estimates.jsonl`, never into the skills folder. `estimate.py show --project <project root>` prints the defaults from `estimates.json`, replaced by the median of the project records when a method has 3 or more.
 
 ## Rules for every path
 
 - Work within the AD brief, the chosen direction, the camera and the technical limits. Do not repeat an approval that the user already gave. Never relax a threshold only to pass.
 - Use an asset workspace: read-only input, `task/spec.json`, versioned work, evidence, deliverables. Numbers come from measured files, not from visual guesses. Record the exact version and view that you inspected.
+- In the reference files, "task giver", "visual standard keeper" and "approver" mean the user. Thresholds are in `task/spec.json`; measurements come from the scripts in `tools/`.
 - One build path and one writer per asset. Builder and critic briefs ([builder](agents/3d-builder.md), [critic](agents/3d-critic.md)) are task prompts. Without authorized delegation, do a self-review and label it.
-- A paid call (Meshy, Tripo) needs a dry run, the cost, and the user's approval first. Never run paid calls in parallel on one budget file. Never print a key.
+- A paid call (Meshy, Tripo) needs a dry run (`--dry-run`), the cost, and the user's approval first. Create one budget file per asset: `{"max_credits": <approved>, "used_credits": 0}`. Never run paid calls in parallel on one budget file. Never print a key.
+- Number of generations: propose it from the concept and show the cost. Clear concept with enough views: 1. No back view, or a hard shape: 2 (one image, and multi-view), then keep the better one. If a generation fails, ask before you generate again.
 - A failed mandatory geometry check blocks the final export. Label a diagnostic preview as a preview. If no mesh meets the budget, report the gap and the smallest valid alternative. A required check that did not run is pending, not passed.
 - `finalize.py` checks recorded technical results only, not art approval. `report.py` makes a draft report. State source and final triangles, budget, measurements, texture source, inferred hidden surfaces, missing checks and file paths. Claim engine or device validation only if you did it.
 - For learning capture that the user requests, use [Art Learning](../zps-art-learning/SKILL.md). Do not change skill thresholds or code automatically.

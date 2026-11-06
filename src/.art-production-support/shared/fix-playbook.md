@@ -48,7 +48,7 @@ Color scripts (`tone_match`, `score_variants`) skip transparent pixels and keep 
 
 ## Choosing an option
 
-- **Eyes first** (required): correct render style, element inventory, generated-image fault table, 6-dimension self-check.
+- **Eyes first** (required): correct render style, element inventory, generated-image fault table, [6-dimension self-check](../templates/review.md) (the art axes; the skill's own Self-check list covers the asset contract).
 - **Numbers after, only to break ties**: measurements help eliminate clearly deviating options. They also break ties when the options look almost equal by eye. A lower `score_variants` total does not prove by itself that an option is better as art. The weights are uncalibrated estimates. Compare totals only within the same scoring run and the same reference. Color measurements do not see render style, personality, or expression.
 - An edit must pass `structure_diff` if the request is to keep the shape.
 

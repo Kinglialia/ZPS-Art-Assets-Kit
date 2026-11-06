@@ -8,6 +8,10 @@
 - Option B: …
 - Recommendation: A, because …
 - Test sample: <area, angle, acceptance criteria>
+- Map contract: <channels, color space, size, normal convention>
+- Assigned areas: <part → material, or the whole model>
+- UV requirements (only before unwrap): <overlap allowed?, texel density, trim direction, slot split>
+- Recipient: <3D Artist (before unwrap) | Surface>
 - Needs an answer from AD/3D Artist: …
 ```
 

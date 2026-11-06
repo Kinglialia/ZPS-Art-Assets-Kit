@@ -40,7 +40,9 @@ If something is missing, record an assumption. If the concept lacks material are
 3. **Choose 1–2 methods** (author × shader) from [texture methods](references/texture-methods.md). Give the reason, the trade-offs (quality, memory, draw calls, effort, variants) and the parts that need a DCC tool/person.
 4. **Small test sample:** a representative area, camera angle, acceptance criteria. For value or color ramps of a material, check even steps with `palette_report.py --ramp` ([color](../.art-production-support/shared/color.md)).
    For a procedural or seeded method, record the seed and every parameter of each variant, so the chosen variant can be rebuilt exactly. Group parameters by kind (counts, scales, probabilities, ratios, angles, thresholds).
-5. Deliver with the [proposal template](references/proposal-template.md). When the method is already chosen, or is within the existing authority to choose, hand off to [Surface](../zps-surface/SKILL.md).
+5. Deliver with the [proposal template](references/proposal-template.md).
+   - If the 3D Artist called **before unwrap**, return the proposal and the UV requirements to the 3D Artist, and stop. The 3D Artist unwraps, then calls Texture Artist with part A of the handoff.
+   - Otherwise, when the method is already chosen or is within the existing authority to choose, hand off to [Surface](../zps-surface/SKILL.md).
 
 ## Gotchas
 

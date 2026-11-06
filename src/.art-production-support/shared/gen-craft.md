@@ -1,6 +1,6 @@
 # Gen craft — write requests for generate/edit tools and find generated-image faults
 
-Read this before you call a tool that creates or edits images, and when you self-check the output. It applies to every tool (Codex `image_gen`, image APIs, masked edit).
+Read this before you call a tool that creates or edits images, and when you self-check the output. It applies to every tool (the session's image tool, image APIs, masked edit; the [adapter](../adapters/runtime.md) names the tools of this app).
 
 ## Contents
 - Write the request

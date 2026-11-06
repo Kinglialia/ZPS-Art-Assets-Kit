@@ -33,7 +33,7 @@ Collect:
 
 If there is no wireframe, use the described layout if it is clear enough. Ask only about interaction or layout that affects the drawing. Do not redesign the UX.
 
-If there is no complete Bible/style sheet and only reference images, read the style with [style read](../.art-production-support/shared/style-read.md). Present one test sample before you make the series. If the references conflict, or the whole project needs a style, propose it to the AD.
+If there is no complete Bible/style sheet and only reference images, read the style with [style read](../.art-production-support/shared/style-read.md). Then make the whole set and present it once. Make a single sample first only if the user asks. If the references conflict, or the whole project needs a style, propose it to the AD.
 
 ## Workflow
 
@@ -49,7 +49,7 @@ If there is no complete Bible/style sheet and only reference images, read the st
    - Choose the source by UI type in [UI system](references/ui-system.md). Geometric components and flat UI default to **SVG** (export PNG with `svg_render.py`). Hand-drawn frames and illustrations use generated images per [gen craft](../.art-production-support/shared/gen-craft.md). You may combine them.
    - A flat image is not a source for a whole screen.
 4. **Handoff to the developer:** fill in the [UI handoff](templates/ui-handoff.md). For a Godot project, also read [Godot handoff](references/ui-godot-handoff.md). Do not change production project settings/Theme to preview.
-5. **Review before delivery:** when you deliver a UI screen, a full component set or a final, call [2D Review](../zps-2d-review/SKILL.md) (section "When Asset 2D or UI calls this skill"). After the AD/user approves, record the direction or sample screen as described in [set anchor](../.art-production-support/shared/set-anchor.md).
+5. **Review before delivery:** when you deliver a UI screen, a full component set, or a final that the brief marks for acceptance, call [2D Review](../zps-2d-review/SKILL.md) (section "When Asset 2D or UI calls this skill"). After the AD/user approves, record the direction or sample screen as described in [set anchor](../.art-production-support/shared/set-anchor.md).
 6. **QA:** choose checks by risk in [UI QA](references/ui-qa.md). For accessibility, follow the task: [UI accessibility](references/ui-accessibility.md). If an image does not pass, choose the fix with the [fix playbook](../.art-production-support/shared/fix-playbook.md). For a multi-turn task or a task that needs handoff, write a [task record](../.art-production-support/templates/task-record.md).
 
 ## Self-check

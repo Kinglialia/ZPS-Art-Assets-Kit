@@ -1,6 +1,6 @@
 # Tools — run per operation, not a required stage
 
-Python 3.11+. Pillow is needed for preview/palette/sprite/inspect. generate_image and check_gate use the standard library. `inspect_model` and `render_model` run inside Blender (see below). Run with the absolute path to the package scripts:
+Python 3.11+. Pillow is needed for preview/palette/sprite/inspect; preview and palette also need numpy. generate_image and check_gate use the standard library. `inspect_model` and `render_model` run inside Blender (see below). Run with the absolute path to the package scripts:
 
 ```sh
 ART_TOOLS=/absolute/path/to/skills/.art-production-support/shared/scripts

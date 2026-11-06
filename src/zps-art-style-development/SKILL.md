@@ -56,4 +56,4 @@ Deliver the relevant working rules, anchors, evidence and trade-offs. Suggest a 
 
 Record approval (proposed/owner-approved) separately from validation (untested/tested within a named scope). A successful test does not approve a rule; only an executed new-subject test supports transfer. Hand rules and their status to Art Bible & Artist Direction, research gaps to Visual Research and asset issues to Artistic Critique when useful. These are responsibilities, not mandatory installed dependencies.
 
-For combined tasks, use the [Art Direction workflow](../.art-director-support/workflows/art-direction.md) to route work and carry decisions forward. Individual tasks do not require every skill.
+Combined tasks: [Art Direction workflow](../.art-director-support/workflows/art-direction.md). A single task needs only this skill.

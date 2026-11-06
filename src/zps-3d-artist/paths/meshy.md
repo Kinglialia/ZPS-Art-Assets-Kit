@@ -12,11 +12,7 @@ Tools: `tools/gen/gen_api.py` (Python 3 standard library), `MESHY_API_KEY`. The 
 | Remesh | one call at the chosen count, triangle | 5 |
 | Retexture | on the final mesh, keep UVs | 10 |
 
-**Number of generations.** Propose it from the concept, and show the cost:
-- Clear concept, enough views: 1 generation.
-- No back view, or a hard shape: 2 generations (one image, and multi-view), then keep the better one.
-
-Before each paid call, run the same command with `--dry-run`, show the user the step and its credits, and wait for approval. If a generation fails, ask before you generate again. Create a budget file per asset: `{"max_credits": <approved>, "used_credits": 0}`.
+Paid-call rules (number of generations, dry run, budget file): SKILL.md, Rules for every path.
 
 ## Steps
 

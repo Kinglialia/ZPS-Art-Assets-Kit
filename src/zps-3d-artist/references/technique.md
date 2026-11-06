@@ -1,5 +1,3 @@
-> Roles in this skill: "task giver", "visual standard keeper", and "approver" all mean the user. Use "independent review" only when a truly separate reviewer exists. Do not call a subagent by default. Thresholds are in `task/spec.json`. Take measurements from the scripts in `tools/`. Source: skill art-3d-artist v0.1.0.
-
 # Choose and verify a build solution
 
 ## 1. Analyze before you choose

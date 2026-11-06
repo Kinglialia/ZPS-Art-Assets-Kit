@@ -1,16 +1,20 @@
 # Detailed static-prop pipeline
 
-Read only the section for the current job. The entrypoint defines authorization and review status. Commands are relative to the skill root; use absolute paths when the task working directory differs.
+Read only the section for the current job. The entrypoint defines authorization and review status. In every command, `<SKILL>` is the absolute path of this skill folder and `<BLENDER>` is the absolute Blender path; write both as literal paths.
 
 ## Setup
 
-Dependency setup is optional and must be within authorized scope: `bash tools/setup_deps.sh`. It finds Blender, installs the packages Blender's own Python needs into `tools/.deps/blender-py<ver>/` (Blender cannot see a venv; scripts add that folder to `sys.path` themselves), and creates `tools/.deps/venv/` for the pure-Python tools. It also needs `gltfpack` (`brew install gltfpack` or `npm i -g gltfpack`) and, optionally, `node` + `npm i -g gltf-validator` for `export_check`. Then run `tools/.deps/venv/bin/python tools/preflight.py --out evidence/preflight.json`: it records versions and turns each feature on or off. A missing tool disables its feature and adds a warning; it never silently changes a result.
+Dependency setup is optional and must be within authorized scope: `bash <SKILL>/tools/setup_deps.sh`. It finds Blender, installs the packages Blender's own Python needs into `tools/.deps/blender-py<ver>/` (Blender cannot see a venv; scripts add that folder to `sys.path` themselves), and creates `tools/.deps/venv/` for the pure-Python tools. It also needs `gltfpack` (`brew install gltfpack` or `npm i -g gltfpack`) and, optionally, `node` + `npm i -g gltf-validator` for `export_check`. Then run `<SKILL>/tools/.deps/venv/bin/python <SKILL>/tools/preflight.py --out evidence/preflight.json`: it records versions and turns each feature on or off. A missing tool disables its feature and adds a warning; it never silently changes a result.
 
-Two runners, decided by the script:
-- **Blender-side** (they `import bpy`: `optimize/audit.py`, `cleanup.py`, `bake.py`, `decimate.py`, `self_build/render_views.py`, every `asset_checks/*.py`): `<BLENDER> -b --python <SKILL>/tools/<dir>/<script>.py -- <args>`.
-- **Pure Python** (everything else: `validate_concept`, `gate1`, `sweep`, `measure`, `self_build/assembly`, `gates`, `param_fit`, `apply_edit`, `preflight`, `report`, `finalize`): `<SKILL>/tools/.deps/venv/bin/python <SKILL>/tools/<dir>/<script>.py <args>`.
+Two runners. Use the one in this table for each script:
 
-`<BLENDER>` is the absolute path in `paths.blender` of `config.yaml`. `<SKILL>` is the absolute path of this skill folder. Write both as literal absolute paths in every command, not as shell variables: some hosts (for example Codex rules) allow a command by matching its literal text. `sweep.py`, `apply_edit.py` and `preflight.py` start Blender themselves, so the host must let them run Blender too.
+| Runner | Scripts | Command |
+|---|---|---|
+| Blender | `optimize/audit`, `cleanup`, `bake`, `decimate`; `self_build/assembly`, `param_fit`, `render_views`; `texture/project_concept`; every `asset_checks/*.py` | `<BLENDER> -b --python <SKILL>/tools/<dir>/<script>.py -- <args>` |
+| 3D venv Python | `optimize/validate_concept`, `gate1`, `sweep`, `measure`; `self_build/gates`, `fit_camera`, `apply_edit`; `preflight`, `report`, `finalize` | `<SKILL>/tools/.deps/venv/bin/python <SKILL>/tools/<dir>/<script>.py <args>` |
+| System `python3` | `estimate.py`, `gen/gen_api.py` (standard library only) | `python3 <SKILL>/tools/<script>.py <args>` |
+
+`assembly` and `param_fit` need Blender because `custom` parts use `bmesh`. `<BLENDER>` is the absolute path in `paths.blender` of `config.yaml`. Some hosts (for example Codex rules) allow a command only by its literal text, so never use shell variables or relative paths. `sweep.py`, `apply_edit.py` and `preflight.py` start Blender themselves, so the host must let them run Blender too.
 
 Alternative without the Blender app: `pip install bpy` (Python 3.13 → bpy 5.2.x) in the venv; then every script runs as `python3 <script>.py <args>`. Tested on Linux and macOS (Blender 5.x app, 2026-11-03).
 
@@ -18,15 +22,15 @@ Work dir per asset: `output/<asset>/` with `input/` (originals, read-only), `tas
 
 ## Intake
 
-Ask only what the brief does not already answer, in this order:
+Start `task/spec.json` from [spec.template.json](../templates/spec.template.json) (filled example: [spec.example.rock-moss.json](../templates/spec.example.rock-moss.json)). Ask only what the brief does not already answer, in this order:
 
 1. Asset name (default: file name).
 2. Size class and real height in meters. If not given, estimate from the name and concept proportions, record `height_source: estimated`, and use it everywhere.
-3. Texture style (see [texture handoff](texture-handoff.md) for when to ask Texture Planning before you unwrap): `hand_painted` (baked light in albedo, flat palette, unlit) or `pbr`. This decides UV rules (mirroring forbidden with baked light; palette atlases may overlap on purpose).
+3. Texture style: `hand_painted` (baked light in albedo, flat palette, unlit), `pbr`, or `unknown` (default). Do not ask for it. Use the value from the brief or the Art Style document. If Texture Planning answers before unwrap (see [texture handoff](texture-handoff.md)), set it from that answer. It decides UV rules (mirroring forbidden with baked light; palette atlases may overlap on purpose). With `unknown`, unwrap unique non-overlapping UVs.
 4. Face budget: from the brief or the project; otherwise `auto` (the fewest faces that pass the floor; SKILL.md section 3). Do not ask.
 5. Target engine for extra checks (`unity`, `godot`, `unreal`, or `glb_only`). Export is always glTF Y-up metres with pivot at bottom-centre.
 
-With concept images, run `tools/optimize/validate_concept.py --images <files> --work output/<asset>/work/optimize --spec task/spec.json` first (gate1 reads masks from that work dir). It labels views from file names (`front|back|left|right|top|34`), removes backgrounds, checks cross-view proportions, scores complexity 0–1. Label any `vision_needed` image yourself. A proportion failure above `concept.proportion_tol` stops the task: name the view and the % off. Then point `spec.concept.views` at the masks it wrote (`../work/optimize/concept/mask_<label>.png`) so every later IoU uses the same masks.
+With concept images, run `<SKILL>/tools/.deps/venv/bin/python <SKILL>/tools/optimize/validate_concept.py --images <files> --work output/<asset>/work/optimize --spec task/spec.json` first (gate1 reads masks from that work dir). It labels views from file names (`front|back|left|right|top|34`), removes backgrounds, checks cross-view proportions, scores complexity 0–1. Label any `vision_needed` image yourself. A proportion failure above `concept.proportion_tol` stops the task: name the view and the % off. Then point `spec.concept.views` at the masks it wrote (`../work/optimize/concept/mask_<label>.png`) so every later IoU uses the same masks.
 
 View convention: the prop faces −Y. `left` is the object's **own** left side (camera at +X looking −X), `right` its own right. Many sheets label from the viewer's side instead. For an asymmetric prop, confirm with the user which one the sheet uses before building; a swapped label silently mirrors the result.
 
@@ -51,15 +55,15 @@ Fix the game camera first: the first `render_rig` run without `camera.distance_m
 
 Multi-object assets: the optimize path joins every mesh into one object named after the asset (audit records the original names). Per-object spec keys (`objects`, `dimensions_m`, `expected_parts`, contacts between those objects) then report `not_checked` with that reason. Check per-object facts on the input before optimizing, and say in the report which checks ran on the input only.
 
-Then the visual review: `render_rig` produced `sheet.png`, clay crops at the game camera, and `concept_compare.png` (only with a ConceptCam; otherwise use `render_views.py --input <final> --mode critic` overlays). Review the image set listed in `templates/REVIEW-RUBRIC.md`. Label self-review versus independent review; neither grants owner approval. `not passed` → one fix cycle (rule 6), then re-run the gate.
+Then the visual review: `render_rig` produced `sheet.png`, clay crops at the game camera, and `concept_compare.png` (only with a ConceptCam; otherwise use `render_views.py --input <final> --mode critic` overlays). Review the image set listed in `templates/REVIEW-RUBRIC.md`. Label self-review versus independent review; neither grants owner approval. `not passed` → one fix cycle (self-built props: the critic loop in [self-build](self_build.md) step 6; other paths: fix the named issue), then re-run the gate.
 
-When required QA checks pass and the configured visual review milestone is satisfied: `tools/.deps/venv/bin/python tools/finalize.py --work output/<asset> --from <baked GLB> [--min-pass <baked GLB>]`. It refuses while any QA result is `fail` or `error` and names them; otherwise it writes `final.glb` (and `final_budget.glb` / `final_min_pass.glb`).
+When required QA checks pass and the configured visual review milestone is satisfied: `<SKILL>/tools/.deps/venv/bin/python <SKILL>/tools/finalize.py --work output/<asset> --from <baked GLB> [--min-pass <baked GLB>]`. It refuses while any QA result is `fail` or `error` and names them; otherwise it writes `final.glb` (and `final_budget.glb` / `final_min_pass.glb`).
 
 Scope of `finalize.py`: it requires only a `mesh_check` result for the exact file, and it refuses any `fail` or `error` among the results present. A check that did not run is listed in `data.not_run`; finalize does not block on it. Before you call finalize, confirm yourself that every check the spec requires has a result for that file. Do not report a check in `not_run` as passed.
 
 ## Report
 
-Run `tools/.deps/venv/bin/python tools/report.py --work output/<asset> --spec output/<asset>/task/spec.json`. It collects every result JSON, writes `report.json`, `contact_sheet.png` and a `report.md` skeleton; you then edit the prose. `report.md` in Vietnamese, short: entry, generator/path, faces (source → chosen, budget, min_pass), metrics (IoU min, Hausdorff, SSIM), texture (mode, source, resolution), validation errors, critic verdict with the images it cited, warnings, what was **not** checked (no engine, no device, estimated height), file paths. `report.json` mirrors it. `contact_sheet.png`: concept | clay | final, plus the error-vs-faces curve with knee and chosen marked.
+Run `<SKILL>/tools/.deps/venv/bin/python <SKILL>/tools/report.py --work output/<asset> --spec output/<asset>/task/spec.json`. It collects every result JSON, writes `report.json`, `contact_sheet.png` and a `report.md` skeleton; you then edit the prose. `report.md` in the user's language, short: entry, generator/path, faces (source → chosen, budget, min_pass), metrics (IoU min, Hausdorff, SSIM), texture (mode, source, resolution), validation errors, critic verdict with the images it cited, warnings, what was **not** checked (no engine, no device, estimated height), file paths. `report.json` mirrors it. `contact_sheet.png`: concept | clay | final, plus the error-vs-faces curve with knee and chosen marked.
 
 Never call the result "game-ready" when engine or device checks were skipped. Say which milestone it reached.
 

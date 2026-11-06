@@ -26,6 +26,7 @@ A shared template for the 3D Artist and the Texture Artist. The 3D Artist fills 
 ```markdown
 # Texture <asset> — for model v<number>, UV v<number>
 - Method used: <author × shader> — <as requested by … | self-chosen because …>
+- Texture Review: <verdict, self/independent, open issues> | not run (test sample or small fix)
 - Maps/atlas delivered: <file, size, channels, color space>
 - Attached to material slot: <slot → map>
 - Material setup notes for the person who imports the asset into the engine: lit | unlit; compression; mipmap on/off; which image is the normal map (OpenGL/DirectX convention)

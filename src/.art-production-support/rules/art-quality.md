@@ -17,7 +17,7 @@ Inventory — sword_icon_v3
 
 ## 2. Revision round
 
-1. Create/edit. 2. Preview at the target size and compare with a reference of the same deliverable type. 3. Open the image and check: the inventory, the generated-image fault table in gen craft, and the 6-dimension self-check. 4. Choose the fix method from the [fix playbook](../shared/fix-playbook.md). Use the cheapest method that has evidence. If the structure is acceptable, try a script or a local edit before you regenerate. 5. Record the round in the task record.
+1. Create/edit. 2. Preview at the target size and compare with a reference of the same deliverable type. 3. Open the image and check: the inventory, the generated-image fault table in gen craft, and the [6-dimension self-check](../templates/review.md). 4. Choose the fix method from the [fix playbook](../shared/fix-playbook.md). Use the cheapest method that has evidence. If the structure is acceptable, try a script or a local edit before you regenerate. 5. Record the round in the task record.
 
 If you have many hypotheses and budget remains, you can test several options. In each branch, change one factor. Score all branches at the same time. Choose by eye first. Use measurements to eliminate options and to break ties.
 

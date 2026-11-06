@@ -19,6 +19,7 @@ When the AD or user approves an asset or a whole set, record the set anchor. If 
 | Situation | Where to record |
 |---|---|
 | The project has a style sheet or an Art Style document | The Production notes section of the style sheet |
+| The project has only an AD Art Bible (no artist style sheet) | A `_set-anchor.md` file placed next to the asset set. Do not edit the Bible |
 | The project has no style sheet | A `_set-anchor.md` file placed next to the asset set |
 | Global call, no project | Record it in the delivery result. Next time, the user sends the anchor image again |
 

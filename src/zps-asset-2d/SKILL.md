@@ -53,7 +53,7 @@ If there is no complete Bible/style sheet and only reference images, read the st
 
 ## Handoff
 
-When you deliver a full set or a final, call [2D Review](../zps-2d-review/SKILL.md) before you deliver (section "When Asset 2D or UI calls this skill"). Fix the issues, then check only those issues again. After the AD/user approves, record the set anchor as described in [set anchor](../.art-production-support/shared/set-anchor.md).
+When you deliver a full set, a UI screen, or an asset that the brief marks as final for acceptance, call [2D Review](../zps-2d-review/SKILL.md) (section "When Asset 2D or UI calls this skill") before you deliver. A single asset otherwise needs only the self-check. Fix the issues, then check only those issues again. After the AD/user approves, record the set anchor as described in [set anchor](../.art-production-support/shared/set-anchor.md).
 
 The handoff contains:
 - PNG with the correct size/alpha.

@@ -19,13 +19,25 @@ Imports, rejects armature/shape keys (`out_of_scope_rig`), triangulates, applies
 
 ## 2. Gate 1 — `tools/optimize/gate1.py` (only with concept)
 
+```
+<SKILL>/tools/.deps/venv/bin/python <SKILL>/tools/optimize/gate1.py --work <w> --spec task/spec.json
+```
+
 Tries 4 front directions (±X, ±Y), then 24 if the best is weak; picks the highest front IoU; writes `orientation` and rotates `ingest.glb` → `oriented.glb`. Reports per-view IoU for every concept view present and an overlay PNG per view. Below `gate1.silhouette_iou_min`: show the overlays, ask the user.
 
 ## 3. Cleanup — `tools/optimize/cleanup.py`
 
+```
+<BLENDER> -b --python <SKILL>/tools/optimize/cleanup.py -- --work <w> --spec task/spec.json
+```
+
 Always: merge by distance (`merge_distance_ratio` × diag), delete loose shells below `loose_part_min_ratio`, delete interior faces found by the audit (clean branch only, when the ratio is small), recalc normals, fill holes ≤ `max_hole_edges`, origin bottom-centre. Dirty branch (or `voxel_remesh.mode: always`): solidify open sheets if `solidify_thin`, voxel remesh at `resolution` voxels on the longest edge, keep `pre_remesh.glb` as the bake source, write `remeshed: true`, `rebake: true`. Output `ref_high.glb` — the only reference for every later comparison.
 
 ## 4. Sweep — `tools/optimize/sweep.py`
+
+```
+<SKILL>/tools/.deps/venv/bin/python <SKILL>/tools/optimize/sweep.py --work <w> --spec task/spec.json --auto | --budget N
+```
 
 For each ratio in `optimize.sweep_ratios` (or `--budget N` → ratio = N / ref tris, plus the sweep below it to find `min_pass`):
 - `gltfpack -i ref_high.glb -o level_<r>.glb -si <r> -se <gltfpack_error> -noq` (+ `-sp` when `rebake` and `permissive_when_rebake`, + `-slb` if `lock_border`). Note `-se`: gltfpack may stop above target; record the achieved count.
@@ -36,7 +48,7 @@ At the chosen level, also run the other engine and keep the better (worst-view I
 ## 5. Measure — `tools/optimize/measure.py`
 
 ```
-tools/.deps/venv/bin/python tools/optimize/measure.py --ref ref_high.glb --cand level_0.1.glb --out <w>/measure/level_0.1.json [--views 12] [--raster 512] [--screen-px 400]
+<SKILL>/tools/.deps/venv/bin/python <SKILL>/tools/optimize/measure.py --ref ref_high.glb --cand level_0.1.glb --out <w>/measure/level_0.1.json [--views 12] [--raster 512] [--screen-px 400]
 ```
 Pure Python (trimesh + numpy). Silhouettes by orthographic triangle rasterisation from `cameras` directions on a sphere (including above and below), same framing for ref and candidate; IoU per view, worst view. Two-way Hausdorff and mean (surface samples → closest point) as fraction of bbox diagonal and projected to px (`× screen_px / bbox_height`). Normal deviation p95 between candidate samples and nearest ref face. Masked SSIM is added by `bake.py` when texture exists.
 
@@ -49,6 +61,10 @@ Pure Python (trimesh + numpy). Silhouettes by orthographic triangle rasterisatio
 - Write `sweep.json`: `curve[]`, `knee_tris`, `chosen_tris`, `budget_tris`, `min_pass_tris`, `engine_winner`, `reason`; and `curve.png`.
 
 ## 7. UV and texture — `tools/optimize/bake.py`
+
+```
+<BLENDER> -b --python <SKILL>/tools/optimize/bake.py -- --work <w> --low <chosen level GLB> --spec task/spec.json [--mode auto|keep_uv|rebake]
+```
 
 - **keep_uv** (clean branch, UVs usable): carry original UVs and textures. Run `uv_check` for bounds, overlap and padding.
 - **rebake**: `xatlas` unwrap (deterministic; Blender Smart UV Project is not), padding from `texture.padding_px_by_res`. Resolution = next power of two (rounded up) of √(surface area m²) × `texel_density_px_per_m` / √(UV occupancy), clamped to `[min_res, max_res]`. Blender Cycles CPU bake selected-to-active from `pre_remesh.glb` (or `ref_high.glb`), `max_ray_distance` = `max_ray_distance_ratio` × diag, margin `bake_margin_px`. `albedo` always; `albedo_normal` adds tangent-space normal (OpenGL convention) for `pbr`. Single material.

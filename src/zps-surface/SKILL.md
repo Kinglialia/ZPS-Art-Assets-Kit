@@ -74,6 +74,8 @@ Hand off with part B of the [3D ↔ Texture handoff](../.art-production-support/
 - **Material setup notes** for the person who imports the asset into the engine: lit/unlit, compression, mipmap, which image is the normal map.
 - Parts not checked.
 
+Before you deliver a final, or a set of models, call [Texture Review](../zps-texture-review/SKILL.md) (section "When Surface calls this skill"). Fix the issues, then let it check only those issues and regressions. A single test sample or a small fix needs only the self-check. Put the review verdict in part B.
+
 Do not create a material in the engine project unless the task clearly assigns it. If the 3D Artist called this skill, return the result to the 3D Artist. The 3D Artist applies it to the model and exports the final file.
 
 ## Gotchas

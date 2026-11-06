@@ -61,6 +61,6 @@ When an unresolved uncertainty matters to the decision, propose the smallest use
 
 Deliver the concept(s), recommendation and trade-off at the requested depth. Do not invent an experiment when the requested decision is complete.
 
-For combined tasks, use the [Art Direction workflow](../.art-director-support/workflows/art-direction.md) to route work and carry decisions forward. Individual tasks do not require every skill.
+Combined tasks: [Art Direction workflow](../.art-director-support/workflows/art-direction.md). A single task needs only this skill.
 
 When the requested next output is an actual asset concept or grey-box paint-over, use [Concept Artist](../zps-concept-artist/SKILL.md) with the existing direction and brief. This does not require a separate intake or approval cycle.

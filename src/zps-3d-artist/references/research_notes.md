@@ -4,6 +4,11 @@
 
 Why the skill's rules are what they are. Each claim has a link. Tags: **[C]** read in a primary source, **[S]** search snippet or aggregator only, **[I]** inference. Several hosts (arxiv, huggingface, docs.blender.org, polycount, Unity/Godot/Unreal docs) were not reachable when this was written, so many numbers are [S]; re-check before relying on an exact figure.
 
+
+## 0. Why the self-build loop has this shape
+
+frontier models now write bpy that runs almost every time, but the geometry stays toy-like with floating or misplaced parts; better harnesses raise executability, not shape quality (3DCodeBench). The one code-built system that matched native generators on props (Procedura) got there by constraining the representation: named parts, typed machine-checked attachments, hard gates per part, a separate critic, one patch per cycle. Placement is the weakest LLM skill (P3D-Bench part F1 ≈ 0.5). So: the builder never types a coordinate. See `research_notes.md` §1.
+
 ## 1. LLM-written geometry
 
 - Frontier models now write executable bpy almost always, but shape quality does not improve with better harnesses; successful renders still have floating or disconnected parts. 3DCodeBench [S] — https://github.com/gaoypeng/3dcodebench

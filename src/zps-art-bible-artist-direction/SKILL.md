@@ -60,4 +60,4 @@ Separate corrections from changed requirements. Record an owner change, the supe
 
 Deliver the requested document with the decision-record fields listed under Ground the handoff. A documentation-only task does not require commissioning a fresh-maker test. Style decisions requiring exploration return to Art Style Development; critique findings can drive revisions but do not themselves change the approved Bible.
 
-For combined tasks, use the [Art Direction workflow](../.art-director-support/workflows/art-direction.md) to route work and carry decisions forward. Individual tasks do not require every skill.
+Combined tasks: [Art Direction workflow](../.art-director-support/workflows/art-direction.md). A single task needs only this skill.

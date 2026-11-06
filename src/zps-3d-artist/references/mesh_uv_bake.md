@@ -1,5 +1,3 @@
-> Roles in this skill: "task giver", "visual standard keeper", and "approver" all mean the user. Use "independent review" only when a truly separate reviewer exists. Do not call a subagent by default. Thresholds are in `task/spec.json`. Take measurements from the scripts in `tools/`. Source: skill art-3d-artist v0.1.0.
-
 ## B. Finish the mesh / edit the model
 **Receive:** the blockout/source of the correct version, the relevant approval milestones, and the delta to make.
 - Record Source/Keep/Change. Work from main mass → secondary → detail. Use parametric for number-based edits. Use sculpt for organic shapes. Use retopo when the mesh needs a new structure. It is not required for every asset type. Use modular with grid/snap. Do not require every asset to start from primitives or from image-to-3D.
@@ -11,7 +9,7 @@
 
 ## Reduce faces and retopo when needed
 
-Fix the cause of excess faces first. Reduce segment counts or modifiers that are too high. Dissolve edges that do not contribute. Remove small geometry that a surface can show, as in 00-style-method.md. Remove interior, bottom, or covered faces only after you confirm that the task does not need them for any view, shadow, motion, or interaction. Keep the construction that is needed.
+Fix the cause of excess faces first. Reduce segment counts or modifiers that are too high. Dissolve edges that do not contribute. Remove small geometry that a surface can show, as in [technique](technique.md). Remove interior, bottom, or covered faces only after you confirm that the task does not need them for any view, shadow, motion, or interaction. Keep the construction that is needed.
 
 If the mesh has a simple structure, edit it directly first. If a mesh from AI or sculpt is too dense, hard to edit, or does not meet deformation needs, consider retopo to lay out the faces again. For a fast reduction for far viewing, you can try decimate or LOD when it fits. Do not build dense and then retopo every asset by default. Do not treat auto-remesh as a guarantee that it keeps the shape or reduces triangles.
 

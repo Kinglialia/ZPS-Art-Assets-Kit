@@ -35,6 +35,8 @@ Use the available image generate/edit tools and the instructions of that tool. W
 
 Open the actual result. Check the silhouette, the forms, the locked details, the framing, and the readability at the size provided. Do not claim a numeric match to the camera from a generated image alone. Record the deviation and the need for verification when you cannot compare. For a multi-view sheet, check whether identity and construction are consistent.
 
+**For 3D modeling,** also deliver: one file per view, named with the view (`front`, `back`, `left`, `right`, `top`, `34`); `left` and `right` are the object's own sides, not the viewer's; near-orthographic views for front, back and sides; a plain or transparent background; more than 1040 px on the long edge.
+
 Deliver the concept image/PNG used for modeling, the version, the source camera/grey-box, the hidden parts/assumptions, and the questions that affect modeling. Deliver a layered file or an alpha background only when you really created it and can check it. If the tool exports only a flat image, say so. If a layered source is a mandatory requirement, state what is missing.
 
 Keep three states separate: the self-check that was done (not an independent review), art approval by the designated person, and confirmation by the modeler that the modeling information is sufficient. Do not fill in the name/date of an approver or confirm on behalf of another person. A good concept does not prove topology, budget, or engine import ability. Do not apply a default number of revision rounds or a default cost. Use the limit that was assigned.
