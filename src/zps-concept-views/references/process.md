@@ -58,6 +58,7 @@ Use the image tool of this app, as the runtime adapter describes (`../../.art-pr
 - Use a **plain, flat, one-color background** that is not in the object. The default is `#E8E8E8` light grey. If the object is grey or white, use `#2B2B2B` or another color that differs from the object. No ground, no cast shadow, no vignette, no text.
 - **Lighting:** even, neutral light, the same in every view. No shadow cast on the object (roof on wall, part on part), no strong directional light, no dark ambient-occlusion corners. Reasons: a fixed light would make the back and one side darker than the front, so the views cannot match; shadows change the measured material colors and cause false regenerations; and shadows end up in the 3D texture.
   - Exception: if the style sheet paints light into the albedo (hand-painted, for example a lighter top and darker base), keep that painted convention, and keep it the same in every view. Never use one fixed world light.
+  - Write the rest of the request with the [lighting rules](../../.art-production-support/shared/gen-craft.md#lighting-and-shadows). After each generation, check for shadows and remove them by an edit before you measure.
   - The prompts below use the default lighting line. For the exception, replace it with: "Painted light as in the concept (<the convention>), the same in every view. No other shadows."
 - The object is **fully inside the image**. Do not crop it. Do not stretch it.
 - Save the prompt of each view, so that you can repeat it.
@@ -92,8 +93,9 @@ STRICT RULES
   Paint each region with that material as it looks in the concept.
 - Plain, flat, solid background [#E8E8E8]. No ground, no cast shadow, no vignette,
   no text, no labels, no border.
-- Even, neutral light, the same in every view. No shadow cast on the object,
-  no strong directional light, no dark ambient-occlusion corners.
+- Unlit base-color look, even ambient light, the same in every view. No shadow cast on the object,
+  no strong directional light, no dark ambient-occlusion corners. The shading of the guide image
+  only shows the form: do not copy it as light.
 - The whole object fully visible and centred. Do not crop. Do not stretch.
 ```
 
@@ -113,8 +115,9 @@ STRICT RULES
 - What this side looks like: [HIDDEN-SIDE DESCRIPTION FROM STEP 0, in English].
 - Plain, flat, solid background [#E8E8E8]. No ground, no cast shadow, no vignette,
   no text, no labels, no border.
-- Even, neutral light, the same in every view. No shadow cast on the object,
-  no strong directional light, no dark ambient-occlusion corners.
+- Unlit base-color look, even ambient light, the same in every view. No shadow cast on the object,
+  no strong directional light, no dark ambient-occlusion corners. The shading of the guide image
+  only shows the form: do not copy it as light.
 - The whole object fully visible and centred. Do not crop. Do not stretch.
 ```
 
@@ -132,8 +135,9 @@ STRICT RULES
 - Each flat colour marks one material: [MATERIAL LIST]. One material = the same look in every cell.
 - Hidden sides: [HIDDEN-SIDE DESCRIPTION].
 - Plain, flat, solid background [#E8E8E8] everywhere. No shadows, no text, no labels, no grid lines.
-- Even, neutral light, the same in every view. No shadow cast on the object,
-  no strong directional light, no dark ambient-occlusion corners.
+- Unlit base-color look, even ambient light, the same in every view. No shadow cast on the object,
+  no strong directional light, no dark ambient-occlusion corners. The shading of the guide image
+  only shows the form: do not copy it as light.
 ```
 
 If you did not render a view, change the sheet prompt to list only the views you have. Save the images in `views_gen/` with these names: `front.png`, `back.png`, `left.png`, `right.png`, `top.png` (`bottom.png` only on request).

@@ -5,6 +5,7 @@ Read this before you call a tool that creates or edits images, and when you self
 ## Contents
 - Write the request
 - Request template
+- Lighting and shadows
 - Errors and paid calls
 - Typical faults of generated images
 
@@ -12,7 +13,7 @@ Read this before you call a tool that creates or edits images, and when you self
 
 1. **Give the Execution reference image to the tool** when the tool accepts images. State the role of each image (Image 1: style/color standard; Image 2: structure only…). Words that describe a style do not replace an image. A prompt with text only tends to drift to another render style.
 2. **Choose references by color.** The model follows the colors of an image more than hex codes. If a reference has a tone that differs from the style sheet, remove it, or write "structure only, ignore its colors".
-3. **Name the correct target image type** for the deliverable: "in-game screenshot of a real-time 3D game", "game UI icon on transparent background", "tileable texture, flat lighting"… The words "concept art", "illustration", and "keyframe" pull the result toward a painting.
+3. **Name the correct target image type** for the deliverable: "in-game screenshot of a real-time 3D game", "game UI icon on transparent background", "tileable texture, flat lighting", "unlit base-color render"… The words "concept art", "illustration", and "keyframe" pull the result toward a painting.
 4. **Describe with concrete nouns**: object, material, viewing angle, layout. Do not stack adjectives. "Epic, highly detailed, intricate" is a command to add detail. Experience with the tools tried so far (not tested widely): strong color adjectives ("vivid", "saturated", capitalized color names) often make the color exceed the target. When you have a color-standard image, prefer "match the colors of Image N".
 5. **Always state exclusion constraints**: no text, no logo, no accessory or effect outside the list, background as set by the contract.
 6. **Edit**: write "change only X; keep everything else unchanged" and repeat it in every round. Change one thing per round: two changes in one round make it impossible to tell which one broke the image. Use a mask when the tool has one. When the request is to keep the shape or layout, run `structure_diff.py` against the source image. If the task intentionally changes the structure, compare by eye the areas that must stay.
@@ -32,6 +33,16 @@ Composition: <view angle, framing, position, empty margin>
 Constraints: <size, background, palette, change only X; keep Y unchanged>
 Avoid: <text, logo, extra accessories, glow, particles, ...>
 ```
+
+## Lighting and shadows
+
+Use this section when the image must have no shadows: a flat-lit concept, views for 3D, a texture reference. Image tools add light by default, and a text "no shadows" is weak against the other inputs.
+
+- **A reference image passes on its light.** If a reference has light and shadows, say what to take and what to ignore: "Image 1: take the shapes and paint colors only; ignore its lighting and shadows."
+- **Name an unlit image type**, not a render: "unlit base-color render", "ambient light only", "every surface shows its own paint color", "like a flat-shaded color view in a 3D editor". Do not write "3D render", "studio lighting", "soft shadows", "cinematic", "dramatic", "golden hour", "ambient occlusion".
+- **List where shadows must not be**, concretely: under the awning or eaves, under objects on other objects, inside recesses, at the base, on the side faces.
+- **Allow form only by paint:** a slightly lighter painted top plane is allowed when the style has it; nothing else.
+- **Check, then fix by edit.** Shadows often remain. Remove them with an edit of the result that changes only the light, and check the shape with `structure_diff.py`. A shadow edit on a new image is safer than a new generation, because the design stays.
 
 ## Errors and paid calls
 
