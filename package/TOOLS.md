@@ -29,6 +29,8 @@ The skill installer itself does not use the network and does not install tools. 
 | gltfpack | Recommended | 3D optimize sweep (else Blender Decimate) | `brew install gltfpack` or `npm i -g gltfpack` |
 | Node.js + gltf-validator | Optional | 3D `export_check` | `brew install node`, then `npm i -g gltf-validator` |
 | rembg | Optional, large | 3D `validate_concept` background removal | `{{INSTALL_ROOT}}/zps-3d-artist/tools/.deps/venv/bin/python -m pip install "rembg[cpu]"` |
+| zps-ai CLI | Optional | 3D Artist, ZPS 3D Gen path | Ask the user first: `curl -fsSL https://zps-ai-console.zingplay.com/cli/install.sh \| sh`, then `zps-ai login` (browser sign-in, no key) |
+| Meshy / Tripo keys | Optional, paid | 3D Artist, Meshy and Tripo paths | The installer creates `~/.config/zps-art-assets-kit/.env` with empty keys (mode 600). The user pastes the keys into that file. Never put a key in the chat |
 | Google Chrome | Optional | Fallback for `svg_render` when resvg-py is missing | Only if resvg-py cannot be installed. The fallback does not work inside the Codex sandbox |
 
 After the 3D setup, run the 3D preflight for a full report of 3D features:
@@ -48,6 +50,7 @@ Some Python builds (for example Homebrew Python) block `pip install --user` with
 ## Do not install
 
 - API keys or paid image-generation providers for `generate_image.py`. The user sets these up per task budget.
+- Meshy or Tripo keys. Only the user pastes them into the key file.
 - Godot or Figma. The skills do not need them; the people who use them install them.
 
 ## Library maintenance (only if the user maintains the offline library)

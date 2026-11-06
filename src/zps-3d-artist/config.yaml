@@ -90,12 +90,10 @@ self_build:
     worst_penalty: 0.5        # objective = mean IoU − worst_penalty × (mean − worst)
     regularization: 0.001     # pulls params silhouettes cannot see back toward their start
 
-generation:                   # paid generators: stubs until configured
-  credit_cap_per_asset: 120
-  max_retry: 2
-  adapters:
-    meshy: {enabled: false, api_key_env: MESHY_API_KEY}
-    tripo: {enabled: false, api_key_env: TRIPO_API_KEY}
+generation:                   # Meshy, Tripo: tools/gen/gen_api.py; ZPS 3D Gen: zps-ai CLI. See paths/*.md
+  credit_cap_per_asset: 120   # default max_credits for a new budget file; the user approves the real value
+  max_retry: 2                # generations per asset before you ask the user again
+  key_file: ~/.config/zps-art-assets-kit/.env   # MESHY_API_KEY, TRIPO_API_KEY; the environment overrides it
 
 validate:
   max_file_size_mb: 5

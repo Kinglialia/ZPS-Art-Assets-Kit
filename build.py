@@ -184,6 +184,12 @@ def tests(rt):
         r = subprocess.run([sys.executable, str(ROOT / 'tests' / t), str(scripts / target)], capture_output=True, text=True)
         if r.returncode != 0:
             errors.append(f'{t} failed: {(r.stdout + r.stderr).strip()[-400:]}')
+    tools3d = next(rt.glob('zps-3d-artist*')) / 'tools'
+    for t, target in (('test_gen_api.py', tools3d / 'gen' / 'gen_api.py'), ('test_estimate.py', tools3d / 'estimate.py'),
+                      ('test_key_file.py', rt.parent)):
+        r = subprocess.run([sys.executable, str(ROOT / 'tests' / t), str(target)], capture_output=True, text=True)
+        if r.returncode != 0:
+            errors.append(f'{t} failed: {(r.stdout + r.stderr).strip()[-400:]}')
     rules = rt.parent / 'installer' / 'codex_rules.py'
     if rules.exists():
         r = subprocess.run([sys.executable, str(ROOT / 'tests' / 'test_codex_rules.py'), str(rules), str(rt)],

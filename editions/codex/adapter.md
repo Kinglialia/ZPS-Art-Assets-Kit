@@ -14,7 +14,7 @@ Codex runs commands in a sandbox. By default it can write only inside the worksp
   - `<3D venv python> <sweep.py | apply_edit.py | preflight.py> <args>`
 
   Write the Blender path, the script path and the venv Python path as literal absolute paths. The rule matches the literal command, so a shell variable such as `$BLENDER` or a relative path does not match, and the command then runs in the sandbox and crashes. If the rule is not installed, ask the user to approve each Blender command outside the sandbox. Do not retry inside the sandbox.
-- **Network is off.** `pip install`, Drive sync and paid image APIs (`generate_image.py`) need the user's approval to run with network. The Codex web search tool is separate and is not affected.
+- **Network is off.** `pip install`, Drive sync, paid image APIs (`generate_image.py`), the 3D generators (`zps-3d-artist-codex/tools/gen/gen_api.py` for Meshy and Tripo, `zps-ai` for ZPS 3D Gen) need the user's approval to run with network. Ask for each call; never retry inside the sandbox. The Blender rule never covers these scripts. `zps-ai` is at `~/.local/bin/zps-ai` when it is not on PATH. The Codex web search tool is separate and is not affected.
 - **Write outputs to the workspace.** Give every script an output path inside the task folder. Never write into the skills folder.
 - **SVG:** `svg_render.py` needs resvg-py inside the sandbox. Its Chrome fallback crashes inside the sandbox.
 

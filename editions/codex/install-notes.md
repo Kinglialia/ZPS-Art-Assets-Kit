@@ -9,5 +9,6 @@
   ```
 
   Restart Codex after writing. Run it again after each upgrade. Without the rule, Codex asks you to approve each Blender command.
-- Network is off by default in the sandbox; tool installs need your approval.
+- Network is off by default in the sandbox; tool installs need your approval. The 3D generators (Meshy, Tripo, ZPS 3D Gen) also ask for approval at each call.
+- If you installed v0.7.x and wrote the rule, run `codex_rules.py --write` again after this upgrade: the old rule file also allowed the paid image script.
 - Codex shows only a limited amount of skill descriptions at session start. Many other skills in `~/.agents/skills` can make Codex shorten or drop some descriptions. Keep that folder tidy.

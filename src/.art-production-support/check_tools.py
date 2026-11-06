@@ -102,6 +102,14 @@ def collect():
     rembg_ok = venv.exists() and venv_imports(venv, ['rembg', 'onnxruntime'])
     out.append(item('3d', 'rembg', 'optional', rembg_ok, str(venv) if rembg_ok else None,
                     f'"{venv}" -m pip install "rembg[cpu]" (large)', '3D validate_concept background removal'))
+    zps = shutil.which('zps-ai') or (str(Path.home() / '.local/bin/zps-ai') if (Path.home() / '.local/bin/zps-ai').exists() else None)
+    out.append(item('3d', 'zps-ai CLI', 'optional', zps, zps,
+                    'ask the user, then: curl -fsSL https://zps-ai-console.zingplay.com/cli/install.sh | sh; zps-ai login',
+                    '3D Artist ZPS 3D Gen path'))
+    env = Path(os.environ.get('ZPS_ART_ENV_FILE', '~/.config/zps-art-assets-kit/.env')).expanduser()
+    out.append(item('3d', 'Meshy/Tripo key file', 'optional', env.is_file(), str(env) if env.is_file() else None,
+                    'run the kit installer again (it creates the file); the user pastes the keys',
+                    '3D Artist Meshy and Tripo paths (paid)'))
     return out
 
 

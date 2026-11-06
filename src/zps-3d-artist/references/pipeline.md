@@ -22,7 +22,7 @@ Ask only what the brief does not already answer, in this order:
 
 1. Asset name (default: file name).
 2. Size class and real height in meters. If not given, estimate from the name and concept proportions, record `height_source: estimated`, and use it everywhere.
-3. Texture style (see SKILL.md, Texture by default, for when to ask Texture Planning before you unwrap): `hand_painted` (baked light in albedo, flat palette, unlit) or `pbr`. This decides UV rules (mirroring forbidden with baked light; palette atlases may overlap on purpose).
+3. Texture style (see [texture handoff](texture-handoff.md) for when to ask Texture Planning before you unwrap): `hand_painted` (baked light in albedo, flat palette, unlit) or `pbr`. This decides UV rules (mirroring forbidden with baked light; palette atlases may overlap on purpose).
 4. Face budget (number) or `auto` (find the fewest faces that pass the floor).
 5. Target engine for extra checks (`unity`, `godot`, `unreal`, or `glb_only`). Export is always glTF Y-up metres with pivot at bottom-centre.
 
@@ -36,8 +36,8 @@ Reuse confirmed task constraints in `task/spec.json`; ask only about new consequ
 
 Follow [self_build.md](self_build.md); it is the only source for the build loop and its commands. Two steps live here because self_build.md does not cover them:
 
-- **Fit check before the loop.** If `validate_concept.py` scores complexity above `concept.complexity_warn`, or the shape is organic, say so. Offer the optimize path with an external generator, and stop unless the user insists.
-- **Texture after Optimize (temporary pass).** The result of this step is a temporary texture. Hand it to Texture Artist as described in the SKILL.md section Texture by default. `<BLENDER> -b --python <SKILL>/tools/texture/project_concept.py -- --input <low GLB> --concept <view>=<concept image> --spec task/spec.json --work <dir>` projects the painted concept onto the low mesh from the (fitted) concept camera, then fills what no view sees: facet colour gradients, short UV inpaint, then a palette clustered from the concept (up-facing facets take the concept's top colour, back/down facets darkened). Unlit material for `hand_painted`. It reports coverage (projected / facet / inpaint / palette) and masked SSIM per concept view against `texture.ssim_min`. With one 3/4 view, more than half the texture is inferred: say so in the report, and show the back view. More concept views are the real fix.
+- **Fit check before the loop.** If `validate_concept.py` scores complexity above `concept.complexity_warn`, or the shape is organic, say so. Offer Meshy, Tripo or ZPS 3D Gen (SKILL.md section 2), and stop unless the user insists.
+- **Texture after Optimize (temporary pass).** The result of this step is a temporary texture. Hand it to Texture Artist as described in [texture handoff](texture-handoff.md). `<BLENDER> -b --python <SKILL>/tools/texture/project_concept.py -- --input <low GLB> --concept <view>=<concept image> --spec task/spec.json --work <dir>` projects the painted concept onto the low mesh from the (fitted) concept camera, then fills what no view sees: facet colour gradients, short UV inpaint, then a palette clustered from the concept (up-facing facets take the concept's top colour, back/down facets darkened). Unlit material for `hand_painted`. It reports coverage (projected / facet / inpaint / palette) and masked SSIM per concept view against `texture.ssim_min`. With one 3/4 view, more than half the texture is inferred: say so in the report, and show the back view. More concept views are the real fix.
 
 ## Optimize a model
 

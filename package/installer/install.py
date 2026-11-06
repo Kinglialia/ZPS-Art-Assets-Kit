@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Local, stdlib-only installer. No network, sudo, or configuration edits."""
+"""Local, stdlib-only installer. No network, sudo, or configuration edits, except one new key file
+(see ensure_key_file) that it creates once and never changes."""
 import argparse, datetime, difflib, hashlib, json, os, pathlib, sys, tempfile, uuid
 P = pathlib.Path
 PACKAGE = P(__file__).resolve().parents[1]
@@ -69,6 +70,21 @@ def check_conflicts(root, manifest):
     if conflicts:
         raise ValueError('Conflicting skill folders; nothing installed. Archive the listed folders outside all skills roots, then retry. See INSTALL.md migration instructions:\n'+'\n'.join(conflicts))
 
+KEY_FILE_TEXT = """# API keys for the ZPS Art Assets Kit (3D Artist: Meshy and Tripo paths).
+# Paste a key after the = sign. Leave a line empty if you do not use that service.
+# ZPS 3D Gen needs no key here: it uses the zps-ai CLI and its own sign-in.
+MESHY_API_KEY=
+TRIPO_API_KEY=
+"""
+def ensure_key_file():
+    # Kept apart from the payload on purpose: secrets must never enter backups, receipts or rollback.
+    path = P(os.environ.get('ZPS_ART_ENV_FILE', '~/.config/zps-art-assets-kit/.env')).expanduser()
+    if path.exists() or path.is_symlink():
+        print('Key file kept:', path); return
+    path.parent.mkdir(parents=True, exist_ok=True)
+    fd = os.open(str(path), os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o600)
+    with os.fdopen(fd, 'w') as out: out.write(KEY_FILE_TEXT)
+    print('Key file created (empty keys, mode 600):', path)
 def confirm(word):
     return input('Type '+word+' to continue, or Enter to cancel: ').strip() == word
 def main():
@@ -119,7 +135,9 @@ def main():
             print(''.join(difflib.unified_diff(before[n].decode('utf-8',errors='replace').splitlines(True), b.decode().splitlines(True), fromfile='installed/'+n, tofile='package/'+n)))
     old_receipt = read(root/RECEIPT)
     if not changes and old_receipt is not None and json.loads(old_receipt).get('files') == m['files']:
-        print('Already installed; no changes.'); return
+        print('Already installed; no changes.')
+        if a.install: ensure_key_file()
+        return
     print('Other skills and project settings are preserved. A timestamped backup will be created.')
     if not a.install:
         print('Preview only. Run with --install to apply.'); return
@@ -146,6 +164,7 @@ def main():
         for n in reversed(done): write(root/n,before[n])
         raise
     print(f"Installed {len(m['skills'])} skills. Backup:", backup)
+    ensure_key_file()
     print(f'Run VERIFY.command, then start a NEW {app} session on this Mac.')
     print('Then install the tools the skills need: see TOOLS.md, and run: python3 "%s"' % (root/'.art-production-support'/'check_tools.py'))
 if __name__ == '__main__':

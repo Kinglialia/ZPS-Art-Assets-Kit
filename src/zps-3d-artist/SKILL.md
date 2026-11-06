@@ -1,6 +1,6 @@
 ---
 name: zps-3d-artist
-description: "Build, optimize or check static 3D game props from concepts or existing models: mesh, UV, bake, GLB export and QA. Use for modeling and polygon reduction (\"dựng model\", \"giảm mặt\", \"low poly\", \"kiểm model\")."
+description: "Make, optimize or check static 3D game props: model from a concept yourself in Blender, or with Meshy, Tripo or ZPS 3D Gen, then retopo, UV, texture, GLB and QA. Use for modeling and polygon reduction (\"dựng model\", \"giảm mặt\", \"low poly\", \"kiểm model\")."
 metadata:
   version: 0.5.6
   validation: pending
@@ -10,54 +10,64 @@ metadata:
 
 **Not for:** 2D drawing, concept art or texture painting (zps-texture-artist).
 
-Work within the AD brief, chosen direction, camera and supplied technical limits. Static triangle-mesh props are supported. Rigging, animated characters, cloth and quad retopology are outside this toolset; identify the unsupported part and continue independent supported work.
+This file is a router. Read it, then read only the one path file that the job needs. Static triangle-mesh props are supported. Rigging, animated characters and cloth are outside this toolset; name the unsupported part and continue the supported work.
 
-## Start with the requested output
+## 1. Pick the job
 
-- New model from concept: [self-build](references/self_build.md).
-- Reduce/clean an existing model: [optimize](references/optimize.md).
-- Both paths: [pipeline](references/pipeline.md) holds setup, intake, the QA gate, finalize and the report.
-- Review only: run relevant checks and inspect renders, without model edits. See [QA tools](tools/asset_checks/README.md) and [review rubric](templates/REVIEW-RUBRIC.md).
+| Input | Job | Read |
+|---|---|---|
+| A concept, and a model is wanted | Make a model | Section 2 |
+| An existing model to reduce or clean | Optimize | [optimize](references/optimize.md), then [texture handoff](references/texture-handoff.md) |
+| A model to check only, no edits | Review | [QA tools](tools/asset_checks/README.md) and [review rubric](templates/REVIEW-RUBRIC.md) |
 
-Reuse the current brief. Write task/spec.json from supplied dimensions, camera, budget and texture intent. Record defaults from config.yaml as provisional, not universal standards. Resolve only missing facts that affect the chosen path; do not repeat approval already granted. Never relax a threshold merely to pass. Unknown left/right conventions or conflicting concept views require clarification for the affected geometry.
+All jobs use [pipeline](references/pipeline.md) for setup, intake, the QA gate, finalize and the report. Read only the section you need.
 
-## Build and verify
+## 2. Make a model: ask the method first
 
-Use an asset workspace with immutable input, task/spec.json, versioned work, evidence and deliverables. Open concept images; numeric dimensions and mesh metrics come from measured files, not visual guesses. Use clay/normals for shape and textured renders for surface. Record the exact version/view inspected.
+If the request already names the method, use it and skip the question. Otherwise ask one question with five answers:
 
-Run only necessary setup within permission: scripts may require Blender/bpy, Pillow, numpy, xatlas or other dependencies. [Pipeline setup](references/pipeline.md) and preflight identify capabilities. Package installation does not install dependencies or invoke paid generators. Existing provider/asset authorization applies; stop at its budget. Generator adapters remain unconfigured unless explicitly set up.
+1. **Self-model**: the agent builds the model as code in Blender (the kit's self-build).
+2. **Meshy**: Meshy makes the mesh and the texture.
+3. **Tripo**: Tripo makes the mesh and the texture.
+4. **ZPS 3D Gen**: the team's image-to-3D service (`zps-ai`), free, with an UltraTex texture.
+5. **Not sure**: the agent reads the concept and recommends one.
 
-Prefer one build path and one writer per asset. A separate builder/critic is optional when delegation is authorized; [builder brief](agents/3d-builder.md) and [critic brief](agents/3d-critic.md) are task prompts, not Claude agent registration files. Otherwise perform and label self-review. Do not claim independence or owner approval. Missing required independent review leaves that milestone pending without preventing a clearly labeled working preview.
+If the answer is "Not sure", measure the concept first (type, part count, symmetry, thin parts, text or logos, available views). Then show one table for the four methods: time, cost, who paints the texture, the risk for this concept, and your recommendation with its reason. Get the times and costs from `tools/estimate.py show` (section 4). Use this first rule set:
 
-Preserve fixed dimensions when fitting cameras or parameters. Check geometry against the spec; inspect silhouettes and internal forms at the target scale. Repeated failure requires diagnosis rather than endless retries. Keep/revert edits using observed results and the assigned repair budget. See [craft](references/technique.md), [blockout](references/blockout.md), [mesh/UV/bake](references/mesh_uv_bake.md) and [export](references/export_engine.md) only for the stage being performed.
+| Concept | Recommend | Reason |
+|---|---|---|
+| Architecture, modular parts, hard-surface low poly | Self-model | Exact sizes, clean topology, edits by parameter |
+| Organic shape, sculpted detail | Meshy or Tripo | AI generators make organic forms better than code |
+| Organic shape, fast and free | ZPS 3D Gen | Internal service, about 1 minute, no cost |
+| Text, logos, thin or sharp parts | Self-model, or AI with manual fixes | Generators often break text and thin parts |
 
-Texture-only work routes to [Texture Artist](../zps-texture-artist/SKILL.md); see Texture by default below. Mesh, UV layout and high-to-low baking stay here. For projection, lock the mesh/UV/camera version and exchange paint views; any geometry/UV change invalidates affected texture evidence. Use a single writer at a time. A shader/material map request does not automatically authorize topology edits.
+Then read the path file:
 
-## Texture by default
+| Method | Path file | Texture |
+|---|---|---|
+| Self-model | [self-model](paths/self-model.md) | Texture Artist |
+| Meshy | [meshy](paths/meshy.md) | Meshy retexture on the final mesh |
+| Tripo | [tripo](paths/tripo.md) | Tripo texture on the final mesh |
+| ZPS 3D Gen | [zps3d](paths/zps3d.md) | UltraTex from the service, baked to the final mesh |
 
-A finished model ships with a texture. Skip the texture step only in these cases:
-- The caller says that the model needs no texture.
-- After retopo or optimize, the existing texture still works: the UVs were kept, or the transfer bake reaches `texture.ssim_min` and shows no visible seam or blur at the game camera.
+Before the work starts, check the tools of the chosen method: `python3 <SKILL>/tools/gen/gen_api.py keys` for Meshy and Tripo keys, `zps-ai whoami` for ZPS 3D Gen, Blender for every method. If a Meshy or Tripo key is missing, show the user the path of the key file and ask the user to paste the key into that file, not into the chat. If the user has no key, use Self-model. Tell the user the time estimate of the chosen method before you start.
 
-In all other cases, call the Texture Artist skill of the runtime that you run in. Send part A of the [3D ↔ Texture handoff](../.art-production-support/templates/3d-texture-handoff.md). If the caller named a texture method, pass it on. If nobody named one, Texture Artist selects it.
+## 3. Budget
 
-UV and materials before the handoff:
-- By default, unwrap unique, non-overlapping UVs and keep one material. This suits most texture methods and costs one draw call on mobile.
-- Call [Texture Planning](../zps-texture-planning/SKILL.md) before you unwrap if a sign shows that the texture needs special UVs: the caller or the Art Style document names tileable/trim, pixel texture or vertex color, or the asset is an environment or modular piece. Unwrap to the method that Planning returns.
-- If the known method allows overlap (palette atlas, intended mirror), you may overlap. Set `uv.allow_overlap: true` in the spec with `_allow_overlap_reason`, and record it in part A.
-- Give region information instead of material slots: the material label of each part and the `parts_<view>.png` renders. Split material slots in Blender for one model only when Texture Planning asks for a different shader per region.
-- If Texture Artist asks for UV changes or slot splits, expect one combined request.
+Use the budget from the brief or the project if it has one. If not, choose it yourself and do not ask: run the sweep in auto mode (the fewest triangles that pass the floor, see [optimize](references/optimize.md) §4–6), capped by the size-class budget in `config.yaml`. Ask only when the camera or the platform is unknown and the project does not record it. Record the chosen budget and its reason in `task/spec.json`.
 
-A texture that the 3D pipeline made (concept projection or transfer bake) is a temporary pass. Label it as temporary in part A. Texture Artist decides to keep it, fix it or replace it.
+## 4. Learn from each job
 
-When part B comes back, you own the final asset. Assign the maps to the material slots, export the final GLB, and run the QA gate again on that file. Copy the material setup notes from part B into the report for the person who imports the asset into the engine.
+After each model, append one record: `python3 <SKILL>/tools/estimate.py log --project <project root> --method <method> --minutes <total> --credits <spent> --tris <final> --complexity <0-1>`. The record goes to `<project root>/.zps-art/estimates.jsonl`, never into the skills folder. `estimate.py show --project <project root>` prints the defaults from `estimates.json`, replaced by the median of the project records when a method has 3 or more.
 
-## Deliver the actual milestone
+## Rules for every path
 
-Read relevant QA JSON and open final renders. A failed mandatory geometry check blocks an accepted final export; diagnostic previews must be labeled and separated. If no valid mesh meets the requested budget, report the gap and a valid minimum alternative rather than labeling the failing candidate final. Required not_checked is pending, not pass.
+- Work within the AD brief, the chosen direction, the camera and the technical limits. Do not repeat an approval that the user already gave. Never relax a threshold only to pass.
+- Use an asset workspace: read-only input, `task/spec.json`, versioned work, evidence, deliverables. Numbers come from measured files, not from visual guesses. Record the exact version and view that you inspected.
+- One build path and one writer per asset. Builder and critic briefs ([builder](agents/3d-builder.md), [critic](agents/3d-critic.md)) are task prompts. Without authorized delegation, do a self-review and label it.
+- A paid call (Meshy, Tripo) needs a dry run, the cost, and the user's approval first. Never run paid calls in parallel on one budget file. Never print a key.
+- A failed mandatory geometry check blocks the final export. Label a diagnostic preview as a preview. If no mesh meets the budget, report the gap and the smallest valid alternative. A required check that did not run is pending, not passed.
+- `finalize.py` checks recorded technical results only, not art approval. `report.py` makes a draft report. State source and final triangles, budget, measurements, texture source, inferred hidden surfaces, missing checks and file paths. Claim engine or device validation only if you did it.
+- For learning capture that the user requests, use [Art Learning](../zps-art-learning/SKILL.md). Do not change skill thresholds or code automatically.
 
-Use finalize.py only after the required review milestone; it checks recorded technical results, not artistic approval. report.py produces a report to inspect and complete, not an automatic acceptance verdict. State source/chosen tris, budgets, measurements, texture sources, inferred unseen surfaces, missing checks and source/output paths. Only claim engine/device validation if performed.
-
-For requested learning capture, use [Art Learning](../zps-art-learning/SKILL.md) to ingest the measured result and separately record actual reviewer feedback. Do not modify skill thresholds or code automatically.
-
-[AD routing](../.art-director-support/workflows/art-direction.md) selects the next capability without requiring the full pipeline.
+[AD routing](../.art-director-support/workflows/art-direction.md) selects the next capability without the full pipeline.

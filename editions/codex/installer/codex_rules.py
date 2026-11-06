@@ -35,11 +35,20 @@ def find_blender(given):
     return None
 
 
+# Scripts that call paid network APIs. They must never match the allow rule: Codex has to ask
+# before each of them runs outside the sandbox (network on).
+NETWORK_SCRIPTS = ('gen_api.py', 'generate_image.py')
+
+
+def network_scripts(root):
+    return [str(p) for p in sorted(root.rglob('*.py')) if p.name in NETWORK_SCRIPTS and '.deps' not in p.parts]
+
+
 def kit_scripts(root):
     out = []
     for base in sorted(root.glob('zps-*-codex')) + [root / '.art-production-support']:
         for p in sorted(base.rglob('*.py')):
-            if '.deps' not in p.parts and '__pycache__' not in p.parts:
+            if '.deps' not in p.parts and '__pycache__' not in p.parts and p.name not in NETWORK_SCRIPTS:
                 out.append(str(p))
     return out
 
@@ -62,7 +71,7 @@ def render(blender, scripts, venv_py, skill3d):
     return '\n'.join(lines)
 
 
-def self_test(path, blender, scripts, venv_py, skill3d):
+def self_test(path, blender, scripts, venv_py, skill3d, root):
     codex = shutil.which('codex')
     if not codex:
         return 'codex CLI not found: rule not tested'
@@ -70,6 +79,7 @@ def self_test(path, blender, scripts, venv_py, skill3d):
              ([blender, '-b', '--python-exit-code', '1', '--python', scripts[-1], '--'], 'allow'),
              ([blender, '-b', '--python-expr', 'print(1)'], None),
              ([blender, '-b', '--python', '/tmp/other.py'], None)]
+    cases += [([blender, '-b', '--python', n, '--', 'generate'], None) for n in network_scripts(root)]
     if venv_py:
         cases.append(([str(venv_py), str(skill3d / SPAWNERS[0]), '--work', 'w'], 'allow'))
         cases.append(([str(venv_py), '-c', 'print(1)'], None))
@@ -105,7 +115,7 @@ def main():
     target = a.rules_dir.expanduser() / FILE
     tmp = Path(os.environ.get('TMPDIR', '/tmp')) / f'{FILE}.preview'
     tmp.write_text(text)
-    result = self_test(tmp, blender, scripts, venv_py, skill3d)
+    result = self_test(tmp, blender, scripts, venv_py, skill3d, root)
     print(f'Blender: {blender}\nKit scripts: {len(scripts)}\n3D venv rule: {"yes" if venv_py else "no"}\n{result}')
     if 'FAILED' in result:
         return 1
