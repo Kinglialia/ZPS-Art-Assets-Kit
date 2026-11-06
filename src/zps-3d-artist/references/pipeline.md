@@ -23,7 +23,7 @@ Ask only what the brief does not already answer, in this order:
 1. Asset name (default: file name).
 2. Size class and real height in meters. If not given, estimate from the name and concept proportions, record `height_source: estimated`, and use it everywhere.
 3. Texture style (see [texture handoff](texture-handoff.md) for when to ask Texture Planning before you unwrap): `hand_painted` (baked light in albedo, flat palette, unlit) or `pbr`. This decides UV rules (mirroring forbidden with baked light; palette atlases may overlap on purpose).
-4. Face budget (number) or `auto` (find the fewest faces that pass the floor).
+4. Face budget: from the brief or the project; otherwise `auto` (the fewest faces that pass the floor; SKILL.md section 3). Do not ask.
 5. Target engine for extra checks (`unity`, `godot`, `unreal`, or `glb_only`). Export is always glTF Y-up metres with pivot at bottom-centre.
 
 With concept images, run `tools/optimize/validate_concept.py --images <files> --work output/<asset>/work/optimize --spec task/spec.json` first (gate1 reads masks from that work dir). It labels views from file names (`front|back|left|right|top|34`), removes backgrounds, checks cross-view proportions, scores complexity 0–1. Label any `vision_needed` image yourself. A proportion failure above `concept.proportion_tol` stops the task: name the view and the % off. Then point `spec.concept.views` at the masks it wrote (`../work/optimize/concept/mask_<label>.png`) so every later IoU uses the same masks.

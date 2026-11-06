@@ -50,7 +50,7 @@ Then read the path file:
 | Tripo | [tripo](paths/tripo.md) | Tripo texture on the final mesh |
 | ZPS 3D Gen | [zps3d](paths/zps3d.md) | UltraTex from the service, baked to the final mesh |
 
-Before the work starts, check the tools of the chosen method: `python3 <SKILL>/tools/gen/gen_api.py keys` for Meshy and Tripo keys, `zps-ai whoami` for ZPS 3D Gen, Blender for every method. If a Meshy or Tripo key is missing, show the user the path of the key file and ask the user to paste the key into that file, not into the chat. If the user has no key, use Self-model. Tell the user the time estimate of the chosen method before you start.
+Before the work starts, check the tools of the chosen method: `python3 <SKILL>/tools/gen/gen_api.py keys` for Meshy and Tripo keys, for ZPS 3D Gen that `zps-ai` is installed and `~/.config/zps-ai/credentials.json` exists (no network; `zps-ai whoami` needs network), Blender for every method. If a Meshy or Tripo key is missing, show the user the path of the key file and ask the user to paste the key into that file, not into the chat. If the user has no key, use Self-model. Tell the user the time estimate of the chosen method before you start.
 
 ## 3. Budget
 

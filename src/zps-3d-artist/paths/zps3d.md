@@ -2,7 +2,7 @@
 
 The team's image-to-3D service makes a dense textured mesh. The kit reduces it to the budget and bakes the texture onto the final mesh. The service is free for the team.
 
-Tools: the `zps-ai` CLI (`~/.local/bin/zps-ai`), signed in. If it is missing, ask the user before you install it: `curl -fsSL https://zps-ai-console.zingplay.com/cli/install.sh | sh`, then `zps-ai login` (browser sign-in). No API key is needed. Run `zps-ai guide 3d` once per session: the service admins keep the current parameters there, and they override this file.
+Tools: the `zps-ai` CLI (`~/.local/bin/zps-ai`), signed in: `~/.config/zps-ai/credentials.json` exists. Every `zps-ai` command that reaches the portal needs network, also `whoami` and `guide`. If it is missing, ask the user before you install it: `curl -fsSL https://zps-ai-console.zingplay.com/cli/install.sh | sh`, then `zps-ai login` (browser sign-in). No API key is needed. Run `zps-ai guide 3d` once per session: the service admins keep the current parameters there, and they override this file.
 
 ## Facts
 
