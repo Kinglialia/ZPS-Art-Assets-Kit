@@ -34,7 +34,7 @@ Default views: front, back, left, right. Add top when the 3D path needs it. Make
 
 Use literal absolute paths: `<BLENDER>` (absolute Blender path), `<SKILL>` (this skill folder). No shell variables.
 
-0. **Ask once.** Use the approved **flat-lit concept** (even light, no cast shadows) as the color and material reference; a version with shadows is for mood only, because the image AI cannot tell a shadow from dark paint. If no flat-lit version exists, ask Concept Artist to make it first. Reuse the hidden-side notes and dimensions that Concept Artist recorded in the concept brief. Ask only what is missing. Never invent a hidden side.
+0. **Ask once.** Use the **albedo concept** (base color plus material, no light, from Concept Artist) as the color and material reference; a version with shadows is for mood only, because the image AI cannot tell a shadow from dark paint. If it does not exist, ask Concept Artist to make it first. Reuse the hidden-side notes and dimensions that Concept Artist recorded in the concept brief. Ask only what is missing. Never invent a hidden side.
 1. **Build the blockout** with the 3D Artist self-build part graph. Write `part_graph.json` and `parts_lib.py` as in [self-build part graph](../zps-3d-artist/references/self_build.md#part-graph-part_graphjson). Give every part a `material` label (wall, roof, door). Make a detail whose position must be checked its own part with its own label. It sticks out or sinks in at least 2 cm. Work dir `<w>` is `output/<asset>/work/self_build/`, so the 3D Artist can continue from the same graph. Build:
    ```bash
    <BLENDER> -b --python <3D SKILL>/tools/self_build/assembly.py -- --work <w>

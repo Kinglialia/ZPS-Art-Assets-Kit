@@ -18,7 +18,8 @@ Optional template: reuse an existing brief and drop the fields that are not rele
 - Hidden sides: what each unseen side shows (door, windows, roof slopes…) or "unknown"; symmetric? real height (m):
 - Goes to 3D? (default yes; presentation only when stated):
 - Flat-lit version: path; approved by/when; areas inferred under former shadow:
-- Presentation version (optional, made from the flat-lit version): path | none
+- Albedo concept (flat-lit plus materials, no light; the reference for views, 3D and texture): path; structure_diff result
+- Presentation version (optional, made from the albedo concept): path | none
 - Painted-in light of the style (hand-painted convention) | none; alpha/plain background:
 - Grey-box/source image/version; locked forms and editable parts:
 

@@ -36,11 +36,12 @@ Avoid: <text, logo, extra accessories, glow, particles, ...>
 
 ## Lighting and shadows
 
-Use this section when the image must have no shadows: a flat-lit concept, views for 3D, a texture reference. Image tools add light by default, and a text "no shadows" is weak against the other inputs.
+Use this section when the image must have no shadows: a flat-lit or albedo concept, views for 3D, a texture reference. Image tools add light by default, and a text "no shadows" is weak against the other inputs.
 
 - **A reference image passes on its light.** If a reference has light and shadows, say what to take and what to ignore: "Image 1: take the shapes and paint colors only; ignore its lighting and shadows."
 - **Name an unlit image type**, not a render: "unlit base-color render", "ambient light only", "every surface shows its own paint color", "like a flat-shaded color view in a 3D editor". Do not write "3D render", "studio lighting", "soft shadows", "cinematic", "dramatic", "golden hour", "ambient occlusion".
 - **List where shadows must not be**, concretely: under the awning or eaves, under objects on other objects, inside recesses, at the base, on the side faces.
+- **Unlit does not mean without material.** "Unlit" or "flat" alone pushes the tool to a flat-filled illustration and drops stone grain, wood grain and cloth weave. When materials matter, add: "keep material detail (grain, weave, finish) as painted color variation".
 - **Allow form only by paint:** a slightly lighter painted top plane is allowed when the style has it; nothing else.
 - **Check, then fix by edit.** Shadows often remain. Remove them with an edit of the result that changes only the light, and check the shape with `structure_diff.py`. A shadow edit on a new image is safer than a new generation, because the design stays.
 

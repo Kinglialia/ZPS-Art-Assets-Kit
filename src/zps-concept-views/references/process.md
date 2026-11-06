@@ -9,7 +9,7 @@ Read SKILL.md first. It holds the goal, the view convention, the default views, 
 
 ## Step 0. Ask the artist (required)
 
-1. Read the concept brief first. Concept Artist records the flat-lit concept, the hidden-side notes and the real dimensions there. Reuse them. Use the flat-lit concept as image 1 in every prompt (see SKILL.md step 0).
+1. Read the concept brief first. Concept Artist records the albedo concept, the hidden-side notes and the real dimensions there. Reuse them. Use the albedo concept as image 1 in every prompt (see SKILL.md step 0).
 2. Ask only what is missing, in one message:
    - **What do the hidden sides look like?** For each side that the concept does not show (back, top, the other side), ask for a rough sketch or a clear description: doors, number and place of windows, number of roof slopes, chimney, sign. If there is no information, **do not invent it**. Write "assumption" in the report.
    - **Is the object symmetric?** (left/right, front/back)
@@ -80,7 +80,7 @@ This costs less, and the colors are often more consistent. But each view is smal
 
 Replace each `[...]` with real information. Take `[MATERIAL LIST]` from `views.json`. Example: `yellow = thatched roof, blue = plastered stone wall, green = wooden door, orange = window with wooden frame, red = brick chimney`.
 
-**Front view** (image 1 = flat-lit concept, image 2 = front_guide.png):
+**Front view** (image 1 = albedo concept, image 2 = front_guide.png):
 ```text
 Repaint image 2 (a flat-coloured 3D guide render) as a finished game-asset illustration
 in the exact art style, materials, colours and level of detail of the concept art in image 1.
@@ -99,7 +99,7 @@ STRICT RULES
 - The whole object fully visible and centred. Do not crop. Do not stretch.
 ```
 
-**Other views** (image 1 = flat-lit concept, image 2 = approved front view, image 3 = `<view>_guide.png`):
+**Other views** (image 1 = albedo concept, image 2 = approved front view, image 3 = `<view>_guide.png`):
 ```text
 Image 2 is the approved FRONT view of an object. Image 3 is a flat-coloured 3D guide render
 of the [BACK / LEFT / RIGHT / TOP / BOTTOM] view of the SAME object.
@@ -121,7 +121,7 @@ STRICT RULES
 - The whole object fully visible and centred. Do not crop. Do not stretch.
 ```
 
-**Whole sheet** (image 1 = flat-lit concept, image 2 = `guide_sheet.png`):
+**Whole sheet** (image 1 = albedo concept, image 2 = `guide_sheet.png`):
 ```text
 Image 2 is a sheet of 6 orthographic guide renders of ONE object, in a 3x2 grid:
 row 1 = front, back, left; row 2 = right, top, bottom.
@@ -146,7 +146,7 @@ If you did not render a view, change the sheet prompt to list only the views you
 
 ## Step 4. Measure and report
 
-**(Optional, recommended)** Measure the reference colors on the **flat-lit** concept, never on a version with shadows (a shadowed wall reads darker than its paint). Use `palette_report.py` on the concept (the `vivid` color of each material area) to get the hex code of each material on the concept. Save `concept_colors.json`. Use the **same material names as in `views.json`**:
+**(Optional, recommended)** Measure the reference colors on the **albedo** concept, never on a version with light or shadows (a shadowed wall reads darker than its paint). Use `palette_report.py` on the concept (the `vivid` color of each material area) to get the hex code of each material on the concept. Save `concept_colors.json`. Use the **same material names as in `views.json`**:
 ```json
 { "roof": "#A1901B", "wall": "#45549A", "door": "#43844A" }
 ```
